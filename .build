@@ -6,8 +6,6 @@ Canary.Abilities.html
 CodeCorps.Analytics.InMemory.html
 CodeCorps.Analytics.Segment.html
 CodeCorps.ApiCase.html
-CodeCorps.AuthController.html
-CodeCorps.AuthView.html
 CodeCorps.AuthenticationHelpers.html
 CodeCorps.AuthenticationTestHelpers.html
 CodeCorps.Base64Image.html
@@ -90,6 +88,8 @@ CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
 CodeCorps.TaskView.html
+CodeCorps.TokenController.html
+CodeCorps.TokenView.html
 CodeCorps.Transition.UserState.html
 CodeCorps.User.html
 CodeCorps.UserCategory.html
