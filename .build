@@ -42,10 +42,6 @@ CodeCorps.PageController.html
 CodeCorps.PageView.html
 CodeCorps.Plug.AnalyticsIdentify.html
 CodeCorps.Plug.CurrentUser.html
-CodeCorps.Post.html
-CodeCorps.PostController.html
-CodeCorps.PostPolicy.html
-CodeCorps.PostView.html
 CodeCorps.Preview.html
 CodeCorps.PreviewController.html
 CodeCorps.PreviewPolicy.html
@@ -84,6 +80,10 @@ CodeCorps.SkillView.html
 CodeCorps.SluggedRoute.html
 CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
+CodeCorps.Task.html
+CodeCorps.TaskController.html
+CodeCorps.TaskPolicy.html
+CodeCorps.TaskView.html
 CodeCorps.Transition.UserState.html
 CodeCorps.User.html
 CodeCorps.UserCategory.html
