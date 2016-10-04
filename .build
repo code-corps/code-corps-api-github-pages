@@ -88,6 +88,7 @@ CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
 CodeCorps.TaskView.html
+CodeCorps.TestHelpers.html
 CodeCorps.TokenController.html
 CodeCorps.TokenView.html
 CodeCorps.Transition.UserState.html
