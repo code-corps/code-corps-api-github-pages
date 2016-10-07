@@ -46,6 +46,7 @@ CodeCorps.PageController.html
 CodeCorps.PageView.html
 CodeCorps.Plug.AnalyticsIdentify.html
 CodeCorps.Plug.CurrentUser.html
+CodeCorps.Plug.SetSentryUserContext.html
 CodeCorps.Preview.html
 CodeCorps.PreviewController.html
 CodeCorps.PreviewPolicy.html
