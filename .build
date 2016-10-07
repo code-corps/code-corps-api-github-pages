@@ -28,6 +28,7 @@ CodeCorps.ErrorView.html
 CodeCorps.Factories.html
 CodeCorps.Gettext.html
 CodeCorps.GuardianSerializer.html
+CodeCorps.JsonPayloadStrategy.html
 CodeCorps.LayoutView.html
 CodeCorps.MarkdownRenderer.html
 CodeCorps.ModelCase.html
@@ -47,6 +48,7 @@ CodeCorps.PageView.html
 CodeCorps.Plug.AnalyticsIdentify.html
 CodeCorps.Plug.CurrentUser.html
 CodeCorps.Plug.SetSentryUserContext.html
+CodeCorps.PreloadHelpers.html
 CodeCorps.Preview.html
 CodeCorps.PreviewController.html
 CodeCorps.PreviewPolicy.html
