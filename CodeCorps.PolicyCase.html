@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
-    <title>CodeCorps.ProjectSkill – code_corps v0.0.1</title>
+    <title>CodeCorps.PolicyCase – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-bbdf358507.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -60,44 +60,21 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.ProjectSkill
+        CodeCorps.PolicyCase
         
         
       </h1>
 
       
-
-      
-        <section id="summary" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
-            </a>
-            Summary
-          </h1>
-          
-
-          
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#create_changeset/2">create_changeset(struct, params \\ %{})</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code></p>
-</div>
-  
-</div>
-
-  </div>
-
-
-          
-
-          
+        <section id="moduledoc">
+          <p>This module defines the test case to be used by
+policy tests.</p>
+<p>You may define functions here to be used as helpers in
+your model tests. See <code class="inline">errors_on/2</code>’s definition as reference.</p>
+<p>Finally, if the test case interacts with the database,
+it cannot be async. For this reason, every test runs
+inside a transaction which is reset at the beginning
+of the test unless the test case is marked as async.</p>
 
         </section>
       
@@ -105,30 +82,7 @@
       
 
       
-        <section id="functions" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
-            </a>
-            Functions
-          </h1>
-          <div class="detail" id="create_changeset/2">
-  <div class="detail-header">
-    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">create_changeset(struct, params \\ %{})</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>.</p>
 
-  </section>
-</div>
-
-        </section>
       
 
       
