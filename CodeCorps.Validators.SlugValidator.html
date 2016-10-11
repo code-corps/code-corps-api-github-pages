@@ -92,6 +92,9 @@
     <a href="#validate_slug/2">validate_slug(changeset, field_name)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Validates a slug</p>
+</div>
+  
 </div>
 
   </div>
@@ -125,7 +128,35 @@
   </div>
   
   <section class="docstring">
-    
+    <p>Validates a slug.</p>
+<p>Matches slugs with:</p>
+<ul>
+<li>only letters
+</li>
+<li>prefixed/suffixed underscores
+</li>
+<li>prefixed/suffixed numbers
+</li>
+<li>single inside dashes
+</li>
+<li>single/multiple inside underscores
+</li>
+<li>one character
+</li>
+</ul>
+<p>Prevents slugs with:</p>
+<ul>
+<li>prefixed symbols
+</li>
+<li>prefixed/suffixed dashes
+</li>
+<li>multiple consecutive dashes
+</li>
+<li>single/multiple/multiple consecutive slashes
+</li>
+</ul>
+<p>Also prevents slugs that conflict with reserved routes for either the API or the web.</p>
+
   </section>
 </div>
 
