@@ -84,8 +84,65 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create/2">create(conn, map)</a>
+    <a href="#filter/4">filter(conn, results, key, val)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Index.filter/4</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_create/2">handle_create(conn, attributes)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Create.handle_create/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_delete/2">handle_delete(conn, model)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Delete.handle_delete/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_index/2">handle_index(conn, params)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Index.handle_index/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_index_query/2">handle_index_query(conn, query)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Index.handle_index_query/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_show/2">handle_show(conn, id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Show.handle_show/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_update/3">handle_update(conn, model, attributes)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Update.handle_update/3</code></p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -96,14 +153,65 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#show/2">show(conn, map)</a>
+    <a href="#model/0">model()</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Model.model/0</code></p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update/2">update(conn, map)</a>
+    <a href="#permitted_attributes/3">permitted_attributes(conn, attrs, )</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Attributes.permitted_attributes/3</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#record/2">record(conn, id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Record.record/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#records/1">records(conn)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Records.records/1</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#repo/0">repo()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Repo.repo/0</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#serialization_opts/2">serialization_opts(conn, arg2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Serializable.serialization_opts/2</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sort/4">sort(conn, results, key, dir)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaResource.Index.sort/4</code></p>
+</div>
   
 </div>
 
@@ -127,18 +235,109 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create/2">
+          <div class="detail" id="filter/4">
   <div class="detail-header">
-    <a href="#create/2" class="detail-link" title="Link to this function">
+    <a href="#filter/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create(conn, map)</span>
+    <span class="signature">filter(conn, results, key, val)</span>
     
     
   </div>
   
   <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Index.filter/4</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_create/2">
+  <div class="detail-header">
+    <a href="#handle_create/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_create(conn, attributes)</span>
     
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Create.handle_create/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_delete/2">
+  <div class="detail-header">
+    <a href="#handle_delete/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_delete(conn, model)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Delete.handle_delete/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_index/2">
+  <div class="detail-header">
+    <a href="#handle_index/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_index(conn, params)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Index.handle_index/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_index_query/2">
+  <div class="detail-header">
+    <a href="#handle_index_query/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_index_query(conn, query)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Index.handle_index_query/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_show/2">
+  <div class="detail-header">
+    <a href="#handle_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_show(conn, id)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Show.handle_show/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_update/3">
+  <div class="detail-header">
+    <a href="#handle_update/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_update(conn, model, attributes)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Update.handle_update/3</code>.</p>
+
   </section>
 </div>
 <div class="detail" id="index/2">
@@ -155,32 +354,109 @@
     
   </section>
 </div>
-<div class="detail" id="show/2">
+<div class="detail" id="model/0">
   <div class="detail-header">
-    <a href="#show/2" class="detail-link" title="Link to this function">
+    <a href="#model/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">show(conn, map)</span>
+    <span class="signature">model()</span>
     
     
   </div>
   
   <section class="docstring">
-    
+    <p>Callback implementation for <code class="inline">c:JaResource.Model.model/0</code>.</p>
+
   </section>
 </div>
-<div class="detail" id="update/2">
+<div class="detail" id="permitted_attributes/3">
   <div class="detail-header">
-    <a href="#update/2" class="detail-link" title="Link to this function">
+    <a href="#permitted_attributes/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">update(conn, map)</span>
+    <span class="signature">permitted_attributes(conn, attrs, )</span>
     
     
   </div>
   
   <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Attributes.permitted_attributes/3</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="record/2">
+  <div class="detail-header">
+    <a href="#record/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">record(conn, id)</span>
     
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Record.record/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="records/1">
+  <div class="detail-header">
+    <a href="#records/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">records(conn)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Records.records/1</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="repo/0">
+  <div class="detail-header">
+    <a href="#repo/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">repo()</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Repo.repo/0</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="serialization_opts/2">
+  <div class="detail-header">
+    <a href="#serialization_opts/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">serialization_opts(conn, arg2)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Serializable.serialization_opts/2</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="sort/4">
+  <div class="detail-header">
+    <a href="#sort/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">sort(conn, results, key, dir)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Callback implementation for <code class="inline">c:JaResource.Index.sort/4</code>.</p>
+
   </section>
 </div>
 

@@ -3,8 +3,9 @@ api-reference.html
 404.html
 dist/sidebar_items.js
 Canary.Abilities.html
-CodeCorps.Analytics.InMemory.html
+CodeCorps.Analytics.InMemoryAPI.html
 CodeCorps.Analytics.Segment.html
+CodeCorps.Analytics.SegmentAPI.html
 CodeCorps.ApiCase.html
 CodeCorps.AuthenticationHelpers.html
 CodeCorps.AuthenticationTestHelpers.html
@@ -21,13 +22,15 @@ CodeCorps.CommentController.html
 CodeCorps.CommentPolicy.html
 CodeCorps.CommentView.html
 CodeCorps.ConnCase.html
-CodeCorps.ControllerHelpers.html
 CodeCorps.Endpoint.html
 CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html
 CodeCorps.Factories.html
 CodeCorps.Gettext.html
 CodeCorps.GuardianSerializer.html
+CodeCorps.Helpers.Query.html
+CodeCorps.Helpers.Slug.html
+CodeCorps.Helpers.String.html
 CodeCorps.JsonPayloadStrategy.html
 CodeCorps.LayoutView.html
 CodeCorps.MarkdownRenderer.html

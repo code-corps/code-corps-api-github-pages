@@ -66,6 +66,16 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>Provides analytics tracking for Segment.com with an interface for making <a href="https://github.com/stueccles/analytics-elixir#identify"><code class="inline">identify</code></a> and <a href="https://github.com/stueccles/analytics-elixir#track"><code class="inline">track</code></a> calls via the <a href="https://github.com/stueccles/analytics-elixir"><code class="inline">analytics-elixir</code> package</a>.</p>
+<p>You can read more about <a href="https://segment.com/docs/spec/identify/"><code class="inline">identify</code></a> and <a href="https://segment.com/docs/spec/track/"><code class="inline">track</code></a> in <a href="https://segment.com/docs/">Segment’s documentation</a>.</p>
+<p>By default, in <code class="inline">dev</code> and <code class="inline">test</code> envrionments, this module will use <a href="CodeCorps.Analytics.InMemoryAPI.html"><code class="inline">CodeCorps.Analytics.InMemoryAPI</code></a> which does not make a request to Segment’s REST API.</p>
+<p>In <code class="inline">prod</code> and <code class="inline">staging</code> environments, the module will use <a href="CodeCorps.Analytics.SegmentAPI.html"><code class="inline">CodeCorps.Analytics.SegmentAPI</code></a> which <em>will</em> make requests to Segment’s REST API.</p>
+<p>In your <code class="inline">config/prod.exs</code> you might set this like so:</p>
+<pre><code class="elixir">config :code_corps, :analytics, CodeCorps.Analytics.SegmentAPI</code></pre>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -84,20 +94,38 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#get_event_name/2">get_event_name(action, model)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Uses the action on the record to determine the event name that should be passed in for the <code class="inline">track</code> call</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#identify/1">identify(user)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Calls <code class="inline">identify</code> in the configured API module</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#track/2">track(conn, arg2)</a>
-  </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#track/3">track(conn, arg2, arg3)</a>
+    <a href="#track/3">track(arg, action, conn)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Calls <code class="inline">track</code> in the configured API module</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#track_sign_in/1">track_sign_in(conn)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Calls <code class="inline">track</code> with the “Signed In” event in the configured API module</p>
+</div>
   
 </div>
 
@@ -121,7 +149,31 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="identify/1">
+          <div class="detail" id="get_event_name/2">
+  <div class="detail-header">
+    <a href="#get_event_name/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_event_name(action, model)</span>
+    
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">get_event_name(atom, struct) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Uses the action on the record to determine the event name that should be passed in for the <code class="inline">track</code> call.</p>
+
+  </section>
+</div>
+<div class="detail" id="identify/1">
   <div class="detail-header">
     <a href="#identify/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -131,22 +183,18 @@
     
   </div>
   
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="track/2">
-  <div class="detail-header">
-    <a href="#track/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">track(conn, arg2)</span>
-    
-    
-  </div>
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">identify(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: any</code></pre>
+        
+      </div>
+    </div>
   
   <section class="docstring">
-    
+    <p>Calls <code class="inline">identify</code> in the configured API module.</p>
+
   </section>
 </div>
 <div class="detail" id="track/3">
@@ -154,13 +202,48 @@
     <a href="#track/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">track(conn, arg2, arg3)</span>
+    <span class="signature">track(arg, action, conn)</span>
     
     
   </div>
   
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">track({:ok, Ecto.Schema.t} | {:error, Ecto.Changeset.t}, atom, Plug.Conn.t) :: any</code></pre>
+        
+      </div>
+    </div>
+  
   <section class="docstring">
+    <p>Calls <code class="inline">track</code> in the configured API module.</p>
+<p>Receives either an <code class="inline">:ok</code> or <code class="inline">:error</code> tuple from an attempted <code class="inline">Ecto.Repo</code> operation.</p>
+
+  </section>
+</div>
+<div class="detail" id="track_sign_in/1">
+  <div class="detail-header">
+    <a href="#track_sign_in/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">track_sign_in(conn)</span>
     
+    
+  </div>
+  
+    <div class="specs">
+      <h4 class="specs-title">Specs</h4>
+      <div class="specs-list">
+        
+          <pre><code class="elixir">track_sign_in(Plug.Conn.t) :: any</code></pre>
+        
+      </div>
+    </div>
+  
+  <section class="docstring">
+    <p>Calls <code class="inline">track</code> with the “Signed In” event in the configured API module.</p>
+
   </section>
 </div>
 

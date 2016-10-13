@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
-    <title>CodeCorps.User – code_corps v0.0.1</title>
+    <title>CodeCorps.Helpers.Query – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-bbdf358507.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -60,16 +60,11 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.User
+        CodeCorps.Helpers.Query
         
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>This module defines a user of the Code Corps app.</p>
-
-        </section>
       
 
       
@@ -89,43 +84,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#apply_state_transition/2">apply_state_transition(changeset, map)</a>
+    <a href="#id_filter/2">id_filter(query, id_list)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#changeset/2">changeset(struct, params \\ %{})</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#check_email_availability/1">check_email_availability(email)</a>
+    <a href="#organization_filter/2">organization_filter(query, organization_id)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#check_username_availability/1">check_username_availability(username)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#registration_changeset/2">registration_changeset(struct, params)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset for registering the user</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_changeset/2">update_changeset(struct, params)</a>
+    <a href="#role_filter/2">role_filter(query, roles_list)</a>
   </div>
   
 </div>
@@ -150,12 +121,12 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="apply_state_transition/2">
+          <div class="detail" id="id_filter/2">
   <div class="detail-header">
-    <a href="#apply_state_transition/2" class="detail-link" title="Link to this function">
+    <a href="#id_filter/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">apply_state_transition(changeset, map)</span>
+    <span class="signature">id_filter(query, id_list)</span>
     
     
   </div>
@@ -164,27 +135,12 @@
     
   </section>
 </div>
-<div class="detail" id="changeset/2">
+<div class="detail" id="organization_filter/2">
   <div class="detail-header">
-    <a href="#changeset/2" class="detail-link" title="Link to this function">
+    <a href="#organization_filter/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">changeset(struct, params \\ %{})</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>.</p>
-
-  </section>
-</div>
-<div class="detail" id="check_email_availability/1">
-  <div class="detail-header">
-    <a href="#check_email_availability/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">check_email_availability(email)</span>
+    <span class="signature">organization_filter(query, organization_id)</span>
     
     
   </div>
@@ -193,41 +149,12 @@
     
   </section>
 </div>
-<div class="detail" id="check_username_availability/1">
+<div class="detail" id="role_filter/2">
   <div class="detail-header">
-    <a href="#check_username_availability/1" class="detail-link" title="Link to this function">
+    <a href="#role_filter/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">check_username_availability(username)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="registration_changeset/2">
-  <div class="detail-header">
-    <a href="#registration_changeset/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">registration_changeset(struct, params)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    <p>Builds a changeset for registering the user.</p>
-
-  </section>
-</div>
-<div class="detail" id="update_changeset/2">
-  <div class="detail-header">
-    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">update_changeset(struct, params)</span>
+    <span class="signature">role_filter(query, roles_list)</span>
     
     
   </div>
