@@ -34,6 +34,7 @@ CodeCorps.Helpers.Slug.html
 CodeCorps.Helpers.String.html
 CodeCorps.JsonPayloadStrategy.html
 CodeCorps.LayoutView.html
+CodeCorps.MapUtils.html
 CodeCorps.MarkdownRenderer.html
 CodeCorps.ModelCase.html
 CodeCorps.Organization.html
@@ -91,6 +92,8 @@ CodeCorps.SkillView.html
 CodeCorps.SluggedRoute.html
 CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
+CodeCorps.Stripe.Adapters.StripeAccount.html
+CodeCorps.StripeAccount.html
 CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
