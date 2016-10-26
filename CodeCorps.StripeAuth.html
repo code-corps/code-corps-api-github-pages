@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
-    <title>CodeCorps.ProjectPolicy – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeAuth – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-bbdf358507.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -60,7 +60,7 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.ProjectPolicy
+        CodeCorps.StripeAuth
         
         
       </h1>
@@ -84,20 +84,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, changeset)</a>
+    <a href="#generate_button_url/1">generate_button_url(project)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Generates the URL for a Stripe Connect button for a given project</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#stripe_auth?/2">stripe_auth?(user, project)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update?/2">update?(user, project)</a>
-  </div>
   
 </div>
 
@@ -121,46 +112,22 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="generate_button_url/1">
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#generate_button_url/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create?(user, changeset)</span>
+    <span class="signature">generate_button_url(project)</span>
     
     
   </div>
   
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="stripe_auth?/2">
-  <div class="detail-header">
-    <a href="#stripe_auth?/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">stripe_auth?(user, project)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="update?/2">
-  <div class="detail-header">
-    <a href="#update?/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">update?(user, project)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
+    <p>Generates the URL for a Stripe Connect button for a given project.</p>
+<p>The URL includes a <code class="inline">state</code> CSRF token which is a Guardian generated
+JWT which contains the project’s ID.</p>
+<p>Returns either an <code class="inline">:ok</code> or <code class="inline">:error</code> tuple.</p>
+
   </section>
 </div>
 

@@ -94,6 +94,9 @@ CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
 CodeCorps.Stripe.Adapters.StripeAccount.html
 CodeCorps.StripeAccount.html
+CodeCorps.StripeAuth.html
+CodeCorps.StripeAuthController.html
+CodeCorps.StripeAuthView.html
 CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
