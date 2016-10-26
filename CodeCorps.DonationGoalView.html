@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.13.2">
-    <title>CodeCorps.ProjectView – code_corps v0.0.1</title>
+    <title>CodeCorps.DonationGoalView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-bbdf358507.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -60,7 +60,7 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.ProjectView
+        CodeCorps.DonationGoalView
         
         
       </h1>
@@ -111,11 +111,35 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#amount/1">amount(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#amount/2">amount(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#attributes/2">attributes(data, conn)</a>
   </div>
   
     <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.attributes/2</code></p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#current/1">current(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#current/2">current(m, c)</a>
+  </div>
   
 </div>
 <div class="summary-row">
@@ -127,12 +151,6 @@
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#description/2">description(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#donation_goals/2">donation_goals(struct, conn)</a>
   </div>
   
 </div>
@@ -156,47 +174,11 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#icon_large_url/1">icon_large_url(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#icon_large_url/2">icon_large_url(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#icon_thumb_url/1">icon_thumb_url(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#icon_thumb_url/2">icon_thumb_url(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#id/2">id(data, c)</a>
   </div>
   
     <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.id/2</code></p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#inserted_at/1">inserted_at(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#inserted_at/2">inserted_at(m, c)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -210,41 +192,11 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#long_description_body/1">long_description_body(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#long_description_body/2">long_description_body(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#long_description_markdown/1">long_description_markdown(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#long_description_markdown/2">long_description_markdown(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#meta/2">meta(struct, conn)</a>
   </div>
   
     <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.meta/2</code></p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#organization/2">organization(struct, conn)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -258,13 +210,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#project_categories/2">project_categories(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#project_skills/2">project_skills(struct, conn)</a>
+    <a href="#project/2">project(struct, conn)</a>
   </div>
   
 </div>
@@ -284,24 +230,6 @@
   
     <div class="summary-synopsis"><p>Renders the given template locally</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#slug/1">slug(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#slug/2">slug(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#tasks/2">tasks(struct, conn)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -340,18 +268,6 @@ to render a particular template</p>
   
     <div class="summary-synopsis"><p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.type/2</code></p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#updated_at/1">updated_at(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#updated_at/2">updated_at(m, c)</a>
-  </div>
   
 </div>
 
@@ -420,6 +336,34 @@ to render a particular template</p>
 
   </section>
 </div>
+<div class="detail" id="amount/1">
+  <div class="detail-header">
+    <a href="#amount/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">amount(m)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="amount/2">
+  <div class="detail-header">
+    <a href="#amount/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">amount(m, c)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
 <div class="detail" id="attributes/2">
   <div class="detail-header">
     <a href="#attributes/2" class="detail-link" title="Link to this function">
@@ -433,6 +377,34 @@ to render a particular template</p>
   <section class="docstring">
     <p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.attributes/2</code>.</p>
 
+  </section>
+</div>
+<div class="detail" id="current/1">
+  <div class="detail-header">
+    <a href="#current/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">current(m)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="current/2">
+  <div class="detail-header">
+    <a href="#current/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">current(m, c)</span>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="description/1">
@@ -455,20 +427,6 @@ to render a particular template</p>
       <i class="icon-link"></i>
     </a>
     <span class="signature">description(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="donation_goals/2">
-  <div class="detail-header">
-    <a href="#donation_goals/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">donation_goals(struct, conn)</span>
     
     
   </div>
@@ -519,62 +477,6 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="icon_large_url/1">
-  <div class="detail-header">
-    <a href="#icon_large_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_large_url(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="icon_large_url/2">
-  <div class="detail-header">
-    <a href="#icon_large_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_large_url(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="icon_thumb_url/1">
-  <div class="detail-header">
-    <a href="#icon_thumb_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_thumb_url(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="icon_thumb_url/2">
-  <div class="detail-header">
-    <a href="#icon_thumb_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_thumb_url(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="id/2">
   <div class="detail-header">
     <a href="#id/2" class="detail-link" title="Link to this function">
@@ -588,34 +490,6 @@ to render a particular template</p>
   <section class="docstring">
     <p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.id/2</code>.</p>
 
-  </section>
-</div>
-<div class="detail" id="inserted_at/1">
-  <div class="detail-header">
-    <a href="#inserted_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">inserted_at(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="inserted_at/2">
-  <div class="detail-header">
-    <a href="#inserted_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">inserted_at(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
   </section>
 </div>
 <div class="detail" id="links/2">
@@ -633,62 +507,6 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="long_description_body/1">
-  <div class="detail-header">
-    <a href="#long_description_body/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">long_description_body(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="long_description_body/2">
-  <div class="detail-header">
-    <a href="#long_description_body/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">long_description_body(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="long_description_markdown/1">
-  <div class="detail-header">
-    <a href="#long_description_markdown/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">long_description_markdown(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="long_description_markdown/2">
-  <div class="detail-header">
-    <a href="#long_description_markdown/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">long_description_markdown(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="meta/2">
   <div class="detail-header">
     <a href="#meta/2" class="detail-link" title="Link to this function">
@@ -702,20 +520,6 @@ to render a particular template</p>
   <section class="docstring">
     <p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.meta/2</code>.</p>
 
-  </section>
-</div>
-<div class="detail" id="organization/2">
-  <div class="detail-header">
-    <a href="#organization/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">organization(struct, conn)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
   </section>
 </div>
 <div class="detail" id="preload/3">
@@ -733,26 +537,12 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="project_categories/2">
+<div class="detail" id="project/2">
   <div class="detail-header">
-    <a href="#project_categories/2" class="detail-link" title="Link to this function">
+    <a href="#project/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">project_categories(struct, conn)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="project_skills/2">
-  <div class="detail-header">
-    <a href="#project_skills/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">project_skills(struct, conn)</span>
+    <span class="signature">project(struct, conn)</span>
     
     
   </div>
@@ -789,48 +579,6 @@ to render a particular template</p>
   <section class="docstring">
     <p>Renders the given template locally.</p>
 
-  </section>
-</div>
-<div class="detail" id="slug/1">
-  <div class="detail-header">
-    <a href="#slug/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">slug(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="slug/2">
-  <div class="detail-header">
-    <a href="#slug/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">slug(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="tasks/2">
-  <div class="detail-header">
-    <a href="#tasks/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">tasks(struct, conn)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
   </section>
 </div>
 <div class="detail" id="template_not_found/2">
@@ -914,34 +662,6 @@ to render a particular template.</p>
   <section class="docstring">
     <p>Callback implementation for <code class="inline">c:JaSerializer.Serializer.type/2</code>.</p>
 
-  </section>
-</div>
-<div class="detail" id="updated_at/1">
-  <div class="detail-header">
-    <a href="#updated_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">updated_at(m)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="updated_at/2">
-  <div class="detail-header">
-    <a href="#updated_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">updated_at(m, c)</span>
-    
-    
-  </div>
-  
-  <section class="docstring">
-    
   </section>
 </div>
 

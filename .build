@@ -23,12 +23,17 @@ CodeCorps.CommentController.html
 CodeCorps.CommentPolicy.html
 CodeCorps.CommentView.html
 CodeCorps.ConnCase.html
+CodeCorps.DonationGoal.html
+CodeCorps.DonationGoalController.html
+CodeCorps.DonationGoalPolicy.html
+CodeCorps.DonationGoalView.html
 CodeCorps.Endpoint.html
 CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html
 CodeCorps.Factories.html
 CodeCorps.Gettext.html
 CodeCorps.GuardianSerializer.html
+CodeCorps.Helpers.Policy.html
 CodeCorps.Helpers.Query.html
 CodeCorps.Helpers.Slug.html
 CodeCorps.Helpers.String.html
