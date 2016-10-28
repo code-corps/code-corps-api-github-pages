@@ -100,12 +100,16 @@ CodeCorps.SluggedRouteView.html
 CodeCorps.Stripe.Adapters.StripeAccount.html
 CodeCorps.Stripe.Adapters.StripeCard.html
 CodeCorps.Stripe.Adapters.StripeCustomer.html
+CodeCorps.Stripe.Adapters.StripePlan.html
+CodeCorps.Stripe.Adapters.StripeSubscription.html
 CodeCorps.StripeAccount.html
 CodeCorps.StripeAuth.html
 CodeCorps.StripeAuthController.html
 CodeCorps.StripeAuthView.html
 CodeCorps.StripeCard.html
 CodeCorps.StripeCustomer.html
+CodeCorps.StripePlan.html
+CodeCorps.StripeSubscription.html
 CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
