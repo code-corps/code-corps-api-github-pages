@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.2">
+    <meta name="generator" content="ExDoc v0.14.3">
     <title>CodeCorps.Analytics.Segment – code_corps v0.0.1</title>
-    <link rel="stylesheet" href="dist/app-bbdf358507.css" />
+    <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -48,9 +48,8 @@
 
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -150,6 +149,7 @@
             Functions
           </h1>
           <div class="detail" id="get_event_name/2">
+  
   <div class="detail-header">
     <a href="#get_event_name/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -157,23 +157,21 @@
     <span class="signature">get_event_name(action, model)</span>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">get_event_name(atom, struct) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></code></pre>
+          <pre>get_event_name(atom, struct) :: <a href="http://elixir-lang.org/docs/stable/elixir/String.html#t:t/0">String.t</a></pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Uses the action on the record to determine the event name that should be passed in for the <code class="inline">track</code> call.</p>
 
   </section>
 </div>
 <div class="detail" id="identify/1">
+  
   <div class="detail-header">
     <a href="#identify/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -181,23 +179,21 @@
     <span class="signature">identify(user)</span>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">identify(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: any</code></pre>
+          <pre>identify(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Calls <code class="inline">identify</code> in the configured API module.</p>
 
   </section>
 </div>
 <div class="detail" id="track/3">
+  
   <div class="detail-header">
     <a href="#track/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -205,24 +201,22 @@
     <span class="signature">track(arg, action, conn)</span>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">track({:ok, Ecto.Schema.t} | {:error, Ecto.Changeset.t}, atom, Plug.Conn.t) :: any</code></pre>
+          <pre>track({:ok, <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Schema.html#t:t/0">Ecto.Schema.t</a>} | {:error, <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}, atom, <a href="https://hexdocs.pm/plug/1.2.2/Plug.Conn.html#t:t/0">Plug.Conn.t</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Calls <code class="inline">track</code> in the configured API module.</p>
-<p>Receives either an <code class="inline">:ok</code> or <code class="inline">:error</code> tuple from an attempted <code class="inline">Ecto.Repo</code> operation.</p>
+<p>Receives either an <code class="inline">:ok</code> or <code class="inline">:error</code> tuple from an attempted <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> operation.</p>
 
   </section>
 </div>
 <div class="detail" id="track_sign_in/1">
+  
   <div class="detail-header">
     <a href="#track_sign_in/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -230,17 +224,14 @@
     <span class="signature">track_sign_in(conn)</span>
     
     
-  </div>
-  
-    <div class="specs">
-      <h4 class="specs-title">Specs</h4>
-      <div class="specs-list">
+    
+      <div class="specs">
         
-          <pre><code class="elixir">track_sign_in(Plug.Conn.t) :: any</code></pre>
+          <pre>track_sign_in(<a href="https://hexdocs.pm/plug/1.2.2/Plug.Conn.html#t:t/0">Plug.Conn.t</a>) :: any</pre>
         
       </div>
-    </div>
-  
+    
+  </div>
   <section class="docstring">
     <p>Calls <code class="inline">track</code> with the “Signed In” event in the configured API module.</p>
 
@@ -257,7 +248,7 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.3),
           </span>
           <span class="line">
             designed by
@@ -270,7 +261,7 @@
   </div>
 </section>
 </div>
-  <script src="dist/app-9b2d1e432c.js"></script>
+  <script src="dist/app-574613960f.js"></script>
   </body>
 </html>
 

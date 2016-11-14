@@ -1,3 +1,9 @@
+/home/ubuntu/code-corps-api/doc/dist/app-091c05798a.css
+/home/ubuntu/code-corps-api/doc/dist/app-574613960f.js
+/home/ubuntu/code-corps-api/doc/fonts/icomoon.eot
+/home/ubuntu/code-corps-api/doc/fonts/icomoon.svg
+/home/ubuntu/code-corps-api/doc/fonts/icomoon.ttf
+/home/ubuntu/code-corps-api/doc/fonts/icomoon.woff
 index.html
 api-reference.html
 404.html
@@ -139,9 +145,3 @@ CodeCorps.UserSocket.html
 CodeCorps.UserView.html
 CodeCorps.Validators.SlugValidator.html
 CodeCorps.Web.html
-dist/app-9b2d1e432c.js
-dist/app-bbdf358507.css
-fonts/icomoon.eot
-fonts/icomoon.svg
-fonts/icomoon.ttf
-fonts/icomoon.woff

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.13.2">
+    <meta name="generator" content="ExDoc v0.14.3">
     <title>CodeCorps.Helpers.Policy – code_corps v0.0.1</title>
-    <link rel="stylesheet" href="dist/app-bbdf358507.css" />
+    <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -48,9 +48,8 @@
 
     
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
@@ -111,7 +110,7 @@ authorization policies.</p>
     <a href="#get_membership/2">get_membership(arg1, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Retrieves the specified user’s membership record, from a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> struct or an <code class="inline">Ecto.Changeset</code>,
+    <div class="summary-synopsis"><p>Retrieves the specified user’s membership record, from a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>,
 containing an <code class="inline">organization_id</code> field, or from a <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a> struct</p>
 </div>
   
@@ -121,7 +120,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <a href="#get_project/1">get_project(arg1)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Retrieves a project record, from a model struct, or an <code class="inline">Ecto.Changeset</code> containing a <code class="inline">project_id</code> field</p>
+    <div class="summary-synopsis"><p>Retrieves a project record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a> containing a <code class="inline">project_id</code> field</p>
 </div>
   
 </div>
@@ -130,7 +129,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <a href="#get_role/1">get_role(changeset)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Retrieves the role field, from a <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a> struct or an <code class="inline">Ecto.Changeset</code></p>
+    <div class="summary-synopsis"><p>Retrieves the role field, from a <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a></p>
 </div>
   
 </div>
@@ -165,6 +164,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
             Functions
           </h1>
           <div class="detail" id="admin_or_higher?/1">
+  
   <div class="detail-header">
     <a href="#admin_or_higher?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -172,14 +172,15 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <span class="signature">admin_or_higher?(role)</span>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Determines if provided string is equal to one of <code class="inline">[&quot;admin&quot;, &quot;owner&quot;]</code></p>
 
   </section>
 </div>
 <div class="detail" id="contributor_or_higher?/1">
+  
   <div class="detail-header">
     <a href="#contributor_or_higher?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -187,14 +188,15 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <span class="signature">contributor_or_higher?(role)</span>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Determines if provided string is equal to one of <code class="inline">[&quot;contributor&quot;, &quot;admin&quot;, &quot;owner&quot;]</code></p>
 
   </section>
 </div>
 <div class="detail" id="get_membership/2">
+  
   <div class="detail-header">
     <a href="#get_membership/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -202,16 +204,17 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <span class="signature">get_membership(arg1, user)</span>
     
     
+    
   </div>
-  
   <section class="docstring">
-    <p>Retrieves the specified user’s membership record, from a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> struct or an <code class="inline">Ecto.Changeset</code>,
+    <p>Retrieves the specified user’s membership record, from a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>,
 containing an <code class="inline">organization_id</code> field, or from a <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a> struct</p>
 <p>Returns <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a></p>
 
   </section>
 </div>
 <div class="detail" id="get_project/1">
+  
   <div class="detail-header">
     <a href="#get_project/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -219,15 +222,16 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <span class="signature">get_project(arg1)</span>
     
     
+    
   </div>
-  
   <section class="docstring">
-    <p>Retrieves a project record, from a model struct, or an <code class="inline">Ecto.Changeset</code> containing a <code class="inline">project_id</code> field</p>
+    <p>Retrieves a project record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a> containing a <code class="inline">project_id</code> field</p>
 <p>Returns <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a></p>
 
   </section>
 </div>
 <div class="detail" id="get_role/1">
+  
   <div class="detail-header">
     <a href="#get_role/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -235,15 +239,16 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <span class="signature">get_role(changeset)</span>
     
     
+    
   </div>
-  
   <section class="docstring">
-    <p>Retrieves the role field, from a <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a> struct or an <code class="inline">Ecto.Changeset</code></p>
+    <p>Retrieves the role field, from a <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.0.5/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a></p>
 <p>Returns <code class="inline">:string</code></p>
 
   </section>
 </div>
 <div class="detail" id="owner?/1">
+  
   <div class="detail-header">
     <a href="#owner?/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
@@ -251,8 +256,8 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <span class="signature">owner?(arg1)</span>
     
     
+    
   </div>
-  
   <section class="docstring">
     <p>Determines if provided string is equal to “owner”</p>
 
@@ -269,7 +274,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.2),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.3),
           </span>
           <span class="line">
             designed by
@@ -282,7 +287,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
   </div>
 </section>
 </div>
-  <script src="dist/app-9b2d1e432c.js"></script>
+  <script src="dist/app-574613960f.js"></script>
   </body>
 </html>
 
