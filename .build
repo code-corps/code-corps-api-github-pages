@@ -111,6 +111,7 @@ CodeCorps.Stripe.Adapters.StripeSubscription.html
 CodeCorps.Stripe.InMemory.html
 CodeCorps.Stripe.InMemory.Customer.html
 CodeCorps.StripeAccount.html
+CodeCorps.StripeAccountPolicy.html
 CodeCorps.StripeAuth.html
 CodeCorps.StripeAuthController.html
 CodeCorps.StripeAuthView.html
