@@ -105,8 +105,8 @@ CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
 CodeCorps.Stripe.Adapters.StripeAccount.html
 CodeCorps.Stripe.Adapters.StripeCard.html
-CodeCorps.Stripe.Adapters.StripeCustomer.html
 CodeCorps.Stripe.Adapters.StripePlan.html
+CodeCorps.Stripe.Adapters.StripePlatformCustomer.html
 CodeCorps.Stripe.Adapters.StripeSubscription.html
 CodeCorps.Stripe.InMemory.html
 CodeCorps.Stripe.InMemory.Customer.html
@@ -116,11 +116,12 @@ CodeCorps.StripeAuth.html
 CodeCorps.StripeAuthController.html
 CodeCorps.StripeAuthView.html
 CodeCorps.StripeCard.html
-CodeCorps.StripeCustomer.html
-CodeCorps.StripeCustomerController.html
-CodeCorps.StripeCustomerPolicy.html
-CodeCorps.StripeCustomerView.html
+CodeCorps.StripeConnectCustomer.html
 CodeCorps.StripePlan.html
+CodeCorps.StripePlatformCustomer.html
+CodeCorps.StripePlatformCustomerController.html
+CodeCorps.StripePlatformCustomerPolicy.html
+CodeCorps.StripePlatformCustomerView.html
 CodeCorps.StripeService.html
 CodeCorps.StripeSubscription.html
 CodeCorps.Task.html
