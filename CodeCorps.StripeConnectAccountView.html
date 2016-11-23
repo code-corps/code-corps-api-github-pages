@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.OrganizationView – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeConnectAccountView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,7 +59,7 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.OrganizationView
+        CodeCorps.StripeConnectAccountView
         
         
       </h1>
@@ -110,6 +110,18 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#access_code/1">access_code(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#access_code/2">access_code(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#attributes/2">attributes(data, conn)</a>
   </div>
   
@@ -119,13 +131,97 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#description/1">description(m)</a>
+    <a href="#business_name/1">business_name(m)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#description/2">description(m, c)</a>
+    <a href="#business_name/2">business_name(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#business_url/1">business_url(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#business_url/2">business_url(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#charges_enabled/1">charges_enabled(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#charges_enabled/2">charges_enabled(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#country/1">country(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#country/2">country(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#default_currency/1">default_currency(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#default_currency/2">default_currency(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#details_submitted/1">details_submitted(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#details_submitted/2">details_submitted(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#display_name/1">display_name(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#display_name/2">display_name(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#email/1">email(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#email/2">email(m, c)</a>
   </div>
   
 </div>
@@ -149,30 +245,6 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#icon_large_url/1">icon_large_url(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#icon_large_url/2">icon_large_url(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#icon_thumb_url/1">icon_thumb_url(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#icon_thumb_url/2">icon_thumb_url(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#id/2">id(data, c)</a>
   </div>
   
@@ -182,13 +254,13 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#inserted_at/1">inserted_at(m)</a>
+    <a href="#id_from_stripe/1">id_from_stripe(m)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#inserted_at/2">inserted_at(m, c)</a>
+    <a href="#id_from_stripe/2">id_from_stripe(m, c)</a>
   </div>
   
 </div>
@@ -203,6 +275,18 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#managed/1">managed(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#managed/2">managed(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#meta/2">meta(struct, conn)</a>
   </div>
   
@@ -212,19 +296,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#name/1">name(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#name/2">name(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#organization_memberships/2">organization_memberships(struct, conn)</a>
+    <a href="#organization/2">organization(struct, conn)</a>
   </div>
   
 </div>
@@ -235,12 +307,6 @@
   
     <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a></p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#projects/2">projects(struct, conn)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -263,25 +329,37 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#slug/1">slug(m)</a>
+    <a href="#support_email/1">support_email(m)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#slug/2">slug(m, c)</a>
+    <a href="#support_email/2">support_email(m, c)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#slugged_route/2">slugged_route(struct, conn)</a>
+    <a href="#support_phone/1">support_phone(m)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#stripe_connect_account/2">stripe_connect_account(struct, conn)</a>
+    <a href="#support_phone/2">support_phone(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#support_url/1">support_url(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#support_url/2">support_url(m, c)</a>
   </div>
   
 </div>
@@ -298,6 +376,18 @@ to render a particular template</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#transfers_enabled/1">transfers_enabled(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transfers_enabled/2">transfers_enabled(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#type/0">type()</a>
   </div>
   
@@ -309,18 +399,6 @@ to render a particular template</p>
   
     <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:type/2"><code class="inline">JaSerializer.Serializer.type/2</code></a></p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#updated_at/1">updated_at(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#updated_at/2">updated_at(m, c)</a>
-  </div>
   
 </div>
 
@@ -392,6 +470,36 @@ to render a particular template</p>
 
   </section>
 </div>
+<div class="detail" id="access_code/1">
+  
+  <div class="detail-header">
+    <a href="#access_code/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">access_code(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="access_code/2">
+  
+  <div class="detail-header">
+    <a href="#access_code/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">access_code(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
 <div class="detail" id="attributes/2">
   
   <div class="detail-header">
@@ -408,13 +516,13 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="description/1">
+<div class="detail" id="business_name/1">
   
   <div class="detail-header">
-    <a href="#description/1" class="detail-link" title="Link to this function">
+    <a href="#business_name/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">description(m)</span>
+    <span class="signature">business_name(m)</span>
     
     
     
@@ -423,13 +531,223 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="description/2">
+<div class="detail" id="business_name/2">
   
   <div class="detail-header">
-    <a href="#description/2" class="detail-link" title="Link to this function">
+    <a href="#business_name/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">description(m, c)</span>
+    <span class="signature">business_name(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="business_url/1">
+  
+  <div class="detail-header">
+    <a href="#business_url/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">business_url(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="business_url/2">
+  
+  <div class="detail-header">
+    <a href="#business_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">business_url(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="charges_enabled/1">
+  
+  <div class="detail-header">
+    <a href="#charges_enabled/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">charges_enabled(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="charges_enabled/2">
+  
+  <div class="detail-header">
+    <a href="#charges_enabled/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">charges_enabled(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="country/1">
+  
+  <div class="detail-header">
+    <a href="#country/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">country(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="country/2">
+  
+  <div class="detail-header">
+    <a href="#country/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">country(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="default_currency/1">
+  
+  <div class="detail-header">
+    <a href="#default_currency/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">default_currency(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="default_currency/2">
+  
+  <div class="detail-header">
+    <a href="#default_currency/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">default_currency(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="details_submitted/1">
+  
+  <div class="detail-header">
+    <a href="#details_submitted/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">details_submitted(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="details_submitted/2">
+  
+  <div class="detail-header">
+    <a href="#details_submitted/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">details_submitted(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="display_name/1">
+  
+  <div class="detail-header">
+    <a href="#display_name/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">display_name(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="display_name/2">
+  
+  <div class="detail-header">
+    <a href="#display_name/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">display_name(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="email/1">
+  
+  <div class="detail-header">
+    <a href="#email/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">email(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="email/2">
+  
+  <div class="detail-header">
+    <a href="#email/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">email(m, c)</span>
     
     
     
@@ -483,66 +801,6 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="icon_large_url/1">
-  
-  <div class="detail-header">
-    <a href="#icon_large_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_large_url(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="icon_large_url/2">
-  
-  <div class="detail-header">
-    <a href="#icon_large_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_large_url(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="icon_thumb_url/1">
-  
-  <div class="detail-header">
-    <a href="#icon_thumb_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_thumb_url(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="icon_thumb_url/2">
-  
-  <div class="detail-header">
-    <a href="#icon_thumb_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">icon_thumb_url(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="id/2">
   
   <div class="detail-header">
@@ -559,13 +817,13 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="inserted_at/1">
+<div class="detail" id="id_from_stripe/1">
   
   <div class="detail-header">
-    <a href="#inserted_at/1" class="detail-link" title="Link to this function">
+    <a href="#id_from_stripe/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">inserted_at(m)</span>
+    <span class="signature">id_from_stripe(m)</span>
     
     
     
@@ -574,13 +832,13 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="inserted_at/2">
+<div class="detail" id="id_from_stripe/2">
   
   <div class="detail-header">
-    <a href="#inserted_at/2" class="detail-link" title="Link to this function">
+    <a href="#id_from_stripe/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">inserted_at(m, c)</span>
+    <span class="signature">id_from_stripe(m, c)</span>
     
     
     
@@ -605,6 +863,36 @@ to render a particular template</p>
 
   </section>
 </div>
+<div class="detail" id="managed/1">
+  
+  <div class="detail-header">
+    <a href="#managed/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">managed(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="managed/2">
+  
+  <div class="detail-header">
+    <a href="#managed/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">managed(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
 <div class="detail" id="meta/2">
   
   <div class="detail-header">
@@ -621,43 +909,13 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="name/1">
+<div class="detail" id="organization/2">
   
   <div class="detail-header">
-    <a href="#name/1" class="detail-link" title="Link to this function">
+    <a href="#organization/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">name(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="name/2">
-  
-  <div class="detail-header">
-    <a href="#name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">name(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="organization_memberships/2">
-  
-  <div class="detail-header">
-    <a href="#organization_memberships/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">organization_memberships(struct, conn)</span>
+    <span class="signature">organization(struct, conn)</span>
     
     
     
@@ -680,21 +938,6 @@ to render a particular template</p>
   <section class="docstring">
     <p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a>.</p>
 
-  </section>
-</div>
-<div class="detail" id="projects/2">
-  
-  <div class="detail-header">
-    <a href="#projects/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">projects(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
   </section>
 </div>
 <div class="detail" id="relationships/2">
@@ -731,13 +974,13 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="slug/1">
+<div class="detail" id="support_email/1">
   
   <div class="detail-header">
-    <a href="#slug/1" class="detail-link" title="Link to this function">
+    <a href="#support_email/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">slug(m)</span>
+    <span class="signature">support_email(m)</span>
     
     
     
@@ -746,13 +989,13 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="slug/2">
+<div class="detail" id="support_email/2">
   
   <div class="detail-header">
-    <a href="#slug/2" class="detail-link" title="Link to this function">
+    <a href="#support_email/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">slug(m, c)</span>
+    <span class="signature">support_email(m, c)</span>
     
     
     
@@ -761,13 +1004,13 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="slugged_route/2">
+<div class="detail" id="support_phone/1">
   
   <div class="detail-header">
-    <a href="#slugged_route/2" class="detail-link" title="Link to this function">
+    <a href="#support_phone/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">slugged_route(struct, conn)</span>
+    <span class="signature">support_phone(m)</span>
     
     
     
@@ -776,13 +1019,43 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="stripe_connect_account/2">
+<div class="detail" id="support_phone/2">
   
   <div class="detail-header">
-    <a href="#stripe_connect_account/2" class="detail-link" title="Link to this function">
+    <a href="#support_phone/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">stripe_connect_account(struct, conn)</span>
+    <span class="signature">support_phone(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="support_url/1">
+  
+  <div class="detail-header">
+    <a href="#support_url/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">support_url(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="support_url/2">
+  
+  <div class="detail-header">
+    <a href="#support_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">support_url(m, c)</span>
     
     
     
@@ -815,6 +1088,36 @@ to render a particular template.</p>
 
   </section>
 </div>
+<div class="detail" id="transfers_enabled/1">
+  
+  <div class="detail-header">
+    <a href="#transfers_enabled/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transfers_enabled(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="transfers_enabled/2">
+  
+  <div class="detail-header">
+    <a href="#transfers_enabled/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">transfers_enabled(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
 <div class="detail" id="type/0">
   
   <div class="detail-header">
@@ -844,36 +1147,6 @@ to render a particular template.</p>
   <section class="docstring">
     <p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:type/2"><code class="inline">JaSerializer.Serializer.type/2</code></a>.</p>
 
-  </section>
-</div>
-<div class="detail" id="updated_at/1">
-  
-  <div class="detail-header">
-    <a href="#updated_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">updated_at(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="updated_at/2">
-  
-  <div class="detail-header">
-    <a href="#updated_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">updated_at(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
   </section>
 </div>
 
