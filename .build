@@ -105,9 +105,9 @@ CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
 CodeCorps.Stripe.Adapters.StripeConnectAccount.html
 CodeCorps.Stripe.Adapters.StripeConnectPlan.html
+CodeCorps.Stripe.Adapters.StripeConnectSubscription.html
 CodeCorps.Stripe.Adapters.StripePlatformCard.html
 CodeCorps.Stripe.Adapters.StripePlatformCustomer.html
-CodeCorps.Stripe.Adapters.StripeSubscription.html
 CodeCorps.Stripe.StripeConnectAccount.html
 CodeCorps.Stripe.StripePlatformCard.html
 CodeCorps.Stripe.StripePlatformCustomer.html
@@ -121,6 +121,7 @@ CodeCorps.StripeConnectAccountView.html
 CodeCorps.StripeConnectCard.html
 CodeCorps.StripeConnectCustomer.html
 CodeCorps.StripeConnectPlan.html
+CodeCorps.StripeConnectSubscription.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCardController.html
 CodeCorps.StripePlatformCardPolicy.html
@@ -129,7 +130,6 @@ CodeCorps.StripePlatformCustomer.html
 CodeCorps.StripePlatformCustomerController.html
 CodeCorps.StripePlatformCustomerPolicy.html
 CodeCorps.StripePlatformCustomerView.html
-CodeCorps.StripeSubscription.html
 CodeCorps.StripityStripeTesting.Account.html
 CodeCorps.StripityStripeTesting.Card.html
 CodeCorps.StripityStripeTesting.Connect.OAuth.html
