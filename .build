@@ -109,6 +109,7 @@ CodeCorps.Stripe.Adapters.StripeConnectSubscription.html
 CodeCorps.Stripe.Adapters.StripePlatformCard.html
 CodeCorps.Stripe.Adapters.StripePlatformCustomer.html
 CodeCorps.Stripe.StripeConnectAccount.html
+CodeCorps.Stripe.StripeConnectPlan.html
 CodeCorps.Stripe.StripePlatformCard.html
 CodeCorps.Stripe.StripePlatformCustomer.html
 CodeCorps.StripeAuth.html
@@ -121,6 +122,9 @@ CodeCorps.StripeConnectAccountView.html
 CodeCorps.StripeConnectCard.html
 CodeCorps.StripeConnectCustomer.html
 CodeCorps.StripeConnectPlan.html
+CodeCorps.StripeConnectPlanController.html
+CodeCorps.StripeConnectPlanPolicy.html
+CodeCorps.StripeConnectPlanView.html
 CodeCorps.StripeConnectSubscription.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCardController.html
@@ -134,6 +138,7 @@ CodeCorps.StripityStripeTesting.Account.html
 CodeCorps.StripityStripeTesting.Card.html
 CodeCorps.StripityStripeTesting.Connect.OAuth.html
 CodeCorps.StripityStripeTesting.Customer.html
+CodeCorps.StripityStripeTesting.Plan.html
 CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
