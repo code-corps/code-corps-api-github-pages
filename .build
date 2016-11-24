@@ -126,6 +126,7 @@ CodeCorps.StripeConnectPlanController.html
 CodeCorps.StripeConnectPlanPolicy.html
 CodeCorps.StripeConnectPlanView.html
 CodeCorps.StripeConnectSubscription.html
+CodeCorps.StripeConnectSubscriptionPolicy.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCardController.html
 CodeCorps.StripePlatformCardPolicy.html
@@ -139,6 +140,7 @@ CodeCorps.StripityStripeTesting.Card.html
 CodeCorps.StripityStripeTesting.Connect.OAuth.html
 CodeCorps.StripityStripeTesting.Customer.html
 CodeCorps.StripityStripeTesting.Plan.html
+CodeCorps.StripityStripeTesting.Subscription.html
 CodeCorps.Task.html
 CodeCorps.TaskController.html
 CodeCorps.TaskPolicy.html
