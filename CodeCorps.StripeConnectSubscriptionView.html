@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.UserView – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeConnectSubscriptionView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,7 +59,7 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.UserView
+        CodeCorps.StripeConnectSubscriptionView
         
         
       </h1>
@@ -119,46 +119,6 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#biography/1">biography(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#biography/2">biography(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#email/1">email(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#email/2">email(m, c)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns the user email or an empty string, depending on the user
-being rendered is the authenticated user, or some other user</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#first_name/1">first_name(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#first_name/2">first_name(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#format/1">format(data)</a>
   </div>
   
@@ -198,18 +158,6 @@ being rendered is the authenticated user, or some other user</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#last_name/1">last_name(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#last_name/2">last_name(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#links/2">links(data, conn)</a>
   </div>
   
@@ -228,41 +176,23 @@ being rendered is the authenticated user, or some other user</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#organization_memberships/2">organization_memberships(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#photo_large_url/1">photo_large_url(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#photo_large_url/2">photo_large_url(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#photo_thumb_url/1">photo_thumb_url(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#photo_thumb_url/2">photo_thumb_url(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#preload/3">preload(query, conn, arg3)</a>
   </div>
   
     <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a></p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#quantity/1">quantity(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#quantity/2">quantity(m, c)</a>
+  </div>
   
 </div>
 <div class="summary-row">
@@ -285,49 +215,7 @@ being rendered is the authenticated user, or some other user</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#slugged_route/2">slugged_route(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#state/1">state(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#state/2">state(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#state_transition/1">state_transition(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#state_transition/2">state_transition(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#stripe_connect_subscriptions/2">stripe_connect_subscriptions(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#stripe_platform_card/2">stripe_platform_card(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#stripe_platform_customer/2">stripe_platform_customer(struct, conn)</a>
+    <a href="#stripe_connect_plan/2">stripe_connect_plan(struct, conn)</a>
   </div>
   
 </div>
@@ -340,18 +228,6 @@ being rendered is the authenticated user, or some other user</p>
 By default it raises but can be customized
 to render a particular template</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#twitter/1">twitter(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#twitter/2">twitter(m, c)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -383,43 +259,7 @@ to render a particular template</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#user_categories/2">user_categories(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user_roles/2">user_roles(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user_skills/2">user_skills(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#username/1">username(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#username/2">username(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#website/1">website(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#website/2">website(m, c)</a>
+    <a href="#user/2">user(struct, conn)</a>
   </div>
   
 </div>
@@ -506,99 +346,6 @@ to render a particular template</p>
   <section class="docstring">
     <p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:attributes/2"><code class="inline">JaSerializer.Serializer.attributes/2</code></a>.</p>
 
-  </section>
-</div>
-<div class="detail" id="biography/1">
-  
-  <div class="detail-header">
-    <a href="#biography/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">biography(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="biography/2">
-  
-  <div class="detail-header">
-    <a href="#biography/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">biography(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="email/1">
-  
-  <div class="detail-header">
-    <a href="#email/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">email(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="email/2">
-  
-  <div class="detail-header">
-    <a href="#email/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">email(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Returns the user email or an empty string, depending on the user
-being rendered is the authenticated user, or some other user.</p>
-<p>Users can only see their own emails. Everyone else’s are private.</p>
-
-  </section>
-</div>
-<div class="detail" id="first_name/1">
-  
-  <div class="detail-header">
-    <a href="#first_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">first_name(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="first_name/2">
-  
-  <div class="detail-header">
-    <a href="#first_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">first_name(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
   </section>
 </div>
 <div class="detail" id="format/1">
@@ -692,36 +439,6 @@ being rendered is the authenticated user, or some other user.</p>
     
   </section>
 </div>
-<div class="detail" id="last_name/1">
-  
-  <div class="detail-header">
-    <a href="#last_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">last_name(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="last_name/2">
-  
-  <div class="detail-header">
-    <a href="#last_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">last_name(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="links/2">
   
   <div class="detail-header">
@@ -754,81 +471,6 @@ being rendered is the authenticated user, or some other user.</p>
 
   </section>
 </div>
-<div class="detail" id="organization_memberships/2">
-  
-  <div class="detail-header">
-    <a href="#organization_memberships/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">organization_memberships(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="photo_large_url/1">
-  
-  <div class="detail-header">
-    <a href="#photo_large_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">photo_large_url(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="photo_large_url/2">
-  
-  <div class="detail-header">
-    <a href="#photo_large_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">photo_large_url(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="photo_thumb_url/1">
-  
-  <div class="detail-header">
-    <a href="#photo_thumb_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">photo_thumb_url(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="photo_thumb_url/2">
-  
-  <div class="detail-header">
-    <a href="#photo_thumb_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">photo_thumb_url(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="preload/3">
   
   <div class="detail-header">
@@ -843,6 +485,36 @@ being rendered is the authenticated user, or some other user.</p>
   <section class="docstring">
     <p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.1/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a>.</p>
 
+  </section>
+</div>
+<div class="detail" id="quantity/1">
+  
+  <div class="detail-header">
+    <a href="#quantity/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">quantity(m)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="quantity/2">
+  
+  <div class="detail-header">
+    <a href="#quantity/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">quantity(m, c)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="relationships/2">
@@ -879,118 +551,13 @@ being rendered is the authenticated user, or some other user.</p>
 
   </section>
 </div>
-<div class="detail" id="slugged_route/2">
+<div class="detail" id="stripe_connect_plan/2">
   
   <div class="detail-header">
-    <a href="#slugged_route/2" class="detail-link" title="Link to this function">
+    <a href="#stripe_connect_plan/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">slugged_route(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="state/1">
-  
-  <div class="detail-header">
-    <a href="#state/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">state(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="state/2">
-  
-  <div class="detail-header">
-    <a href="#state/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">state(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="state_transition/1">
-  
-  <div class="detail-header">
-    <a href="#state_transition/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">state_transition(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="state_transition/2">
-  
-  <div class="detail-header">
-    <a href="#state_transition/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">state_transition(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="stripe_connect_subscriptions/2">
-  
-  <div class="detail-header">
-    <a href="#stripe_connect_subscriptions/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">stripe_connect_subscriptions(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="stripe_platform_card/2">
-  
-  <div class="detail-header">
-    <a href="#stripe_platform_card/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">stripe_platform_card(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="stripe_platform_customer/2">
-  
-  <div class="detail-header">
-    <a href="#stripe_platform_customer/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">stripe_platform_customer(struct, conn)</span>
+    <span class="signature">stripe_connect_plan(struct, conn)</span>
     
     
     
@@ -1021,36 +588,6 @@ being rendered is the authenticated user, or some other user.</p>
 By default it raises but can be customized
 to render a particular template.</p>
 
-  </section>
-</div>
-<div class="detail" id="twitter/1">
-  
-  <div class="detail-header">
-    <a href="#twitter/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">twitter(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="twitter/2">
-  
-  <div class="detail-header">
-    <a href="#twitter/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">twitter(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
   </section>
 </div>
 <div class="detail" id="type/0">
@@ -1114,103 +651,13 @@ to render a particular template.</p>
     
   </section>
 </div>
-<div class="detail" id="user_categories/2">
+<div class="detail" id="user/2">
   
   <div class="detail-header">
-    <a href="#user_categories/2" class="detail-link" title="Link to this function">
+    <a href="#user/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">user_categories(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="user_roles/2">
-  
-  <div class="detail-header">
-    <a href="#user_roles/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">user_roles(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="user_skills/2">
-  
-  <div class="detail-header">
-    <a href="#user_skills/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">user_skills(struct, conn)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="username/1">
-  
-  <div class="detail-header">
-    <a href="#username/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">username(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="username/2">
-  
-  <div class="detail-header">
-    <a href="#username/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">username(m, c)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="website/1">
-  
-  <div class="detail-header">
-    <a href="#website/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">website(m)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="website/2">
-  
-  <div class="detail-header">
-    <a href="#website/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">website(m, c)</span>
+    <span class="signature">user(struct, conn)</span>
     
     
     
