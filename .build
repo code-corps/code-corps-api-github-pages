@@ -33,6 +33,7 @@ CodeCorps.DonationGoal.html
 CodeCorps.DonationGoalController.html
 CodeCorps.DonationGoalPolicy.html
 CodeCorps.DonationGoalView.html
+CodeCorps.DonationGoalsManager.html
 CodeCorps.Endpoint.html
 CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html

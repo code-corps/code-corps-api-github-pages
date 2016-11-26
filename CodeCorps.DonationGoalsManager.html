@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.Project – code_corps v0.0.1</title>
+    <title>CodeCorps.DonationGoalsManager – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,14 +59,19 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Project
+        CodeCorps.DonationGoalsManager
         
         
       </h1>
 
       
         <section id="moduledoc">
-          <p>Represents a project on Code Corps, e.g. the “Code Corps” project itself.</p>
+          <p>Handles CRUD operations for donation goals.</p>
+<p>When operations happen on <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a>, we need to set
+the current donation goal on <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a>.</p>
+<p>The current donation goal should be the smallest value that is
+greater than the project’s current total donations, <em>or</em> falls back to
+the largest donation goal.</p>
 
         </section>
       
@@ -88,35 +93,20 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#changeset/2">changeset(struct, params)</a>
+    <a href="#create/1">create(attributes)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/2">create_changeset(struct, params)</a>
+    <a href="#set_current_goal_for_project/1">set_current_goal_for_project(project)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset for creating a project</p>
-</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#set_current_donation_goal_changeset/2">set_current_donation_goal_changeset(struct, params)</a>
+    <a href="#update/2">update(donation_goal, attributes)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset for setting the current donation goal</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_changeset/2">update_changeset(struct, params)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset for updating a project</p>
-</div>
   
 </div>
 
@@ -140,13 +130,13 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="changeset/2">
+          <div class="detail" id="create/1">
   
   <div class="detail-header">
-    <a href="#changeset/2" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">changeset(struct, params)</span>
+    <span class="signature">create(attributes)</span>
     
     
     
@@ -155,52 +145,34 @@
     
   </section>
 </div>
-<div class="detail" id="create_changeset/2">
+<div class="detail" id="set_current_goal_for_project/1">
   
   <div class="detail-header">
-    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#set_current_goal_for_project/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create_changeset(struct, params)</span>
+    <span class="signature">set_current_goal_for_project(project)</span>
     
     
     
   </div>
   <section class="docstring">
-    <p>Builds a changeset for creating a project.</p>
-
+    
   </section>
 </div>
-<div class="detail" id="set_current_donation_goal_changeset/2">
+<div class="detail" id="update/2">
   
   <div class="detail-header">
-    <a href="#set_current_donation_goal_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#update/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">set_current_donation_goal_changeset(struct, params)</span>
+    <span class="signature">update(donation_goal, attributes)</span>
     
     
     
   </div>
   <section class="docstring">
-    <p>Builds a changeset for setting the current donation goal.</p>
-
-  </section>
-</div>
-<div class="detail" id="update_changeset/2">
-  
-  <div class="detail-header">
-    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">update_changeset(struct, params)</span>
     
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Builds a changeset for updating a project.</p>
-
   </section>
 </div>
 
