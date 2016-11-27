@@ -96,17 +96,28 @@ the largest donation goal.</p>
     <a href="#create/1">create(attributes)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Creates the <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by wrapping the following in a
+transaction</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#set_current_goal_for_project/1">set_current_goal_for_project(project)</a>
-  </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#update/2">update(donation_goal, attributes)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Updates the <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by wrapping the following in a
+transaction</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_related_goals/1">update_related_goals(arg1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Updates sibling goals for a <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by</p>
+</div>
   
 </div>
 
@@ -142,22 +153,15 @@ the largest donation goal.</p>
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="set_current_goal_for_project/1">
-  
-  <div class="detail-header">
-    <a href="#set_current_goal_for_project/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">set_current_goal_for_project(project)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Creates the <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by wrapping the following in a
+transaction:</p>
+<ul>
+<li>Inserting the donation goal
+</li>
+<li>Updating the sibling goals with <a href="#update_related_goals/1"><code class="inline">update_related_goals/1</code></a>
+</li>
+</ul>
+
   </section>
 </div>
 <div class="detail" id="update/2">
@@ -172,7 +176,56 @@ the largest donation goal.</p>
     
   </div>
   <section class="docstring">
+    <p>Updates the <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by wrapping the following in a
+transaction:</p>
+<ul>
+<li>Updating the donation goal
+</li>
+<li>Updating the sibling goals with <a href="#update_related_goals/1"><code class="inline">update_related_goals/1</code></a>
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="update_related_goals/1">
+  
+  <div class="detail-header">
+    <a href="#update_related_goals/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">update_related_goals(arg1)</span>
     
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Updates sibling goals for a <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by:</p>
+<ul>
+<li>Finding this goal’s project
+</li>
+<li>Calculating the total donations for the project
+</li>
+<li>Finding the current goal for that project
+</li>
+<li>Setting <code class="inline">current</code> on every sibling goal to <code class="inline">false</code>
+</li>
+<li>Setting <code class="inline">current</code> on the found goal to <code class="inline">true</code>
+</li>
+</ul>
+<p>The current goal is either:</p>
+<ul>
+<li>The goal with the lowest <code class="inline">amount</code> greater than the project’s total raised;
+</li>
+<li>Failing that, the highest goal less than the amount raised
+</li>
+</ul>
+<p>For example, if the project has goals of $100 and $200, and has raised $150,
+then the current goal is $200.</p>
+<p>If the project has a goal of $100 only and has raised $150, then the current
+goal is $100; the project is over that goal, but it is still the current
+one. It is therefore possible for a goal to have both <code class="inline">current</code> and <code class="inline">achieved</code>
+be true.</p>
+
   </section>
 </div>
 
