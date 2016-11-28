@@ -5,7 +5,7 @@
 /home/ubuntu/code-corps-api/doc/fonts/icomoon.ttf
 /home/ubuntu/code-corps-api/doc/fonts/icomoon.woff
 index.html
-api-reference.html
+README.html
 404.html
 dist/sidebar_items.js
 Canary.Abilities.html
@@ -183,3 +183,6 @@ CodeCorps.UserSocket.html
 CodeCorps.UserView.html
 CodeCorps.Validators.SlugValidator.html
 CodeCorps.Web.html
+api-reference.html
+readme.html
+license.html
