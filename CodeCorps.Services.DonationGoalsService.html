@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.DonationGoalsManager – code_corps v0.0.1</title>
+    <title>CodeCorps.Services.DonationGoalsService – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.DonationGoalsManager
+        CodeCorps.Services.DonationGoalsService
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/donation_goals_manager.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/donation_goals.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -117,6 +117,15 @@ transaction</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#update_project_goals/1">update_project_goals(project)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Updates all <code class="inline">CodeCorpes.DonationGoal</code> records for a project</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#update_related_goals/1">update_related_goals(arg1)</a>
   </div>
   
@@ -153,7 +162,7 @@ transaction</p>
     </a>
     <span class="signature">create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/donation_goals_manager.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/donation_goals.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -180,7 +189,7 @@ transaction:</p>
     </a>
     <span class="signature">update(donation_goal, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/donation_goals_manager.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/donation_goals.ex#L51" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -199,6 +208,39 @@ transaction:</p>
 
   </section>
 </div>
+<div class="detail" id="update_project_goals/1">
+  
+  <div class="detail-header">
+    <a href="#update_project_goals/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">update_project_goals(project)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/donation_goals.ex#L114" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Updates all <code class="inline">CodeCorpes.DonationGoal</code> records for a project.</p>
+<p>To be used when something related to the project’s donation goals changes,
+but not any of the donation goals directly.</p>
+<p>For example, a customer could update their subscription, which would change the total
+amount in monthly donations to a project, so the current goal might need updating.</p>
+<p>It updates all goals for a project by</p>
+<ul>
+<li>finding the current goal for a project
+</li>
+<li>setting <code class="inline">current</code> for each of its siblings to false
+</li>
+<li>setting <code class="inline">current</code> for the current goal to true
+</li>
+</ul>
+
+  </section>
+</div>
 <div class="detail" id="update_related_goals/1">
   
   <div class="detail-header">
@@ -207,7 +249,7 @@ transaction:</p>
     </a>
     <span class="signature">update_related_goals(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/donation_goals_manager.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/donation_goals.ex#L91" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -218,8 +260,6 @@ transaction:</p>
     <p>Updates sibling goals for a <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a> by:</p>
 <ul>
 <li>Finding this goal’s project
-</li>
-<li>Calculating the total donations for the project
 </li>
 <li>Finding the current goal for that project
 </li>
