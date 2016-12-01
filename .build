@@ -148,6 +148,7 @@ CodeCorps.StripeService.StripeConnectPlanService.html
 CodeCorps.StripeService.StripeConnectSubscriptionService.html
 CodeCorps.StripeService.StripePlatformCardService.html
 CodeCorps.StripeService.StripePlatformCustomerService.html
+CodeCorps.StripeService.Validators.ProjectCanEnableDonations.html
 CodeCorps.StripeTesting.Account.html
 CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Connect.OAuth.html
