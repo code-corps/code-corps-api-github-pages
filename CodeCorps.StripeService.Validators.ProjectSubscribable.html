@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.StripeService.StripeConnectSubscriptionService – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeService.Validators.ProjectSubscribable – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,15 +59,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.StripeConnectSubscriptionService
+        CodeCorps.StripeService.Validators.ProjectSubscribable
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/validators/project_subscribable.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Ensures a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> is able to receive subscriptions.</p>
+
+        </section>
       
 
       
@@ -87,14 +92,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create/1">find_or_create(attributes)</a>
+    <a href="#validate/1">validate(project)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Determines if the provided <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> is able to
+get a subscription by a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_from_stripe/2">update_from_stripe(stripe_id, connect_customer_id)</a>
-  </div>
   
 </div>
 
@@ -118,15 +121,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_or_create/1">
+          <div class="detail" id="validate/1">
   
   <div class="detail-header">
-    <a href="#find_or_create/1" class="detail-link" title="Link to this function">
+    <a href="#validate/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">find_or_create(attributes)</span>
+    <span class="signature">validate(project)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/validators/project_subscribable.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -134,26 +137,20 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="update_from_stripe/2">
-  
-  <div class="detail-header">
-    <a href="#update_from_stripe/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">update_from_stripe(stripe_id, connect_customer_id)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L38" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Determines if the provided <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> is able to
+get a subscription by a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+<p>For a project to be able to receive subscriptions,
+it needs to have proper associations set up.</p>
+<p>These are:</p>
+<ul>
+<li><code class="inline">StripeConnectPlan</code>
+</li>
+<li><code class="inline">Organization</code> with a <code class="inline">StripeConnectAccount</code>
+</li>
+</ul>
+<p>If the project has these relationships set up, it returns <code class="inline">{:ok, project}</code></p>
+<p>In any other case, it returns {:error, :project_not_ready}</p>
+
   </section>
 </div>
 

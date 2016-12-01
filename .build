@@ -140,6 +140,7 @@ CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCardAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCustomerAdapter.html
 CodeCorps.StripeService.Events.AccountUpdated.html
+CodeCorps.StripeService.Events.CustomerSubscriptionDeleted.html
 CodeCorps.StripeService.Events.CustomerSubscriptionUpdated.html
 CodeCorps.StripeService.StripeConnectAccountService.html
 CodeCorps.StripeService.StripeConnectCardService.html
@@ -149,6 +150,8 @@ CodeCorps.StripeService.StripeConnectSubscriptionService.html
 CodeCorps.StripeService.StripePlatformCardService.html
 CodeCorps.StripeService.StripePlatformCustomerService.html
 CodeCorps.StripeService.Validators.ProjectCanEnableDonations.html
+CodeCorps.StripeService.Validators.ProjectSubscribable.html
+CodeCorps.StripeService.Validators.UserCanSubscribe.html
 CodeCorps.StripeTesting.Account.html
 CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Connect.OAuth.html
