@@ -31,6 +31,7 @@ CodeCorps.DonationGoal.html
 CodeCorps.DonationGoalController.html
 CodeCorps.DonationGoalPolicy.html
 CodeCorps.DonationGoalView.html
+CodeCorps.Emails.Test.html
 CodeCorps.Endpoint.html
 CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html
@@ -43,6 +44,7 @@ CodeCorps.Helpers.Slug.html
 CodeCorps.Helpers.String.html
 CodeCorps.JsonPayloadStrategy.html
 CodeCorps.LayoutView.html
+CodeCorps.Mailer.html
 CodeCorps.MapUtils.html
 CodeCorps.ModelCase.html
 CodeCorps.Organization.html
