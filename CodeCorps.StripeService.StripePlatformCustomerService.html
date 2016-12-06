@@ -96,7 +96,19 @@
     <a href="#update/2">update(customer, attributes)</a>
   </div>
   
-    <div class="summary-synopsis"></div>
+    <div class="summary-synopsis"><p>Updates a <a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> local and associated `%Stripe.Customer{} API record
+with provided attributes</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_from_stripe/1">update_from_stripe(id_from_stripe)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Updates a <a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> local record using `%Stripe.Customer{} API record
+retrieved from API using the provided Stripe ID</p>
+</div>
   
 </div>
 
@@ -128,7 +140,7 @@
     </a>
     <span class="signature">create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L11" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -147,7 +159,7 @@
     </a>
     <span class="signature">update(customer, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -155,7 +167,45 @@
     
   </div>
   <section class="docstring">
+    <p>Updates a <a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> local and associated <code class="inline">%Stripe.Customer{} API record
+with provided attributes
+
+Returns
+
+-</code>{:ok, %CodeCorps.StriePlatformCustomer{}, %Stripe.Customer{}}<code class="inline">if everything was updated
+-</code>{:error, %Ecto.Changeset{}}<code class="inline">-if there was a validation issue while updating the local record
+-</code>{:error, %Stripe.APIErrorResposne{}}<code class="inline">- if there was a problem with updating the API record
+-</code>{:error, :unhandled}` -if something unexpected went wrong</p>
+
+  </section>
+</div>
+<div class="detail" id="update_from_stripe/1">
+  
+  <div class="detail-header">
+    <a href="#update_from_stripe/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">update_from_stripe(id_from_stripe)</span>
     
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L58" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Updates a <a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> local record using <code class="inline">%Stripe.Customer{} API record
+retrieved from API using the provided Stripe ID
+
+Returns
+
+-</code>{:ok, %CodeCorps.StripePlatformCustomer{}}<code class="inline">if the local record was updated
+-</code>{:error, :not_found}<code class="inline">- If there was no record witht he specified Stripe ID
+-</code>{:error, %Ecto.Changeset{}}<code class="inline">-if there was a validation issue while updating the local record
+-</code>{:error, %Stripe.APIErrorResposne{}}<code class="inline">- if there was a problem with retrieving the API record
+-</code>{:error, :unhandled}` -if something unexpected went wrong</p>
+
   </section>
 </div>
 
