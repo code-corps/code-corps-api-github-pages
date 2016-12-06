@@ -143,6 +143,7 @@ CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCardAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCustomerAdapter.html
 CodeCorps.StripeService.Events.AccountUpdated.html
+CodeCorps.StripeService.Events.CustomerSourceUpdated.html
 CodeCorps.StripeService.Events.CustomerSubscriptionDeleted.html
 CodeCorps.StripeService.Events.CustomerSubscriptionUpdated.html
 CodeCorps.StripeService.Events.CustomerUpdated.html
