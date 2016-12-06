@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.StripeService.StripePlatformCustomerService – code_corps v0.0.1</title>
+    <title>CodeCorps.Services.UserService – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,15 +59,23 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.StripePlatformCustomerService
+        CodeCorps.Services.UserService
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/user_service.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Handles CRUD operations for users.</p>
+<p>When operations happen on <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>, we need to make sure changes
+are propagated to related records, ex., <a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> and
+<a href="CodeCorps.StripeConnectCustomer.html"><code class="inline">CodeCorps.StripeConnectCustomer</code></a></p>
+
+        </section>
       
 
       
@@ -87,16 +95,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create/1">create(attributes)</a>
+    <a href="#update/2">update(user, attributes)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Updates a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> record and, if necessary, associated
+<a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> and <a href="CodeCorps.StripeConnectCustomer.html"><code class="inline">CodeCorps.StripeConnectCustomer</code></a> records</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update/2">update(customer, attributes)</a>
-  </div>
-  
-    <div class="summary-synopsis"></div>
   
 </div>
 
@@ -120,34 +124,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create/1">
-  
-  <div class="detail-header">
-    <a href="#create/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">create(attributes)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L9" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="update/2">
+          <div class="detail" id="update/2">
   
   <div class="detail-header">
     <a href="#update/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">update(customer, attributes)</span>
+    <span class="signature">update(user, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_platform_customer.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/user_service.ex#L31" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -155,7 +140,24 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Updates a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> record and, if necessary, associated
+<a href="CodeCorps.StripePlatformCustomer.html"><code class="inline">CodeCorps.StripePlatformCustomer</code></a> and <a href="CodeCorps.StripeConnectCustomer.html"><code class="inline">CodeCorps.StripeConnectCustomer</code></a> records.</p>
+<p>These related records inherit the email field from the user,
+so they need to be kept in sync, both locally, and on the Stripe platform.</p>
+<p>Returns one of</p>
+<ul>
+<li><code class="inline">{:ok, %CodeCorps.User{}, nil, nil}</code>
+</li>
+<li><code class="inline">{:ok, %CodeCorps.User{}, %CodeCorps.StripePlatformCustomer{}, nil}</code>
+</li>
+<li><code class="inline">{:ok, %CodeCorps.User{}, %CodeCorps.StripePlatformCustomer{}, %CodeCorps.StripeConnectCustomer{}}</code>
+</li>
+<li><code class="inline">{:error, %Ecto.Changeset{}}</code>
+</li>
+<li><code class="inline">{:error, :unhandled}</code>
+</li>
+</ul>
+
   </section>
 </div>
 

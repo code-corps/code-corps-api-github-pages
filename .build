@@ -100,6 +100,7 @@ CodeCorps.Services.Base64ImageUploaderService.html
 CodeCorps.Services.DonationGoalsService.html
 CodeCorps.Services.MarkdownRendererService.html
 CodeCorps.Services.ProjectService.html
+CodeCorps.Services.UserService.html
 CodeCorps.Skill.html
 CodeCorps.SkillController.html
 CodeCorps.SkillPolicy.html
