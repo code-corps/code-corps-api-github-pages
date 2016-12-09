@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.StripeService.StripeConnectCustomerService – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeEvent – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,15 +59,42 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.StripeConnectCustomerService
+        CodeCorps.StripeEvent
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_customer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/stripe_event.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Represents a reference to single Stripe API Event object</p>
+<h2 id="module-fields" class="section-heading">
+  <a href="#module-fields" class="hover-link"><i class="icon-link"></i></a>
+  Fields
+</h2>
+
+<ul>
+<li><code class="inline">id_from_stripe</code> - Stripe’s <code class="inline">id</code>
+</li>
+<li><code class="inline">status</code> - “unprocessed”, “processed”, or “errored”
+</li>
+</ul>
+<h2 id="module-note-on" class="section-heading">
+  <a href="#module-note-on" class="hover-link"><i class="icon-link"></i></a>
+  Note on <code class="inline">status</code>
+</h2>
+
+<p>When the event is received via a webhook, it is stored as “unprocessed”.
+If during processing, there is an issue, it is set to “errored”. Once
+successfuly processed, it is set to “processed”.</p>
+<p>There are cases where Stripe can send multiple webhooks for the same event,
+so when such a request is received, an event that is “errored” or “unprocessed”
+can be processed again, while a “processed” event is ignored.</p>
+
+        </section>
       
 
       
@@ -87,14 +114,24 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create/2">find_or_create(platform_customer, connect_account)</a>
+    <a href="#create_changeset/2">create_changeset(struct, params \\ %{})</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset for storing a new event reference into the database.
+Accepts <code class="inline">:id_from_stripe</code> only. The <code class="inline">status</code> field is set to “unprocessed”
+by default</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update/2">update(stripe_connect_customer, attributes)</a>
+    <a href="#update_changeset/2">update_changeset(struct, params)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset for updating the status of an existing event reference.
+Accepts <code class="inline">:status</code> only and ensures it’s one of “unprocessed”, “processed” or
+“errored”</p>
+</div>
   
 </div>
 
@@ -118,15 +155,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_or_create/2">
+          <div class="detail" id="create_changeset/2">
+  
+    <span id="create_changeset/1" />
   
   <div class="detail-header">
-    <a href="#find_or_create/2" class="detail-link" title="Link to this function">
+    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">find_or_create(platform_customer, connect_account)</span>
+    <span class="signature">create_changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_customer.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/stripe_event.ex#L36" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -134,18 +173,21 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Builds a changeset for storing a new event reference into the database.
+Accepts <code class="inline">:id_from_stripe</code> only. The <code class="inline">status</code> field is set to “unprocessed”
+by default.</p>
+
   </section>
 </div>
-<div class="detail" id="update/2">
+<div class="detail" id="update_changeset/2">
   
   <div class="detail-header">
-    <a href="#update/2" class="detail-link" title="Link to this function">
+    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">update(stripe_connect_customer, attributes)</span>
+    <span class="signature">update_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_customer.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/stripe_event.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -153,7 +195,10 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Builds a changeset for updating the status of an existing event reference.
+Accepts <code class="inline">:status</code> only and ensures it’s one of “unprocessed”, “processed” or
+“errored”.</p>
+
   </section>
 </div>
 

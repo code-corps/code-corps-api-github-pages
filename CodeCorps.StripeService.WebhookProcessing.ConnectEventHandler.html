@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.StripeConnectEventsController – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeService.WebhookProcessing.ConnectEventHandler – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,15 +59,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeConnectEventsController
+        CodeCorps.StripeService.WebhookProcessing.ConnectEventHandler
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/controllers/stripe_connect_events_controller.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/connect_event_handler.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>In charge of handling Stripe Connect webhooks</p>
+
+        </section>
       
 
       
@@ -87,8 +92,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create/2">create(conn, params)</a>
+    <a href="#handle_event/1">handle_event(attributes)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Handles Stripe Connect webhooks</p>
+</div>
   
 </div>
 
@@ -112,15 +120,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create/2">
+          <div class="detail" id="handle_event/1">
   
   <div class="detail-header">
-    <a href="#create/2" class="detail-link" title="Link to this function">
+    <a href="#handle_event/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create(conn, params)</span>
+    <span class="signature">handle_event(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/controllers/stripe_connect_events_controller.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/connect_event_handler.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -128,7 +136,20 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Handles Stripe Connect webhooks</p>
+<h2 id="handle_event/1-returns" class="section-heading">
+  <a href="#handle_event/1-returns" class="hover-link"><i class="icon-link"></i></a>
+  Returns
+</h2>
+
+<ul>
+<li>The result of calling the specific handlers <code class="inline">handle/1</code> function. This result ought ot be a tupple,
+  in which the first member is <code class="inline">:ok</code>, followed by one or more other elements, usually modified records.
+</li>
+<li><code class="inline">{:ok, :unhandled_event}</code> if the specific event is not supported yet or at all
+</li>
+</ul>
+
   </section>
 </div>
 

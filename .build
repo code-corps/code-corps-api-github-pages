@@ -126,6 +126,7 @@ CodeCorps.StripeConnectSubscription.html
 CodeCorps.StripeConnectSubscriptionController.html
 CodeCorps.StripeConnectSubscriptionPolicy.html
 CodeCorps.StripeConnectSubscriptionView.html
+CodeCorps.StripeEvent.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCardController.html
 CodeCorps.StripePlatformCardPolicy.html
@@ -157,6 +158,9 @@ CodeCorps.StripeService.StripePlatformCustomerService.html
 CodeCorps.StripeService.Validators.ProjectCanEnableDonations.html
 CodeCorps.StripeService.Validators.ProjectSubscribable.html
 CodeCorps.StripeService.Validators.UserCanSubscribe.html
+CodeCorps.StripeService.WebhookProcessing.ConnectEventHandler.html
+CodeCorps.StripeService.WebhookProcessing.PlatformEventHandler.html
+CodeCorps.StripeService.WebhookProcessing.WebhookProcessor.html
 CodeCorps.StripeTesting.Account.html
 CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Connect.OAuth.html
