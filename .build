@@ -108,9 +108,6 @@ CodeCorps.SkillView.html
 CodeCorps.SluggedRoute.html
 CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
-CodeCorps.StripeAuth.html
-CodeCorps.StripeAuthController.html
-CodeCorps.StripeAuthView.html
 CodeCorps.StripeConnectAccount.html
 CodeCorps.StripeConnectAccountController.html
 CodeCorps.StripeConnectAccountPolicy.html
@@ -163,7 +160,6 @@ CodeCorps.StripeService.WebhookProcessing.PlatformEventHandler.html
 CodeCorps.StripeService.WebhookProcessing.WebhookProcessor.html
 CodeCorps.StripeTesting.Account.html
 CodeCorps.StripeTesting.Card.html
-CodeCorps.StripeTesting.Connect.OAuth.html
 CodeCorps.StripeTesting.Customer.html
 CodeCorps.StripeTesting.Plan.html
 CodeCorps.StripeTesting.Subscription.html
