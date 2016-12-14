@@ -124,6 +124,7 @@ CodeCorps.StripeConnectSubscriptionController.html
 CodeCorps.StripeConnectSubscriptionPolicy.html
 CodeCorps.StripeConnectSubscriptionView.html
 CodeCorps.StripeEvent.html
+CodeCorps.StripeExternalAccount.html
 CodeCorps.StripeFileUpload.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCardController.html
