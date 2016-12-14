@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>CodeCorps.TaskView – code_corps v0.0.1</title>
+    <title>CodeCorps.TaskListView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.TaskView
+        CodeCorps.TaskListView
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -123,24 +123,6 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#body/1">body(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#body/2">body(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#comments/2">comments(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#format/1">format(data)</a>
   </div>
   
@@ -189,18 +171,6 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#markdown/1">markdown(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#markdown/2">markdown(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#meta/2">meta(struct, conn)</a>
   </div>
   
@@ -210,13 +180,13 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#number/1">number(m)</a>
+    <a href="#name/1">name(m)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#number/2">number(m, c)</a>
+    <a href="#name/2">name(m, c)</a>
   </div>
   
 </div>
@@ -267,43 +237,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#state/1">state(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#state/2">state(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#status/1">status(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#status/2">status(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#task_list/2">task_list(struct, conn)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#task_type/1">task_type(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#task_type/2">task_type(m, c)</a>
+    <a href="#tasks/2">tasks(struct, conn)</a>
   </div>
   
 </div>
@@ -316,18 +250,6 @@
 By default it raises but can be customized
 to render a particular template</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#title/1">title(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#title/2">title(m, c)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -354,12 +276,6 @@ to render a particular template</p>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#updated_at/2">updated_at(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user/2">user(struct, conn)</a>
   </div>
   
 </div>
@@ -392,7 +308,7 @@ to render a particular template</p>
     </a>
     <span class="signature">__phoenix_recompile__?()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -412,7 +328,7 @@ to render a particular template</p>
     </a>
     <span class="signature">__resource__()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -432,7 +348,7 @@ to render a particular template</p>
     </a>
     <span class="signature">__templates__()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -452,7 +368,7 @@ to render a particular template</p>
     </a>
     <span class="signature">attributes(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -464,63 +380,6 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="body/1">
-  
-  <div class="detail-header">
-    <a href="#body/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">body(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="body/2">
-  
-  <div class="detail-header">
-    <a href="#body/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">body(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="comments/2">
-  
-  <div class="detail-header">
-    <a href="#comments/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">comments(struct, conn)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="format/1">
   
   <div class="detail-header">
@@ -529,7 +388,7 @@ to render a particular template</p>
     </a>
     <span class="signature">format(data)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -548,7 +407,7 @@ to render a particular template</p>
     </a>
     <span class="signature">format(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -567,7 +426,7 @@ to render a particular template</p>
     </a>
     <span class="signature">format(data, conn, opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -586,7 +445,7 @@ to render a particular template</p>
     </a>
     <span class="signature">id(data, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -606,7 +465,7 @@ to render a particular template</p>
     </a>
     <span class="signature">inserted_at(m)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -625,7 +484,7 @@ to render a particular template</p>
     </a>
     <span class="signature">inserted_at(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -644,7 +503,7 @@ to render a particular template</p>
     </a>
     <span class="signature">links(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -656,44 +515,6 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="markdown/1">
-  
-  <div class="detail-header">
-    <a href="#markdown/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">markdown(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="markdown/2">
-  
-  <div class="detail-header">
-    <a href="#markdown/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">markdown(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="meta/2">
   
   <div class="detail-header">
@@ -702,7 +523,7 @@ to render a particular template</p>
     </a>
     <span class="signature">meta(struct, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -714,15 +535,15 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="number/1">
+<div class="detail" id="name/1">
   
   <div class="detail-header">
-    <a href="#number/1" class="detail-link" title="Link to this function">
+    <a href="#name/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">number(m)</span>
+    <span class="signature">name(m)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -733,15 +554,15 @@ to render a particular template</p>
     
   </section>
 </div>
-<div class="detail" id="number/2">
+<div class="detail" id="name/2">
   
   <div class="detail-header">
-    <a href="#number/2" class="detail-link" title="Link to this function">
+    <a href="#name/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">number(m, c)</span>
+    <span class="signature">name(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -760,7 +581,7 @@ to render a particular template</p>
     </a>
     <span class="signature">order(m)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -779,7 +600,7 @@ to render a particular template</p>
     </a>
     <span class="signature">order(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -798,7 +619,7 @@ to render a particular template</p>
     </a>
     <span class="signature">preload(query, conn, arg3)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L2" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -818,7 +639,7 @@ to render a particular template</p>
     </a>
     <span class="signature">project(struct, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L8" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -837,7 +658,7 @@ to render a particular template</p>
     </a>
     <span class="signature">relationships(struct, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -859,7 +680,7 @@ to render a particular template</p>
     </a>
     <span class="signature">render(template, assigns \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -871,129 +692,15 @@ to render a particular template</p>
 
   </section>
 </div>
-<div class="detail" id="state/1">
+<div class="detail" id="tasks/2">
   
   <div class="detail-header">
-    <a href="#state/1" class="detail-link" title="Link to this function">
+    <a href="#tasks/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">state(m)</span>
+    <span class="signature">tasks(struct, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="state/2">
-  
-  <div class="detail-header">
-    <a href="#state/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">state(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="status/1">
-  
-  <div class="detail-header">
-    <a href="#status/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">status(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="status/2">
-  
-  <div class="detail-header">
-    <a href="#status/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">status(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="task_list/2">
-  
-  <div class="detail-header">
-    <a href="#task_list/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">task_list(struct, conn)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L10" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="task_type/1">
-  
-  <div class="detail-header">
-    <a href="#task_type/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">task_type(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="task_type/2">
-  
-  <div class="detail-header">
-    <a href="#task_type/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">task_type(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L10" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1012,7 +719,7 @@ to render a particular template</p>
     </a>
     <span class="signature">template_not_found(template, assigns)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1032,44 +739,6 @@ to render a particular template.</p>
 
   </section>
 </div>
-<div class="detail" id="title/1">
-  
-  <div class="detail-header">
-    <a href="#title/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">title(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="title/2">
-  
-  <div class="detail-header">
-    <a href="#title/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">title(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="type/0">
   
   <div class="detail-header">
@@ -1078,7 +747,7 @@ to render a particular template.</p>
     </a>
     <span class="signature">type()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1097,7 +766,7 @@ to render a particular template.</p>
     </a>
     <span class="signature">type(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1117,7 +786,7 @@ to render a particular template.</p>
     </a>
     <span class="signature">updated_at(m)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -1136,26 +805,7 @@ to render a particular template.</p>
     </a>
     <span class="signature">updated_at(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="user/2">
-  
-  <div class="detail-header">
-    <a href="#user/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">user(struct, conn)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_view.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/task_list_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

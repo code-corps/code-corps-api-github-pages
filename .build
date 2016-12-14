@@ -166,6 +166,9 @@ CodeCorps.StripeTesting.Subscription.html
 CodeCorps.StripeTesting.Token.html
 CodeCorps.Task.html
 CodeCorps.TaskController.html
+CodeCorps.TaskList.html
+CodeCorps.TaskListController.html
+CodeCorps.TaskListView.html
 CodeCorps.TaskPolicy.html
 CodeCorps.TaskView.html
 CodeCorps.TestHelpers.html
