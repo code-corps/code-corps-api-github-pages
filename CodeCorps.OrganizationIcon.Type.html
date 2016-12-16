@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.3">
+    <meta name="generator" content="ExDoc v0.14.5">
     <title>CodeCorps.OrganizationIcon.Type – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items.js"></script>
+    <script src="dist/sidebar_items-f7399e18cc.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -90,7 +90,7 @@
     <a href="#cast/1">cast(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:cast/1"><code class="inline">Ecto.Type.cast/1</code></a></p>
+    <div class="summary-synopsis"><p>Casts the given input to the custom type</p>
 </div>
   
 </div>
@@ -99,7 +99,7 @@
     <a href="#dump/1">dump(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:dump/1"><code class="inline">Ecto.Type.dump/1</code></a></p>
+    <div class="summary-synopsis"><p>Dumps the given term into an Ecto native type</p>
 </div>
   
 </div>
@@ -108,7 +108,7 @@
     <a href="#load/1">load(value)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:load/1"><code class="inline">Ecto.Type.load/1</code></a></p>
+    <div class="summary-synopsis"><p>Loads the given term into a custom type</p>
 </div>
   
 </div>
@@ -117,7 +117,7 @@
     <a href="#type/0">type()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:type/0"><code class="inline">Ecto.Type.type/0</code></a></p>
+    <div class="summary-synopsis"><p>Returns the underlying schema type for the custom type</p>
 </div>
   
 </div>
@@ -158,7 +158,18 @@
     
   </div>
   <section class="docstring">
-    <p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:cast/1"><code class="inline">Ecto.Type.cast/1</code></a>.</p>
+    <p>Casts the given input to the custom type.</p>
+<p>This callback is called on external input and can return any type,
+as long as the <a href="#dump/1"><code class="inline">dump/1</code></a> function is able to convert the returned
+value back into an Ecto native type. There are two situations where
+this callback is called:</p>
+<ol>
+<li>When casting values by <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>
+</li>
+<li>When passing arguments to <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Query.html"><code class="inline">Ecto.Query</code></a>
+</li>
+</ol>
+<p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:cast/1"><code class="inline">Ecto.Type.cast/1</code></a>.</p>
 
   </section>
 </div>
@@ -178,7 +189,10 @@
     
   </div>
   <section class="docstring">
-    <p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:dump/1"><code class="inline">Ecto.Type.dump/1</code></a>.</p>
+    <p>Dumps the given term into an Ecto native type.</p>
+<p>This callback is called with any term that was stored in the struct
+and it needs to validate them and convert it to an Ecto native type.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:dump/1"><code class="inline">Ecto.Type.dump/1</code></a>.</p>
 
   </section>
 </div>
@@ -198,7 +212,12 @@
     
   </div>
   <section class="docstring">
-    <p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:load/1"><code class="inline">Ecto.Type.load/1</code></a>.</p>
+    <p>Loads the given term into a custom type.</p>
+<p>This callback is called when loading data from the database and
+receive an Ecto native type. It can return any type, as long as
+the <a href="#dump/1"><code class="inline">dump/1</code></a> function is able to convert the returned value back
+into an Ecto native type.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:load/1"><code class="inline">Ecto.Type.load/1</code></a>.</p>
 
   </section>
 </div>
@@ -218,7 +237,12 @@
     
   </div>
   <section class="docstring">
-    <p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:type/0"><code class="inline">Ecto.Type.type/0</code></a>.</p>
+    <p>Returns the underlying schema type for the custom type.</p>
+<p>For example, if you want to provide your own datetime
+structures, the type function should return <code class="inline">:datetime</code>.</p>
+<p>Note this function is not required to return Ecto primitive
+types, the type is only required to be known by the adapter.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ecto/2.0.6/Ecto.Type.html#c:type/0"><code class="inline">Ecto.Type.type/0</code></a>.</p>
 
   </section>
 </div>
@@ -233,7 +257,7 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.5),
           </span>
           <span class="line">
             designed by
@@ -246,7 +270,7 @@
   </div>
 </section>
 </div>
-  <script src="dist/app-574613960f.js"></script>
+  <script src="dist/app-4aef34ad5f.js"></script>
   </body>
 </html>
 
