@@ -128,7 +128,7 @@
     </a>
     <span class="signature">process_async(json, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/webhook_processor.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/webhook_processor.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -137,18 +137,19 @@
   </div>
   <section class="docstring">
     <p>Used to process a Stripe webhook event.</p>
-<p>Receives the event json as the first parameter.
-Since a webhook can be a platform or a connect webhook,
-the function requires the handler module as the second parameter.</p>
+<p>Receives the event JSON as the first parameter.</p>
+<p>Since a webhook can be a platform or a connect webhook, the function requires
+the handler module as the second parameter.</p>
 <h2 id="process_async/2-returns" class="section-heading">
   <a href="#process_async/2-returns" class="hover-link"><i class="icon-link"></i></a>
   Returns
 </h2>
 
 <ul>
-<li><code class="inline">{:ok, :ignored_by_environment}</code> if the event was ignored due to environment mismatch
+<li><code class="inline">{:ok, pid}</code> if the event will be handled
 </li>
-<li><code class="inline">{:ok, :enqueued}</code> if the event will be handled
+<li><code class="inline">{:error, :ignored_by_environment}</code> if the event was ignored due to
+  environment mismatch
 </li>
 </ul>
 <h2 id="process_async/2-note" class="section-heading">
@@ -157,8 +158,8 @@ the function requires the handler module as the second parameter.</p>
 </h2>
 
 <p>Stripe events can have their <code class="inline">livemode</code> property set to <code class="inline">true</code> or <code class="inline">false</code>.
-A livemode event should be handled by the production environment, while all other environments
-handle non-livemode events.</p>
+A livemode <code class="inline">true</code> event should be handled by the production environment,
+while all other environments handle livemode <code class="inline">false</code> events.</p>
 
   </section>
 </div>

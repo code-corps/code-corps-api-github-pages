@@ -163,6 +163,7 @@ CodeCorps.StripeService.WebhookProcessing.WebhookProcessor.html
 CodeCorps.StripeTesting.Account.html
 CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Customer.html
+CodeCorps.StripeTesting.Event.html
 CodeCorps.StripeTesting.Plan.html
 CodeCorps.StripeTesting.Subscription.html
 CodeCorps.StripeTesting.Token.html
