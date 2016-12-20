@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-1ab56f0be2.js
+dist/sidebar_items-92afd36e4e.js
 api-reference.html
 readme.html
 license.html
@@ -142,6 +142,7 @@ CodeCorps.StripeService.Adapters.StripeConnectCardAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectCustomerAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectPlanAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter.html
+CodeCorps.StripeService.Adapters.StripeExternalAccountAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCardAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCustomerAdapter.html
 CodeCorps.StripeService.Events.AccountUpdated.html
@@ -149,11 +150,13 @@ CodeCorps.StripeService.Events.CustomerSourceUpdated.html
 CodeCorps.StripeService.Events.CustomerSubscriptionDeleted.html
 CodeCorps.StripeService.Events.CustomerSubscriptionUpdated.html
 CodeCorps.StripeService.Events.CustomerUpdated.html
+CodeCorps.StripeService.Events.ExternalAccountCreated.html
 CodeCorps.StripeService.StripeConnectAccountService.html
 CodeCorps.StripeService.StripeConnectCardService.html
 CodeCorps.StripeService.StripeConnectCustomerService.html
 CodeCorps.StripeService.StripeConnectPlanService.html
 CodeCorps.StripeService.StripeConnectSubscriptionService.html
+CodeCorps.StripeService.StripeExternalAccountService.html
 CodeCorps.StripeService.StripePlatformCardService.html
 CodeCorps.StripeService.StripePlatformCustomerService.html
 CodeCorps.StripeService.Validators.ProjectCanEnableDonations.html
@@ -163,6 +166,7 @@ CodeCorps.StripeService.WebhookProcessing.ConnectEventHandler.html
 CodeCorps.StripeService.WebhookProcessing.PlatformEventHandler.html
 CodeCorps.StripeService.WebhookProcessing.WebhookProcessor.html
 CodeCorps.StripeTesting.Account.html
+CodeCorps.StripeTesting.BankAccount.html
 CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Customer.html
 CodeCorps.StripeTesting.Event.html
