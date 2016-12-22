@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-03a919490e.js
+dist/sidebar_items-79dccd567f.js
 api-reference.html
 readme.html
 license.html
@@ -143,6 +143,7 @@ CodeCorps.StripeService.Adapters.StripeConnectCustomerAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectPlanAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter.html
 CodeCorps.StripeService.Adapters.StripeExternalAccountAdapter.html
+CodeCorps.StripeService.Adapters.StripeFileUploadAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCardAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCustomerAdapter.html
 CodeCorps.StripeService.Events.AccountUpdated.html

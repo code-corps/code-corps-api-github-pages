@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.5">
-    <title>CodeCorps.Plug.SetSentryUserContext – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeService.Adapters.StripeFileUploadAdapter – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-79dccd567f.js"></script>
@@ -59,15 +59,21 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Plug.SetSentryUserContext
+        CodeCorps.StripeService.Adapters.StripeFileUploadAdapter
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/plugs/set_sentry_user_context.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_file_upload.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Used for conversion between stripe api payload maps and maps
+usable for creation of <code class="inline">StripeFileUpload</code> records locally</p>
+
+        </section>
       
 
       
@@ -87,14 +93,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#call/2">call(conn, opts)</a>
+    <a href="#to_params/2">to_params(stripe_file_upload, attributes)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Converts a struct received from the Stripe API into a map that can be used
+to create a <a href="CodeCorps.StripeFileUpload.html"><code class="inline">CodeCorps.StripeFileUpload</code></a> record</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#init/1">init(opts)</a>
-  </div>
   
 </div>
 
@@ -118,15 +122,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="call/2">
+          <div class="detail" id="to_params/2">
   
   <div class="detail-header">
-    <a href="#call/2" class="detail-link" title="Link to this function">
+    <a href="#to_params/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">call(conn, opts)</span>
+    <span class="signature">to_params(stripe_file_upload, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/plugs/set_sentry_user_context.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_file_upload.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -134,26 +138,9 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="init/1">
-  
-  <div class="detail-header">
-    <a href="#init/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">init(opts)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/plugs/set_sentry_user_context.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Converts a struct received from the Stripe API into a map that can be used
+to create a <a href="CodeCorps.StripeFileUpload.html"><code class="inline">CodeCorps.StripeFileUpload</code></a> record</p>
+
   </section>
 </div>
 
