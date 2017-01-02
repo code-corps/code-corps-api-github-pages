@@ -8,7 +8,7 @@
     <title>CodeCorps.OrganizationMembership – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f0b1616e29.js"></script>
+    <script src="dist/sidebar_items-4f34f6c4c5.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -102,6 +102,16 @@ The membership role is strictly set to “pending” by the system, regardless o
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#create_owner_changeset/2">create_owner_changeset(struct, params \\ %{})</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>, for creating a record.
+The membership role is strictly set to “owner” by the system, regardless of parameters</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#update_changeset/2">update_changeset(struct, params \\ %{})</a>
   </div>
   
@@ -153,6 +163,29 @@ The membership role is strictly set to “pending” by the system, regardless o
 
   </section>
 </div>
+<div class="detail" id="create_owner_changeset/2">
+  
+    <span id="create_owner_changeset/1" />
+  
+  <div class="detail-header">
+    <a href="#create_owner_changeset/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">create_owner_changeset(struct, params \\ %{})</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/organization_membership.ex#L34" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>, for creating a record.
+The membership role is strictly set to “owner” by the system, regardless of parameters</p>
+
+  </section>
+</div>
 <div class="detail" id="update_changeset/2">
   
     <span id="update_changeset/1" />
@@ -163,7 +196,7 @@ The membership role is strictly set to “pending” by the system, regardless o
     </a>
     <span class="signature">update_changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/organization_membership.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/organization_membership.ex#L46" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
