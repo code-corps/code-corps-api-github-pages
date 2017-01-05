@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-df6ffb353d.js
+dist/sidebar_items-ffa0d90637.js
 api-reference.html
 readme.html
 license.html
@@ -129,6 +129,7 @@ CodeCorps.StripeConnectSubscriptionView.html
 CodeCorps.StripeEvent.html
 CodeCorps.StripeExternalAccount.html
 CodeCorps.StripeFileUpload.html
+CodeCorps.StripeInvoice.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCardController.html
 CodeCorps.StripePlatformCardPolicy.html
@@ -145,6 +146,7 @@ CodeCorps.StripeService.Adapters.StripeConnectPlanAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter.html
 CodeCorps.StripeService.Adapters.StripeExternalAccountAdapter.html
 CodeCorps.StripeService.Adapters.StripeFileUploadAdapter.html
+CodeCorps.StripeService.Adapters.StripeInvoiceAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCardAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCustomerAdapter.html
 CodeCorps.StripeService.Events.AccountUpdated.html
@@ -153,12 +155,14 @@ CodeCorps.StripeService.Events.CustomerSourceUpdated.html
 CodeCorps.StripeService.Events.CustomerSubscriptionDeleted.html
 CodeCorps.StripeService.Events.CustomerSubscriptionUpdated.html
 CodeCorps.StripeService.Events.CustomerUpdated.html
+CodeCorps.StripeService.Events.InvoicePaymentSucceeded.html
 CodeCorps.StripeService.StripeConnectAccountService.html
 CodeCorps.StripeService.StripeConnectCardService.html
 CodeCorps.StripeService.StripeConnectCustomerService.html
 CodeCorps.StripeService.StripeConnectExternalAccountService.html
 CodeCorps.StripeService.StripeConnectPlanService.html
 CodeCorps.StripeService.StripeConnectSubscriptionService.html
+CodeCorps.StripeService.StripeInvoiceService.html
 CodeCorps.StripeService.StripePlatformCardService.html
 CodeCorps.StripeService.StripePlatformCustomerService.html
 CodeCorps.StripeService.Util.html
@@ -173,6 +177,7 @@ CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Customer.html
 CodeCorps.StripeTesting.Event.html
 CodeCorps.StripeTesting.ExternalAccount.html
+CodeCorps.StripeTesting.Invoice.html
 CodeCorps.StripeTesting.Plan.html
 CodeCorps.StripeTesting.Subscription.html
 CodeCorps.StripeTesting.Token.html
