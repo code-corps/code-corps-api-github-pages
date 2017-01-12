@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeService.StripeConnectAccountService – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-a1ba8259c0.js"></script>
+    <script src="dist/sidebar_items-65b24ff5ea.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -90,11 +90,28 @@
     <a href="#create/1">create(attributes)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Used to create a remote <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Account.html"><code class="inline">Stripe.Account</code></a> record as well as an associated local
+<code class="inline">StripeConnectAccount</code> record</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#update/2">update(account, attributes)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Used to update both the local <code class="inline">StripeConnectAccount</code> as well as the remote <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Account.html"><code class="inline">Stripe.Account</code></a>,
+using attributes sent by the client</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_from_stripe/1">update_from_stripe(id_from_stripe)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Used to update the local <code class="inline">StripeConnectAccount</code> record using data retrieved from the Stripe API</p>
+</div>
   
 </div>
 
@@ -126,7 +143,7 @@
     </a>
     <span class="signature">create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_account.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_account.ex#L11" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -134,7 +151,9 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Used to create a remote <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Account.html"><code class="inline">Stripe.Account</code></a> record as well as an associated local
+<code class="inline">StripeConnectAccount</code> record.</p>
+
   </section>
 </div>
 <div class="detail" id="update/2">
@@ -145,7 +164,7 @@
     </a>
     <span class="signature">update(account, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_account.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_account.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -153,7 +172,29 @@
     
   </div>
   <section class="docstring">
+    <p>Used to update both the local <code class="inline">StripeConnectAccount</code> as well as the remote <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Account.html"><code class="inline">Stripe.Account</code></a>,
+using attributes sent by the client</p>
+
+  </section>
+</div>
+<div class="detail" id="update_from_stripe/1">
+  
+  <div class="detail-header">
+    <a href="#update_from_stripe/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">update_from_stripe(id_from_stripe)</span>
     
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_account.ex#L36" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Used to update the local <code class="inline">StripeConnectAccount</code> record using data retrieved from the Stripe API</p>
+
   </section>
 </div>
 
