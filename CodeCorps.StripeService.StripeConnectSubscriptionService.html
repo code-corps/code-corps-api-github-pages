@@ -90,11 +90,19 @@
     <a href="#find_or_create/1">find_or_create(attributes)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Finds or creates a new <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record on Stripe API, as well as an associated local
+<code class="inline">StripeConnectSubscription</code> record</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#update_from_stripe/2">update_from_stripe(stripe_id, connect_customer_id)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Updates an existing <code class="inline">StripeConnectSubscription</code> record by retrieving a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record and
+using that data as update parameters</p>
+</div>
   
 </div>
 
@@ -126,7 +134,7 @@
     </a>
     <span class="signature">find_or_create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L33" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -134,7 +142,31 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Finds or creates a new <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record on Stripe API, as well as an associated local
+<code class="inline">StripeConnectSubscription</code> record</p>
+<h1>Possible return values</h1>
+<ul>
+<li><code class="inline">{:ok, %StripeConnectSubscription{}}</code> - the created record.
+</li>
+<li><code class="inline">{:error, %Ecto.Changeset{}}</code> - the record was not created due to validation issues.
+</li>
+<li><code class="inline">{:error, :project_not_ready}</code> - the associated project does not meed the prerequisites for receiving donations.
+</li>
+<li><code class="inline">{:error, :user_not_ready}</code> - the associated user does not meet the prerequisits to donate.
+</li>
+<li><code class="inline">{:error, %Stripe.APIErrorResponse{}}</code> - there was a problem with the stripe request
+</li>
+<li><code class="inline">{:error, :not_found}</code> - one of the associated records was not found
+</li>
+</ul>
+<h1>Side effects</h1>
+<ul>
+<li>If the subscription is created or found, associated project totals will get updated
+</li>
+<li>If the subscription is created or found, associated donation goal states will be updated
+</li>
+</ul>
+
   </section>
 </div>
 <div class="detail" id="update_from_stripe/2">
@@ -145,7 +177,7 @@
     </a>
     <span class="signature">update_from_stripe(stripe_id, connect_customer_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L59" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -153,7 +185,18 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Updates an existing <code class="inline">StripeConnectSubscription</code> record by retrieving a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record and
+using that data as update parameters</p>
+<h1>Possible return values</h1>
+<ul>
+<li><code class="inline">{:ok, %StripeConnectSubscription{}}</code> - the updated record.
+</li>
+<li><code class="inline">{:error, %Stripe.APIErrorResponse{}}</code> - there was a problem with the stripe request
+</li>
+<li><code class="inline">{:error, :not_found}</code> - one of the associated records was not found
+</li>
+</ul>
+
   </section>
 </div>
 
