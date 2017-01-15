@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeService.Validators.ProjectCanEnableDonations – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-4d320c3706.js"></script>
+    <script src="dist/sidebar_items-bc6c1ea8f4.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -128,7 +128,7 @@
     </a>
     <span class="signature">validate(project)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/validators/project_can_enable_donations.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/validators/project_can_enable_donations.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -143,12 +143,8 @@ it needs to have proper associations set up.</p>
 <ul>
 <li>At least one <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a>
 </li>
-</ul>
-<p>and only one of:</p>
-<ul>
-<li><code class="inline">Organization</code> with a <code class="inline">StripeConnectAccount</code>, in production env, which has <code class="inline">charges_enabled: true</code>
-</li>
-<li><code class="inline">Organization</code> with a <code class="inline">StripeConnectAccount</code>, not in production env
+<li><code class="inline">Organization</code> with a <code class="inline">StripeConnectAccount</code> which
+  has <code class="inline">charges_enabled: true</code> and <code class="inline">transfers_enabled: true</code>
 </li>
 </ul>
 <p>If the project has these relationships set up, it returns <code class="inline">{:ok, project}</code></p>
