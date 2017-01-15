@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.5">
-    <title>CodeCorps.Mailer – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeService.WebhookProcessing.EventHandler – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-fddc193e74.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Mailer
+        CodeCorps.StripeService.WebhookProcessing.EventHandler
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/mailer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/event_handler.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -87,19 +87,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#deliver/1">deliver(email)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#deliver_later/1">deliver_later(email)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#deliver_now/1">deliver_now(email)</a>
+    <a href="#handle/2">handle(api_event, handler)</a>
   </div>
   
 </div>
@@ -124,69 +112,19 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="deliver/1">
+          <div class="detail" id="handle/2">
   
   <div class="detail-header">
-    <a href="#deliver/1" class="detail-link" title="Link to this function">
+    <a href="#handle/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">deliver(email)</span>
+    <span class="signature">handle(api_event, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/mailer.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/event_handler.ex#L8" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="deliver_later/1">
-  
-  <div class="detail-header">
-    <a href="#deliver_later/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">deliver_later(email)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/mailer.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>deliver_later(<a href="https://hexdocs.pm/bamboo/0.7.0/Bamboo.Email.html#t:t/0">Bamboo.Email.t</a>) :: <a href="https://hexdocs.pm/bamboo/0.7.0/Bamboo.Email.html#t:t/0">Bamboo.Email.t</a></pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="deliver_now/1">
-  
-  <div class="detail-header">
-    <a href="#deliver_now/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">deliver_now(email)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/mailer.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>deliver_now(<a href="https://hexdocs.pm/bamboo/0.7.0/Bamboo.Email.html#t:t/0">Bamboo.Email.t</a>) :: <a href="https://hexdocs.pm/bamboo/0.7.0/Bamboo.Email.html#t:t/0">Bamboo.Email.t</a></pre>
-        
-      </div>
     
   </div>
   <section class="docstring">

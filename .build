@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-18f5b9e7a9.js
+dist/sidebar_items-fddc193e74.js
 api-reference.html
 readme.html
 license.html
@@ -171,6 +171,9 @@ CodeCorps.StripeService.Validators.ProjectCanEnableDonations.html
 CodeCorps.StripeService.Validators.ProjectSubscribable.html
 CodeCorps.StripeService.Validators.UserCanSubscribe.html
 CodeCorps.StripeService.WebhookProcessing.ConnectEventHandler.html
+CodeCorps.StripeService.WebhookProcessing.EnvironmentFilter.html
+CodeCorps.StripeService.WebhookProcessing.EventHandler.html
+CodeCorps.StripeService.WebhookProcessing.IgnoredEventHandler.html
 CodeCorps.StripeService.WebhookProcessing.PlatformEventHandler.html
 CodeCorps.StripeService.WebhookProcessing.WebhookProcessor.html
 CodeCorps.StripeTesting.Account.html

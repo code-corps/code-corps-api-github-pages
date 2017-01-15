@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeService.WebhookProcessing.WebhookProcessor – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-18f5b9e7a9.js"></script>
+    <script src="dist/sidebar_items-fddc193e74.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -92,10 +92,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#process_async/2">process_async(json, handler)</a>
+    <a href="#process/2">process(event_params, handler)</a>
   </div>
   
     <div class="summary-synopsis"><p>Used to process a Stripe webhook event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#process_async/2">process_async(event_params, handler)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Used to process a Stripe webhook event in an async manner</p>
 </div>
   
 </div>
@@ -120,15 +129,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="process_async/2">
+          <div class="detail" id="process/2">
   
   <div class="detail-header">
-    <a href="#process_async/2" class="detail-link" title="Link to this function">
+    <a href="#process/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">process_async(json, handler)</span>
+    <span class="signature">process(event_params, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/webhook_processor.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/webhook_processor.ex#L39" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -140,26 +149,39 @@
 <p>Receives the event JSON as the first parameter.</p>
 <p>Since a webhook can be a platform or a connect webhook, the function requires
 the handler module as the second parameter.</p>
-<h2 id="process_async/2-returns" class="section-heading">
-  <a href="#process_async/2-returns" class="hover-link"><i class="icon-link"></i></a>
-  Returns
-</h2>
-
+<h1>Returns</h1>
 <ul>
-<li><code class="inline">{:ok, pid}</code> if the event will be handled
+<li><code class="inline">{:ok, %CodeCorps.StripeEvent{}}</code> if the event was processed in some way. This includes
+  the event being previously processed, or erroring out, or even just not being handled at the moment.
 </li>
-<li><code class="inline">{:error, :ignored_by_environment}</code> if the event was ignored due to
-  environment mismatch
+<li><code class="inline">{:error, :already_processing}</code> if the event already exists locally and is in the process of
+  being handled.
 </li>
 </ul>
-<h2 id="process_async/2-note" class="section-heading">
-  <a href="#process_async/2-note" class="hover-link"><i class="icon-link"></i></a>
-  Note
-</h2>
 
-<p>Stripe events can have their <code class="inline">livemode</code> property set to <code class="inline">true</code> or <code class="inline">false</code>.
-A livemode <code class="inline">true</code> event should be handled by the production environment,
-while all other environments handle livemode <code class="inline">false</code> events.</p>
+  </section>
+</div>
+<div class="detail" id="process_async/2">
+  
+  <div class="detail-header">
+    <a href="#process_async/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">process_async(event_params, handler)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/webhook_processor.ex#L20" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Used to process a Stripe webhook event in an async manner.</p>
+<p>Receives the event JSON as the first parameter.</p>
+<p>Since a webhook can be a platform or a connect webhook, the function requires
+the handler module as the second parameter.</p>
+<p>Returns <code class="inline">{:ok, pid}</code></p>
 
   </section>
 </div>
