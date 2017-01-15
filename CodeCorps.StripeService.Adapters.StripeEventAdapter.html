@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.5">
-    <title>CodeCorps.ProjectPolicy – code_corps v0.0.1</title>
+    <title>CodeCorps.StripeService.Adapters.StripeEventAdapter – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-18f5b9e7a9.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.ProjectPolicy
+        CodeCorps.StripeService.Adapters.StripeEventAdapter
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/policies/project_policy.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_event.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -87,14 +87,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, changeset)</a>
+    <a href="#to_params/2">to_params(stripe_event, attributes)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Transforms a <code class="inline">%Stripe.Event{}</code> and a set of local attributes into a
+map of parameters used to create or update a <code class="inline">StripeEvent</code> record</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update?/2">update?(user, project)</a>
-  </div>
   
 </div>
 
@@ -118,15 +116,15 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="to_params/2">
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#to_params/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create?(user, changeset)</span>
+    <span class="signature">to_params(stripe_event, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/policies/project_policy.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_event.ex#L17" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -134,26 +132,9 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="update?/2">
-  
-  <div class="detail-header">
-    <a href="#update?/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">update?(user, project)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/policies/project_policy.ex#L15" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Transforms a <code class="inline">%Stripe.Event{}</code> and a set of local attributes into a
+map of parameters used to create or update a <code class="inline">StripeEvent</code> record.</p>
+
   </section>
 </div>
 
