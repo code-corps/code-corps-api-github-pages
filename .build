@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-b73c1eaf38.js
+dist/sidebar_items-c44799ff20.js
 api-reference.html
 readme.html
 license.html
@@ -111,6 +111,7 @@ CodeCorps.SkillView.html
 CodeCorps.SluggedRoute.html
 CodeCorps.SluggedRouteController.html
 CodeCorps.SluggedRouteView.html
+CodeCorps.StripeCase.html
 CodeCorps.StripeConnectAccount.html
 CodeCorps.StripeConnectAccountController.html
 CodeCorps.StripeConnectAccountPolicy.html
@@ -181,6 +182,7 @@ CodeCorps.StripeTesting.Card.html
 CodeCorps.StripeTesting.Customer.html
 CodeCorps.StripeTesting.Event.html
 CodeCorps.StripeTesting.ExternalAccount.html
+CodeCorps.StripeTesting.Helpers.html
 CodeCorps.StripeTesting.Invoice.html
 CodeCorps.StripeTesting.Plan.html
 CodeCorps.StripeTesting.Subscription.html
