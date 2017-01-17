@@ -8,7 +8,7 @@
     <title>README – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-fddc193e74.js"></script>
+    <script src="dist/sidebar_items-b73c1eaf38.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -87,13 +87,20 @@
 </ul>
 <p>You can also always come :wave: hello <a href="http://slack.codecorps.org">in our Slack</a>, where there are always a ton of us around to help you learn, debug, or just shoot the breeze.</p>
 <p>We highlight everyone who’s contributed to <a href="https://www.codecorps.org/team">the Code Corps team page</a>. If we’ve missed you for some reason, please <a href="https://github.com/code-corps/code-corps-ember/issues/new">open an issue in the Ember app</a>!</p>
-<p><strong>At the moment, our focus is integration with Stripe</strong>, so if you want to help, that would be the most useful spot. Check our <a href="https://github.com/code-corps/code-corps-api/blob/develop/milestone/1">Donations milestone</a> to see which parts we need help on. Of course, help with other areas is always welcome, so if that sort of thing isn’t your cup of tea, feel free to pick anything else.</p>
-<h2 id="installing-with-docker" class="section-heading">
-  <a href="#installing-with-docker" class="hover-link"><i class="icon-link"></i></a>
-  Installing with Docker
+<h2 id="where-should-i-help" class="section-heading">
+  <a href="#where-should-i-help" class="hover-link"><i class="icon-link"></i></a>
+  Where should I help?
 </h2>
 
-<p>To make your life easier, you can just clone this repository and use our Docker container. <a href="https://github.com/code-corps/code-corps-api/blob/develop/docs/INSTALLING.md">Follow this guide to get started.</a></p>
+<p>We recommend checking the latest <a href="https://github.com/code-corps/code-corps-api/milestones">milestones on GitHub</a> to get a sense for our current priorities.</p>
+<p>Of course, help with other areas is always welcome, so if the current milestones aren’t your cup of tea, feel free to <a href="https://github.com/code-corps/code-corps-api/issues">browse the issues</a>.</p>
+<p>And you can <em>always</em> ask us for advice on where to start <a href="http://slack.codecorps.org">in our Slack</a>.</p>
+<h2 id="installing" class="section-heading">
+  <a href="#installing" class="hover-link"><i class="icon-link"></i></a>
+  Installing
+</h2>
+
+<p><a href="https://github.com/code-corps/code-corps-api/blob/develop/docs/INSTALLING.md">Follow this guide to get started.</a></p>
 <h2 id="usage" class="section-heading">
   <a href="#usage" class="hover-link"><i class="icon-link"></i></a>
   Usage
@@ -101,21 +108,17 @@
 
 <p>Have everything installed and ready to work? Read <a href="USAGE.md">our usage guides</a> to learn how to:</p>
 <ul>
-<li><a href="USAGE.md#interacting-with-the-app">Run normal <code class="inline">mix</code> commands through Docker</a>
+<li><a href="USAGE.md#interacting-with-the-app">Run <code class="inline">mix</code> commands</a>
 </li>
 <li><a href="USAGE.md#stopping-and-starting-the-server">Stop and start the server</a>
 </li>
 <li><a href="USAGE.md#running-tests">Run tests</a>
 </li>
-<li><a href="USAGE.md#linting-code-with-credo">Linting and Style Guidelines</a>
-</li>
-<li><a href="USAGE.md#rebuilding-docker-containers">Rebuild Docker containers</a>
+<li><a href="USAGE.md#linting-code-with-credo">Linting and style guidelines</a>
 </li>
 <li><a href="USAGE.md#serving-ember">Work with the Ember front-end</a>
 </li>
 <li><a href="USAGE.md#environment">Set up environment variables</a>
-</li>
-<li><a href="USAGE.md#pushing-changes">Push changes to GitHub</a>
 </li>
 </ul>
 <h2 id="documentation" class="section-heading">
@@ -127,7 +130,7 @@
 <ul>
 <li>Project documentation (README, CONTRIBUTING, etc.)
 </li>
-<li><a href="http://docs.codecorpsapi.apiary.io/">API documentation</a> written in <a href="https://apiblueprint.org/">API Blueprint</a> format in <a href="https://github.com/code-corps/code-corps-api/blob/develop/blueprint/api.apib"><code class="inline">blueprint/api.apib</code></a> and published to the web when merging into <code class="inline">develop</code>
+<li>API documentation (<a href="http://docs.codecorpsapi.apiary.io/"><code class="inline">master</code></a> | <a href="http://docs.codecorpsapidevelop.apiary.io/"><code class="inline">develop</code></a> | <a href="docs/API.md">local</a>) written in <a href="https://apiblueprint.org/">API Blueprint</a> format in <a href="https://github.com/code-corps/code-corps-api/blob/develop/blueprint/api.apib"><code class="inline">blueprint/api.apib</code></a> and published to the web when merging into <code class="inline">develop</code> or <code class="inline">master</code>
 </li>
 <li><a href="https://code-corps.github.io/code-corps-api-github-pages">Inline documentation</a> for the Elixir app generated by <a href="https://github.com/elixir-lang/ex_doc"><code class="inline">ex_doc</code></a> and published to GitHub pages when merging into <code class="inline">develop</code>
 </li>
@@ -154,7 +157,7 @@
 <li>Writing small, clear, and achievable issues :dart:
 </li>
 </ul>
-<p>We also track quantifiable metrics like inline documentation coverage, testing coverage, and so on. You can see some of these metrics in the icons at the top of this page.</p>
+<p>We also track quantifiable metrics like inline documentation coverage, testing coverage, and so on. You can see some of these metrics in the badges at the top of this page.</p>
 
       <footer class="footer">
         <p>
