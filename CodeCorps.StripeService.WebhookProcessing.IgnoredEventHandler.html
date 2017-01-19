@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeService.WebhookProcessing.IgnoredEventHandler – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c44799ff20.js"></script>
+    <script src="dist/sidebar_items-35d2317210.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -87,7 +87,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/1">handle(local_event)</a>
+    <a href="#handle/2">handle(local_event, handler)</a>
   </div>
   
     <div class="summary-synopsis"><p>Takes in a <a href="CodeCorps.StripeEvent.html"><code class="inline">CodeCorps.StripeEvent</code></a> to be processed as “ignored”.
@@ -98,7 +98,7 @@ Determines the reason for ignoring the event, then updates the record to
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#ignored_event_types/0">ignored_event_types()</a>
+    <a href="#ignored_event_types/1">ignored_event_types(arg)</a>
   </div>
   
     <div class="summary-synopsis"><p>Returns a list of event types which are being explicitly ignored by the application</p>
@@ -107,7 +107,7 @@ Determines the reason for ignoring the event, then updates the record to
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#should_handle?/1">should_handle?(type)</a>
+    <a href="#should_handle?/2">should_handle?(type, handler)</a>
   </div>
   
     <div class="summary-synopsis"><p>Determines if an event type should be handled by <strong>MODULE</strong></p>
@@ -135,15 +135,15 @@ Determines the reason for ignoring the event, then updates the record to
             </a>
             Functions
           </h1>
-          <div class="detail" id="handle/1">
+          <div class="detail" id="handle/2">
   
   <div class="detail-header">
-    <a href="#handle/1" class="detail-link" title="Link to this function">
+    <a href="#handle/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">handle(local_event)</span>
+    <span class="signature">handle(local_event, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L51" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -151,7 +151,7 @@ Determines the reason for ignoring the event, then updates the record to
     
       <div class="specs">
         
-          <pre>handle(<a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>) :: {:ok, <a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>}</pre>
+          <pre>handle(<a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>, <a href="https://hexdocs.pm/elixir/Module.html#t:t/0">Module.t</a>) :: {:ok, <a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>}</pre>
         
       </div>
     
@@ -164,15 +164,15 @@ Determines the reason for ignoring the event, then updates the record to
 
   </section>
 </div>
-<div class="detail" id="ignored_event_types/0">
+<div class="detail" id="ignored_event_types/1">
   
   <div class="detail-header">
-    <a href="#ignored_event_types/0" class="detail-link" title="Link to this function">
+    <a href="#ignored_event_types/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">ignored_event_types()</span>
+    <span class="signature">ignored_event_types(arg)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -180,7 +180,7 @@ Determines the reason for ignoring the event, then updates the record to
     
       <div class="specs">
         
-          <pre>ignored_event_types() :: list</pre>
+          <pre>ignored_event_types(<a href="https://hexdocs.pm/elixir/Module.html#t:t/0">Module.t</a>) :: list</pre>
         
       </div>
     
@@ -190,15 +190,15 @@ Determines the reason for ignoring the event, then updates the record to
 
   </section>
 </div>
-<div class="detail" id="should_handle?/1">
+<div class="detail" id="should_handle?/2">
   
   <div class="detail-header">
-    <a href="#should_handle?/1" class="detail-link" title="Link to this function">
+    <a href="#should_handle?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">should_handle?(type)</span>
+    <span class="signature">should_handle?(type, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -206,7 +206,7 @@ Determines the reason for ignoring the event, then updates the record to
     
       <div class="specs">
         
-          <pre>should_handle?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: boolean</pre>
+          <pre>should_handle?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/Module.html#t:t/0">Module.t</a>) :: boolean</pre>
         
       </div>
     
