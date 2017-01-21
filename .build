@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-89f2a8a6b7.js
+dist/sidebar_items-9485fa1444.js
 api-reference.html
 readme.html
 license.html
@@ -117,6 +117,7 @@ CodeCorps.StripeConnectAccountController.html
 CodeCorps.StripeConnectAccountPolicy.html
 CodeCorps.StripeConnectAccountView.html
 CodeCorps.StripeConnectCard.html
+CodeCorps.StripeConnectCharge.html
 CodeCorps.StripeConnectCustomer.html
 CodeCorps.StripeConnectEventsController.html
 CodeCorps.StripeConnectPlan.html
@@ -142,6 +143,7 @@ CodeCorps.StripePlatformCustomerView.html
 CodeCorps.StripePlatformEventsController.html
 CodeCorps.StripeService.Adapters.StripeConnectAccountAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectCardAdapter.html
+CodeCorps.StripeService.Adapters.StripeConnectChargeAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectCustomerAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectPlanAdapter.html
 CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter.html
@@ -152,6 +154,7 @@ CodeCorps.StripeService.Adapters.StripeInvoiceAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCardAdapter.html
 CodeCorps.StripeService.Adapters.StripePlatformCustomerAdapter.html
 CodeCorps.StripeService.Events.AccountUpdated.html
+CodeCorps.StripeService.Events.ConnectChargeSucceeded.html
 CodeCorps.StripeService.Events.ConnectExternalAccountCreated.html
 CodeCorps.StripeService.Events.CustomerSourceUpdated.html
 CodeCorps.StripeService.Events.CustomerSubscriptionDeleted.html
@@ -160,6 +163,7 @@ CodeCorps.StripeService.Events.CustomerUpdated.html
 CodeCorps.StripeService.Events.InvoicePaymentSucceeded.html
 CodeCorps.StripeService.StripeConnectAccountService.html
 CodeCorps.StripeService.StripeConnectCardService.html
+CodeCorps.StripeService.StripeConnectChargeService.html
 CodeCorps.StripeService.StripeConnectCustomerService.html
 CodeCorps.StripeService.StripeConnectExternalAccountService.html
 CodeCorps.StripeService.StripeConnectPlanService.html
@@ -179,6 +183,7 @@ CodeCorps.StripeService.WebhookProcessing.PlatformEventHandler.html
 CodeCorps.StripeService.WebhookProcessing.WebhookProcessor.html
 CodeCorps.StripeTesting.Account.html
 CodeCorps.StripeTesting.Card.html
+CodeCorps.StripeTesting.Charge.html
 CodeCorps.StripeTesting.Customer.html
 CodeCorps.StripeTesting.Event.html
 CodeCorps.StripeTesting.ExternalAccount.html
