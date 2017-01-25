@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-a807b5b445.js
+dist/sidebar_items-8271d5a187.js
 api-reference.html
 readme.html
 license.html
@@ -34,7 +34,8 @@ CodeCorps.DonationGoal.html
 CodeCorps.DonationGoalController.html
 CodeCorps.DonationGoalPolicy.html
 CodeCorps.DonationGoalView.html
-CodeCorps.Emails.Test.html
+CodeCorps.Emails.BaseEmail.html
+CodeCorps.Emails.ReceiptEmail.html
 CodeCorps.Endpoint.html
 CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html
