@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeService.StripeConnectSubscriptionService – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-8271d5a187.js"></script>
+    <script src="dist/sidebar_items-e5c3ef3c39.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -62,7 +62,7 @@
         CodeCorps.StripeService.StripeConnectSubscriptionService
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription_service.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -134,7 +134,7 @@ using that data as update parameters</p>
     </a>
     <span class="signature">find_or_create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription_service.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -150,13 +150,15 @@ using that data as update parameters</p>
 </li>
 <li><code class="inline">{:error, %Ecto.Changeset{}}</code> - the record was not created due to validation issues.
 </li>
+<li><code class="inline">{:error, :project_not_found}</code>
+</li>
 <li><code class="inline">{:error, :project_not_ready}</code> - the associated project does not meed the prerequisites for receiving donations.
+</li>
+<li><code class="inline">{:error, :user_not_found}</code>
 </li>
 <li><code class="inline">{:error, :user_not_ready}</code> - the associated user does not meet the prerequisits to donate.
 </li>
 <li><code class="inline">{:error, %Stripe.APIErrorResponse{}}</code> - there was a problem with the stripe request
-</li>
-<li><code class="inline">{:error, :not_found}</code> - one of the associated records was not found
 </li>
 </ul>
 <h1>Side effects</h1>
@@ -177,7 +179,7 @@ using that data as update parameters</p>
     </a>
     <span class="signature">update_from_stripe(stripe_id, connect_customer_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription_service.ex#L59" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
