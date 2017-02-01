@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-e5c3ef3c39.js
+dist/sidebar_items-a48f36e159.js
 api-reference.html
 readme.html
 license.html
@@ -222,6 +222,10 @@ CodeCorps.UserSkillController.html
 CodeCorps.UserSkillPolicy.html
 CodeCorps.UserSkillView.html
 CodeCorps.UserSocket.html
+CodeCorps.UserTask.html
+CodeCorps.UserTaskController.html
+CodeCorps.UserTaskPolicy.html
+CodeCorps.UserTaskView.html
 CodeCorps.UserView.html
 CodeCorps.Validators.SlugValidator.html
 CodeCorps.ViewCase.html
