@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.5">
-    <title>CodeCorps.Services.Base64ImageUploaderService – code_corps v0.0.1</title>
+    <title>CodeCorps.Helpers.RandomIconColor – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-a48f36e159.js"></script>
+    <script src="dist/sidebar_items-1bb4728971.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Services.Base64ImageUploaderService
+        CodeCorps.Helpers.RandomIconColor
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/base64_image_uploader.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/random_icon_color.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -87,19 +87,8 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_plug_upload/1">build_plug_upload(arg)</a>
+    <a href="#generate_icon_color/2">generate_icon_color(changeset, icon_color_key)</a>
   </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#upload_image/3">upload_image(changeset, origin_field, destination_field)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Takes a changeset, a virtual origin field containing base64 image
-data, and a destination field for use with <code class="inline">arc_ecto</code> to upload
-and save an image</p>
-</div>
   
 </div>
 
@@ -123,15 +112,15 @@ and save an image</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_plug_upload/1">
+          <div class="detail" id="generate_icon_color/2">
   
   <div class="detail-header">
-    <a href="#build_plug_upload/1" class="detail-link" title="Link to this function">
+    <a href="#generate_icon_color/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">build_plug_upload(arg)</span>
+    <span class="signature">generate_icon_color(changeset, icon_color_key)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/base64_image_uploader.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/random_icon_color.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -140,28 +129,6 @@ and save an image</p>
   </div>
   <section class="docstring">
     
-  </section>
-</div>
-<div class="detail" id="upload_image/3">
-  
-  <div class="detail-header">
-    <a href="#upload_image/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">upload_image(changeset, origin_field, destination_field)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/services/base64_image_uploader.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Takes a changeset, a virtual origin field containing base64 image
-data, and a destination field for use with <code class="inline">arc_ecto</code> to upload
-and save an image.</p>
-
   </section>
 </div>
 

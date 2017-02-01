@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-a48f36e159.js
+dist/sidebar_items-1bb4728971.js
 api-reference.html
 readme.html
 license.html
@@ -42,8 +42,10 @@ CodeCorps.ErrorView.html
 CodeCorps.Factories.html
 CodeCorps.Gettext.html
 CodeCorps.GuardianSerializer.html
+CodeCorps.Helpers.CloudinaryUrl.html
 CodeCorps.Helpers.Policy.html
 CodeCorps.Helpers.Query.html
+CodeCorps.Helpers.RandomIconColor.html
 CodeCorps.Helpers.Slug.html
 CodeCorps.Helpers.String.html
 CodeCorps.JsonAPIHelpers.html
@@ -99,8 +101,6 @@ CodeCorps.RoleSkillView.html
 CodeCorps.RoleView.html
 CodeCorps.Router.html
 CodeCorps.Router.Helpers.html
-CodeCorps.Services.Base64ImageService.html
-CodeCorps.Services.Base64ImageUploaderService.html
 CodeCorps.Services.DonationGoalsService.html
 CodeCorps.Services.MarkdownRendererService.html
 CodeCorps.Services.ProjectService.html
