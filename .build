@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-60389474eb.js
+dist/sidebar_items-bfb7137e6e.js
 api-reference.html
 readme.html
 license.html
@@ -54,8 +54,6 @@ CodeCorps.MapUtils.html
 CodeCorps.ModelCase.html
 CodeCorps.Organization.html
 CodeCorps.OrganizationController.html
-CodeCorps.OrganizationIcon.html
-CodeCorps.OrganizationIcon.Type.html
 CodeCorps.OrganizationMembership.html
 CodeCorps.OrganizationMembershipController.html
 CodeCorps.OrganizationMembershipPolicy.html
@@ -79,8 +77,6 @@ CodeCorps.ProjectCategoryController.html
 CodeCorps.ProjectCategoryPolicy.html
 CodeCorps.ProjectCategoryView.html
 CodeCorps.ProjectController.html
-CodeCorps.ProjectIcon.html
-CodeCorps.ProjectIcon.Type.html
 CodeCorps.ProjectPolicy.html
 CodeCorps.ProjectSkill.html
 CodeCorps.ProjectSkillController.html
@@ -213,8 +209,6 @@ CodeCorps.UserCategoryController.html
 CodeCorps.UserCategoryPolicy.html
 CodeCorps.UserCategoryView.html
 CodeCorps.UserController.html
-CodeCorps.UserPhoto.html
-CodeCorps.UserPhoto.Type.html
 CodeCorps.UserPolicy.html
 CodeCorps.UserRole.html
 CodeCorps.UserRoleController.html
