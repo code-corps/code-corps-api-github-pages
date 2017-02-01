@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-1bb4728971.js
+dist/sidebar_items-60389474eb.js
 api-reference.html
 readme.html
 license.html
@@ -39,7 +39,6 @@ CodeCorps.Emails.ReceiptEmail.html
 CodeCorps.Endpoint.html
 CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html
-CodeCorps.Factories.html
 CodeCorps.Gettext.html
 CodeCorps.GuardianSerializer.html
 CodeCorps.Helpers.CloudinaryUrl.html
@@ -199,6 +198,10 @@ CodeCorps.TaskList.html
 CodeCorps.TaskListController.html
 CodeCorps.TaskListView.html
 CodeCorps.TaskPolicy.html
+CodeCorps.TaskSkill.html
+CodeCorps.TaskSkillController.html
+CodeCorps.TaskSkillPolicy.html
+CodeCorps.TaskSkillView.html
 CodeCorps.TaskView.html
 CodeCorps.TestHelpers.html
 CodeCorps.TokenController.html
