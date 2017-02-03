@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bfb7137e6e.js"></script>
+    <script src="dist/sidebar_items-23616dfccf.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -309,6 +309,9 @@ model tests</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.OrganizationMembershipPolicy.html">CodeCorps.OrganizationMembershipPolicy</a></div>
   
+    <div class="summary-synopsis"><p>Handles <code class="inline">User</code> authorization of actions on <code class="inline">OrganizationMembership</code> records</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.OrganizationMembershipView.html">CodeCorps.OrganizationMembershipView</a></div>
@@ -497,6 +500,9 @@ policy tests</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.Services.MarkdownRendererService.html">CodeCorps.Services.MarkdownRendererService</a></div>
+  
+    <div class="summary-synopsis"><p>Used to render provided markdown into html using an external renderer package</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -795,13 +801,26 @@ usable for creation of <code class="inline">StripeFileUpload</code> records loca
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.StripeService.StripeConnectExternalAccountService.html">CodeCorps.StripeService.StripeConnectExternalAccountService</a></div>
   
+    <div class="summary-synopsis"><p>Used to perform actions on a <code class="inline">StripeConnectExternalAccount</code> record while
+propagating to and from the associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.ExternalAccount.html"><code class="inline">Stripe.ExternalAccount</code></a> record</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.StripeService.StripeConnectPlanService.html">CodeCorps.StripeService.StripeConnectPlanService</a></div>
   
+    <div class="summary-synopsis"><p>Used to perform actions on <code class="inline">StripeConnectPlan</code> records
+while at the same time propagating to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Plan.html"><code class="inline">Stripe.Plan</code></a>
+records</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.StripeService.StripeConnectSubscriptionService.html">CodeCorps.StripeService.StripeConnectSubscriptionService</a></div>
+  
+    <div class="summary-synopsis"><p>Used to perform actions on <code class="inline">StripeConnectSubscription</code> records while propagating
+to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> records</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -811,9 +830,17 @@ usable for creation of <code class="inline">StripeFileUpload</code> records loca
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.StripeService.StripePlatformCardService.html">CodeCorps.StripeService.StripePlatformCardService</a></div>
   
+    <div class="summary-synopsis"><p>Used to perform actions on StripePlatformCard records, while propagating to
+and from associated Stripe.Card records</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.StripeService.StripePlatformCustomerService.html">CodeCorps.StripeService.StripePlatformCustomerService</a></div>
+  
+    <div class="summary-synopsis"><p>Used to perform actions on <code class="inline">StripePlatformCustomer</code> records while propagating
+to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.5/Stripe.Customer.html"><code class="inline">Stripe.Customer</code></a> records</p>
+</div>
   
 </div>
 <div class="summary-row">
