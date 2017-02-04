@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-23616dfccf.js
+dist/sidebar_items-c70c7d7397.js
 api-reference.html
 readme.html
 license.html
@@ -12,8 +12,13 @@ index.html
 404.html
 Canary.Abilities.html
 CodeCorps.Analytics.InMemoryAPI.html
-CodeCorps.Analytics.Segment.html
 CodeCorps.Analytics.SegmentAPI.html
+CodeCorps.Analytics.SegmentDataExtractor.html
+CodeCorps.Analytics.SegmentEventNameBuilder.html
+CodeCorps.Analytics.SegmentPlugTracker.html
+CodeCorps.Analytics.SegmentTracker.html
+CodeCorps.Analytics.SegmentTrackingSupport.html
+CodeCorps.Analytics.SegmentTraitsBuilder.html
 CodeCorps.Analytics.TestAPI.html
 CodeCorps.ApiCase.html
 CodeCorps.AuthenticationHelpers.html
@@ -64,6 +69,7 @@ CodeCorps.PageController.html
 CodeCorps.PageView.html
 CodeCorps.Plug.AnalyticsIdentify.html
 CodeCorps.Plug.CurrentUser.html
+CodeCorps.Plug.Segment.html
 CodeCorps.Plug.SetSentryUserContext.html
 CodeCorps.PolicyCase.html
 CodeCorps.PreloadHelpers.html

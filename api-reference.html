@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-23616dfccf.js"></script>
+    <script src="dist/sidebar_items-c70c7d7397.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -82,16 +82,51 @@
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.Analytics.Segment.html">CodeCorps.Analytics.Segment</a></div>
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentAPI.html">CodeCorps.Analytics.SegmentAPI</a></div>
   
-    <div class="summary-synopsis"><p>Provides analytics tracking for Segment.com with an interface for making <a href="https://github.com/stueccles/analytics-elixir#identify"><code class="inline">identify</code></a> and <a href="https://github.com/stueccles/analytics-elixir#track"><code class="inline">track</code></a> calls via the <a href="https://github.com/stueccles/analytics-elixir"><code class="inline">analytics-elixir</code> package</a></p>
+    <div class="summary-synopsis"><p>Interface to the Segment API through the <a href="https://github.com/stueccles/analytics-elixir"><code class="inline">analytics-elixir</code> package</a></p>
 </div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentAPI.html">CodeCorps.Analytics.SegmentAPI</a></div>
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentDataExtractor.html">CodeCorps.Analytics.SegmentDataExtractor</a></div>
   
-    <div class="summary-synopsis"><p>Interface to the Segment API through the <a href="https://github.com/stueccles/analytics-elixir"><code class="inline">analytics-elixir</code> package</a></p>
+    <div class="summary-synopsis"><p>Extract data for use in Segment tracking</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentEventNameBuilder.html">CodeCorps.Analytics.SegmentEventNameBuilder</a></div>
+  
+    <div class="summary-synopsis"><p>Used for building friendly event names for use in Segment tracking</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentPlugTracker.html">CodeCorps.Analytics.SegmentPlugTracker</a></div>
+  
+    <div class="summary-synopsis"><p>Segment tracking</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentTracker.html">CodeCorps.Analytics.SegmentTracker</a></div>
+  
+    <div class="summary-synopsis"><p>Performs tracking of segment events</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentTrackingSupport.html">CodeCorps.Analytics.SegmentTrackingSupport</a></div>
+  
+    <div class="summary-synopsis"><p>Used to determine what Segment should and should not track</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Analytics.SegmentTraitsBuilder.html">CodeCorps.Analytics.SegmentTraitsBuilder</a></div>
+  
+    <div class="summary-synopsis"><p>Builds Segment traits from provided data</p>
 </div>
   
 </div>
@@ -336,12 +371,19 @@ model tests</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.Plug.AnalyticsIdentify.html">CodeCorps.Plug.AnalyticsIdentify</a></div>
   
-    <div class="summary-synopsis"><p>Plug used to identify the current user on Segment.com using <a href="CodeCorps.Analytics.Segment.html"><code class="inline">CodeCorps.Analytics.Segment</code></a></p>
+    <div class="summary-synopsis"><p>Plug used to identify the current user on Segment.com using <code class="inline">CodeCorps.Analytics.Segment</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.Plug.CurrentUser.html">CodeCorps.Plug.CurrentUser</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Plug.Segment.html">CodeCorps.Plug.Segment</a></div>
+  
+    <div class="summary-synopsis"><p>Used for reporting segment events</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -756,6 +798,10 @@ usable for creation of <code class="inline">StripeFileUpload</code> records loca
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.StripeService.Events.ConnectChargeSucceeded.html">CodeCorps.StripeService.Events.ConnectChargeSucceeded</a></div>
+  
+    <div class="summary-synopsis"><p>Performs everything required to handle a charge.succeeded webhook
+on Stripe Connect</p>
+</div>
   
 </div>
 <div class="summary-row">
