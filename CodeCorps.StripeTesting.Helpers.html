@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeTesting.Helpers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c70c7d7397.js"></script>
+    <script src="dist/sidebar_items-8982dea320.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -69,6 +69,12 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>Used to load JSON fitures which simulate Stripe API responses into
+stripity_stripe structs</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -87,7 +93,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#load_fixture/2">load_fixture(module, id)</a>
+    <a href="#load_fixture/1">load_fixture(id)</a>
   </div>
   
     <div class="summary-synopsis"><p>Load a stripe response fixture through stripity_stripe, into a
@@ -116,15 +122,15 @@ stripity_stripe struct</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="load_fixture/2">
+          <div class="detail" id="load_fixture/1">
   
   <div class="detail-header">
-    <a href="#load_fixture/2" class="detail-link" title="Link to this function">
+    <a href="#load_fixture/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">load_fixture(module, id)</span>
+    <span class="signature">load_fixture(id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_testing/helpers.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_testing/helpers.ex#L13" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -132,7 +138,7 @@ stripity_stripe struct</p>
     
       <div class="specs">
         
-          <pre>load_fixture(module, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: struct</pre>
+          <pre>load_fixture(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: struct</pre>
         
       </div>
     
