@@ -4,13 +4,15 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-cee544243f.js
+dist/sidebar_items-0532fbbce0.js
 api-reference.html
 readme.html
 license.html
 index.html
 404.html
 Canary.Abilities.html
+Cloudex.CloudinaryApi.Test.html
+Cloudex.CloudinaryApi.Test.Url.html
 CodeCorps.Analytics.InMemoryAPI.html
 CodeCorps.Analytics.SegmentAPI.html
 CodeCorps.Analytics.SegmentDataExtractor.html
