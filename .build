@@ -4,15 +4,15 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-2cbaeb8ba8.js
+dist/sidebar_items-424541110d.js
 api-reference.html
 readme.html
 license.html
 index.html
 404.html
 Canary.Abilities.html
-Cloudex.CloudinaryApi.Test.html
-Cloudex.CloudinaryApi.Test.Url.html
+CloudexTest.html
+CloudexTest.Url.html
 CodeCorps.Analytics.InMemoryAPI.html
 CodeCorps.Analytics.SegmentAPI.html
 CodeCorps.Analytics.SegmentDataExtractor.html
@@ -31,6 +31,7 @@ CodeCorps.CategoryPolicy.html
 CodeCorps.CategoryView.html
 CodeCorps.ChangesetView.html
 CodeCorps.ChannelCase.html
+CodeCorps.Cloudex.CloudinaryUrl.html
 CodeCorps.Comment.html
 CodeCorps.CommentController.html
 CodeCorps.CommentPolicy.html
@@ -48,7 +49,6 @@ CodeCorps.ErrorHelpers.html
 CodeCorps.ErrorView.html
 CodeCorps.Gettext.html
 CodeCorps.GuardianSerializer.html
-CodeCorps.Helpers.CloudinaryUrl.html
 CodeCorps.Helpers.Policy.html
 CodeCorps.Helpers.Query.html
 CodeCorps.Helpers.RandomIconColor.html
