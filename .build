@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-e67edd3dc3.js
+dist/sidebar_items-7e02e08f80.js
 api-reference.html
 readme.html
 license.html
@@ -90,6 +90,10 @@ CodeCorps.ProjectSkill.html
 CodeCorps.ProjectSkillController.html
 CodeCorps.ProjectSkillPolicy.html
 CodeCorps.ProjectSkillView.html
+CodeCorps.ProjectUser.html
+CodeCorps.ProjectUserController.html
+CodeCorps.ProjectUserPolicy.html
+CodeCorps.ProjectUserView.html
 CodeCorps.ProjectView.html
 CodeCorps.RandomIconColor.Generator.html
 CodeCorps.RandomIconColor.TestGenerator.html
