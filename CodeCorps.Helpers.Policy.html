@@ -8,7 +8,7 @@
     <title>CodeCorps.Helpers.Policy – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-7e02e08f80.js"></script>
+    <script src="dist/sidebar_items-27c593e941.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -148,6 +148,15 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#organization_owned_by?/2">organization_owned_by?(organization, user)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Determines if the provided organization is owned by the provided user</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#owner?/1">owner?(arg1)</a>
   </div>
   
@@ -193,7 +202,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">admin_or_higher?(role)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L66" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L74" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -219,7 +228,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">contributor_or_higher?(role)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L73" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L81" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -275,7 +284,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">get_project(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -302,7 +311,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">get_role(changeset)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L50" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L58" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -331,7 +340,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">get_task(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L80" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L88" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -349,6 +358,32 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
 
   </section>
 </div>
+<div class="detail" id="organization_owned_by?/2">
+  
+  <div class="detail-header">
+    <a href="#organization_owned_by?/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">organization_owned_by?(organization, user)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>organization_owned_by?(<a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: boolean</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Determines if the provided organization is owned by the provided user</p>
+
+  </section>
+</div>
 <div class="detail" id="owner?/1">
   
   <div class="detail-header">
@@ -357,7 +392,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">owner?(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L67" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -383,7 +418,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">task_authored_by?(task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L96" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
