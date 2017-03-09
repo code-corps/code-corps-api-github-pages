@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.5">
-    <title>CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter – code_corps v0.0.1</title>
+    <title>CodeCorps.Helpers.URL – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-2e774523cf.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.Adapters.StripeConnectSubscriptionAdapter
+        CodeCorps.Helpers.URL
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_connect_subscription.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/url.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,8 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>Used for conversion between stripe api payload maps and maps
-usable for creation of StripeConnectSubscription records locally</p>
+          <p>Provides some helpers for assembling and validating URLs.</p>
 
         </section>
       
@@ -93,12 +92,18 @@ usable for creation of StripeConnectSubscription records locally</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_params/2">to_params(stripe_subscription, attributes)</a>
+    <a href="#prefix_url/2">prefix_url(changeset, key)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts a map received from the Stripe API into a map that can be used
-to create a <a href="CodeCorps.StripeConnectSubscription.html"><code class="inline">CodeCorps.StripeConnectSubscription</code></a> record</p>
+    <div class="summary-synopsis"><p>Prefixes the URL with <code class="inline">http://</code> in the event that <code class="inline">http://</code> and <code class="inline">https://</code> are
+not already the starting format. If <code class="inline">nil</code>, simply returns <code class="inline">nil</code></p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#valid_format/0">valid_format()</a>
+  </div>
   
 </div>
 
@@ -122,15 +127,15 @@ to create a <a href="CodeCorps.StripeConnectSubscription.html"><code class="inli
             </a>
             Functions
           </h1>
-          <div class="detail" id="to_params/2">
+          <div class="detail" id="prefix_url/2">
   
   <div class="detail-header">
-    <a href="#to_params/2" class="detail-link" title="Link to this function">
+    <a href="#prefix_url/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">to_params(stripe_subscription, attributes)</span>
+    <span class="signature">prefix_url(changeset, key)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_connect_subscription.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/url.ex#L12" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -138,9 +143,28 @@ to create a <a href="CodeCorps.StripeConnectSubscription.html"><code class="inli
     
   </div>
   <section class="docstring">
-    <p>Converts a map received from the Stripe API into a map that can be used
-to create a <a href="CodeCorps.StripeConnectSubscription.html"><code class="inline">CodeCorps.StripeConnectSubscription</code></a> record</p>
+    <p>Prefixes the URL with <code class="inline">http://</code> in the event that <code class="inline">http://</code> and <code class="inline">https://</code> are
+not already the starting format. If <code class="inline">nil</code>, simply returns <code class="inline">nil</code>.</p>
 
+  </section>
+</div>
+<div class="detail" id="valid_format/0">
+  
+  <div class="detail-header">
+    <a href="#valid_format/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">valid_format()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/url.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 
