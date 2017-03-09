@@ -8,7 +8,7 @@
     <title>CodeCorps.Helpers.Policy – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2e774523cf.js"></script>
+    <script src="dist/sidebar_items-61dfb480a1.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -93,29 +93,29 @@ authorization policies.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#admin_or_higher?/1">admin_or_higher?(role)</a>
+    <a href="#administered_by?/2">administered_by?(project, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Determines if provided string is equal to one of <code class="inline">[&quot;admin&quot;, &quot;owner&quot;]</code></p>
+    <div class="summary-synopsis"><p>Determines if the provided project is being administered by the provided User</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#contributor_or_higher?/1">contributor_or_higher?(role)</a>
+    <a href="#contributed_by?/2">contributed_by?(project, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Determines if provided string is equal to one of <code class="inline">[&quot;contributor&quot;, &quot;admin&quot;, &quot;owner&quot;]</code></p>
+    <div class="summary-synopsis"><p>Determines if the provided project is being contributed to by the provided User</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_membership/2">get_membership(arg1, user)</a>
+    <a href="#get_organization/1">get_organization(arg1)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Retrieves the specified user’s membership record, from a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>,
-containing an <code class="inline">organization_id</code> field, or from a <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a> struct</p>
+    <div class="summary-synopsis"><p>Retrieves an organization record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>
+containing an <code class="inline">organization_id</code> field</p>
 </div>
   
 </div>
@@ -124,7 +124,8 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <a href="#get_project/1">get_project(arg1)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Retrieves a project record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a> containing a <code class="inline">project_id</code> field</p>
+    <div class="summary-synopsis"><p>Retrieves a project record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>
+containing a <code class="inline">project_id</code> field</p>
 </div>
   
 </div>
@@ -133,7 +134,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     <a href="#get_role/1">get_role(changeset)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Retrieves the role field, from a <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a></p>
+    <div class="summary-synopsis"><p>Retrieves the role field from a <a href="CodeCorps.ProjectUser.html"><code class="inline">CodeCorps.ProjectUser</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a></p>
 </div>
   
 </div>
@@ -148,19 +149,10 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#organization_owned_by?/2">organization_owned_by?(organization, user)</a>
+    <a href="#owned_by?/2">owned_by?(arg1, arg2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Determines if the provided organization is owned by the provided user</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#owner?/1">owner?(arg1)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Determines if provided string is equal to “owner”</p>
+    <div class="summary-synopsis"><p>Determines if the provided organization or project is owned by the provided user</p>
 </div>
   
 </div>
@@ -194,15 +186,15 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
             </a>
             Functions
           </h1>
-          <div class="detail" id="admin_or_higher?/1">
+          <div class="detail" id="administered_by?/2">
   
   <div class="detail-header">
-    <a href="#admin_or_higher?/1" class="detail-link" title="Link to this function">
+    <a href="#administered_by?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">admin_or_higher?(role)</span>
+    <span class="signature">administered_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L74" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -210,25 +202,32 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
       <div class="specs">
         
-          <pre>admin_or_higher?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: boolean</pre>
+          <pre>administered_by?(nil | <a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: boolean</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Determines if provided string is equal to one of <code class="inline">[&quot;admin&quot;, &quot;owner&quot;]</code></p>
+    <p>Determines if the provided project is being administered by the provided User</p>
+<p>Returns <code class="inline">true</code> if</p>
+<ul>
+<li>the user is the owner of the project
+</li>
+<li>the user is an admin or higher member of the project
+</li>
+</ul>
 
   </section>
 </div>
-<div class="detail" id="contributor_or_higher?/1">
+<div class="detail" id="contributed_by?/2">
   
   <div class="detail-header">
-    <a href="#contributor_or_higher?/1" class="detail-link" title="Link to this function">
+    <a href="#contributed_by?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">contributor_or_higher?(role)</span>
+    <span class="signature">contributed_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -236,25 +235,32 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
       <div class="specs">
         
-          <pre>contributor_or_higher?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: boolean</pre>
+          <pre>contributed_by?(nil | <a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: boolean</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Determines if provided string is equal to one of <code class="inline">[&quot;contributor&quot;, &quot;admin&quot;, &quot;owner&quot;]</code></p>
+    <p>Determines if the provided project is being contributed to by the provided User</p>
+<p>Returns <code class="inline">true</code> if</p>
+<ul>
+<li>the user is the owner of the project
+</li>
+<li>the user is a contributor or higher member of the project
+</li>
+</ul>
 
   </section>
 </div>
-<div class="detail" id="get_membership/2">
+<div class="detail" id="get_organization/1">
   
   <div class="detail-header">
-    <a href="#get_membership/2" class="detail-link" title="Link to this function">
+    <a href="#get_organization/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">get_membership(arg1, user)</span>
+    <span class="signature">get_organization(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L60" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -262,17 +268,15 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
       <div class="specs">
         
-          <pre>get_membership(nil | <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a> | <a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a> | <a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a> | <a href="CodeCorps.StripeConnectAccount.html#t:t/0">CodeCorps.StripeConnectAccount.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) ::
-  nil |
-  <a href="CodeCorps.OrganizationMembership.html#t:t/0">CodeCorps.OrganizationMembership.t</a></pre>
+          <pre>get_organization(struct | <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a> | any) :: <a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Retrieves the specified user’s membership record, from a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>,
-containing an <code class="inline">organization_id</code> field, or from a <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a> struct</p>
-<p>Returns <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a></p>
+    <p>Retrieves an organization record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>
+containing an <code class="inline">organization_id</code> field</p>
+<p>Returns <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a></p>
 
   </section>
 </div>
@@ -284,7 +288,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">get_project(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L71" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -298,7 +302,8 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
   </div>
   <section class="docstring">
-    <p>Retrieves a project record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a> containing a <code class="inline">project_id</code> field</p>
+    <p>Retrieves a project record, from a model struct, or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a>
+containing a <code class="inline">project_id</code> field</p>
 <p>Returns <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a></p>
 
   </section>
@@ -311,7 +316,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">get_role(changeset)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L58" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L79" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -319,7 +324,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
       <div class="specs">
         
-          <pre>get_role(nil | <a href="CodeCorps.OrganizationMembership.html#t:t/0">CodeCorps.OrganizationMembership.t</a> | <a href="CodeCorps.ProjectUser.html#t:t/0">CodeCorps.ProjectUser.t</a> | <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>) ::
+          <pre>get_role(nil | <a href="CodeCorps.ProjectUser.html#t:t/0">CodeCorps.ProjectUser.t</a> | <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>) ::
   <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a> |
   nil</pre>
         
@@ -327,8 +332,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
   </div>
   <section class="docstring">
-    <p>Retrieves the role field, from a <a href="CodeCorps.OrganizationMembership.html"><code class="inline">CodeCorps.OrganizationMembership</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a></p>
-<p>Returns <code class="inline">:string</code></p>
+    <p>Retrieves the role field from a <a href="CodeCorps.ProjectUser.html"><code class="inline">CodeCorps.ProjectUser</code></a> struct or an <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Changeset.html"><code class="inline">Ecto.Changeset</code></a></p>
 
   </section>
 </div>
@@ -340,7 +344,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">get_task(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L95" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -358,15 +362,15 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
 
   </section>
 </div>
-<div class="detail" id="organization_owned_by?/2">
+<div class="detail" id="owned_by?/2">
   
   <div class="detail-header">
-    <a href="#organization_owned_by?/2" class="detail-link" title="Link to this function">
+    <a href="#owned_by?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">organization_owned_by?(organization, user)</span>
+    <span class="signature">owned_by?(arg1, arg2)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -374,39 +378,13 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     
       <div class="specs">
         
-          <pre>organization_owned_by?(<a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: boolean</pre>
+          <pre>owned_by?(nil | <a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a> | <a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: boolean</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Determines if the provided organization is owned by the provided user</p>
-
-  </section>
-</div>
-<div class="detail" id="owner?/1">
-  
-  <div class="detail-header">
-    <a href="#owner?/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">owner?(arg1)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L67" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>owner?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: boolean</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Determines if provided string is equal to “owner”</p>
+    <p>Determines if the provided organization or project is owned by the provided user</p>
 
   </section>
 </div>
@@ -418,7 +396,7 @@ containing an <code class="inline">organization_id</code> field, or from a <a hr
     </a>
     <span class="signature">task_authored_by?(task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L96" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L103" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
