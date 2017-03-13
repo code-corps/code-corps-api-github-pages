@@ -8,7 +8,7 @@
     <title>CodeCorps.Helpers.Policy – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-63c53362f7.js"></script>
+    <script src="dist/sidebar_items-6de96cffe0.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -149,7 +149,7 @@ containing a <code class="inline">project_id</code> field</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#owned_by?/2">owned_by?(arg1, arg2)</a>
+    <a href="#owned_by?/2">owned_by?(project, user)</a>
   </div>
   
     <div class="summary-synopsis"><p>Determines if the provided organization or project is owned by the provided user</p>
@@ -194,7 +194,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">administered_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L30" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -209,13 +209,7 @@ containing a <code class="inline">project_id</code> field</p>
   </div>
   <section class="docstring">
     <p>Determines if the provided project is being administered by the provided User</p>
-<p>Returns <code class="inline">true</code> if</p>
-<ul>
-<li>the user is the owner of the project
-</li>
-<li>the user is an admin or higher member of the project
-</li>
-</ul>
+<p>Returns <code class="inline">true</code> if the user is an admin or higher member of the project</p>
 
   </section>
 </div>
@@ -227,7 +221,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">contributed_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L40" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -242,13 +236,7 @@ containing a <code class="inline">project_id</code> field</p>
   </div>
   <section class="docstring">
     <p>Determines if the provided project is being contributed to by the provided User</p>
-<p>Returns <code class="inline">true</code> if</p>
-<ul>
-<li>the user is the owner of the project
-</li>
-<li>the user is a contributor or higher member of the project
-</li>
-</ul>
+<p>Returns <code class="inline">true</code> if the user is a contributor or higher member of the project</p>
 
   </section>
 </div>
@@ -260,7 +248,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">get_organization(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L51" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -288,7 +276,7 @@ containing an <code class="inline">organization_id</code> field</p>
     </a>
     <span class="signature">get_project(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L62" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -316,7 +304,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">get_role(changeset)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L70" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -344,7 +332,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">get_task(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L95" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L90" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -368,7 +356,7 @@ containing a <code class="inline">project_id</code> field</p>
     <a href="#owned_by?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">owned_by?(arg1, arg2)</span>
+    <span class="signature">owned_by?(project, user)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -396,7 +384,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">task_authored_by?(task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L103" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/helpers/policy.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
