@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeConnectSubscriptionController – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-ab630045cb.js"></script>
+    <script src="dist/sidebar_items-cb843968f7.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -132,6 +132,24 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#handle_invalid_create/2">handle_invalid_create(conn, errors)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during create</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_invalid_update/2">handle_invalid_update(conn, errors)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during update</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#handle_show/2">handle_show(conn, id)</a>
   </div>
   
@@ -153,7 +171,7 @@
     <a href="#model/0">model()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented</p>
+    <div class="summary-synopsis"><p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented</p>
 </div>
   
 </div>
@@ -186,10 +204,28 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#render_create/2">render_create(conn, model)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful create</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#render_update/2">render_update(conn, model)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful update</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#repo/0">repo()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller</p>
+    <div class="summary-synopsis"><p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller</p>
 </div>
   
 </div>
@@ -266,7 +302,7 @@ def filter(_conn, query, attr, val) when attr in @filterable_attrs do
   where(query, [{String.to_existing_atom(attr), val}])
 end</code></pre>
 <p>Anything not explicitly matched by your callbacks will be ignored.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Index.html#c:filter/4"><code class="inline">JaResource.Index.filter/4</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Index.html#c:filter/4"><code class="inline">JaResource.Index.filter/4</code></a>.</p>
 
   </section>
 </div>
@@ -289,7 +325,7 @@ end</code></pre>
     <p>Returns an unpersisted changeset or persisted model of the newly created object.</p>
 <p>Default implementation returns the results of calling
 <code class="inline">Model.changeset(%Model{}, attrs)</code> where Model is the model defined by the
-<a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Model.html#model/0"><code class="inline">JaResource.Model.model/0</code></a> callback.</p>
+<a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Model.html#model/0"><code class="inline">JaResource.Model.model/0</code></a> callback.</p>
 <p>The attributes argument is the result of the <code class="inline">permitted_attributes</code> function.</p>
 <p><a href="#handle_create/2"><code class="inline">handle_create/2</code></a> can return an %Ecto.Changeset, an Ecto.Schema struct,
 a list of errors (<code class="inline">{:error, [email: &quot;is not valid&quot;]}</code> or a conn with
@@ -298,7 +334,7 @@ any response/body.</p>
 <pre><code class="elixir">def handle_create(_conn, attributes) do
   Post.changeset(%Post{}, attributes, :create_and_publish)
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Create.html#c:handle_create/2"><code class="inline">JaResource.Create.handle_create/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Create.html#c:handle_create/2"><code class="inline">JaResource.Create.handle_create/2</code></a>.</p>
 
   </section>
 </div>
@@ -328,7 +364,7 @@ end</code></pre>
     _                 -&gt; send_resp(conn, 401, &quot;nope&quot;)
   end
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Delete.html#c:handle_delete/2"><code class="inline">JaResource.Delete.handle_delete/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Delete.html#c:handle_delete/2"><code class="inline">JaResource.Delete.handle_delete/2</code></a>.</p>
 
   </section>
 </div>
@@ -362,7 +398,7 @@ callback. Usually a module or an <code class="inline">%Ecto.Query{}</code>.</p>
 end</code></pre>
 <p>In most cases JaResource.Records.records/1, filter/4, and sort/4 are the
 better customization hooks.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Index.html#c:handle_index/2"><code class="inline">JaResource.Index.handle_index/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Index.html#c:handle_index/2"><code class="inline">JaResource.Index.handle_index/2</code></a>.</p>
 
   </section>
 </div>
@@ -388,7 +424,53 @@ pagination, monitoring, etc. For example to paginate with Scrivener:</p>
 <pre><code class="elixir">def handle_index_query(%{query_params: qp}, query) do
   repo().paginate(query, qp[&quot;page&quot;] || %{})
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Index.html#c:handle_index_query/2"><code class="inline">JaResource.Index.handle_index_query/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Index.html#c:handle_index_query/2"><code class="inline">JaResource.Index.handle_index_query/2</code></a>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_invalid_create/2">
+  
+  <div class="detail-header">
+    <a href="#handle_invalid_create/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_invalid_create(conn, errors)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/controllers/stripe_connect_subscription_controller.ex#L3" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during create.</p>
+<p>Default implementation sets the status to <code class="inline">:unprocessable_entity</code> and renders
+the error messages provided.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Create.html#c:handle_invalid_create/2"><code class="inline">JaResource.Create.handle_invalid_create/2</code></a>.</p>
+
+  </section>
+</div>
+<div class="detail" id="handle_invalid_update/2">
+  
+  <div class="detail-header">
+    <a href="#handle_invalid_update/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">handle_invalid_update(conn, errors)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/controllers/stripe_connect_subscription_controller.ex#L3" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during update.</p>
+<p>Default implementation sets the status to <code class="inline">:unprocessable_entity</code> and renders
+the error messages provided.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Update.html#c:handle_invalid_update/2"><code class="inline">JaResource.Update.handle_invalid_update/2</code></a>.</p>
 
   </section>
 </div>
@@ -419,7 +501,7 @@ or a record to be serialized.</p>
 end</code></pre>
 <p>In most cases JaResource.Record.record/2 and JaResource.Records.records/1 are
 the better customization hooks.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Show.html#c:handle_show/2"><code class="inline">JaResource.Show.handle_show/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Show.html#c:handle_show/2"><code class="inline">JaResource.Show.handle_show/2</code></a>.</p>
 
   </section>
 </div>
@@ -455,7 +537,7 @@ any response/body.</p>
     _                -&gt; Post.changeset(post, attributes, :update)
   end
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Update.html#c:handle_update/3"><code class="inline">JaResource.Update.handle_update/3</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Update.html#c:handle_update/3"><code class="inline">JaResource.Update.handle_update/3</code></a>.</p>
 
   </section>
 </div>
@@ -475,14 +557,14 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented.</p>
+    <p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented.</p>
 <p>Example:</p>
 <pre><code class="elixir">def model, do: MyApp.Models.Post</code></pre>
 <p>Defaults to the name of the controller, for example the controller
 <code class="inline">MyApp.V1.PostController</code> would serve the <code class="inline">MyApp.Post</code> model.</p>
 <p>Used by the default implementations for <a href="#handle_create/2"><code class="inline">handle_create/2</code></a>, <a href="#handle_update/3"><code class="inline">handle_update/3</code></a>,
 and <a href="#records/1"><code class="inline">records/1</code></a>.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Model.html#c:model/0"><code class="inline">JaResource.Model.model/0</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Model.html#c:model/0"><code class="inline">JaResource.Model.model/0</code></a>.</p>
 
   </section>
 </div>
@@ -522,7 +604,7 @@ the values at <code class="inline">data/attributes</code>, <code class="inline">
     Map.take(attrs, ~w(title body type category_id))
   end
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Attributes.html#c:permitted_attributes/3"><code class="inline">JaResource.Attributes.permitted_attributes/3</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Attributes.html#c:permitted_attributes/3"><code class="inline">JaResource.Attributes.permitted_attributes/3</code></a>.</p>
 
   </section>
 </div>
@@ -549,7 +631,7 @@ end</code></pre>
   |&gt; where([p], p.author_id == ^user_id)
   |&gt; Repo.get(id)
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Record.html#c:record/2"><code class="inline">JaResource.Record.record/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Record.html#c:record/2"><code class="inline">JaResource.Record.record/2</code></a>.</p>
 
   </section>
 </div>
@@ -576,7 +658,51 @@ end</code></pre>
   |&gt; where([p], p.author_id == ^user_id)
 end</code></pre>
 <p>Return value should be %Plug.Conn{} or an %Ecto.Query{}.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Records.html#c:records/1"><code class="inline">JaResource.Records.records/1</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Records.html#c:records/1"><code class="inline">JaResource.Records.records/1</code></a>.</p>
+
+  </section>
+</div>
+<div class="detail" id="render_create/2">
+  
+  <div class="detail-header">
+    <a href="#render_create/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">render_create(conn, model)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/controllers/stripe_connect_subscription_controller.ex#L3" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful create.</p>
+<p>Default implementation sets the status to <code class="inline">:created</code> and renders the view.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Create.html#c:render_create/2"><code class="inline">JaResource.Create.render_create/2</code></a>.</p>
+
+  </section>
+</div>
+<div class="detail" id="render_update/2">
+  
+  <div class="detail-header">
+    <a href="#render_update/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">render_update(conn, model)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/controllers/stripe_connect_subscription_controller.ex#L3" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful update.</p>
+<p>Default implementation renders the view.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Update.html#c:render_update/2"><code class="inline">JaResource.Update.render_update/2</code></a>.</p>
 
   </section>
 </div>
@@ -596,13 +722,13 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.1.3/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller.</p>
+    <p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller.</p>
 <p>Defaults to the value set in config if present:</p>
 <pre><code class="elixir">config :ja_resource,
    repo: MyApp.Repo</code></pre>
 <p>Default can be overridden per controller:</p>
 <pre><code class="elixir">def repo, do: MyApp.SecondaryRepo</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Repo.html#c:repo/0"><code class="inline">JaResource.Repo.repo/0</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Repo.html#c:repo/0"><code class="inline">JaResource.Repo.repo/0</code></a>.</p>
 
   </section>
 </div>
@@ -628,7 +754,7 @@ optionally requested by the stack.</p>
 <p>It can also be used to add a meta to the payload,
 such as for scrivener pagination, on an index endpoint.</p>
 <p>See http://github.com/AgilionApps/ja_serializer for option format.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Serializable.html#c:serialization_opts/3"><code class="inline">JaResource.Serializable.serialization_opts/3</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Serializable.html#c:serialization_opts/3"><code class="inline">JaResource.Serializable.serialization_opts/3</code></a>.</p>
 
   </section>
 </div>
@@ -663,7 +789,7 @@ def sort(_conn, query, &quot;title&quot;, direction) do
   order_by(query, [{direction, :title}])
 end</code></pre>
 <p>Anything not explicitly matched by your callbacks will be ignored.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.2.0/JaResource.Index.html#c:sort/4"><code class="inline">JaResource.Index.sort/4</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Index.html#c:sort/4"><code class="inline">JaResource.Index.sort/4</code></a>.</p>
 
   </section>
 </div>

@@ -8,7 +8,7 @@
     <title>CodeCorps.UserSocket – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-ab630045cb.js"></script>
+    <script src="dist/sidebar_items-cb843968f7.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -152,9 +152,9 @@ verification, you can put default assigns into
 the socket that will be set for all channels, ie</p>
 <pre><code class="elixir">{:ok, assign(socket, :user_id, verified_user_id)}</code></pre>
 <p>To deny connection, return <code class="inline">:error</code>.</p>
-<p>See <a href="https://hexdocs.pm/phoenix/1.2.1/Phoenix.Token.html"><code class="inline">Phoenix.Token</code></a> documentation for examples in
+<p>See <a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Token.html"><code class="inline">Phoenix.Token</code></a> documentation for examples in
 performing token verification on connect.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/phoenix/1.2.1/Phoenix.Socket.html#c:connect/2"><code class="inline">Phoenix.Socket.connect/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Socket.html#c:connect/2"><code class="inline">Phoenix.Socket.connect/2</code></a>.</p>
 
   </section>
 </div>
@@ -181,7 +181,7 @@ performing token verification on connect.</p>
 all active sockets and channels for a given user:</p>
 <pre><code class="elixir">MyApp.Endpoint.broadcast(&quot;users_socket:&quot; &lt;&gt; user.id, &quot;disconnect&quot;, %{})</code></pre>
 <p>Returning <code class="inline">nil</code> makes this socket anonymous.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/phoenix/1.2.1/Phoenix.Socket.html#c:id/1"><code class="inline">Phoenix.Socket.id/1</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Socket.html#c:id/1"><code class="inline">Phoenix.Socket.id/1</code></a>.</p>
 
   </section>
 </div>
