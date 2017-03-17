@@ -70,7 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of handling Stripe Connect webhooks</p>
+          <p>Handler for Stripe Connect webhooks.</p>
 
         </section>
       
@@ -95,7 +95,7 @@
     <a href="#handle_event/1">handle_event(attributes)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles Stripe Connect webhooks</p>
+    <div class="summary-synopsis"><p>Handles Stripe Connect webhook events</p>
 </div>
   
 </div>
@@ -128,7 +128,7 @@
     </a>
     <span class="signature">handle_event(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/connect_event_handler.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/connect_event_handler.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -136,17 +136,19 @@
     
   </div>
   <section class="docstring">
-    <p>Handles Stripe Connect webhooks</p>
+    <p>Handles Stripe Connect webhook events.</p>
 <h2 id="handle_event/1-returns" class="section-heading">
   <a href="#handle_event/1-returns" class="hover-link"><i class="icon-link"></i></a>
   Returns
 </h2>
 
 <ul>
-<li>The result of calling the specific handlers <code class="inline">handle/1</code> function. This result ought ot be a tupple,
-  in which the first member is <code class="inline">:ok</code>, followed by one or more other elements, usually modified records.
+<li>The result of calling the specific handlers <code class="inline">handle/1</code> function. This
+  result should be a tuple, in which the first member is <code class="inline">:ok</code>, followed by
+  one or more other elements, usually modified records.
 </li>
-<li><code class="inline">{:ok, :unhandled_event}</code> if the specific event is not supported yet or at all
+<li><code class="inline">{:ok, :unhandled_event}</code> if the specific event is not supported yet
+  or at all
 </li>
 </ul>
 
