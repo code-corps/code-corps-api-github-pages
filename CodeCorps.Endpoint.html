@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.5">
+    <meta name="generator" content="ExDoc v0.15.0">
     <title>CodeCorps.Endpoint – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-313e210945.js"></script>
+    <script src="dist/sidebar_items-0e3ad7605e.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -123,7 +123,7 @@
     <a href="#call/2">call(conn, opts)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.3/Plug.html#c:call/2"><code class="inline">Plug.call/2</code></a></p>
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.4/Plug.html#c:call/2"><code class="inline">Plug.call/2</code></a></p>
 </div>
   
 </div>
@@ -150,7 +150,16 @@
     <a href="#init/1">init(opts)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.3/Plug.html#c:init/1"><code class="inline">Plug.init/1</code></a></p>
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.4/Plug.html#c:init/1"><code class="inline">Plug.init/1</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#instrument/3">instrument(event, runtime \\ Macro.escape(%{}), fun)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Instruments the given function</p>
 </div>
   
 </div>
@@ -235,24 +244,6 @@
   </div>
   
     <div class="summary-synopsis"><p>Generates the endpoint base URL without any path information</p>
-</div>
-  
-</div>
-
-  </div>
-
-
-          
-  <div class="summary-macros summary">
-    <h2>
-      <a href="#macros">Macros</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#instrument/3">instrument(event, runtime \\ Macro.escape(%{}), fun)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Instruments the given function</p>
 </div>
   
 </div>
@@ -387,7 +378,7 @@
     
   </div>
   <section class="docstring">
-    <p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.3/Plug.html#c:call/2"><code class="inline">Plug.call/2</code></a>.</p>
+    <p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.4/Plug.html#c:call/2"><code class="inline">Plug.call/2</code></a>.</p>
 
   </section>
 </div>
@@ -450,7 +441,43 @@
     
   </div>
   <section class="docstring">
-    <p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.3/Plug.html#c:init/1"><code class="inline">Plug.init/1</code></a>.</p>
+    <p>Callback implementation for <a href="https://hexdocs.pm/plug/1.3.4/Plug.html#c:init/1"><code class="inline">Plug.init/1</code></a>.</p>
+
+  </section>
+</div>
+<div class="detail" id="instrument/3">
+  
+    <span id="instrument/2" />
+  
+  <div class="detail-header">
+    <a href="#instrument/3" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">instrument(event, runtime \\ Macro.escape(%{}), fun)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/endpoint.ex#L1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+      <span class="note">(macro)</span>
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Instruments the given function.</p>
+<p><code class="inline">event</code> is the event identifier (usually an atom) that specifies which
+instrumenting function to call in the instrumenter modules. <code class="inline">runtime</code> is
+metadata to be associated with the event at runtime (e.g., the query being
+issued if the event to instrument is a DB query).</p>
+<h2 id="instrument/3-examples" class="section-heading">
+  <a href="#instrument/3-examples" class="hover-link"><i class="icon-link"></i></a>
+  Examples
+</h2>
+
+<pre><code class="elixir">instrument :render_view, %{view: &quot;index.html&quot;}, fn -&gt;
+  render conn, &quot;index.html&quot;
+end</code></pre>
 
   </section>
 </div>
@@ -680,57 +707,11 @@ URL helpers.</p>
       
 
       
-        <section id="macros" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#macros">
-              <i class="icon-link"></i>
-            </a>
-            Macros
-          </h1>
-          <div class="detail" id="instrument/3">
-  
-    <span id="instrument/2" />
-  
-  <div class="detail-header">
-    <a href="#instrument/3" class="detail-link" title="Link to this macro">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">instrument(event, runtime \\ Macro.escape(%{}), fun)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/endpoint.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Instruments the given function.</p>
-<p><code class="inline">event</code> is the event identifier (usually an atom) that specifies which
-instrumenting function to call in the instrumenter modules. <code class="inline">runtime</code> is
-metadata to be associated with the event at runtime (e.g., the query being
-issued if the event to instrument is a DB query).</p>
-<h2 id="instrument/3-examples" class="section-heading">
-  <a href="#instrument/3-examples" class="hover-link"><i class="icon-link"></i></a>
-  Examples
-</h2>
-
-<pre><code class="elixir">instrument :render_view, %{view: &quot;index.html&quot;}, fn -&gt;
-  render conn, &quot;index.html&quot;
-end</code></pre>
-
-  </section>
-</div>
-
-        </section>
-      
-
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.5),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
           </span>
           <span class="line">
             designed by
@@ -743,7 +724,7 @@ end</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-4aef34ad5f.js"></script>
+  <script src="dist/app-372682077e.js"></script>
   </body>
 </html>
 

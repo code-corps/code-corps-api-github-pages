@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.14.5">
+    <meta name="generator" content="ExDoc v0.15.0">
     <title>CodeCorps.UserTaskController – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-313e210945.js"></script>
+    <script src="dist/sidebar_items-0e3ad7605e.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -135,7 +135,7 @@
     <a href="#handle_invalid_create/2">handle_invalid_create(conn, errors)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during create</p>
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during create</p>
 </div>
   
 </div>
@@ -144,7 +144,7 @@
     <a href="#handle_invalid_update/2">handle_invalid_update(conn, errors)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during update</p>
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during update</p>
 </div>
   
 </div>
@@ -207,7 +207,7 @@
     <a href="#render_create/2">render_create(conn, model)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful create</p>
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful create</p>
 </div>
   
 </div>
@@ -216,7 +216,7 @@
     <a href="#render_update/2">render_update(conn, model)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful update</p>
+    <div class="summary-synopsis"><p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful update</p>
 </div>
   
 </div>
@@ -253,8 +253,6 @@
 
           
 
-          
-
         </section>
       
 
@@ -284,7 +282,7 @@
     
       <div class="specs">
         
-          <pre>filter(<a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html#t:t/0">Ecto.Query.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html#t:t/0">Plug.Conn.t</a></pre>
+          <pre>filter(<a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Query.html#t:t/0">Ecto.Query.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html#t:t/0">Plug.Conn.t</a></pre>
         
       </div>
     
@@ -328,7 +326,7 @@ end</code></pre>
     
       <div class="specs">
         
-          <pre>handle_create(<a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, map) :: <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+          <pre>handle_create(<a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, map) :: <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
         
       </div>
     
@@ -456,7 +454,7 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during create.</p>
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during create.</p>
 <p>Default implementation sets the status to <code class="inline">:unprocessable_entity</code> and renders
 the error messages provided.</p>
 <p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Create.html#c:handle_invalid_create/2"><code class="inline">JaResource.Create.handle_invalid_create/2</code></a>.</p>
@@ -479,7 +477,7 @@ the error messages provided.</p>
     
   </div>
   <section class="docstring">
-    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during update.</p>
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to errors during update.</p>
 <p>Default implementation sets the status to <code class="inline">:unprocessable_entity</code> and renders
 the error messages provided.</p>
 <p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Update.html#c:handle_invalid_update/2"><code class="inline">JaResource.Update.handle_invalid_update/2</code></a>.</p>
@@ -533,7 +531,7 @@ the better customization hooks.</p>
     
       <div class="specs">
         
-          <pre>handle_update(<a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, <a href="CodeCorps.UserTask.html#t:t/0">CodeCorps.UserTask.t</a>, map) :: <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+          <pre>handle_update(<a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, <a href="CodeCorps.UserTask.html#t:t/0">CodeCorps.UserTask.t</a>, map) :: <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
         
       </div>
     
@@ -696,7 +694,7 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful create.</p>
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful create.</p>
 <p>Default implementation sets the status to <code class="inline">:created</code> and renders the view.</p>
 <p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Create.html#c:render_create/2"><code class="inline">JaResource.Create.render_create/2</code></a>.</p>
 
@@ -718,7 +716,7 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.3/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful update.</p>
+    <p>Returns a <a href="https://hexdocs.pm/plug/1.3.4/Plug.Conn.html"><code class="inline">Plug.Conn</code></a> in response to successful update.</p>
 <p>Default implementation renders the view.</p>
 <p>Callback implementation for <a href="https://hexdocs.pm/ja_resource/0.3.0/JaResource.Update.html#c:render_update/2"><code class="inline">JaResource.Update.render_update/2</code></a>.</p>
 
@@ -816,13 +814,11 @@ end</code></pre>
       
 
       
-
-      
           <footer class="footer">
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.14.5),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
           </span>
           <span class="line">
             designed by
@@ -835,7 +831,7 @@ end</code></pre>
   </div>
 </section>
 </div>
-  <script src="dist/app-4aef34ad5f.js"></script>
+  <script src="dist/app-372682077e.js"></script>
   </body>
 </html>
 
