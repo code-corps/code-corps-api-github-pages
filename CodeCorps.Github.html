@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.TaskSkill – code_corps v0.0.1</title>
+    <title>CodeCorps.Github – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-f73351ec9b.js"></script>
@@ -59,22 +59,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.TaskSkill
+        CodeCorps.Github
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task_skill.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>Represents a link record between a task and a skill, indicating that
-for a user to be suitable to work on a task, they need to posses skills
-associated with that task.</p>
-
-        </section>
       
 
       
@@ -86,19 +79,6 @@ associated with that task.</p>
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -107,11 +87,8 @@ associated with that task.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/2">create_changeset(struct, params \\ %{})</a>
+    <a href="#associate/2">associate(user, params)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset used to insert a record into the database</p>
-</div>
   
 </div>
 
@@ -123,43 +100,6 @@ associated with that task.</p>
         </section>
       
 
-      
-        <section id="types" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <i class="icon-link"></i>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div class="detail" id="t:t/0">
-  
-  <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">t()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task_skill.ex#L9" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>t() :: %CodeCorps.TaskSkill{__meta__: term, id: term, inserted_at: term, skill: term, skill_id: term, task: term, task_id: term, updated_at: term}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
       
 
       
@@ -170,32 +110,23 @@ associated with that task.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_changeset/2">
-  
-    <span id="create_changeset/1" />
+          <div class="detail" id="associate/2">
   
   <div class="detail-header">
-    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#associate/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create_changeset(struct, params \\ %{})</span>
+    <span class="signature">associate(user, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task_skill.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L5" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>create_changeset(<a href="CodeCorps.TaskSkill.html#t:t/0">CodeCorps.TaskSkill.t</a>, map) :: <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    <p>Builds a changeset used to insert a record into the database</p>
-
+    
   </section>
 </div>
 

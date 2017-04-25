@@ -8,7 +8,7 @@
     <title>CodeCorps.User – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-b93ddeeaf1.js"></script>
+    <script src="dist/sidebar_items-f73351ec9b.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -132,6 +132,12 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#github_associate_changeset/2">github_associate_changeset(struct, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#registration_changeset/2">registration_changeset(struct, params)</a>
   </div>
   
@@ -185,7 +191,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.User{__meta__: term, admin: term, biography: term, categories: term, cloudinary_public_id: term, default_color: term, email: term, encrypted_password: term, first_name: term, id: term, inserted_at: term, last_name: term, password: term, password_confirmation: term, project_users: term, roles: term, sign_up_context: term, skills: term, slugged_route: term, state: term, state_transition: term, stripe_connect_customers: term, stripe_connect_subscriptions: term, stripe_platform_card: term, stripe_platform_customer: term, twitter: term, updated_at: term, user_categories: term, user_roles: term, user_skills: term, username: term, website: term}</pre>
+          <pre>t() :: %CodeCorps.User{slugged_route: term, stripe_connect_customers: term, cloudinary_public_id: term, user_skills: term, admin: term, website: term, sign_up_context: term, roles: term, biography: term, email: term, encrypted_password: term, stripe_platform_customer: term, state_transition: term, stripe_connect_subscriptions: term, password_confirmation: term, username: term, user_categories: term, updated_at: term, user_roles: term, state: term, __meta__: term, first_name: term, twitter: term, stripe_platform_card: term, id: term, project_users: term, github_id: term, skills: term, default_color: term, categories: term, inserted_at: term, last_name: term, password: term}</pre>
         
       </div>
     
@@ -215,7 +221,7 @@
     </a>
     <span class="signature">apply_state_transition(changeset, map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L105" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L111" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -256,7 +262,7 @@
     </a>
     <span class="signature">check_email_availability(email)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L121" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -275,7 +281,26 @@
     </a>
     <span class="signature">check_username_availability(username)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L121" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L127" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_associate_changeset/2">
+  
+  <div class="detail-header">
+    <a href="#github_associate_changeset/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_associate_changeset(struct, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -314,7 +339,7 @@
     </a>
     <span class="signature">reset_password_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/user.ex#L104" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
