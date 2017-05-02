@@ -8,7 +8,7 @@
     <title>CodeCorps.Task – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c5184e7bad.js"></script>
+    <script src="dist/sidebar_items-17f6875648.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -118,6 +118,15 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#github_create_changeset/2">github_create_changeset(struct, params)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset for creating a task that has a connected GitHub issue</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#update_changeset/2">update_changeset(struct, params)</a>
   </div>
   
@@ -156,7 +165,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.Task{__meta__: term, body: term, comments: term, id: term, inserted_at: term, markdown: term, number: term, order: term, position: term, project: term, project_id: term, state: term, status: term, task_list: term, task_list_id: term, task_skills: term, title: term, updated_at: term, user: term, user_id: term, user_task: term}</pre>
+          <pre>t() :: %CodeCorps.Task{__meta__: term, body: term, comments: term, github_id: term, id: term, inserted_at: term, markdown: term, number: term, order: term, position: term, project: term, project_id: term, state: term, status: term, task_list: term, task_list_id: term, task_skills: term, title: term, updated_at: term, user: term, user_id: term, user_task: term}</pre>
         
       </div>
     
@@ -186,7 +195,7 @@
     </a>
     <span class="signature">apply_position(changeset)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L73" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -207,7 +216,7 @@
     </a>
     <span class="signature">changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L34" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -226,7 +235,7 @@
     </a>
     <span class="signature">create_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L44" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -237,6 +246,26 @@
     
   </section>
 </div>
+<div class="detail" id="github_create_changeset/2">
+  
+  <div class="detail-header">
+    <a href="#github_create_changeset/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_create_changeset(struct, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L58" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Builds a changeset for creating a task that has a connected GitHub issue.</p>
+
+  </section>
+</div>
 <div class="detail" id="update_changeset/2">
   
   <div class="detail-header">
@@ -245,7 +274,7 @@
     </a>
     <span class="signature">update_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/task.ex#L65" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     

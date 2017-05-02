@@ -8,7 +8,7 @@
     <title>CodeCorps.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c5184e7bad.js"></script>
+    <script src="dist/sidebar_items-17f6875648.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -113,6 +113,15 @@
   </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_create_changeset/2">github_create_changeset(struct, params)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset for creating a comment that has a connected GitHub comment</p>
+</div>
+  
+</div>
 
   </div>
 
@@ -147,7 +156,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.Comment{__meta__: term, body: term, id: term, inserted_at: term, markdown: term, task: term, task_id: term, updated_at: term, user: term, user_id: term}</pre>
+          <pre>t() :: %CodeCorps.Comment{__meta__: term, body: term, github_id: term, id: term, inserted_at: term, markdown: term, task: term, task_id: term, updated_at: term, user: term, user_id: term}</pre>
         
       </div>
     
@@ -179,7 +188,7 @@
     </a>
     <span class="signature">changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/comment.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/comment.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -199,7 +208,7 @@
     </a>
     <span class="signature">create_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/comment.ex#L28" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/comment.ex#L29" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -208,6 +217,26 @@
   </div>
   <section class="docstring">
     
+  </section>
+</div>
+<div class="detail" id="github_create_changeset/2">
+  
+  <div class="detail-header">
+    <a href="#github_create_changeset/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_create_changeset(struct, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/comment.ex#L41" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Builds a changeset for creating a comment that has a connected GitHub comment.</p>
+
   </section>
 </div>
 
