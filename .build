@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-17f6875648.js
+dist/sidebar_items-73263dc50e.js
 api-reference.html
 readme.html
 license.html
@@ -43,6 +43,7 @@ CodeCorps.DonationGoalController.html
 CodeCorps.DonationGoalPolicy.html
 CodeCorps.DonationGoalView.html
 CodeCorps.Emails.BaseEmail.html
+CodeCorps.Emails.ForgotPasswordEmail.html
 CodeCorps.Emails.ProjectUserAcceptanceEmail.html
 CodeCorps.Emails.ReceiptEmail.html
 CodeCorps.Endpoint.html
@@ -68,8 +69,10 @@ CodeCorps.OrganizationPolicy.html
 CodeCorps.OrganizationView.html
 CodeCorps.PageController.html
 CodeCorps.PageView.html
+CodeCorps.PasswordController.html
 CodeCorps.PasswordResetController.html
 CodeCorps.PasswordResetView.html
+CodeCorps.PasswordView.html
 CodeCorps.Plug.AnalyticsIdentify.html
 CodeCorps.Plug.CurrentUser.html
 CodeCorps.Plug.Segment.html
@@ -111,6 +114,7 @@ CodeCorps.RoleView.html
 CodeCorps.Router.html
 CodeCorps.Router.Helpers.html
 CodeCorps.Services.DonationGoalsService.html
+CodeCorps.Services.ForgotPasswordService.html
 CodeCorps.Services.MarkdownRendererService.html
 CodeCorps.Services.ProjectService.html
 CodeCorps.Services.UserService.html
