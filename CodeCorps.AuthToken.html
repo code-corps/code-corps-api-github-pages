@@ -70,11 +70,12 @@
 
       
         <section id="moduledoc">
-          <p>Represent’s one of the user’s many possible authentication tokens, created
+          <p>Represents one of the user’s many possible authentication tokens, created
 using <a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Token.html#sign/4"><code class="inline">Phoenix.Token.sign/4</code></a>.</p>
-<p>Many can coexist and be valid at the same time. They can be used for password
-resets or passwordless logins.</p>
-<p>These tokens expire.</p>
+<p>Many can coexist and be valid at the same time. They can be used for
+password resets or passwordless logins.</p>
+<p>These tokens do expire based on the <code class="inline">max_age</code> value passed to
+<a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Token.html#verify/4"><code class="inline">Phoenix.Token.verify/4</code></a>.</p>
 
         </section>
       
@@ -130,7 +131,7 @@ resets or passwordless logins.</p>
     </a>
     <span class="signature">changeset(struct, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/auth_token.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/auth_token.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
