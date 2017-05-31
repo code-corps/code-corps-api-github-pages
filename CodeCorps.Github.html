@@ -8,7 +8,7 @@
     <title>CodeCorps.Github – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-73263dc50e.js"></script>
+    <script src="dist/sidebar_items-27d262242a.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -90,13 +90,17 @@
     <a href="#associate/2">associate(user, params)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Associates user with an auth token</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#connect/2">connect(user, code)</a>
+    <a href="#connect/3">connect(user, code, api \\ CodeCorps.Github.TestAPI)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Temporary function until the actual behavior is implemented</p>
+    <div class="summary-synopsis"><p>Posts code to github to receive an auth token, associates user with that
+auth token</p>
 </div>
   
 </div>
@@ -127,34 +131,72 @@
     </a>
     <span class="signature">associate(user, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L36" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>associate(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Associates user with an auth token</p>
+<p>Returns one of the following:</p>
+<ul>
+<li>{:ok, %CodeCorps.User{}}
+</li>
+<li>{:error, %Ecto.Changeset{}}
+</li>
+</ul>
+
   </section>
 </div>
-<div class="detail" id="connect/2">
+<div class="detail" id="connect/3">
+  
+    <span id="connect/2" />
   
   <div class="detail-header">
-    <a href="#connect/2" class="detail-link" title="Link to this function">
+    <a href="#connect/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">connect(user, code)</span>
+    <span class="signature">connect(user, code, api \\ CodeCorps.Github.TestAPI)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>connect(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, module) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
+  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Temporary function until the actual behavior is implemented.</p>
+    <p>Posts code to github to receive an auth token, associates user with that
+auth token.</p>
+<p>Accepts a third parameter, which is a custom API module, for the purposes of
+explicit dependency injection during testing.</p>
+<p>Returns one of the following:</p>
+<ul>
+<li>{:ok, %CodeCorps.User{}}
+</li>
+<li>{:error, %Ecto.Changeset{}}
+</li>
+<li>{:error, "some_github_error"}
+</li>
+</ul>
 
   </section>
 </div>

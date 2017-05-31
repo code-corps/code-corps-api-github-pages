@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.Transition.UserState – code_corps v0.0.1</title>
+    <title>CodeCorps.Github.TestAPI – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-27d262242a.js"></script>
@@ -59,15 +59,23 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Transition.UserState
+        CodeCorps.Github.TestAPI
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/transition/user_state.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/test_api.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>The most basic implementation of an API module for testing. All functions
+here should return successes.</p>
+<p>If we want to test the wrapper module, we can specify custom API modules
+during function calls.</p>
+
+        </section>
       
 
       
@@ -87,8 +95,14 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#next/2">next(current, invalid_transition)</a>
+    <a href="#connect/1">connect(code)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Receives a code string, created in the client part of the github connect process,
+returns either an :ok tupple indicating a successful connect process, where
+the second element is the auth token string, or an :error tuple, where the
+second element is an error message, or a struct</p>
+</div>
   
 </div>
 
@@ -110,23 +124,34 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="next/2">
+          <div class="detail" id="connect/1">
   
   <div class="detail-header">
-    <a href="#next/2" class="detail-link" title="Link to this function">
+    <a href="#connect/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">next(current, invalid_transition)</span>
+    <span class="signature">connect(code)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/transition/user_state.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/test_api.ex#L12" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>connect(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Receives a code string, created in the client part of the github connect process,
+returns either an :ok tupple indicating a successful connect process, where
+the second element is the auth token string, or an :error tuple, where the
+second element is an error message, or a struct</p>
+<p>Callback implementation for <a href="CodeCorps.Github.APIContract.html#c:connect/1"><code class="inline">CodeCorps.Github.APIContract.connect/1</code></a>.</p>
+
   </section>
 </div>
 
