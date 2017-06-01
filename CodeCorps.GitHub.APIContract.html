@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.Github.APIContract – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.APIContract – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-27d262242a.js"></script>
+    <script src="dist/sidebar_items-5986bcb365.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,7 +59,7 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Github.APIContract
+        CodeCorps.GitHub.APIContract
         
           <small>behaviour</small>
         
@@ -72,9 +72,9 @@
 
       
         <section id="moduledoc">
-          <p>Defines a contract for a github API module, listing all functions the module
+          <p>Defines a contract for a GitHub API module, listing all functions the module
 should implement.</p>
-<p>This contract should be specified as behaviour for the default <code class="inline">Github.API</code>
+<p>This contract should be specified as behaviour for the default <code class="inline">GitHub.API</code>
 module, as well as any custom module we inject in tests.</p>
 
         </section>
@@ -102,10 +102,8 @@ module, as well as any custom module we inject in tests.</p>
     <a href="#c:connect/1">connect(code)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Receives a code string, created in the client part of the github connect process,
-returns either an :ok tupple indicating a successful connect process, where
-the second element is the auth token string, or an :error tuple, where the
-second element is an error message, or a struct</p>
+    <div class="summary-synopsis"><p>Receives a code string, created on the client side of the GitHub connect
+process</p>
 </div>
   
 </div>
@@ -136,7 +134,7 @@ second element is an error message, or a struct</p>
     </a>
     <span class="signature">connect(code)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api_contract.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api_contract.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -152,10 +150,16 @@ second element is an error message, or a struct</p>
     
   </div>
   <section class="docstring">
-    <p>Receives a code string, created in the client part of the github connect process,
-returns either an :ok tupple indicating a successful connect process, where
-the second element is the auth token string, or an :error tuple, where the
-second element is an error message, or a struct</p>
+    <p>Receives a code string, created on the client side of the GitHub connect
+process.</p>
+<p>Returns one of:</p>
+<ul>
+<li>an <code class="inline">:ok</code> tuple indicating a successful connect process, where
+the second element is the OAuth token string
+</li>
+<li>an <code class="inline">:error</code> tuple, where the second element is an error message or a struct
+</li>
+</ul>
 
   </section>
 </div>

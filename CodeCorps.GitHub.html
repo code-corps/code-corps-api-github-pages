@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.Github – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-27d262242a.js"></script>
+    <script src="dist/sidebar_items-5986bcb365.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,7 +59,7 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Github
+        CodeCorps.GitHub
         
         
           <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L1" title="View Source" class="view-source" rel="help">
@@ -90,17 +90,17 @@
     <a href="#associate/2">associate(user, params)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Associates user with an auth token</p>
+    <div class="summary-synopsis"><p>Associates user with the GitHub OAuth token</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#connect/3">connect(user, code, api \\ CodeCorps.Github.TestAPI)</a>
+    <a href="#connect/3">connect(user, code, api \\ CodeCorps.GitHub.TestAPI)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Posts code to github to receive an auth token, associates user with that
-auth token</p>
+    <div class="summary-synopsis"><p>POSTs <code class="inline">code</code> to GitHub to receive an OAuth token, then associates the user
+with that OAuth token</p>
 </div>
   
 </div>
@@ -147,7 +147,7 @@ auth token</p>
     
   </div>
   <section class="docstring">
-    <p>Associates user with an auth token</p>
+    <p>Associates user with the GitHub OAuth token.</p>
 <p>Returns one of the following:</p>
 <ul>
 <li>{:ok, %CodeCorps.User{}}
@@ -166,7 +166,7 @@ auth token</p>
     <a href="#connect/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">connect(user, code, api \\ CodeCorps.Github.TestAPI)</span>
+    <span class="signature">connect(user, code, api \\ CodeCorps.GitHub.TestAPI)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L20" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -184,17 +184,17 @@ auth token</p>
     
   </div>
   <section class="docstring">
-    <p>Posts code to github to receive an auth token, associates user with that
-auth token.</p>
-<p>Accepts a third parameter, which is a custom API module, for the purposes of
+    <p>POSTs <code class="inline">code</code> to GitHub to receive an OAuth token, then associates the user
+with that OAuth token.</p>
+<p>Accepts a third parameter – a custom API module – for the purposes of
 explicit dependency injection during testing.</p>
 <p>Returns one of the following:</p>
 <ul>
-<li>{:ok, %CodeCorps.User{}}
+<li><code class="inline">{:ok, %CodeCorps.User{}}</code>
 </li>
-<li>{:error, %Ecto.Changeset{}}
+<li><code class="inline">{:error, %Ecto.Changeset{}}</code>
 </li>
-<li>{:error, "some_github_error"}
+<li><code class="inline">{:error, &quot;some_github_error&quot;}</code>
 </li>
 </ul>
 
