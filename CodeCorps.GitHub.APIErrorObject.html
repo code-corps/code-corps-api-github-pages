@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.TestAPI – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.APIErrorObject – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-5986bcb365.js"></script>
+    <script src="dist/sidebar_items-3b72b8489b.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.TestAPI
+        CodeCorps.GitHub.APIErrorObject
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/test_api.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L12" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,10 +70,11 @@
 
       
         <section id="moduledoc">
-          <p>The most basic implementation of an API module for testing. All functions
-here should return <code class="inline">:ok</code> tuples.</p>
-<p>If we want to test the wrapper module, we can specify custom API modules
-during function calls.</p>
+          <p>Represents an error object from the GitHub API.</p>
+<p>Used in some <code class="inline">APIError</code>s when the API’s JSON response contains an
+<code class="inline">errors</code> key.</p>
+<p>The full details of error objects can be found in the
+<a href="https://developer.github.com/v3/#client-errors">GitHub API documentation</a>.</p>
 
         </section>
       
@@ -95,12 +96,8 @@ during function calls.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#connect/1">connect(code)</a>
+    <a href="#new/1">new(opts)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Receives a code string, created on the client side of the GitHub connect
-process</p>
-</div>
   
 </div>
 
@@ -122,40 +119,23 @@ process</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="connect/1">
+          <div class="detail" id="new/1">
   
   <div class="detail-header">
-    <a href="#connect/1" class="detail-link" title="Link to this function">
+    <a href="#new/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">connect(code)</span>
+    <span class="signature">new(opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/test_api.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L25" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>connect(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    <p>Receives a code string, created on the client side of the GitHub connect
-process.</p>
-<p>Returns one of:</p>
-<ul>
-<li>an <code class="inline">:ok</code> tuple indicating a successful connect process, where
-the second element is the OAuth token string
-</li>
-<li>an <code class="inline">:error</code> tuple, where the second element is an error message or a struct
-</li>
-</ul>
-<p>Callback implementation for <a href="CodeCorps.GitHub.APIContract.html#c:connect/1"><code class="inline">CodeCorps.GitHub.APIContract.connect/1</code></a>.</p>
-
+    
   </section>
 </div>
 

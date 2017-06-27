@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-5986bcb365.js"></script>
+    <script src="dist/sidebar_items-3b72b8489b.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -79,6 +79,37 @@
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:api_error_struct/0">api_error_struct()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:body/0">body()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:headers/0">headers()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:method/0">method()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -87,20 +118,39 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#associate/2">associate(user, params)</a>
+    <a href="#authenticated_integration_request/5">authenticated_integration_request(body, method, endpoint, headers, opts)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Associates user with the GitHub OAuth token</p>
+    <div class="summary-synopsis"><p>A low level utility function to make an authenticated request to the
+GitHub API on behalf of a GitHub App or integration</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#connect/3">connect(user, code, api \\ CodeCorps.GitHub.TestAPI)</a>
+    <a href="#generate_jwt/0">generate_jwt()</a>
   </div>
   
-    <div class="summary-synopsis"><p>POSTs <code class="inline">code</code> to GitHub to receive an OAuth token, then associates the user
-with that OAuth token</p>
+    <div class="summary-synopsis"><p>Generates a JWT from the GitHub App’s generated RSA private key using the
+RS256 algo, where the issuer is the GitHub App’s ID</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#request/5">request(body, method, endpoint, headers, opts)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>A low level utility function to make a direct request to the GitHub API</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_access_token_request/2">user_access_token_request(code, state)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>A low level utility function to fetch a GitHub user’s OAuth access token</p>
 </div>
   
 </div>
@@ -114,6 +164,120 @@ with that OAuth token</p>
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:api_error_struct/0">
+  
+  <div class="detail-header">
+    <a href="#t:api_error_struct/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">api_error_struct()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L97" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:api_error_struct/0">api_error_struct</a> ::
+  %CodeCorps.GitHub.APIError{documentation_url: term, errors: term, message: term, status_code: term} |
+  %CodeCorps.GitHub.HTTPClientError{message: term, reason: term}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:body/0">
+  
+  <div class="detail-header">
+    <a href="#t:body/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">body()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L93" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>body() :: {:multipart, list} | map</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:headers/0">
+  
+  <div class="detail-header">
+    <a href="#t:headers/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">headers()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L92" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>headers() :: %{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:method/0">
+  
+  <div class="detail-header">
+    <a href="#t:method/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">method()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L91" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>method() :: :get | :post | :put | :delete | :patch</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -123,15 +287,15 @@ with that OAuth token</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="associate/2">
+          <div class="detail" id="authenticated_integration_request/5">
   
   <div class="detail-header">
-    <a href="#associate/2" class="detail-link" title="Link to this function">
+    <a href="#authenticated_integration_request/5" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">associate(user, params)</span>
+    <span class="signature">authenticated_integration_request(body, method, endpoint, headers, opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L223" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -139,36 +303,52 @@ with that OAuth token</p>
     
       <div class="specs">
         
-          <pre>associate(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) ::
-  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+          <pre>authenticated_integration_request(<a href="#t:body/0">body</a>, <a href="#t:method/0">method</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:headers/0">headers</a>, list) ::
+  {:ok, map} |
+  {:error, <a href="#t:api_error_struct/0">api_error_struct</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Associates user with the GitHub OAuth token.</p>
-<p>Returns one of the following:</p>
-<ul>
-<li>{:ok, %CodeCorps.User{}}
-</li>
-<li>{:error, %Ecto.Changeset{}}
-</li>
-</ul>
+    <p>A low level utility function to make an authenticated request to the
+GitHub API on behalf of a GitHub App or integration</p>
 
   </section>
 </div>
-<div class="detail" id="connect/3">
-  
-    <span id="connect/2" />
+<div class="detail" id="generate_jwt/0">
   
   <div class="detail-header">
-    <a href="#connect/3" class="detail-link" title="Link to this function">
+    <a href="#generate_jwt/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">connect(user, code, api \\ CodeCorps.GitHub.TestAPI)</span>
+    <span class="signature">generate_jwt()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L137" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Generates a JWT from the GitHub App’s generated RSA private key using the
+RS256 algo, where the issuer is the GitHub App’s ID.</p>
+<p>Used to exchange the JWT for an access token for a given integration, or
+for the GitHub App itself.</p>
+<p>Expires in 10 minutes.</p>
+
+  </section>
+</div>
+<div class="detail" id="request/5">
+  
+  <div class="detail-header">
+    <a href="#request/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">request(body, method, endpoint, headers, opts)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L170" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -176,27 +356,43 @@ with that OAuth token</p>
     
       <div class="specs">
         
-          <pre>connect(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, module) ::
-  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
-  {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+          <pre>request(<a href="#t:body/0">body</a>, <a href="#t:method/0">method</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="#t:headers/0">headers</a>, list) ::
+  {:ok, map} |
+  {:error, <a href="#t:api_error_struct/0">api_error_struct</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>POSTs <code class="inline">code</code> to GitHub to receive an OAuth token, then associates the user
-with that OAuth token.</p>
-<p>Accepts a third parameter – a custom API module – for the purposes of
-explicit dependency injection during testing.</p>
-<p>Returns one of the following:</p>
-<ul>
-<li><code class="inline">{:ok, %CodeCorps.User{}}</code>
-</li>
-<li><code class="inline">{:error, %Ecto.Changeset{}}</code>
-</li>
-<li><code class="inline">{:error, &quot;some_github_error&quot;}</code>
-</li>
-</ul>
+    <p>A low level utility function to make a direct request to the GitHub API.</p>
+
+  </section>
+</div>
+<div class="detail" id="user_access_token_request/2">
+  
+  <div class="detail-header">
+    <a href="#user_access_token_request/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_access_token_request(code, state)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L202" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>user_access_token_request(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) ::
+  {:ok, map} |
+  {:error, <a href="#t:api_error_struct/0">api_error_struct</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>A low level utility function to fetch a GitHub user’s OAuth access token</p>
 
   </section>
 </div>

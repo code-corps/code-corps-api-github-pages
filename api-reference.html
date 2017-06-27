@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-5986bcb365.js"></script>
+    <script src="dist/sidebar_items-3b72b8489b.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -299,27 +299,70 @@ tests that require setting up a connection</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.API.html">CodeCorps.GitHub.API</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.APIError.html">CodeCorps.GitHub.APIError</a></div>
   
-    <div class="summary-synopsis"><p>The boundary module which communicates with the GitHub API using either
-direct requests, or through Tentacat</p>
+    <div class="summary-synopsis"><p>Represents a client error from the GitHub API</p>
 </div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.APIContract.html">CodeCorps.GitHub.APIContract</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.APIErrorObject.html">CodeCorps.GitHub.APIErrorObject</a></div>
   
-    <div class="summary-synopsis"><p>Defines a contract for a GitHub API module, listing all functions the module
-should implement</p>
+    <div class="summary-synopsis"><p>Represents an error object from the GitHub API</p>
 </div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.TestAPI.html">CodeCorps.GitHub.TestAPI</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Bypass.html">CodeCorps.GitHub.Bypass</a></div>
   
-    <div class="summary-synopsis"><p>The most basic implementation of an API module for testing. All functions
-here should return <code class="inline">:ok</code> tuples</p>
 </div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.HTTPClientError.html">CodeCorps.GitHub.HTTPClientError</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.OAuth.html">CodeCorps.GitHub.OAuth</a></div>
+  
+    <div class="summary-synopsis"><p>Used to perform GitHub OAuth requests and actions</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Request.html">CodeCorps.GitHub.Request</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.User.html">CodeCorps.GitHub.User</a></div>
+  
+    <div class="summary-synopsis"><p>Used to perform user actions on the github API
+Also defines a GitHub.User struct</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHubCase.html">CodeCorps.GitHubCase</a></div>
+  
+    <div class="summary-synopsis"><p>For use in tests where Bypass is needed</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GithubAppInstallation.html">CodeCorps.GithubAppInstallation</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GithubAppInstallationController.html">CodeCorps.GithubAppInstallationController</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GithubAppInstallationPolicy.html">CodeCorps.GithubAppInstallationPolicy</a></div>
+  
+    <div class="summary-synopsis"><p>Handles <code class="inline">User</code> authorization of actions on <code class="inline">GithubAppInstallation</code> records</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GithubAppInstallationView.html">CodeCorps.GithubAppInstallationView</a></div>
   
 </div>
 <div class="summary-row">
@@ -1157,6 +1200,13 @@ Used to authorize a controller action</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.TokenView.html">CodeCorps.TokenView</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Transition.GithubAppInstallationState.html">CodeCorps.Transition.GithubAppInstallationState</a></div>
+  
+    <div class="summary-synopsis"><p>Governs the transitioning from one state to the next</p>
+</div>
   
 </div>
 <div class="summary-row">

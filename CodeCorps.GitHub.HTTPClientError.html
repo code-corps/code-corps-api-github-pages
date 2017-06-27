@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.APIContract – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.HTTPClientError – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-5986bcb365.js"></script>
+    <script src="dist/sidebar_items-3b72b8489b.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,25 +59,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.APIContract
-        
-          <small>behaviour</small>
+        CodeCorps.GitHub.HTTPClientError
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api_contract.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L80" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>Defines a contract for a GitHub API module, listing all functions the module
-should implement.</p>
-<p>This contract should be specified as behaviour for the default <code class="inline">GitHub.API</code>
-module, as well as any custom module we inject in tests.</p>
-
-        </section>
       
 
       
@@ -91,25 +81,21 @@ module, as well as any custom module we inject in tests.</p>
           
 
           
-
-          
-  <div class="summary-callbacks summary">
+  <div class="summary-functions summary">
     <h2>
-      <a href="#callbacks">Callbacks</a>
+      <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#c:connect/1">connect(code)</a>
+    <a href="#new/1">new(opts)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Receives a code string, created on the client side of the GitHub connect
-process</p>
-</div>
   
 </div>
 
   </div>
 
+
+          
 
         </section>
       
@@ -117,54 +103,36 @@ process</p>
       
 
       
-
-      
-        <section id="callbacks" class="details-list">
+        <section id="functions" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#callbacks">
+            <a class="hover-link" href="#functions">
               <i class="icon-link"></i>
             </a>
-            Callbacks
+            Functions
           </h1>
-          <div class="detail" id="c:connect/1">
+          <div class="detail" id="new/1">
   
   <div class="detail-header">
-    <a href="#c:connect/1" class="detail-link" title="Link to this callback">
+    <a href="#new/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">connect(code)</span>
+    <span class="signature">new(opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api_contract.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L86" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>connect(code :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) ::
-  {:ok, auth_token :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
-  {:error, error :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    <p>Receives a code string, created on the client side of the GitHub connect
-process.</p>
-<p>Returns one of:</p>
-<ul>
-<li>an <code class="inline">:ok</code> tuple indicating a successful connect process, where
-the second element is the OAuth token string
-</li>
-<li>an <code class="inline">:error</code> tuple, where the second element is an error message or a struct
-</li>
-</ul>
-
+    
   </section>
 </div>
 
         </section>
+      
+
       
           <footer class="footer">
         <p>

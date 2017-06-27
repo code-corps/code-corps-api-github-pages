@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.API – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.APIError – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-5986bcb365.js"></script>
+    <script src="dist/sidebar_items-3b72b8489b.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.API
+        CodeCorps.GitHub.APIError
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L30" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,8 +70,9 @@
 
       
         <section id="moduledoc">
-          <p>The boundary module which communicates with the GitHub API using either
-direct requests, or through Tentacat.</p>
+          <p>Represents a client error from the GitHub API.</p>
+<p>You can read more about client errors in the
+<a href="https://developer.github.com/v3/#client-errors">GitHub API documentation</a>.</p>
 
         </section>
       
@@ -85,6 +86,19 @@ direct requests, or through Tentacat.</p>
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -93,12 +107,8 @@ direct requests, or through Tentacat.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#connect/1">connect(code)</a>
+    <a href="#new/1">new(arg)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Receives a code generated through the client-side GitHub connect process
-and posts it to GitHub</p>
-</div>
   
 </div>
 
@@ -111,6 +121,43 @@ and posts it to GitHub</p>
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:t/0">
+  
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L40" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>t() :: %CodeCorps.GitHub.APIError{documentation_url: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a> | nil, errors: <a href="https://hexdocs.pm/elixir/List.html#t:t/0">List.t</a> | nil, message: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a> | nil, status_code: pos_integer | nil}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -120,15 +167,15 @@ and posts it to GitHub</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="connect/1">
+          <div class="detail" id="new/1">
   
   <div class="detail-header">
-    <a href="#connect/1" class="detail-link" title="Link to this function">
+    <a href="#new/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">connect(code)</span>
+    <span class="signature">new(arg)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github.ex#L48" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -136,16 +183,17 @@ and posts it to GitHub</p>
     
       <div class="specs">
         
-          <pre>connect(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | {:error, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>}</pre>
+          <pre>new({integer, map}) :: <a href="#t:t/0">t</a></pre>
+        
+          <pre>new({integer, map}) :: <a href="#t:t/0">t</a></pre>
+        
+          <pre>new({integer, map}) :: <a href="#t:t/0">t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Receives a code generated through the client-side GitHub connect process
-and posts it to GitHub.</p>
-<p>Returns either an {:ok, access_token}, or an {:error, error_message}.</p>
-
+    
   </section>
 </div>
 
