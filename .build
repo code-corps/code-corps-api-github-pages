@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-e6aaa6ca77.js
+dist/sidebar_items-40d197d539.js
 api-reference.html
 readme.html
 license.html
@@ -54,12 +54,14 @@ CodeCorps.Gettext.html
 CodeCorps.GitHub.html
 CodeCorps.GitHub.APIError.html
 CodeCorps.GitHub.APIErrorObject.html
+CodeCorps.GitHub.Adapters.GithubRepo.html
 CodeCorps.GitHub.Bypass.html
 CodeCorps.GitHub.Events.Installation.html
 CodeCorps.GitHub.Events.InstallationRepositories.html
 CodeCorps.GitHub.Events.IssueComment.html
 CodeCorps.GitHub.Events.Issues.html
 CodeCorps.GitHub.HTTPClientError.html
+CodeCorps.GitHub.Installation.html
 CodeCorps.GitHub.OAuth.html
 CodeCorps.GitHub.Request.html
 CodeCorps.GitHub.User.html
@@ -73,6 +75,7 @@ CodeCorps.GithubAppInstallationController.html
 CodeCorps.GithubAppInstallationPolicy.html
 CodeCorps.GithubAppInstallationView.html
 CodeCorps.GithubEvent.html
+CodeCorps.GithubRepo.html
 CodeCorps.GuardianSerializer.html
 CodeCorps.Helpers.Policy.html
 CodeCorps.Helpers.Query.html
