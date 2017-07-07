@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.Events.Issues – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.Installation.Repos – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-369e7035c9.js"></script>
+    <script src="dist/sidebar_items-e23dc948c5.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Events.Issues
+        CodeCorps.GitHub.Event.Installation.Repos
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/events/issues.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation/repos.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,7 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of dealing with “Issues” GitHub Webhook events</p>
+          <p>In charge of processing repos during an installation event</p>
 
         </section>
       
@@ -92,10 +92,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/2">handle(github_event, map)</a>
+    <a href="#process/1">process(installation)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles an “Issues” GitHub Webhook event</p>
+    <div class="summary-synopsis"><p>Fetches a list of repositories for a <code class="inline">GithubAppInstallation</code> from the GitHub
+API, then creates a <code class="inline">GithubRepo</code> record for each of those repositories</p>
 </div>
   
 </div>
@@ -118,32 +119,30 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="handle/2">
+          <div class="detail" id="process/1">
   
   <div class="detail-header">
-    <a href="#handle/2" class="detail-link" title="Link to this function">
+    <a href="#process/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">handle(github_event, map)</span>
+    <span class="signature">process(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/events/issues.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation/repos.ex#L26" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>process(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) :: outcome</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Handles an “Issues” GitHub Webhook event</p>
-<p>The general idea is</p>
-<ul>
-<li>marked the passed in event as “processing”
-</li>
-<li>do the work
-</li>
-<li>marked the passed in event as “processed” or “errored”
-</li>
-</ul>
+    <p>Fetches a list of repositories for a <code class="inline">GithubAppInstallation</code> from the GitHub
+API, then creates a <code class="inline">GithubRepo</code> record for each of those repositories.</p>
 
   </section>
 </div>

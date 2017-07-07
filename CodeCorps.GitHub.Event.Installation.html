@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.Events.IssueComment – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.Installation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-369e7035c9.js"></script>
+    <script src="dist/sidebar_items-e23dc948c5.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Events.IssueComment
+        CodeCorps.GitHub.Event.Installation
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/events/issue_comment.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,7 +70,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of dealing with “IssueComment” GitHub Webhook events</p>
+          <p>In charge of dealing with “Installation” GitHub Webhook events</p>
 
         </section>
       
@@ -92,10 +92,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/2">handle(github_event, map)</a>
+    <a href="#handle/2">handle(event, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles an “IssueComment” GitHub Webhook event</p>
+    <div class="summary-synopsis"><p>Handles an “Installation” GitHub Webhook event. The event could be
+of subtype “created” or “deleted”. Only the “created” variant is handled at
+the moment</p>
 </div>
   
 </div>
@@ -124,24 +126,70 @@
     <a href="#handle/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">handle(github_event, map)</span>
+    <span class="signature">handle(event, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/events/issue_comment.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation.ex#L54" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: {:ok, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Handles an “IssueComment” GitHub Webhook event</p>
-<p>The general idea is</p>
+    <p>Handles an “Installation” GitHub Webhook event. The event could be
+of subtype “created” or “deleted”. Only the “created” variant is handled at
+the moment.</p>
+<p><code class="inline">InstallationCrreated::added</code> will first try to find the <code class="inline">User</code> and the
+<code class="inline">GithubAppInstallation</code>, using information from the payload.</p>
 <ul>
-<li>marked the passed in event as “processing”
+<li><p>if neither are found, it will</p>
+<ul>
+<li>create a fresh <code class="inline">GithubAppInstallation</code>, with status “unmatched_user”
 </li>
-<li>do the work
+</ul>
 </li>
-<li>marked the passed in event as “processed” or “errored”
+<li><p>if only the <code class="inline">User</code> is found, it will</p>
+<ul>
+<li>create <code class="inline">GithubAppInstallation</code> with status “initiated_on_github”,
+  associated with the <code class="inline">User</code>
+</li>
+</ul>
+</li>
+<li><p>if both are found, it will</p>
+<ul>
+<li>fetch repositories for the installation, create <code class="inline">GithubRepo</code> records
+</li>
+<li>mark installation as processed
+</li>
+</ul>
+</li>
+<li><p>find <code class="inline">GithubAppInstallation</code></p>
+<ul>
+<li>marks event as errored if not found
+</li>
+<li>marks event as errored if payload does not have keys it needs, meaning
+  there’s something wrong with our code and we need to updated
+</li>
+</ul>
+</li>
+<li><p>find or create <code class="inline">GithubRepo</code> records affected</p>
+<p>  At the end of the process, the associated event will me marked as
+  “processed”. If any failure occurs, the event will be marked as “errored”.</p>
+<p>  Potential points of failure:</p>
+</li>
+<li><p>the installation is found, but the user is not</p>
+</li>
+<li><p>problem communicating with the API</p>
+</li>
+<li><p>the payload received is not of the expected structure</p>
+</li>
+<li><p>the action type is not one of the supported types (“created”)</p>
 </li>
 </ul>
 

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.Events.InstallationRepositories – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.InstallationRepositories – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-369e7035c9.js"></script>
+    <script src="dist/sidebar_items-e23dc948c5.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Events.InstallationRepositories
+        CodeCorps.GitHub.Event.InstallationRepositories
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/events/installation_repositories.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation_repositories.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -92,10 +92,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/2">handle(github_event, map)</a>
+    <a href="#handle/2">handle(event, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles an “InstallationRepositories” GitHub Webhook event</p>
+    <div class="summary-synopsis"><p>Handles an “InstallationRepositories” GitHub Webhook event. The event could be
+of subtype “added” or “removed” and is handled differently based on that</p>
 </div>
   
 </div>
@@ -124,24 +125,57 @@
     <a href="#handle/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">handle(github_event, map)</span>
+    <span class="signature">handle(event, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/events/installation_repositories.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation_repositories.ex#L38" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: {:ok, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Handles an “InstallationRepositories” GitHub Webhook event</p>
-<p>The general idea is</p>
+    <p>Handles an “InstallationRepositories” GitHub Webhook event. The event could be
+of subtype “added” or “removed” and is handled differently based on that.</p>
+<p><code class="inline">InstallationRepositories::added</code> will</p>
 <ul>
-<li>marked the passed in event as “processing”
+<li><p>find <code class="inline">GithubAppInstallation</code></p>
+<ul>
+<li>marks event as errored if not found
 </li>
-<li>do the work
+<li>marks event as errored if payload does not have keys it needs, meaning
+  there’s something wrong with our code and we need to updated
 </li>
-<li>marked the passed in event as “processed” or “errored”
+</ul>
+</li>
+<li>find or create <code class="inline">GithubRepo</code> records affected
+</li>
+</ul>
+<p><code class="inline">InstallationRepositories::removed</code> will</p>
+<ul>
+<li><p>find <code class="inline">GithubAppInstallation</code></p>
+<ul>
+<li>marks event as errored if not found
+</li>
+<li>marks event as errored if payload does not have keys it needs, meaning
+  there’s something wrong with our code and we need to updated
+</li>
+</ul>
+</li>
+<li><p>find <code class="inline">GithubRepo</code> records affected and delete them</p>
+<ul>
+<li>if there is no <code class="inline">GithubRepo</code> to delete, it just skips it
+</li>
+<li><code class="inline">ProjectGithubRepo</code> are deleted automatically, since they are set to
+  <code class="inline">on_delete: :delete_all</code>
+</li>
+</ul>
 </li>
 </ul>
 

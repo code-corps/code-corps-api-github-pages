@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-369e7035c9.js
+dist/sidebar_items-e23dc948c5.js
 api-reference.html
 readme.html
 license.html
@@ -56,10 +56,14 @@ CodeCorps.GitHub.APIError.html
 CodeCorps.GitHub.APIErrorObject.html
 CodeCorps.GitHub.Adapters.GithubRepo.html
 CodeCorps.GitHub.Bypass.html
-CodeCorps.GitHub.Events.Installation.html
-CodeCorps.GitHub.Events.InstallationRepositories.html
-CodeCorps.GitHub.Events.IssueComment.html
-CodeCorps.GitHub.Events.Issues.html
+CodeCorps.GitHub.Event.html
+CodeCorps.GitHub.Event.Installation.html
+CodeCorps.GitHub.Event.Installation.MatchedUser.html
+CodeCorps.GitHub.Event.Installation.Repos.html
+CodeCorps.GitHub.Event.Installation.UnmatchedUser.html
+CodeCorps.GitHub.Event.InstallationRepositories.html
+CodeCorps.GitHub.Event.IssueComment.html
+CodeCorps.GitHub.Event.Issues.html
 CodeCorps.GitHub.HTTPClientError.html
 CodeCorps.GitHub.Installation.html
 CodeCorps.GitHub.OAuth.html
@@ -116,6 +120,7 @@ CodeCorps.ProjectCategoryController.html
 CodeCorps.ProjectCategoryPolicy.html
 CodeCorps.ProjectCategoryView.html
 CodeCorps.ProjectController.html
+CodeCorps.ProjectGithubRepo.html
 CodeCorps.ProjectPolicy.html
 CodeCorps.ProjectSkill.html
 CodeCorps.ProjectSkillController.html

@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-369e7035c9.js"></script>
+    <script src="dist/sidebar_items-e23dc948c5.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -329,28 +329,57 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Events.Installation.html">CodeCorps.GitHub.Events.Installation</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.html">CodeCorps.GitHub.Event</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of marking <code class="inline">GithubEvent</code> records as “processing”, “processed” or
+“errored”, based on the outcome of processing a webhook event payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.html">CodeCorps.GitHub.Event.Installation</a></div>
   
     <div class="summary-synopsis"><p>In charge of dealing with “Installation” GitHub Webhook events</p>
 </div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Events.InstallationRepositories.html">CodeCorps.GitHub.Events.InstallationRepositories</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.MatchedUser.html">CodeCorps.GitHub.Event.Installation.MatchedUser</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of handling the matched user case of an installation event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.Repos.html">CodeCorps.GitHub.Event.Installation.Repos</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of processing repos during an installation event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.UnmatchedUser.html">CodeCorps.GitHub.Event.Installation.UnmatchedUser</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of handling the unmatched user case of an installation event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.InstallationRepositories.html">CodeCorps.GitHub.Event.InstallationRepositories</a></div>
   
     <div class="summary-synopsis"><p>In charge of dealing with “InstallationRepositories” GitHub Webhook events</p>
 </div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Events.IssueComment.html">CodeCorps.GitHub.Events.IssueComment</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.html">CodeCorps.GitHub.Event.IssueComment</a></div>
   
     <div class="summary-synopsis"><p>In charge of dealing with “IssueComment” GitHub Webhook events</p>
 </div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Events.Issues.html">CodeCorps.GitHub.Events.Issues</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.html">CodeCorps.GitHub.Event.Issues</a></div>
   
     <div class="summary-synopsis"><p>In charge of dealing with “Issues” GitHub Webhook events</p>
 </div>
@@ -643,6 +672,13 @@ policy tests</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.ProjectController.html">CodeCorps.ProjectController</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.ProjectGithubRepo.html">CodeCorps.ProjectGithubRepo</a></div>
+  
+    <div class="summary-synopsis"><p>Represents a link between a Project and a GithubRepo</p>
+</div>
   
 </div>
 <div class="summary-row">
