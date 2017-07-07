@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.AuthToken – code_corps v0.0.1</title>
+    <title>CodeCorps.Github.JWT – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-369e7035c9.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.AuthToken
+        CodeCorps.Github.JWT
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/auth_token.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/jwt.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,12 +70,8 @@
 
       
         <section id="moduledoc">
-          <p>Represents one of the user’s many possible authentication tokens, created
-using <a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Token.html#sign/4"><code class="inline">Phoenix.Token.sign/4</code></a>.</p>
-<p>Many can coexist and be valid at the same time. They can be used for
-password resets or passwordless logins.</p>
-<p>These tokens do expire based on the <code class="inline">max_age</code> value passed to
-<a href="https://hexdocs.pm/phoenix/1.2.3/Phoenix.Token.html#verify/4"><code class="inline">Phoenix.Token.verify/4</code></a>.</p>
+          <p>In charge of loading a a GitHub app .pem and generating a JSON Web Token from
+it.</p>
 
         </section>
       
@@ -97,10 +93,11 @@ password resets or passwordless logins.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#changeset/2">changeset(struct, user)</a>
+    <a href="#generate/0">generate()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code></p>
+    <div class="summary-synopsis"><p>Generates a JWT from the GitHub App’s generated RSA private key using the
+RS256 algo, where the issuer is the GitHub App’s ID</p>
 </div>
   
 </div>
@@ -123,15 +120,15 @@ password resets or passwordless logins.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="changeset/2">
+          <div class="detail" id="generate/0">
   
   <div class="detail-header">
-    <a href="#changeset/2" class="detail-link" title="Link to this function">
+    <a href="#generate/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">changeset(struct, user)</span>
+    <span class="signature">generate()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/auth_token.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/jwt.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -139,7 +136,11 @@ password resets or passwordless logins.</p>
     
   </div>
   <section class="docstring">
-    <p>Builds a changeset based on the <code class="inline">struct</code></p>
+    <p>Generates a JWT from the GitHub App’s generated RSA private key using the
+RS256 algo, where the issuer is the GitHub App’s ID.</p>
+<p>Used to exchange the JWT for an access token for a given integration, or
+for the GitHub App itself.</p>
+<p>Expires in 5 minutes.</p>
 
   </section>
 </div>
