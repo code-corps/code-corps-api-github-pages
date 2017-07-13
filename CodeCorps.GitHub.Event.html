@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c1edb9f280.js"></script>
+    <script src="dist/sidebar_items-f16fdb762c.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -95,12 +95,6 @@
   </div>
   
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:processing_result/0">processing_result()</a>
-  </div>
-  
-</div>
 
   </div>
 
@@ -123,13 +117,13 @@ are already being processed</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#stop_processing/2">stop_processing(arg, event)</a>
+    <a href="#stop_processing/2">stop_processing(result, event)</a>
   </div>
   
     <div class="summary-synopsis"><p>Sets record status to “processed” or “errored” based on the first element of
-first argument, which is the result tuple. The result tuple should always be
-either <code class="inline">{:ok, data}</code> if the the processing of the event payload went as
-expected, or <code class="inline">{:error, reason}</code> if something went wrong</p>
+first argument, which is the result tuple. The first element of the result
+tuple should always be either <code class="inline">:ok</code>, or <code class="inline">:error</code>. Any number of elements in
+the tuple is suported</p>
 </div>
   
 </div>
@@ -176,31 +170,6 @@ expected, or <code class="inline">{:error, reason}</code> if something went wron
     
   </section>
 </div>
-<div class="detail" id="t:processing_result/0">
-  
-  <div class="detail-header">
-    <a href="#t:processing_result/0" class="detail-link" title="Link to this type">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">processing_result()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event.ex#L11" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>processing_result() :: {:ok, any} | {:error, <a href="#t:error/0">error</a>}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 
           </div>
         </section>
@@ -222,7 +191,7 @@ expected, or <code class="inline">{:error, reason}</code> if something went wron
     </a>
     <span class="signature">start_processing(event)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event.ex#L18" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -248,9 +217,9 @@ are already being processed.</p>
     <a href="#stop_processing/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">stop_processing(arg, event)</span>
+    <span class="signature">stop_processing(result, event)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event.ex#L27" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -258,16 +227,16 @@ are already being processed.</p>
     
       <div class="specs">
         
-          <pre>stop_processing(<a href="#t:processing_result/0">processing_result</a>, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>) :: {:ok, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>}</pre>
+          <pre>stop_processing(tuple, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>) :: {:ok, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Sets record status to “processed” or “errored” based on the first element of
-first argument, which is the result tuple. The result tuple should always be
-either <code class="inline">{:ok, data}</code> if the the processing of the event payload went as
-expected, or <code class="inline">{:error, reason}</code> if something went wrong.</p>
+first argument, which is the result tuple. The first element of the result
+tuple should always be either <code class="inline">:ok</code>, or <code class="inline">:error</code>. Any number of elements in
+the tuple is suported.</p>
 
   </section>
 </div>

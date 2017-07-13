@@ -8,7 +8,7 @@
     <title>CodeCorps.GithubAppInstallation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c1edb9f280.js"></script>
+    <script src="dist/sidebar_items-f16fdb762c.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -69,6 +69,11 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>Represents an installation of the CodeCorps app to a user or an organization on GitHub.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -103,11 +108,8 @@
     <a href="#access_token_changeset/2">access_token_changeset(struct, params \\ %{})</a>
   </div>
   
+    <div class="summary-synopsis"><p>Changeset used to refresh an access token for a GithubAppInstallation</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#apply_state_transition/2">apply_state_transition(changeset, map)</a>
-  </div>
   
 </div>
 <div class="summary-row">
@@ -115,14 +117,8 @@
     <a href="#create_changeset/2">create_changeset(struct, params \\ %{})</a>
   </div>
   
-    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code></p>
+    <div class="summary-synopsis"><p>Changeset used to create a GithubAppInstallation record from CodeCorps</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_changeset/2">update_changeset(struct, params \\ %{})</a>
-  </div>
   
 </div>
 
@@ -151,7 +147,7 @@
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L7" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -159,7 +155,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.GithubAppInstallation{__meta__: term, access_token: term, access_token_expires_at: term, github_id: term, github_repos: term, id: term, inserted_at: term, installed: term, organization_github_app_installations: term, project: term, project_id: term, sender_github_id: term, state: term, updated_at: term, user: term, user_id: term}</pre>
+          <pre>t() :: %CodeCorps.GithubAppInstallation{__meta__: term, access_token: term, access_token_expires_at: term, github_id: term, github_repos: term, id: term, inserted_at: term, installed: term, organization_github_app_installations: term, origin: term, project: term, project_id: term, sender_github_id: term, state: term, updated_at: term, user: term, user_id: term}</pre>
         
       </div>
     
@@ -191,7 +187,7 @@
     </a>
     <span class="signature">access_token_changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L45" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -199,26 +195,8 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="apply_state_transition/2">
-  
-  <div class="detail-header">
-    <a href="#apply_state_transition/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">apply_state_transition(changeset, map)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L53" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Changeset used to refresh an access token for a GithubAppInstallation</p>
+
   </section>
 </div>
 <div class="detail" id="create_changeset/2">
@@ -231,7 +209,7 @@
     </a>
     <span class="signature">create_changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L32" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -239,29 +217,8 @@
     
   </div>
   <section class="docstring">
-    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>.</p>
+    <p>Changeset used to create a GithubAppInstallation record from CodeCorps</p>
 
-  </section>
-</div>
-<div class="detail" id="update_changeset/2">
-  
-    <span id="update_changeset/1" />
-  
-  <div class="detail-header">
-    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">update_changeset(struct, params \\ %{})</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/models/github_app_installation.ex#L31" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
   </section>
 </div>
 

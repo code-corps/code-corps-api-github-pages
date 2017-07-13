@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.Installation.Repos – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c1edb9f280.js"></script>
+    <script src="dist/sidebar_items-f16fdb762c.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -96,7 +96,17 @@
   </div>
   
     <div class="summary-synopsis"><p>Fetches a list of repositories for a <code class="inline">GithubAppInstallation</code> from the GitHub
-API, then creates a <code class="inline">GithubRepo</code> record for each of those repositories</p>
+API and matches up <code class="inline">GithubRepo</code> records stored locally using that list as the
+master list</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#process_async/1">process_async(installation)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Marks a <code class="inline">GithubAppInstallation</code> as “processing” and immediately returns it</p>
 </div>
   
 </div>
@@ -127,7 +137,7 @@ API, then creates a <code class="inline">GithubRepo</code> record for each of th
     </a>
     <span class="signature">process(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation/repos.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation/repos.ex#L41" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -135,14 +145,42 @@ API, then creates a <code class="inline">GithubRepo</code> record for each of th
     
       <div class="specs">
         
-          <pre>process(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) :: outcome</pre>
+          <pre>process(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) :: {:ok | :error, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Fetches a list of repositories for a <code class="inline">GithubAppInstallation</code> from the GitHub
-API, then creates a <code class="inline">GithubRepo</code> record for each of those repositories.</p>
+API and matches up <code class="inline">GithubRepo</code> records stored locally using that list as the
+master list.</p>
+
+  </section>
+</div>
+<div class="detail" id="process_async/1">
+  
+  <div class="detail-header">
+    <a href="#process_async/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">process_async(installation)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation/repos.ex#L27" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>process_async(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) :: {:ok, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>, <a href="https://hexdocs.pm/elixir/Task.html#t:t/0">Task.t</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Marks a <code class="inline">GithubAppInstallation</code> as “processing” and immediately returns it.</p>
+<p>In the background, it fires a task to asynchronously call &amp;process/1</p>
 
   </section>
 </div>
