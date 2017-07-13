@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.PreviewView – code_corps v0.0.1</title>
+    <title>CodeCorps.GithubRepoView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-a541c65000.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.PreviewView
+        CodeCorps.GithubRepoView
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -123,18 +123,6 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#body/1">body(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#body/2">body(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#format/1">format(data)</a>
   </div>
   
@@ -148,6 +136,72 @@
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#format/3">format(data, conn, opts)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_avatar_url/1">github_account_avatar_url(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_avatar_url/2">github_account_avatar_url(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_id/1">github_account_id(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_id/2">github_account_id(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_login/1">github_account_login(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_login/2">github_account_login(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_type/1">github_account_type(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_account_type/2">github_account_type(m, c)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_app_installation/2">github_app_installation(struct, conn)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_id/1">github_id(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#github_id/2">github_id(m, c)</a>
   </div>
   
 </div>
@@ -183,23 +237,23 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#markdown/1">markdown(m)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#markdown/2">markdown(m, c)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#meta/2">meta(struct, conn)</a>
   </div>
   
     <div class="summary-synopsis"><p>Adds meta data to the individual resource being serialized</p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#name/1">name(m)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#name/2">name(m, c)</a>
+  </div>
   
 </div>
 <div class="summary-row">
@@ -267,12 +321,6 @@ to render a particular template</p>
   </div>
   
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user/2">user(struct, conn)</a>
-  </div>
-  
-</div>
 
   </div>
 
@@ -300,7 +348,7 @@ to render a particular template</p>
     </a>
     <span class="signature">__phoenix_recompile__?()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -320,7 +368,7 @@ to render a particular template</p>
     </a>
     <span class="signature">__resource__()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -340,7 +388,7 @@ to render a particular template</p>
     </a>
     <span class="signature">__templates__()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L1" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L1" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -360,7 +408,7 @@ to render a particular template</p>
     </a>
     <span class="signature">attributes(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -409,44 +457,6 @@ UserSerializer.attributes(user, conn)
 
   </section>
 </div>
-<div class="detail" id="body/1">
-  
-  <div class="detail-header">
-    <a href="#body/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">body(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="body/2">
-  
-  <div class="detail-header">
-    <a href="#body/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">body(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="format/1">
   
   <div class="detail-header">
@@ -455,7 +465,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">format(data)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -474,7 +484,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">format(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -493,7 +503,216 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">format(data, conn, opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_avatar_url/1">
+  
+  <div class="detail-header">
+    <a href="#github_account_avatar_url/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_avatar_url(m)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_avatar_url/2">
+  
+  <div class="detail-header">
+    <a href="#github_account_avatar_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_avatar_url(m, c)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_id/1">
+  
+  <div class="detail-header">
+    <a href="#github_account_id/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_id(m)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_id/2">
+  
+  <div class="detail-header">
+    <a href="#github_account_id/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_id(m, c)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_login/1">
+  
+  <div class="detail-header">
+    <a href="#github_account_login/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_login(m)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_login/2">
+  
+  <div class="detail-header">
+    <a href="#github_account_login/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_login(m, c)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_type/1">
+  
+  <div class="detail-header">
+    <a href="#github_account_type/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_type(m)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_account_type/2">
+  
+  <div class="detail-header">
+    <a href="#github_account_type/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_account_type(m, c)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_app_installation/2">
+  
+  <div class="detail-header">
+    <a href="#github_app_installation/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_app_installation(struct, conn)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L10" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_id/1">
+  
+  <div class="detail-header">
+    <a href="#github_id/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_id(m)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="github_id/2">
+  
+  <div class="detail-header">
+    <a href="#github_id/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">github_id(m, c)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -512,7 +731,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">id(data, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -537,7 +756,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">inserted_at(m)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -556,7 +775,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">inserted_at(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -575,7 +794,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">links(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -588,44 +807,6 @@ UserSerializer.attributes(user, conn)
 
   </section>
 </div>
-<div class="detail" id="markdown/1">
-  
-  <div class="detail-header">
-    <a href="#markdown/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">markdown(m)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="markdown/2">
-  
-  <div class="detail-header">
-    <a href="#markdown/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">markdown(m, c)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
 <div class="detail" id="meta/2">
   
   <div class="detail-header">
@@ -634,7 +815,7 @@ UserSerializer.attributes(user, conn)
     </a>
     <span class="signature">meta(struct, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -652,6 +833,44 @@ A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 
   </section>
 </div>
+<div class="detail" id="name/1">
+  
+  <div class="detail-header">
+    <a href="#name/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">name(m)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="name/2">
+  
+  <div class="detail-header">
+    <a href="#name/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">name(m, c)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
 <div class="detail" id="preload/3">
   
   <div class="detail-header">
@@ -660,7 +879,7 @@ A map return value will be formated with JaSerializer.Formatter.format/1.</p>
     </a>
     <span class="signature">preload(query, conn, arg3)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L2" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -695,7 +914,7 @@ end</code></pre>
     </a>
     <span class="signature">relationships(struct, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -736,7 +955,7 @@ macros.</p>
     </a>
     <span class="signature">render(template, assigns \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -756,7 +975,7 @@ macros.</p>
     </a>
     <span class="signature">template_not_found(template, assigns)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -784,7 +1003,7 @@ to render a particular template.</p>
     </a>
     <span class="signature">type()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -803,7 +1022,7 @@ to render a particular template.</p>
     </a>
     <span class="signature">type(data, conn)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L4" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -832,7 +1051,7 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
     </a>
     <span class="signature">updated_at(m)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -851,26 +1070,7 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
     </a>
     <span class="signature">updated_at(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L6" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="user/2">
-  
-  <div class="detail-header">
-    <a href="#user/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">user(struct, conn)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/preview_view.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/web/views/github_repo_view.ex#L6" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
