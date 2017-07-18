@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-f16fdb762c.js
+dist/sidebar_items-8c0a51b2ae.js
 api-reference.html
 readme.html
 license.html
@@ -12,6 +12,7 @@ license.html
 Canary.Abilities.html
 CloudexTest.html
 CloudexTest.Url.html
+CodeCorps.Adapter.MapTransformer.html
 CodeCorps.Analytics.InMemoryAPI.html
 CodeCorps.Analytics.SegmentAPI.html
 CodeCorps.Analytics.SegmentDataExtractor.html
@@ -56,6 +57,8 @@ CodeCorps.GitHub.html
 CodeCorps.GitHub.APIError.html
 CodeCorps.GitHub.APIErrorObject.html
 CodeCorps.GitHub.Adapters.GithubRepo.html
+CodeCorps.GitHub.Adapters.Task.html
+CodeCorps.GitHub.Adapters.User.html
 CodeCorps.GitHub.Bypass.html
 CodeCorps.GitHub.Event.html
 CodeCorps.GitHub.Event.Installation.html
@@ -65,6 +68,10 @@ CodeCorps.GitHub.Event.Installation.UnmatchedUser.html
 CodeCorps.GitHub.Event.InstallationRepositories.html
 CodeCorps.GitHub.Event.IssueComment.html
 CodeCorps.GitHub.Event.Issues.html
+CodeCorps.GitHub.Event.Issues.ChangesetBuilder.html
+CodeCorps.GitHub.Event.Issues.StateMapper.html
+CodeCorps.GitHub.Event.Issues.UserLinker.html
+CodeCorps.GitHub.Event.Issues.Validator.html
 CodeCorps.GitHub.HTTPClientError.html
 CodeCorps.GitHub.Installation.html
 CodeCorps.GitHub.OAuth.html
@@ -226,7 +233,6 @@ CodeCorps.StripeService.StripeConnectSubscriptionService.html
 CodeCorps.StripeService.StripeInvoiceService.html
 CodeCorps.StripeService.StripePlatformCardService.html
 CodeCorps.StripeService.StripePlatformCustomerService.html
-CodeCorps.StripeService.Util.html
 CodeCorps.StripeService.Validators.ProjectCanEnableDonations.html
 CodeCorps.StripeService.Validators.ProjectSubscribable.html
 CodeCorps.StripeService.Validators.UserCanSubscribe.html

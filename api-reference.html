@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f16fdb762c.js"></script>
+    <script src="dist/sidebar_items-8c0a51b2ae.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -86,6 +86,14 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CloudexTest.Url.html">CloudexTest.Url</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Adapter.MapTransformer.html">CodeCorps.Adapter.MapTransformer</a></div>
+  
+    <div class="summary-synopsis"><p>Module used to transform maps for the purposes of various adapters used by the
+application</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -335,6 +343,22 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Task.html">CodeCorps.GitHub.Adapters.Task</a></div>
+  
+    <div class="summary-synopsis"><p>Used to adapt a GitHub issue payload into attributes for creating or updating
+a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.User.html">CodeCorps.GitHub.Adapters.User</a></div>
+  
+    <div class="summary-synopsis"><p>Used to adapt a GitHub issue payload into attributes for creating or updating
+a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Bypass.html">CodeCorps.GitHub.Bypass</a></div>
   
 </div>
@@ -392,6 +416,36 @@ tests that require working with the database</p>
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.html">CodeCorps.GitHub.Event.Issues</a></div>
   
     <div class="summary-synopsis"><p>In charge of dealing with “Issues” GitHub Webhook events</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.ChangesetBuilder.html">CodeCorps.GitHub.Event.Issues.ChangesetBuilder</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
+Issues webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.StateMapper.html">CodeCorps.GitHub.Event.Issues.StateMapper</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of inferring a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> <code class="inline">:state</code> from a GitHub payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.UserLinker.html">CodeCorps.GitHub.Event.Issues.UserLinker</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a user to link with a Task when processing an Issues
+webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.Validator.html">CodeCorps.GitHub.Event.Issues.Validator</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of validatng a GitHub Issue webhook payload</p>
 </div>
   
 </div>
@@ -1198,13 +1252,6 @@ and from associated Stripe.Card records</p>
   
     <div class="summary-synopsis"><p>Used to perform actions on <code class="inline">StripePlatformCustomer</code> records while propagating
 to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.6/Stripe.Customer.html"><code class="inline">Stripe.Customer</code></a> records</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.StripeService.Util.html">CodeCorps.StripeService.Util</a></div>
-  
-    <div class="summary-synopsis"><p>Utility functions for handling the Stripe API</p>
 </div>
   
 </div>

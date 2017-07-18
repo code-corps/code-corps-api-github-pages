@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.StripeService.Util – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Adapters.Task – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f16fdb762c.js"></script>
+    <script src="dist/sidebar_items-8c0a51b2ae.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.Util
+        CodeCorps.GitHub.Adapters.Task
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/util.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/task.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,7 +70,8 @@
 
       
         <section id="moduledoc">
-          <p>Utility functions for handling the Stripe API.</p>
+          <p>Used to adapt a GitHub issue payload into attributes for creating or updating
+a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.</p>
 
         </section>
       
@@ -92,19 +93,8 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#transform_attributes/2">transform_attributes(attributes, mapping)</a>
+    <a href="#from_issue/1">from_issue(payload)</a>
   </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#transform_map/2">transform_map(api_map, mapping)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Takes a source map and a list of tuples representing how the source map
-should be transformed into a new map, then applies the mapping
-operation on each field</p>
-</div>
   
 </div>
 
@@ -126,45 +116,29 @@ operation on each field</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="transform_attributes/2">
+          <div class="detail" id="from_issue/1">
   
   <div class="detail-header">
-    <a href="#transform_attributes/2" class="detail-link" title="Link to this function">
+    <a href="#from_issue/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">transform_attributes(attributes, mapping)</span>
+    <span class="signature">from_issue(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/util.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/task.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="transform_map/2">
-  
-  <div class="detail-header">
-    <a href="#transform_map/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">transform_map(api_map, mapping)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/util.ex#L11" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
+      <div class="specs">
+        
+          <pre>from_issue(map) :: map</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
-    <p>Takes a source map and a list of tuples representing how the source map
-should be transformed into a new map, then applies the mapping
-operation on each field</p>
-
+    
   </section>
 </div>
 
