@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-466aea6884.js"></script>
+    <script src="dist/sidebar_items-f852b21153.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -339,6 +339,14 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Comment.html">CodeCorps.GitHub.Adapters.Comment</a></div>
+  
+    <div class="summary-synopsis"><p>Used to adapt a GitHub payload into attributes for creating or updating
+a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.GithubAppInstallation.html">CodeCorps.GitHub.Adapters.GithubAppInstallation</a></div>
   
     <div class="summary-synopsis"><p>Module used to convert GitHub payloads into attributes for a
@@ -375,6 +383,14 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></
   
     <div class="summary-synopsis"><p>In charge of marking <code class="inline">GithubEvent</code> records as “processing”, “processed” or
 “errored”, based on the outcome of processing a webhook event payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Common.RepoFinder.html">CodeCorps.GitHub.Event.Common.RepoFinder</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of tracking down a relevant <code class="inline">GithubRepo</code> record for a Github API
+payload</p>
 </div>
   
 </div>
@@ -436,6 +452,37 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.ChangesetBuilder.html">CodeCorps.GitHub.Event.IssueComment.ChangesetBuilder</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <code class="inline">Comment</code> with, when handling
+an IssueComment webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.CommentDeleter.html">CodeCorps.GitHub.Event.IssueComment.CommentDeleter</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.CommentSyncer.html">CodeCorps.GitHub.Event.IssueComment.CommentSyncer</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.UserLinker.html">CodeCorps.GitHub.Event.IssueComment.UserLinker</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a user to link with a Task when processing an
+IssueComment webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.Validator.html">CodeCorps.GitHub.Event.IssueComment.Validator</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of validatng a GitHub IssueComment webhook payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.html">CodeCorps.GitHub.Event.Issues</a></div>
   
     <div class="summary-synopsis"><p>In charge of dealing with “Issues” GitHub Webhook events</p>
@@ -451,10 +498,7 @@ Issues webhook</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.StateMapper.html">CodeCorps.GitHub.Event.Issues.StateMapper</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of inferring a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> <code class="inline">:state</code> from a GitHub payload</p>
-</div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.TaskSyncer.html">CodeCorps.GitHub.Event.Issues.TaskSyncer</a></div>
   
 </div>
 <div class="summary-row">

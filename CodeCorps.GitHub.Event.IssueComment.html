@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.IssueComment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-466aea6884.js"></script>
+    <script src="dist/sidebar_items-f852b21153.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -71,6 +71,7 @@
       
         <section id="moduledoc">
           <p>In charge of dealing with “IssueComment” GitHub Webhook events</p>
+<p>https://developer.github.com/v3/activity/events/types/#issuecommentevent</p>
 
         </section>
       
@@ -92,10 +93,10 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/2">handle(github_event, map)</a>
+    <a href="#handle/2">handle(github_event, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles an “IssueComment” GitHub Webhook event</p>
+    <div class="summary-synopsis"><p>Handles the “Issues” GitHub webhook</p>
 </div>
   
 </div>
@@ -124,26 +125,66 @@
     <a href="#handle/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">handle(github_event, map)</span>
+    <span class="signature">handle(github_event, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment.ex#L53" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: outcome</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Handles an “IssueComment” GitHub Webhook event</p>
-<p>The general idea is</p>
+    <p>Handles the “Issues” GitHub webhook</p>
+<p>The process is as follows</p>
 <ul>
-<li>marked the passed in event as “processing”
+<li>validate the payload is structured as expected
 </li>
-<li>do the work
+<li>try and find the appropriate <code class="inline">GithubRepo</code> record.
 </li>
-<li>marked the passed in event as “processed” or “errored”
+<li><p>for each <code class="inline">ProjectGithubRepo</code> belonging to that <code class="inline">Project</code></p>
+<ul>
+<li><p>find or initialize a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
+<ul>
+<li>if initializing, associate with existing, or create <code class="inline">User</code>
 </li>
 </ul>
+</li>
+<li><p>find or initialize a <code class="inline">Comment</code></p>
+<ul>
+<li>if initializing, associate with existing, or create <code class="inline">User</code>
+</li>
+</ul>
+</li>
+<li>commit the change as an insert or update action
+</li>
+</ul>
+</li>
+</ul>
+<p>Depending on the success of the process, the function will return one of</p>
+<ul>
+<li><code class="inline">{:ok, list_of_tasks}</code>
+</li>
+<li><code class="inline">{:error, :not_fully_implemented}</code> - while we’re aware of this action, we have not implemented support for it yet
+</li>
+<li><code class="inline">{:error, :unexpected_payload}</code> - the payload was not as expected
+</li>
+<li><code class="inline">{:error, :unexpected_action}</code> - the action was not of type we are aware of
+</li>
+<li><code class="inline">{:error, :unmatched_repository}</code> - the repository for this issue was not found
+</li>
+</ul>
+<p>Note that it is also possible to have a matched GithubRepo, but with that
+record not having any ProjectGithubRepo children. The outcome of that case
+should NOT be an errored event, since it simply means that the GithubRepo
+was not linked to a Project by the Project owner. This is allowed and
+relatively common.</p>
 
   </section>
 </div>

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.Event.Issues.StateMapper – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.Issues.TaskSyncer – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-466aea6884.js"></script>
+    <script src="dist/sidebar_items-f852b21153.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -59,20 +59,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Issues.StateMapper
+        CodeCorps.GitHub.Event.Issues.TaskSyncer
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/state_mapper.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/task_syncer.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>In charge of inferring a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> <code class="inline">:state</code> from a GitHub payload</p>
-
-        </section>
       
 
       
@@ -92,11 +87,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_state/1">get_state(map)</a>
+    <a href="#sync_all/3">sync_all(github_repo, user, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>From the provided GitHub Issue webhook payload, determins the appropriate
-state for a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> to be put in</p>
+    <div class="summary-synopsis"><p>When provided a <code class="inline">GithubRepo</code>, a <code class="inline">User</code> and a GitHub API payload, for each
+<code class="inline">Project</code> associated to that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it
+creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> associated to the specified <code class="inline">User</code></p>
 </div>
   
 </div>
@@ -119,15 +115,15 @@ state for a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">T
             </a>
             Functions
           </h1>
-          <div class="detail" id="get_state/1">
+          <div class="detail" id="sync_all/3">
   
   <div class="detail-header">
-    <a href="#get_state/1" class="detail-link" title="Link to this function">
+    <a href="#sync_all/3" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">get_state(map)</span>
+    <span class="signature">sync_all(github_repo, user, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/state_mapper.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/task_syncer.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -135,14 +131,15 @@ state for a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">T
     
       <div class="specs">
         
-          <pre>get_state(map) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
+          <pre>sync_all(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) :: {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>]}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>From the provided GitHub Issue webhook payload, determins the appropriate
-state for a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> to be put in.</p>
+    <p>When provided a <code class="inline">GithubRepo</code>, a <code class="inline">User</code> and a GitHub API payload, for each
+<code class="inline">Project</code> associated to that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it
+creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> associated to the specified <code class="inline">User</code>.</p>
 
   </section>
 </div>
