@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Adapters.User – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-8c0a51b2ae.js"></script>
+    <script src="dist/sidebar_items-6627a910a0.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -96,6 +96,10 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.<
     <a href="#from_github_user/1">from_github_user(payload)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Converts a Github user payload into a map of attributes suitable for creating
+or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+</div>
+  
 </div>
 
   </div>
@@ -124,7 +128,7 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.<
     </a>
     <span class="signature">from_github_user(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/user.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/user.ex#L22" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -138,7 +142,11 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.<
     
   </div>
   <section class="docstring">
-    
+    <p>Converts a Github user payload into a map of attributes suitable for creating
+or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+<p>Any nil values are removed here, since we do not want to, for example, delete
+an existing email just because the github payload doesn’t have that data.</p>
+
   </section>
 </div>
 
