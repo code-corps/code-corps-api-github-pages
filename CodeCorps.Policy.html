@@ -8,7 +8,7 @@
     <title>CodeCorps.Policy – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-53b52fda87.js"></script>
+    <script src="dist/sidebar_items-61ca5a9fad.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -92,7 +92,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#authorize/3">authorize(user, action, resource)</a>
+    <a href="#authorize/4">authorize(user, action, struct, params \\ %{})</a>
   </div>
   
     <div class="summary-synopsis"><p>Determines if the specified user can perform the specified action on the
@@ -119,13 +119,15 @@ specified resource</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="authorize/3">
+          <div class="detail" id="authorize/4">
+  
+    <span id="authorize/3" />
   
   <div class="detail-header">
-    <a href="#authorize/3" class="detail-link" title="Link to this function">
+    <a href="#authorize/4" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">authorize(user, action, resource)</span>
+    <span class="signature">authorize(user, action, struct, params \\ %{})</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/policy.ex#L19" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
@@ -135,7 +137,7 @@ specified resource</p>
     
       <div class="specs">
         
-          <pre>authorize(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, atom, map | struct) ::
+          <pre>authorize(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, atom, struct, map) ::
   {:ok, :authorized} |
   {:error, :not_authorized}</pre>
         
