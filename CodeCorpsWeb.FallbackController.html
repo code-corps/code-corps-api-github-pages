@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorpsWeb.TokenController – code_corps v0.0.1</title>
+    <title>CodeCorpsWeb.FallbackController – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-53b52fda87.js"></script>
@@ -59,10 +59,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorpsWeb.TokenController
+        CodeCorpsWeb.FallbackController
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/token_controller.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/fallback_controller.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -79,6 +79,19 @@
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:supported_fallbacks/0">supported_fallbacks()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -87,14 +100,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create/2">create(conn, map)</a>
+    <a href="#call/2">call(conn, action)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Default fallback for validation errors</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#refresh/2">refresh(conn, map)</a>
-  </div>
   
 </div>
 
@@ -107,6 +117,46 @@
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <i class="icon-link"></i>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:supported_fallbacks/0">
+  
+  <div class="detail-header">
+    <a href="#t:supported_fallbacks/0" class="detail-link" title="Link to this type">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">supported_fallbacks()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/fallback_controller.ex#L6" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:supported_fallbacks/0">supported_fallbacks</a> ::
+  {:error, <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>} |
+  {:error, :not_authorized} |
+  nil</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -116,42 +166,31 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create/2">
+          <div class="detail" id="call/2">
   
   <div class="detail-header">
-    <a href="#create/2" class="detail-link" title="Link to this function">
+    <a href="#call/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create(conn, map)</span>
+    <span class="signature">call(conn, action)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/token_controller.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/fallback_controller.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="refresh/2">
-  
-  <div class="detail-header">
-    <a href="#refresh/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">refresh(conn, map)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/token_controller.ex#L28" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
+      <div class="specs">
+        
+          <pre>call(<a href="https://hexdocs.pm/plug/1.4.3/Plug.Conn.html#t:t/0">Plug.Conn.t</a>, <a href="#t:supported_fallbacks/0">supported_fallbacks</a>) :: <a href="https://hexdocs.pm/plug/1.4.3/Plug.Conn.html#t:t/0">Plug.Conn.t</a></pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
-    
+    <p>Default fallback for validation errors.</p>
+<p>Renders validation errors for the provided changeset using <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.html"><code class="inline">JaSerializer</code></a></p>
+
   </section>
 </div>
 
