@@ -70,7 +70,9 @@
 
       
         <section id="moduledoc">
-          <p>Puts authenticated Guardian user into conn.assigns[:current_user]</p>
+          <p>Converts params in the JSON api “data” format into flat params convient for
+changeset casting.</p>
+<p>This is done using <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Params.html#to_attributes/1"><code class="inline">JaSerializer.Params.to_attributes/1</code></a></p>
 
         </section>
       
@@ -129,7 +131,7 @@
     </a>
     <span class="signature">call(conn, opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L15" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -154,7 +156,7 @@
     </a>
     <span class="signature">init(opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L12" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
