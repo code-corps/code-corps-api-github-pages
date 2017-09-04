@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d9aa49c15e.js"></script>
+    <script src="dist/sidebar_items-f0fb7e43bf.js"></script>
   </head>
   <body data-type="extras">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -44,6 +44,8 @@
       <li><a id="modules-list" href="#full-list">Modules</a></li>
     
 
+    
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
     
 
     
@@ -227,6 +229,10 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.html">CodeCorps.GitHub.API</a></div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.APIError.html">CodeCorps.GitHub.APIError</a></div>
   
     <div class="summary-synopsis"><p>Represents a client error from the GitHub API</p>
@@ -274,10 +280,6 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></
     <div class="summary-synopsis"><p>Used to adapt a GitHub issue payload into attributes for creating or updating
 a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Bypass.html">CodeCorps.GitHub.Bypass</a></div>
   
 </div>
 <div class="summary-row">
@@ -423,6 +425,10 @@ webhook</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Headers.html">CodeCorps.GitHub.Headers</a></div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Installation.html">CodeCorps.GitHub.Installation</a></div>
   
     <div class="summary-synopsis"><p>Used to perform installation actions on the GitHub API</p>
@@ -431,6 +437,18 @@ webhook</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Request.html">CodeCorps.GitHub.Request</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.SuccessAPI.html">CodeCorps.GitHub.SuccessAPI</a></div>
+  
+    <div class="summary-synopsis"><p>A mocked github API layer which returns a default successful response for all
+GitHub API requests</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.TestHelpers.html">CodeCorps.GitHub.TestHelpers</a></div>
   
 </div>
 <div class="summary-row">
@@ -458,13 +476,6 @@ webhook</p>
   <div class="summary-signature"><a href="CodeCorps.GitHub.Webhook.Processor.html">CodeCorps.GitHub.Webhook.Processor</a></div>
   
     <div class="summary-synopsis"><p>Serves as a point of entry to process GitHub webhooks</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHubCase.html">CodeCorps.GitHubCase</a></div>
-  
-    <div class="summary-synopsis"><p>For use in tests where Bypass is needed</p>
 </div>
   
 </div>
@@ -1187,13 +1198,6 @@ associated with that task</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.TestHelpers.GitHub.html">CodeCorps.TestHelpers.GitHub</a></div>
-  
-    <div class="summary-synopsis"><p>Contains test helpers for testing github features</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.Transition.UserState.html">CodeCorps.Transition.UserState</a></div>
   
 </div>
@@ -1663,6 +1667,21 @@ tests for views defined in the application</p>
   </section>
 
 
+
+  <section class="details-list">
+    <h2 id="exceptions" class="section-heading">
+  <a href="#exceptions" class="hover-link"><i class="icon-link"></i></a>
+  Exceptions
+</h2>
+
+    <div class="summary">
+      <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.SuccessAPI.UnhandledGitHubEndpointError.html">CodeCorps.GitHub.SuccessAPI.UnhandledGitHubEndpointError</a></div>
+  
+</div>
+
+    </div>
+  </section>
 
 
 

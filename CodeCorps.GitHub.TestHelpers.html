@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.GitHub.Bypass – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.TestHelpers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d9aa49c15e.js"></script>
+    <script src="dist/sidebar_items-f0fb7e43bf.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -45,6 +45,8 @@
     
 
     
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
 
     
   </ul>
@@ -59,10 +61,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Bypass
+        CodeCorps.GitHub.TestHelpers
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/bypass.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/github/test_helpers.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -87,14 +89,31 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#setup/1">setup(bypass)</a>
+    <a href="#load_endpoint_fixture/1">load_endpoint_fixture(id)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#teardown/0">teardown()</a>
+    <a href="#load_event_fixture/1">load_event_fixture(id)</a>
   </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#with_mock_api/2">with_mock_api(mock_module, list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Allows setting a mock Github API module for usage in specific tests
+To use it, define a module containing the methods expected to be called, then
+pass in the block of code expected to call it into the macro:</p>
+<pre><code class="elixir">defmodule MyApiModule do
+  def some_function, do: &quot;foo&quot;
+end
+with_mock_api(MyApiModule) do
+  execute_code_calling_api
+end</code></pre>
+</div>
   
 </div>
 
@@ -116,42 +135,90 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="setup/1">
+          <div class="detail" id="load_endpoint_fixture/1">
   
   <div class="detail-header">
-    <a href="#setup/1" class="detail-link" title="Link to this function">
+    <a href="#load_endpoint_fixture/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">setup(bypass)</span>
+    <span class="signature">load_endpoint_fixture(id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/bypass.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/github/test_helpers.ex#L3" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>load_endpoint_fixture(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: map</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
     
   </section>
 </div>
-<div class="detail" id="teardown/0">
+<div class="detail" id="load_event_fixture/1">
   
   <div class="detail-header">
-    <a href="#teardown/0" class="detail-link" title="Link to this function">
+    <a href="#load_event_fixture/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">teardown()</span>
+    <span class="signature">load_event_fixture(id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/bypass.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/github/test_helpers.ex#L8" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>load_event_fixture(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: map</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
     
+  </section>
+</div>
+<div class="detail" id="with_mock_api/2">
+  
+  <div class="detail-header">
+    <a href="#with_mock_api/2" class="detail-link" title="Link to this macro">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">with_mock_api(mock_module, list)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/github/test_helpers.ex#L26" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+      <span class="note">(macro)</span>
+    
+    
+      <div class="specs">
+        
+          <pre>with_mock_api(term, module, [{:do, function}]) :: any</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Allows setting a mock Github API module for usage in specific tests
+To use it, define a module containing the methods expected to be called, then
+pass in the block of code expected to call it into the macro:</p>
+<pre><code class="elixir">defmodule MyApiModule do
+  def some_function, do: &quot;foo&quot;
+end
+with_mock_api(MyApiModule) do
+  execute_code_calling_api
+end</code></pre>
+
   </section>
 </div>
 

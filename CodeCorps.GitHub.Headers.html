@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.StripeConnectAccount – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Headers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-f0fb7e43bf.js"></script>
@@ -61,20 +61,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeConnectAccount
+        CodeCorps.GitHub.Headers
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/stripe_connect_account.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>Represents a StripeConnectAccount stored on Code Corps.</p>
-
-        </section>
       
 
       
@@ -107,13 +102,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/2">create_changeset(struct, params \\ %{})</a>
+    <a href="#access_token_request/0">access_token_request()</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#webhook_update_changeset/2">webhook_update_changeset(struct, params \\ %{})</a>
+    <a href="#integration_request/1">integration_request(headers)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_request/2">user_request(headers, options)</a>
   </div>
   
 </div>
@@ -143,7 +144,7 @@
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/stripe_connect_account.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L5" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -151,7 +152,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.StripeConnectAccount{legal_entity_business_tax_id_provided: term, business_name: term, legal_entity_address_state: term, legal_entity_address_postal_code: term, legal_entity_address_line2: term, legal_entity_personal_address_country: term, legal_entity_personal_id_number: term, inserted_at: term, legal_entity_personal_address_line1: term, legal_entity_ssn_last_4_provided: term, legal_entity_verification_status: term, legal_entity_type: term, support_email: term, legal_entity_verification_details: term, display_name: term, legal_entity_personal_address_city: term, legal_entity_personal_address_line2: term, legal_entity_maiden_name: term, legal_entity_business_vat_id: term, tos_acceptance_ip: term, legal_entity_address_city: term, country: term, stripe_external_account: term, legal_entity_gender: term, legal_entity_verification_document: term, legal_entity_dob_month: term, organization: term, transfers_enabled: term, __meta__: term, legal_entity_first_name: term, legal_entity_personal_address_state: term, verification_due_by: term, external_account: term, legal_entity_address_line1: term, legal_entity_ssn_last_4: term, legal_entity_last_name: term, legal_entity_dob_year: term, legal_entity_personal_id_number_provided: term, details_submitted: term, tos_acceptance_user_agent: term, charges_enabled: term, business_url: term, default_currency: term, id: term, verification_disabled_reason: term, managed: term, legal_entity_personal_address_postal_code: term, tos_acceptance_date: term, verification_fields_needed: term, legal_entity_address_country: term, id_from_stripe: term, legal_entity_business_vat_id_provided: term, organization_id: term, updated_at: term, email: term, legal_entity_phone_number: term, legal_entity_verification_details_code: term, legal_entity_dob_day: term, legal_entity_business_name: term, support_phone: term, support_url: term, legal_entity_business_tax_id: term}</pre>
+          <pre>t() :: [header]</pre>
         
       </div>
     
@@ -173,42 +174,75 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_changeset/2">
-  
-    <span id="create_changeset/1" />
+          <div class="detail" id="access_token_request/0">
   
   <div class="detail-header">
-    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#access_token_request/0" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">create_changeset(struct, params \\ %{})</span>
+    <span class="signature">access_token_request()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/stripe_connect_account.ex#L138" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L24" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>access_token_request() :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
     
   </section>
 </div>
-<div class="detail" id="webhook_update_changeset/2">
-  
-    <span id="webhook_update_changeset/1" />
+<div class="detail" id="integration_request/1">
   
   <div class="detail-header">
-    <a href="#webhook_update_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#integration_request/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">webhook_update_changeset(struct, params \\ %{})</span>
+    <span class="signature">integration_request(headers)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/stripe_connect_account.ex#L148" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L16" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>integration_request(%{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}) :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="user_request/2">
+  
+  <div class="detail-header">
+    <a href="#user_request/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_request(headers, options)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L8" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>user_request(%{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}, list) :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
     
   </div>
   <section class="docstring">

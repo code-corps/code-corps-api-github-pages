@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-d9aa49c15e.js
+dist/sidebar_items-f0fb7e43bf.js
 api-reference.html
 readme.html
 license.html
@@ -35,6 +35,7 @@ CodeCorps.Emails.ForgotPasswordEmail.html
 CodeCorps.Emails.ProjectUserAcceptanceEmail.html
 CodeCorps.Emails.ReceiptEmail.html
 CodeCorps.GitHub.html
+CodeCorps.GitHub.API.html
 CodeCorps.GitHub.APIError.html
 CodeCorps.GitHub.APIErrorObject.html
 CodeCorps.GitHub.Adapters.Comment.html
@@ -42,7 +43,6 @@ CodeCorps.GitHub.Adapters.GithubAppInstallation.html
 CodeCorps.GitHub.Adapters.GithubRepo.html
 CodeCorps.GitHub.Adapters.Task.html
 CodeCorps.GitHub.Adapters.User.html
-CodeCorps.GitHub.Bypass.html
 CodeCorps.GitHub.Event.html
 CodeCorps.GitHub.Event.Common.RepoFinder.html
 CodeCorps.GitHub.Event.Installation.html
@@ -64,13 +64,15 @@ CodeCorps.GitHub.Event.Issues.TaskSyncer.html
 CodeCorps.GitHub.Event.Issues.UserLinker.html
 CodeCorps.GitHub.Event.Issues.Validator.html
 CodeCorps.GitHub.HTTPClientError.html
+CodeCorps.GitHub.Headers.html
 CodeCorps.GitHub.Installation.html
 CodeCorps.GitHub.Request.html
+CodeCorps.GitHub.SuccessAPI.html
+CodeCorps.GitHub.TestHelpers.html
 CodeCorps.GitHub.User.html
 CodeCorps.GitHub.Webhook.EventSupport.html
 CodeCorps.GitHub.Webhook.Handler.html
 CodeCorps.GitHub.Webhook.Processor.html
-CodeCorps.GitHubCase.html
 CodeCorps.Github.JWT.html
 CodeCorps.GithubAppInstallation.html
 CodeCorps.GithubEvent.html
@@ -205,7 +207,6 @@ CodeCorps.Task.html
 CodeCorps.TaskList.html
 CodeCorps.TaskSkill.html
 CodeCorps.TestHelpers.html
-CodeCorps.TestHelpers.GitHub.html
 CodeCorps.Transition.UserState.html
 CodeCorps.User.html
 CodeCorps.UserCategory.html
@@ -309,4 +310,5 @@ CodeCorpsWeb.UserTaskController.html
 CodeCorpsWeb.UserTaskView.html
 CodeCorpsWeb.UserView.html
 CodeCorpsWeb.ViewCase.html
+CodeCorps.GitHub.SuccessAPI.UnhandledGitHubEndpointError.html
 index.html

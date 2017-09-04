@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.TestHelpers.GitHub – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.SuccessAPI – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d9aa49c15e.js"></script>
+    <script src="dist/sidebar_items-f0fb7e43bf.js"></script>
   </head>
   <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
@@ -45,6 +45,8 @@
     
 
     
+      <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
 
     
   </ul>
@@ -59,10 +61,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.TestHelpers.GitHub
+        CodeCorps.GitHub.SuccessAPI
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/test_helpers/github.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/github/success_api.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -70,7 +72,18 @@
 
       
         <section id="moduledoc">
-          <p>Contains test helpers for testing github features</p>
+          <p>A mocked github API layer which returns a default successful response for all
+GitHub API requests.</p>
+<p>All tests in the test environment use this module as a mock for GitHub API
+requests by default.</p>
+<p>If certain tests explicitly depend on the data returned by GitHub, they can be
+mocked individually using the <code class="inline">CodeCorps.GitHub.TestHelpers.with_mock_api</code>
+macro.</p>
+<p>As support for new GitHub endpoints is added, defaults for those endpoints
+should be added here.</p>
+<p>To assert a request has been made to GitHub as a result as an action, the
+<code class="inline">assert_received</code> test helper can be used:</p>
+<pre><code class="elixir">assert_received({:get, &quot;https://api.github.com/user&quot;, headers, body, options})</code></pre>
 
         </section>
       
@@ -92,13 +105,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#load_endpoint_fixture/1">load_endpoint_fixture(id)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#load_event_fixture/1">load_event_fixture(id)</a>
+    <a href="#request/5">request(method, url, headers, body, options)</a>
   </div>
   
 </div>
@@ -121,50 +128,19 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="load_endpoint_fixture/1">
+          <div class="detail" id="request/5">
   
   <div class="detail-header">
-    <a href="#load_endpoint_fixture/1" class="detail-link" title="Link to this function">
+    <a href="#request/5" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">load_endpoint_fixture(id)</span>
+    <span class="signature">request(method, url, headers, body, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/test_helpers/github.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/github/success_api.ex#L30" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
-    
-      <div class="specs">
-        
-          <pre>load_endpoint_fixture(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: map</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="load_event_fixture/1">
-  
-  <div class="detail-header">
-    <a href="#load_event_fixture/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">load_event_fixture(id)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/test_helpers/github.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>load_event_fixture(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) :: map</pre>
-        
-      </div>
     
   </div>
   <section class="docstring">
