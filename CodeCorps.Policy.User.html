@@ -71,6 +71,12 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>Contains authorization policies for performing actions on a <code class="inline">User</code> record.</p>
+<p>Used to authorize controller actions.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -89,7 +95,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update?/2">update?(user, current_user)</a>
+    <a href="#update?/2">update?(user1, user2)</a>
   </div>
   
 </div>
@@ -118,13 +124,19 @@
     <a href="#update?/2" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">update?(user, current_user)</span>
+    <span class="signature">update?(user1, user2)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user.ex#L4" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user.ex#L10" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>update?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: boolean</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
