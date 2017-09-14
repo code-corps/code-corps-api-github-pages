@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.15.0">
-    <title>CodeCorps.StripeService.Validators.ProjectCanEnableDonations – code_corps v0.0.1</title>
+    <title>CodeCorps.Project.Query – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-bd6c4b7281.js"></script>
@@ -61,10 +61,10 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.Validators.ProjectCanEnableDonations
+        CodeCorps.Project.Query
         
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/validators/project_can_enable_donations.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/project/query.ex#L1" title="View Source" class="view-source" rel="help">
             <i class="icon-code"></i>
           </a>
         
@@ -72,7 +72,7 @@
 
       
         <section id="moduledoc">
-          <p>Ensures a <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> is able to receive subscriptions.</p>
+          <p>Contains queries for retrieving projects</p>
 
         </section>
       
@@ -94,10 +94,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#validate/1">validate(project)</a>
+    <a href="#find/1">find(map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Determines if the provided <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> can enable donations</p>
+    <div class="summary-synopsis"><p>Finds and returns a single <code class="inline">Project</code> record based on a map of parameters</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#list/1">list(map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a list of <code class="inline">Project</code> records based on the provided filter</p>
 </div>
   
 </div>
@@ -120,35 +129,60 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="validate/1">
+          <div class="detail" id="find/1">
   
   <div class="detail-header">
-    <a href="#validate/1" class="detail-link" title="Link to this function">
+    <a href="#find/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">validate(project)</span>
+    <span class="signature">find(map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/validators/project_can_enable_donations.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/project/query.ex#L43" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>find(map) :: <a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a> | nil</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Determines if the provided <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> can enable donations.</p>
-<p>For a project to be able to enable donations,
-it needs to have proper associations set up.</p>
-<p>These are:</p>
-<ul>
-<li>At least one <a href="CodeCorps.DonationGoal.html"><code class="inline">CodeCorps.DonationGoal</code></a>
-</li>
-<li><code class="inline">Organization</code> with a <code class="inline">StripeConnectAccount</code> which
-  has <code class="inline">charges_enabled: true</code> and <code class="inline">transfers_enabled: true</code>
-</li>
-</ul>
-<p>If the project has these relationships set up, it returns <code class="inline">{:ok, project}</code></p>
-<p>In any other case, it returns {:error, :project_not_ready}</p>
+    <p>Finds and returns a single <code class="inline">Project</code> record based on a map of parameters.</p>
+<p>If the map contains a <code class="inline">project_slug</code> key, retrieves record by <code class="inline">slug</code>.</p>
+<p>If the map contains an <code class="inline">id</code>, retrieves by id.</p>
+
+  </section>
+</div>
+<div class="detail" id="list/1">
+  
+  <div class="detail-header">
+    <a href="#list/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">list(map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/project/query.ex#L22" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>list(map) :: [<a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a>]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Returns a list of <code class="inline">Project</code> records based on the provided filter.</p>
+<p>If the filter contains a <code class="inline">slug</code> key, returns all projects for the specified
+<code class="inline">Organization.</code></p>
+<p>If the filter does not contain a <code class="inline">slug</code> key, returns all <code class="inline">approved</code> projects.</p>
 
   </section>
 </div>
