@@ -1,21 +1,23 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.0">
+    <meta name="generator" content="ExDoc v0.16.3">
     <title>CodeCorpsWeb.Router.Helpers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bd6c4b7281.js"></script>
+    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    
   </head>
   <body data-type="modules">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +34,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -46,6 +50,8 @@
 
     
       <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
     
 
     
@@ -63,9 +69,9 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorpsWeb.Router.Helpers
         
-        
           <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -81,7 +87,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -1523,20 +1530,24 @@
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="category_path/2">
   
+  
   <div class="detail-header">
     <a href="#category_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">category_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1548,14 +1559,17 @@
 </div>
 <div class="detail" id="category_path/3">
   
+  
   <div class="detail-header">
     <a href="#category_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">category_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1567,14 +1581,17 @@
 </div>
 <div class="detail" id="category_path/4">
   
+  
   <div class="detail-header">
     <a href="#category_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">category_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1586,14 +1603,17 @@
 </div>
 <div class="detail" id="category_url/2">
   
+  
   <div class="detail-header">
     <a href="#category_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">category_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1605,14 +1625,17 @@
 </div>
 <div class="detail" id="category_url/3">
   
+  
   <div class="detail-header">
     <a href="#category_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">category_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1624,14 +1647,17 @@
 </div>
 <div class="detail" id="category_url/4">
   
+  
   <div class="detail-header">
     <a href="#category_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">category_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1643,14 +1669,17 @@
 </div>
 <div class="detail" id="comment_path/2">
   
+  
   <div class="detail-header">
     <a href="#comment_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">comment_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1662,14 +1691,17 @@
 </div>
 <div class="detail" id="comment_path/3">
   
+  
   <div class="detail-header">
     <a href="#comment_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">comment_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1681,14 +1713,17 @@
 </div>
 <div class="detail" id="comment_path/4">
   
+  
   <div class="detail-header">
     <a href="#comment_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">comment_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1700,14 +1735,17 @@
 </div>
 <div class="detail" id="comment_url/2">
   
+  
   <div class="detail-header">
     <a href="#comment_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">comment_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1719,14 +1757,17 @@
 </div>
 <div class="detail" id="comment_url/3">
   
+  
   <div class="detail-header">
     <a href="#comment_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">comment_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1738,14 +1779,17 @@
 </div>
 <div class="detail" id="comment_url/4">
   
+  
   <div class="detail-header">
     <a href="#comment_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">comment_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1757,14 +1801,17 @@
 </div>
 <div class="detail" id="donation_goal_path/2">
   
+  
   <div class="detail-header">
     <a href="#donation_goal_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">donation_goal_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1776,14 +1823,17 @@
 </div>
 <div class="detail" id="donation_goal_path/3">
   
+  
   <div class="detail-header">
     <a href="#donation_goal_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">donation_goal_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1795,14 +1845,17 @@
 </div>
 <div class="detail" id="donation_goal_path/4">
   
+  
   <div class="detail-header">
     <a href="#donation_goal_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">donation_goal_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1814,14 +1867,17 @@
 </div>
 <div class="detail" id="donation_goal_url/2">
   
+  
   <div class="detail-header">
     <a href="#donation_goal_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">donation_goal_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1833,14 +1889,17 @@
 </div>
 <div class="detail" id="donation_goal_url/3">
   
+  
   <div class="detail-header">
     <a href="#donation_goal_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">donation_goal_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1852,14 +1911,17 @@
 </div>
 <div class="detail" id="donation_goal_url/4">
   
+  
   <div class="detail-header">
     <a href="#donation_goal_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">donation_goal_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1871,14 +1933,17 @@
 </div>
 <div class="detail" id="github_app_installation_path/2">
   
+  
   <div class="detail-header">
     <a href="#github_app_installation_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installation_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1890,14 +1955,17 @@
 </div>
 <div class="detail" id="github_app_installation_path/3">
   
+  
   <div class="detail-header">
     <a href="#github_app_installation_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installation_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1909,14 +1977,17 @@
 </div>
 <div class="detail" id="github_app_installation_path/4">
   
+  
   <div class="detail-header">
     <a href="#github_app_installation_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installation_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1928,14 +1999,17 @@
 </div>
 <div class="detail" id="github_app_installation_url/2">
   
+  
   <div class="detail-header">
     <a href="#github_app_installation_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installation_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1947,14 +2021,17 @@
 </div>
 <div class="detail" id="github_app_installation_url/3">
   
+  
   <div class="detail-header">
     <a href="#github_app_installation_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installation_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1966,14 +2043,17 @@
 </div>
 <div class="detail" id="github_app_installation_url/4">
   
+  
   <div class="detail-header">
     <a href="#github_app_installation_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installation_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1985,14 +2065,17 @@
 </div>
 <div class="detail" id="github_events_path/2">
   
+  
   <div class="detail-header">
     <a href="#github_events_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_events_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2004,14 +2087,17 @@
 </div>
 <div class="detail" id="github_events_path/3">
   
+  
   <div class="detail-header">
     <a href="#github_events_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_events_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2023,14 +2109,17 @@
 </div>
 <div class="detail" id="github_events_url/2">
   
+  
   <div class="detail-header">
     <a href="#github_events_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_events_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2042,14 +2131,17 @@
 </div>
 <div class="detail" id="github_events_url/3">
   
+  
   <div class="detail-header">
     <a href="#github_events_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_events_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2061,14 +2153,17 @@
 </div>
 <div class="detail" id="github_repo_path/2">
   
+  
   <div class="detail-header">
     <a href="#github_repo_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_repo_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2080,14 +2175,17 @@
 </div>
 <div class="detail" id="github_repo_path/3">
   
+  
   <div class="detail-header">
     <a href="#github_repo_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_repo_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2099,14 +2197,17 @@
 </div>
 <div class="detail" id="github_repo_path/4">
   
+  
   <div class="detail-header">
     <a href="#github_repo_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_repo_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2118,14 +2219,17 @@
 </div>
 <div class="detail" id="github_repo_url/2">
   
+  
   <div class="detail-header">
     <a href="#github_repo_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_repo_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2137,14 +2241,17 @@
 </div>
 <div class="detail" id="github_repo_url/3">
   
+  
   <div class="detail-header">
     <a href="#github_repo_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_repo_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2156,14 +2263,17 @@
 </div>
 <div class="detail" id="github_repo_url/4">
   
+  
   <div class="detail-header">
     <a href="#github_repo_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_repo_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2175,14 +2285,17 @@
 </div>
 <div class="detail" id="organization_github_app_installation_path/2">
   
+  
   <div class="detail-header">
     <a href="#organization_github_app_installation_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_github_app_installation_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2194,14 +2307,17 @@
 </div>
 <div class="detail" id="organization_github_app_installation_path/3">
   
+  
   <div class="detail-header">
     <a href="#organization_github_app_installation_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_github_app_installation_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2213,14 +2329,17 @@
 </div>
 <div class="detail" id="organization_github_app_installation_path/4">
   
+  
   <div class="detail-header">
     <a href="#organization_github_app_installation_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_github_app_installation_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2232,14 +2351,17 @@
 </div>
 <div class="detail" id="organization_github_app_installation_url/2">
   
+  
   <div class="detail-header">
     <a href="#organization_github_app_installation_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_github_app_installation_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2251,14 +2373,17 @@
 </div>
 <div class="detail" id="organization_github_app_installation_url/3">
   
+  
   <div class="detail-header">
     <a href="#organization_github_app_installation_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_github_app_installation_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2270,14 +2395,17 @@
 </div>
 <div class="detail" id="organization_github_app_installation_url/4">
   
+  
   <div class="detail-header">
     <a href="#organization_github_app_installation_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_github_app_installation_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2289,14 +2417,17 @@
 </div>
 <div class="detail" id="organization_invite_path/2">
   
+  
   <div class="detail-header">
     <a href="#organization_invite_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_invite_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2308,14 +2439,17 @@
 </div>
 <div class="detail" id="organization_invite_path/3">
   
+  
   <div class="detail-header">
     <a href="#organization_invite_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_invite_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2327,14 +2461,17 @@
 </div>
 <div class="detail" id="organization_invite_path/4">
   
+  
   <div class="detail-header">
     <a href="#organization_invite_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_invite_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2346,14 +2483,17 @@
 </div>
 <div class="detail" id="organization_invite_url/2">
   
+  
   <div class="detail-header">
     <a href="#organization_invite_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_invite_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2365,14 +2505,17 @@
 </div>
 <div class="detail" id="organization_invite_url/3">
   
+  
   <div class="detail-header">
     <a href="#organization_invite_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_invite_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2384,14 +2527,17 @@
 </div>
 <div class="detail" id="organization_invite_url/4">
   
+  
   <div class="detail-header">
     <a href="#organization_invite_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_invite_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2403,14 +2549,17 @@
 </div>
 <div class="detail" id="organization_path/2">
   
+  
   <div class="detail-header">
     <a href="#organization_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2422,14 +2571,17 @@
 </div>
 <div class="detail" id="organization_path/3">
   
+  
   <div class="detail-header">
     <a href="#organization_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2441,14 +2593,17 @@
 </div>
 <div class="detail" id="organization_path/4">
   
+  
   <div class="detail-header">
     <a href="#organization_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2460,14 +2615,17 @@
 </div>
 <div class="detail" id="organization_url/2">
   
+  
   <div class="detail-header">
     <a href="#organization_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2479,14 +2637,17 @@
 </div>
 <div class="detail" id="organization_url/3">
   
+  
   <div class="detail-header">
     <a href="#organization_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2498,14 +2659,17 @@
 </div>
 <div class="detail" id="organization_url/4">
   
+  
   <div class="detail-header">
     <a href="#organization_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2517,14 +2681,17 @@
 </div>
 <div class="detail" id="page_path/2">
   
+  
   <div class="detail-header">
     <a href="#page_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">page_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2536,14 +2703,17 @@
 </div>
 <div class="detail" id="page_path/3">
   
+  
   <div class="detail-header">
     <a href="#page_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">page_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2555,14 +2725,17 @@
 </div>
 <div class="detail" id="page_url/2">
   
+  
   <div class="detail-header">
     <a href="#page_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">page_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2574,14 +2747,17 @@
 </div>
 <div class="detail" id="page_url/3">
   
+  
   <div class="detail-header">
     <a href="#page_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">page_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2593,14 +2769,17 @@
 </div>
 <div class="detail" id="password_path/2">
   
+  
   <div class="detail-header">
     <a href="#password_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2612,14 +2791,17 @@
 </div>
 <div class="detail" id="password_path/3">
   
+  
   <div class="detail-header">
     <a href="#password_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2631,14 +2813,17 @@
 </div>
 <div class="detail" id="password_reset_path/2">
   
+  
   <div class="detail-header">
     <a href="#password_reset_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_reset_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2650,14 +2835,17 @@
 </div>
 <div class="detail" id="password_reset_path/3">
   
+  
   <div class="detail-header">
     <a href="#password_reset_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_reset_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2669,14 +2857,17 @@
 </div>
 <div class="detail" id="password_reset_url/2">
   
+  
   <div class="detail-header">
     <a href="#password_reset_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_reset_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2688,14 +2879,17 @@
 </div>
 <div class="detail" id="password_reset_url/3">
   
+  
   <div class="detail-header">
     <a href="#password_reset_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_reset_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2707,14 +2901,17 @@
 </div>
 <div class="detail" id="password_url/2">
   
+  
   <div class="detail-header">
     <a href="#password_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2726,14 +2923,17 @@
 </div>
 <div class="detail" id="password_url/3">
   
+  
   <div class="detail-header">
     <a href="#password_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">password_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2745,14 +2945,17 @@
 </div>
 <div class="detail" id="path/2">
   
+  
   <div class="detail-header">
     <a href="#path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">path(data, path)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2765,14 +2968,17 @@
 </div>
 <div class="detail" id="preview_path/2">
   
+  
   <div class="detail-header">
     <a href="#preview_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preview_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2784,14 +2990,17 @@
 </div>
 <div class="detail" id="preview_path/3">
   
+  
   <div class="detail-header">
     <a href="#preview_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preview_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2803,14 +3012,17 @@
 </div>
 <div class="detail" id="preview_url/2">
   
+  
   <div class="detail-header">
     <a href="#preview_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preview_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2822,14 +3034,17 @@
 </div>
 <div class="detail" id="preview_url/3">
   
+  
   <div class="detail-header">
     <a href="#preview_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preview_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2841,14 +3056,17 @@
 </div>
 <div class="detail" id="project_category_path/2">
   
+  
   <div class="detail-header">
     <a href="#project_category_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_category_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2860,14 +3078,17 @@
 </div>
 <div class="detail" id="project_category_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_category_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_category_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2879,14 +3100,17 @@
 </div>
 <div class="detail" id="project_category_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_category_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_category_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2898,14 +3122,17 @@
 </div>
 <div class="detail" id="project_category_url/2">
   
+  
   <div class="detail-header">
     <a href="#project_category_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_category_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2917,14 +3144,17 @@
 </div>
 <div class="detail" id="project_category_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_category_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_category_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2936,14 +3166,17 @@
 </div>
 <div class="detail" id="project_category_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_category_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_category_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2955,14 +3188,17 @@
 </div>
 <div class="detail" id="project_github_repo_path/2">
   
+  
   <div class="detail-header">
     <a href="#project_github_repo_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_github_repo_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2974,14 +3210,17 @@
 </div>
 <div class="detail" id="project_github_repo_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_github_repo_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_github_repo_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2993,14 +3232,17 @@
 </div>
 <div class="detail" id="project_github_repo_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_github_repo_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_github_repo_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3012,14 +3254,17 @@
 </div>
 <div class="detail" id="project_github_repo_url/2">
   
+  
   <div class="detail-header">
     <a href="#project_github_repo_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_github_repo_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3031,14 +3276,17 @@
 </div>
 <div class="detail" id="project_github_repo_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_github_repo_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_github_repo_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3050,14 +3298,17 @@
 </div>
 <div class="detail" id="project_github_repo_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_github_repo_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_github_repo_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3069,14 +3320,17 @@
 </div>
 <div class="detail" id="project_path/2">
   
+  
   <div class="detail-header">
     <a href="#project_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3088,14 +3342,17 @@
 </div>
 <div class="detail" id="project_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3107,14 +3364,17 @@
 </div>
 <div class="detail" id="project_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3126,14 +3386,17 @@
 </div>
 <div class="detail" id="project_path/5">
   
+  
   <div class="detail-header">
     <a href="#project_path/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_path(conn_or_endpoint, action, slug, project_slug, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3145,14 +3408,17 @@
 </div>
 <div class="detail" id="project_skill_path/2">
   
+  
   <div class="detail-header">
     <a href="#project_skill_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_skill_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3164,14 +3430,17 @@
 </div>
 <div class="detail" id="project_skill_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_skill_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_skill_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3183,14 +3452,17 @@
 </div>
 <div class="detail" id="project_skill_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_skill_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_skill_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3202,14 +3474,17 @@
 </div>
 <div class="detail" id="project_skill_url/2">
   
+  
   <div class="detail-header">
     <a href="#project_skill_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_skill_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3221,14 +3496,17 @@
 </div>
 <div class="detail" id="project_skill_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_skill_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_skill_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3240,14 +3518,17 @@
 </div>
 <div class="detail" id="project_skill_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_skill_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_skill_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3259,14 +3540,17 @@
 </div>
 <div class="detail" id="project_task_list_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_task_list_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_list_path(conn_or_endpoint, action, project_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3278,14 +3562,17 @@
 </div>
 <div class="detail" id="project_task_list_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_task_list_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_list_path(conn_or_endpoint, action, project_id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3297,14 +3584,17 @@
 </div>
 <div class="detail" id="project_task_list_path/5">
   
+  
   <div class="detail-header">
     <a href="#project_task_list_path/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_list_path(conn_or_endpoint, action, project_id, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3316,14 +3606,17 @@
 </div>
 <div class="detail" id="project_task_list_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_task_list_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_list_url(conn_or_endpoint, action, project_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3335,14 +3628,17 @@
 </div>
 <div class="detail" id="project_task_list_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_task_list_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_list_url(conn_or_endpoint, action, project_id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3354,14 +3650,17 @@
 </div>
 <div class="detail" id="project_task_list_url/5">
   
+  
   <div class="detail-header">
     <a href="#project_task_list_url/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_list_url(conn_or_endpoint, action, project_id, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3373,14 +3672,17 @@
 </div>
 <div class="detail" id="project_task_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_task_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_path(conn_or_endpoint, action, project_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3392,14 +3694,17 @@
 </div>
 <div class="detail" id="project_task_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_task_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_path(conn_or_endpoint, action, project_id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3411,14 +3716,17 @@
 </div>
 <div class="detail" id="project_task_path/5">
   
+  
   <div class="detail-header">
     <a href="#project_task_path/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_path(conn_or_endpoint, action, project_id, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3430,14 +3738,17 @@
 </div>
 <div class="detail" id="project_task_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_task_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_url(conn_or_endpoint, action, project_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3449,14 +3760,17 @@
 </div>
 <div class="detail" id="project_task_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_task_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_url(conn_or_endpoint, action, project_id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3468,14 +3782,17 @@
 </div>
 <div class="detail" id="project_task_url/5">
   
+  
   <div class="detail-header">
     <a href="#project_task_url/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_task_url(conn_or_endpoint, action, project_id, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3487,14 +3804,17 @@
 </div>
 <div class="detail" id="project_url/2">
   
+  
   <div class="detail-header">
     <a href="#project_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3506,14 +3826,17 @@
 </div>
 <div class="detail" id="project_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3525,14 +3848,17 @@
 </div>
 <div class="detail" id="project_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3544,14 +3870,17 @@
 </div>
 <div class="detail" id="project_url/5">
   
+  
   <div class="detail-header">
     <a href="#project_url/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_url(conn_or_endpoint, action, slug, project_slug, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3563,14 +3892,17 @@
 </div>
 <div class="detail" id="project_user_path/2">
   
+  
   <div class="detail-header">
     <a href="#project_user_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_user_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3582,14 +3914,17 @@
 </div>
 <div class="detail" id="project_user_path/3">
   
+  
   <div class="detail-header">
     <a href="#project_user_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_user_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3601,14 +3936,17 @@
 </div>
 <div class="detail" id="project_user_path/4">
   
+  
   <div class="detail-header">
     <a href="#project_user_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_user_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3620,14 +3958,17 @@
 </div>
 <div class="detail" id="project_user_url/2">
   
+  
   <div class="detail-header">
     <a href="#project_user_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_user_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3639,14 +3980,17 @@
 </div>
 <div class="detail" id="project_user_url/3">
   
+  
   <div class="detail-header">
     <a href="#project_user_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_user_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3658,14 +4002,17 @@
 </div>
 <div class="detail" id="project_user_url/4">
   
+  
   <div class="detail-header">
     <a href="#project_user_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_user_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3677,14 +4024,17 @@
 </div>
 <div class="detail" id="role_path/2">
   
+  
   <div class="detail-header">
     <a href="#role_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3696,14 +4046,17 @@
 </div>
 <div class="detail" id="role_path/3">
   
+  
   <div class="detail-header">
     <a href="#role_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3715,14 +4068,17 @@
 </div>
 <div class="detail" id="role_path/4">
   
+  
   <div class="detail-header">
     <a href="#role_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3734,14 +4090,17 @@
 </div>
 <div class="detail" id="role_skill_path/2">
   
+  
   <div class="detail-header">
     <a href="#role_skill_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_skill_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3753,14 +4112,17 @@
 </div>
 <div class="detail" id="role_skill_path/3">
   
+  
   <div class="detail-header">
     <a href="#role_skill_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_skill_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3772,14 +4134,17 @@
 </div>
 <div class="detail" id="role_skill_path/4">
   
+  
   <div class="detail-header">
     <a href="#role_skill_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_skill_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3791,14 +4156,17 @@
 </div>
 <div class="detail" id="role_skill_url/2">
   
+  
   <div class="detail-header">
     <a href="#role_skill_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_skill_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3810,14 +4178,17 @@
 </div>
 <div class="detail" id="role_skill_url/3">
   
+  
   <div class="detail-header">
     <a href="#role_skill_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_skill_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3829,14 +4200,17 @@
 </div>
 <div class="detail" id="role_skill_url/4">
   
+  
   <div class="detail-header">
     <a href="#role_skill_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_skill_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3848,14 +4222,17 @@
 </div>
 <div class="detail" id="role_url/2">
   
+  
   <div class="detail-header">
     <a href="#role_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3867,14 +4244,17 @@
 </div>
 <div class="detail" id="role_url/3">
   
+  
   <div class="detail-header">
     <a href="#role_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3886,14 +4266,17 @@
 </div>
 <div class="detail" id="role_url/4">
   
+  
   <div class="detail-header">
     <a href="#role_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">role_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3905,14 +4288,17 @@
 </div>
 <div class="detail" id="skill_path/2">
   
+  
   <div class="detail-header">
     <a href="#skill_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">skill_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3924,14 +4310,17 @@
 </div>
 <div class="detail" id="skill_path/3">
   
+  
   <div class="detail-header">
     <a href="#skill_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">skill_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3943,14 +4332,17 @@
 </div>
 <div class="detail" id="skill_path/4">
   
+  
   <div class="detail-header">
     <a href="#skill_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">skill_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3962,14 +4354,17 @@
 </div>
 <div class="detail" id="skill_url/2">
   
+  
   <div class="detail-header">
     <a href="#skill_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">skill_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3981,14 +4376,17 @@
 </div>
 <div class="detail" id="skill_url/3">
   
+  
   <div class="detail-header">
     <a href="#skill_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">skill_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4000,14 +4398,17 @@
 </div>
 <div class="detail" id="skill_url/4">
   
+  
   <div class="detail-header">
     <a href="#skill_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">skill_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4019,14 +4420,17 @@
 </div>
 <div class="detail" id="slugged_route_path/3">
   
+  
   <div class="detail-header">
     <a href="#slugged_route_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">slugged_route_path(conn_or_endpoint, action, slug)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4038,14 +4442,17 @@
 </div>
 <div class="detail" id="slugged_route_path/4">
   
+  
   <div class="detail-header">
     <a href="#slugged_route_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">slugged_route_path(conn_or_endpoint, action, slug, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4057,14 +4464,17 @@
 </div>
 <div class="detail" id="slugged_route_url/3">
   
+  
   <div class="detail-header">
     <a href="#slugged_route_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">slugged_route_url(conn_or_endpoint, action, slug)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4076,14 +4486,17 @@
 </div>
 <div class="detail" id="slugged_route_url/4">
   
+  
   <div class="detail-header">
     <a href="#slugged_route_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">slugged_route_url(conn_or_endpoint, action, slug, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4095,14 +4508,17 @@
 </div>
 <div class="detail" id="static_path/2">
   
+  
   <div class="detail-header">
     <a href="#static_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">static_path(conn, path)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4115,14 +4531,17 @@
 </div>
 <div class="detail" id="static_url/2">
   
+  
   <div class="detail-header">
     <a href="#static_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">static_url(conn, path)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4135,14 +4554,17 @@
 </div>
 <div class="detail" id="stripe_connect_account_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_account_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_account_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4154,14 +4576,17 @@
 </div>
 <div class="detail" id="stripe_connect_account_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_account_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_account_path(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4173,14 +4598,17 @@
 </div>
 <div class="detail" id="stripe_connect_account_path/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_account_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_account_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4192,14 +4620,17 @@
 </div>
 <div class="detail" id="stripe_connect_account_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_account_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_account_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4211,14 +4642,17 @@
 </div>
 <div class="detail" id="stripe_connect_account_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_account_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_account_url(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4230,14 +4664,17 @@
 </div>
 <div class="detail" id="stripe_connect_account_url/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_account_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_account_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4249,14 +4686,17 @@
 </div>
 <div class="detail" id="stripe_connect_events_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_events_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_events_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4268,14 +4708,17 @@
 </div>
 <div class="detail" id="stripe_connect_events_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_events_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_events_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4287,14 +4730,17 @@
 </div>
 <div class="detail" id="stripe_connect_events_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_events_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_events_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4306,14 +4752,17 @@
 </div>
 <div class="detail" id="stripe_connect_events_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_events_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_events_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4325,14 +4774,17 @@
 </div>
 <div class="detail" id="stripe_connect_plan_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_plan_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_plan_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4344,14 +4796,17 @@
 </div>
 <div class="detail" id="stripe_connect_plan_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_plan_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_plan_path(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4363,14 +4818,17 @@
 </div>
 <div class="detail" id="stripe_connect_plan_path/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_plan_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_plan_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4382,14 +4840,17 @@
 </div>
 <div class="detail" id="stripe_connect_plan_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_plan_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_plan_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4401,14 +4862,17 @@
 </div>
 <div class="detail" id="stripe_connect_plan_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_plan_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_plan_url(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4420,14 +4884,17 @@
 </div>
 <div class="detail" id="stripe_connect_plan_url/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_plan_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_plan_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4439,14 +4906,17 @@
 </div>
 <div class="detail" id="stripe_connect_subscription_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscription_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscription_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4458,14 +4928,17 @@
 </div>
 <div class="detail" id="stripe_connect_subscription_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscription_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscription_path(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4477,14 +4950,17 @@
 </div>
 <div class="detail" id="stripe_connect_subscription_path/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscription_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscription_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4496,14 +4972,17 @@
 </div>
 <div class="detail" id="stripe_connect_subscription_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscription_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscription_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4515,14 +4994,17 @@
 </div>
 <div class="detail" id="stripe_connect_subscription_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscription_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscription_url(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4534,14 +5016,17 @@
 </div>
 <div class="detail" id="stripe_connect_subscription_url/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscription_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscription_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4553,14 +5038,17 @@
 </div>
 <div class="detail" id="stripe_platform_card_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4572,14 +5060,17 @@
 </div>
 <div class="detail" id="stripe_platform_card_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card_path(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4591,14 +5082,17 @@
 </div>
 <div class="detail" id="stripe_platform_card_path/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4610,14 +5104,17 @@
 </div>
 <div class="detail" id="stripe_platform_card_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4629,14 +5126,17 @@
 </div>
 <div class="detail" id="stripe_platform_card_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card_url(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4648,14 +5148,17 @@
 </div>
 <div class="detail" id="stripe_platform_card_url/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4667,14 +5170,17 @@
 </div>
 <div class="detail" id="stripe_platform_customer_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4686,14 +5192,17 @@
 </div>
 <div class="detail" id="stripe_platform_customer_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer_path(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4705,14 +5214,17 @@
 </div>
 <div class="detail" id="stripe_platform_customer_path/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4724,14 +5236,17 @@
 </div>
 <div class="detail" id="stripe_platform_customer_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4743,14 +5258,17 @@
 </div>
 <div class="detail" id="stripe_platform_customer_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer_url(conn_or_endpoint, action, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4762,14 +5280,17 @@
 </div>
 <div class="detail" id="stripe_platform_customer_url/4">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4781,14 +5302,17 @@
 </div>
 <div class="detail" id="stripe_platform_events_path/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_events_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_events_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4800,14 +5324,17 @@
 </div>
 <div class="detail" id="stripe_platform_events_path/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_events_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_events_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4819,14 +5346,17 @@
 </div>
 <div class="detail" id="stripe_platform_events_url/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_events_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_events_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4838,14 +5368,17 @@
 </div>
 <div class="detail" id="stripe_platform_events_url/3">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_events_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_events_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4857,14 +5390,17 @@
 </div>
 <div class="detail" id="task_list_path/2">
   
+  
   <div class="detail-header">
     <a href="#task_list_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4876,14 +5412,17 @@
 </div>
 <div class="detail" id="task_list_path/3">
   
+  
   <div class="detail-header">
     <a href="#task_list_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4895,14 +5434,17 @@
 </div>
 <div class="detail" id="task_list_path/4">
   
+  
   <div class="detail-header">
     <a href="#task_list_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4914,14 +5456,17 @@
 </div>
 <div class="detail" id="task_list_task_path/3">
   
+  
   <div class="detail-header">
     <a href="#task_list_task_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_task_path(conn_or_endpoint, action, task_list_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4933,14 +5478,17 @@
 </div>
 <div class="detail" id="task_list_task_path/4">
   
+  
   <div class="detail-header">
     <a href="#task_list_task_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_task_path(conn_or_endpoint, action, task_list_id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4952,14 +5500,17 @@
 </div>
 <div class="detail" id="task_list_task_path/5">
   
+  
   <div class="detail-header">
     <a href="#task_list_task_path/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_task_path(conn_or_endpoint, action, task_list_id, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4971,14 +5522,17 @@
 </div>
 <div class="detail" id="task_list_task_url/3">
   
+  
   <div class="detail-header">
     <a href="#task_list_task_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_task_url(conn_or_endpoint, action, task_list_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -4990,14 +5544,17 @@
 </div>
 <div class="detail" id="task_list_task_url/4">
   
+  
   <div class="detail-header">
     <a href="#task_list_task_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_task_url(conn_or_endpoint, action, task_list_id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5009,14 +5566,17 @@
 </div>
 <div class="detail" id="task_list_task_url/5">
   
+  
   <div class="detail-header">
     <a href="#task_list_task_url/5" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_task_url(conn_or_endpoint, action, task_list_id, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5028,14 +5588,17 @@
 </div>
 <div class="detail" id="task_list_url/2">
   
+  
   <div class="detail-header">
     <a href="#task_list_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5047,14 +5610,17 @@
 </div>
 <div class="detail" id="task_list_url/3">
   
+  
   <div class="detail-header">
     <a href="#task_list_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5066,14 +5632,17 @@
 </div>
 <div class="detail" id="task_list_url/4">
   
+  
   <div class="detail-header">
     <a href="#task_list_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_list_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5085,14 +5654,17 @@
 </div>
 <div class="detail" id="task_path/2">
   
+  
   <div class="detail-header">
     <a href="#task_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5104,14 +5676,17 @@
 </div>
 <div class="detail" id="task_path/3">
   
+  
   <div class="detail-header">
     <a href="#task_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5123,14 +5698,17 @@
 </div>
 <div class="detail" id="task_path/4">
   
+  
   <div class="detail-header">
     <a href="#task_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5142,14 +5720,17 @@
 </div>
 <div class="detail" id="task_skill_path/2">
   
+  
   <div class="detail-header">
     <a href="#task_skill_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_skill_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5161,14 +5742,17 @@
 </div>
 <div class="detail" id="task_skill_path/3">
   
+  
   <div class="detail-header">
     <a href="#task_skill_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_skill_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5180,14 +5764,17 @@
 </div>
 <div class="detail" id="task_skill_path/4">
   
+  
   <div class="detail-header">
     <a href="#task_skill_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_skill_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5199,14 +5786,17 @@
 </div>
 <div class="detail" id="task_skill_url/2">
   
+  
   <div class="detail-header">
     <a href="#task_skill_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_skill_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5218,14 +5808,17 @@
 </div>
 <div class="detail" id="task_skill_url/3">
   
+  
   <div class="detail-header">
     <a href="#task_skill_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_skill_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5237,14 +5830,17 @@
 </div>
 <div class="detail" id="task_skill_url/4">
   
+  
   <div class="detail-header">
     <a href="#task_skill_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_skill_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5256,14 +5852,17 @@
 </div>
 <div class="detail" id="task_url/2">
   
+  
   <div class="detail-header">
     <a href="#task_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5275,14 +5874,17 @@
 </div>
 <div class="detail" id="task_url/3">
   
+  
   <div class="detail-header">
     <a href="#task_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5294,14 +5896,17 @@
 </div>
 <div class="detail" id="task_url/4">
   
+  
   <div class="detail-header">
     <a href="#task_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">task_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5313,14 +5918,17 @@
 </div>
 <div class="detail" id="token_path/2">
   
+  
   <div class="detail-header">
     <a href="#token_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">token_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5332,14 +5940,17 @@
 </div>
 <div class="detail" id="token_path/3">
   
+  
   <div class="detail-header">
     <a href="#token_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">token_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5351,14 +5962,17 @@
 </div>
 <div class="detail" id="token_url/2">
   
+  
   <div class="detail-header">
     <a href="#token_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">token_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5370,14 +5984,17 @@
 </div>
 <div class="detail" id="token_url/3">
   
+  
   <div class="detail-header">
     <a href="#token_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">token_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5389,14 +6006,17 @@
 </div>
 <div class="detail" id="url/1">
   
+  
   <div class="detail-header">
     <a href="#url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">url(data)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5409,14 +6029,17 @@
 </div>
 <div class="detail" id="user_category_path/2">
   
+  
   <div class="detail-header">
     <a href="#user_category_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_category_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5428,14 +6051,17 @@
 </div>
 <div class="detail" id="user_category_path/3">
   
+  
   <div class="detail-header">
     <a href="#user_category_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_category_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5447,14 +6073,17 @@
 </div>
 <div class="detail" id="user_category_path/4">
   
+  
   <div class="detail-header">
     <a href="#user_category_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_category_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5466,14 +6095,17 @@
 </div>
 <div class="detail" id="user_category_url/2">
   
+  
   <div class="detail-header">
     <a href="#user_category_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_category_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5485,14 +6117,17 @@
 </div>
 <div class="detail" id="user_category_url/3">
   
+  
   <div class="detail-header">
     <a href="#user_category_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_category_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5504,14 +6139,17 @@
 </div>
 <div class="detail" id="user_category_url/4">
   
+  
   <div class="detail-header">
     <a href="#user_category_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_category_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5523,14 +6161,17 @@
 </div>
 <div class="detail" id="user_path/2">
   
+  
   <div class="detail-header">
     <a href="#user_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5542,14 +6183,17 @@
 </div>
 <div class="detail" id="user_path/3">
   
+  
   <div class="detail-header">
     <a href="#user_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5561,14 +6205,17 @@
 </div>
 <div class="detail" id="user_path/4">
   
+  
   <div class="detail-header">
     <a href="#user_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5580,14 +6227,17 @@
 </div>
 <div class="detail" id="user_role_path/2">
   
+  
   <div class="detail-header">
     <a href="#user_role_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_role_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5599,14 +6249,17 @@
 </div>
 <div class="detail" id="user_role_path/3">
   
+  
   <div class="detail-header">
     <a href="#user_role_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_role_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5618,14 +6271,17 @@
 </div>
 <div class="detail" id="user_role_path/4">
   
+  
   <div class="detail-header">
     <a href="#user_role_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_role_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5637,14 +6293,17 @@
 </div>
 <div class="detail" id="user_role_url/2">
   
+  
   <div class="detail-header">
     <a href="#user_role_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_role_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5656,14 +6315,17 @@
 </div>
 <div class="detail" id="user_role_url/3">
   
+  
   <div class="detail-header">
     <a href="#user_role_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_role_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5675,14 +6337,17 @@
 </div>
 <div class="detail" id="user_role_url/4">
   
+  
   <div class="detail-header">
     <a href="#user_role_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_role_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5694,14 +6359,17 @@
 </div>
 <div class="detail" id="user_skill_path/2">
   
+  
   <div class="detail-header">
     <a href="#user_skill_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skill_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5713,14 +6381,17 @@
 </div>
 <div class="detail" id="user_skill_path/3">
   
+  
   <div class="detail-header">
     <a href="#user_skill_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skill_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5732,14 +6403,17 @@
 </div>
 <div class="detail" id="user_skill_path/4">
   
+  
   <div class="detail-header">
     <a href="#user_skill_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skill_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5751,14 +6425,17 @@
 </div>
 <div class="detail" id="user_skill_url/2">
   
+  
   <div class="detail-header">
     <a href="#user_skill_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skill_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5770,14 +6447,17 @@
 </div>
 <div class="detail" id="user_skill_url/3">
   
+  
   <div class="detail-header">
     <a href="#user_skill_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skill_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5789,14 +6469,17 @@
 </div>
 <div class="detail" id="user_skill_url/4">
   
+  
   <div class="detail-header">
     <a href="#user_skill_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skill_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5808,14 +6491,17 @@
 </div>
 <div class="detail" id="user_task_path/2">
   
+  
   <div class="detail-header">
     <a href="#user_task_path/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_task_path(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5827,14 +6513,17 @@
 </div>
 <div class="detail" id="user_task_path/3">
   
+  
   <div class="detail-header">
     <a href="#user_task_path/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_task_path(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5846,14 +6535,17 @@
 </div>
 <div class="detail" id="user_task_path/4">
   
+  
   <div class="detail-header">
     <a href="#user_task_path/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_task_path(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5865,14 +6557,17 @@
 </div>
 <div class="detail" id="user_task_url/2">
   
+  
   <div class="detail-header">
     <a href="#user_task_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_task_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5884,14 +6579,17 @@
 </div>
 <div class="detail" id="user_task_url/3">
   
+  
   <div class="detail-header">
     <a href="#user_task_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_task_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5903,14 +6601,17 @@
 </div>
 <div class="detail" id="user_task_url/4">
   
+  
   <div class="detail-header">
     <a href="#user_task_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_task_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5922,14 +6623,17 @@
 </div>
 <div class="detail" id="user_url/2">
   
+  
   <div class="detail-header">
     <a href="#user_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_url(conn_or_endpoint, action)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5941,14 +6645,17 @@
 </div>
 <div class="detail" id="user_url/3">
   
+  
   <div class="detail-header">
     <a href="#user_url/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_url(conn_or_endpoint, action, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5960,14 +6667,17 @@
 </div>
 <div class="detail" id="user_url/4">
   
+  
   <div class="detail-header">
     <a href="#user_url/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_url(conn_or_endpoint, action, id, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/router.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -5986,20 +6696,21 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-372682077e.js"></script>
+  <script src="dist/app-574613960f.js"></script>
+  
   </body>
 </html>
 

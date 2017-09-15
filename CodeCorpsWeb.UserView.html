@@ -1,21 +1,23 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.0">
+    <meta name="generator" content="ExDoc v0.16.3">
     <title>CodeCorpsWeb.UserView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bd6c4b7281.js"></script>
+    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    
   </head>
   <body data-type="modules">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +34,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -46,6 +50,8 @@
 
     
       <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
     
 
     
@@ -63,9 +69,9 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorpsWeb.UserView
         
-        
           <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -76,7 +82,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -527,20 +534,24 @@ to render a particular template</p>
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="__phoenix_recompile__?/0">
   
+  
   <div class="detail-header">
     <a href="#__phoenix_recompile__?/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">__phoenix_recompile__?()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -553,14 +564,17 @@ to render a particular template</p>
 </div>
 <div class="detail" id="__resource__/0">
   
+  
   <div class="detail-header">
     <a href="#__resource__/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">__resource__()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L11" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -573,14 +587,17 @@ to render a particular template</p>
 </div>
 <div class="detail" id="__templates__/0">
   
+  
   <div class="detail-header">
     <a href="#__templates__/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">__templates__()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -593,14 +610,17 @@ to render a particular template</p>
 </div>
 <div class="detail" id="attributes/2">
   
+  
   <div class="detail-header">
     <a href="#attributes/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">attributes(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -619,8 +639,8 @@ end
 
 UserSerializer.attributes(user, conn)
 # %{email: &quot;...&quot;, name: &quot;...&quot;}</code></pre>
-<p>If using the <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.DSL.html"><code class="inline">JaSerializer.DSL</code></a> the default implementation is based on the
-<a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.DSL.html#attributes/1"><code class="inline">JaSerializer.DSL.attributes/1</code></a> macro. Eg:</p>
+<p>If using the <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.DSL.html"><code class="inline">JaSerializer.DSL</code></a> the default implementation is based on the
+<a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.DSL.html#attributes/1"><code class="inline">JaSerializer.DSL.attributes/1</code></a> macro. Eg:</p>
 <pre><code class="elixir">defmodule UserSerializer do
   attributes [:email, :name, :is_admin]
 end
@@ -644,20 +664,23 @@ end
 
 UserSerializer.attributes(user, conn)
 # %{email: &quot;...&quot;, name: &quot;...&quot;}</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:attributes/2"><code class="inline">JaSerializer.Serializer.attributes/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:attributes/2"><code class="inline">JaSerializer.Serializer.attributes/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="biography/1">
   
+  
   <div class="detail-header">
     <a href="#biography/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">biography(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -669,14 +692,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="biography/2">
   
+  
   <div class="detail-header">
     <a href="#biography/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">biography(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -688,14 +714,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="cloudinary_public_id/1">
   
+  
   <div class="detail-header">
     <a href="#cloudinary_public_id/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">cloudinary_public_id(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -707,14 +736,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="cloudinary_public_id/2">
   
+  
   <div class="detail-header">
     <a href="#cloudinary_public_id/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">cloudinary_public_id(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -726,14 +758,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="email/1">
   
+  
   <div class="detail-header">
     <a href="#email/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">email(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -745,14 +780,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="email/2">
   
+  
   <div class="detail-header">
     <a href="#email/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">email(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L43" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L46" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -767,14 +805,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="first_name/1">
   
+  
   <div class="detail-header">
     <a href="#first_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">first_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -786,14 +827,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="first_name/2">
   
+  
   <div class="detail-header">
     <a href="#first_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">first_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -805,14 +849,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="format/1">
   
+  
   <div class="detail-header">
     <a href="#format/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">format(data)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -824,14 +871,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="format/2">
   
+  
   <div class="detail-header">
     <a href="#format/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">format(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -843,14 +893,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="format/3">
   
+  
   <div class="detail-header">
     <a href="#format/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">format(data, conn, opts)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -862,14 +915,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_app_installations/2">
   
+  
   <div class="detail-header">
     <a href="#github_app_installations/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_app_installations(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L26" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -881,14 +937,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_avatar_url/1">
   
+  
   <div class="detail-header">
     <a href="#github_avatar_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_avatar_url(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -900,14 +959,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_avatar_url/2">
   
+  
   <div class="detail-header">
     <a href="#github_avatar_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_avatar_url(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -919,14 +981,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_id/1">
   
+  
   <div class="detail-header">
     <a href="#github_id/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_id(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -938,14 +1003,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_id/2">
   
+  
   <div class="detail-header">
     <a href="#github_id/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_id(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -957,14 +1025,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_username/1">
   
+  
   <div class="detail-header">
     <a href="#github_username/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_username(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -976,14 +1047,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="github_username/2">
   
+  
   <div class="detail-header">
     <a href="#github_username/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">github_username(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -995,14 +1069,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="id/2">
   
+  
   <div class="detail-header">
     <a href="#id/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">id(data, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1014,20 +1091,23 @@ being rendered is the authenticated user, or some other user.</p>
 <p>Default implementation attempts to get the :id field from the struct.</p>
 <p>To override simply define the id function:</p>
 <pre><code class="elixir">def id(struct, _conn), do: struct.slug</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:id/2"><code class="inline">JaSerializer.Serializer.id/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:id/2"><code class="inline">JaSerializer.Serializer.id/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="inserted_at/1">
   
+  
   <div class="detail-header">
     <a href="#inserted_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">inserted_at(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1039,14 +1119,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="inserted_at/2">
   
+  
   <div class="detail-header">
     <a href="#inserted_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">inserted_at(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1058,14 +1141,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="last_name/1">
   
+  
   <div class="detail-header">
     <a href="#last_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">last_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1077,14 +1163,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="last_name/2">
   
+  
   <div class="detail-header">
     <a href="#last_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">last_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1096,14 +1185,17 @@ being rendered is the authenticated user, or some other user.</p>
 </div>
 <div class="detail" id="links/2">
   
+  
   <div class="detail-header">
     <a href="#links/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">links(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1111,20 +1203,23 @@ being rendered is the authenticated user, or some other user.</p>
   </div>
   <section class="docstring">
     <p>return links about this resource</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:links/2"><code class="inline">JaSerializer.Serializer.links/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:links/2"><code class="inline">JaSerializer.Serializer.links/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="meta/2">
   
+  
   <div class="detail-header">
     <a href="#meta/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">meta(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1137,20 +1232,23 @@ YourSerializer.format/3.</p>
 <p>A nil return value results in no meta key being added to the serializer.
 A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 <p>The default implementation returns nil.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:meta/2"><code class="inline">JaSerializer.Serializer.meta/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:meta/2"><code class="inline">JaSerializer.Serializer.meta/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="name/1">
   
+  
   <div class="detail-header">
     <a href="#name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1162,14 +1260,17 @@ A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 </div>
 <div class="detail" id="name/2">
   
+  
   <div class="detail-header">
     <a href="#name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L53" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1184,14 +1285,17 @@ otherwise returns nil.</p>
 </div>
 <div class="detail" id="photo_large_url/1">
   
+  
   <div class="detail-header">
     <a href="#photo_large_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">photo_large_url(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1203,14 +1307,17 @@ otherwise returns nil.</p>
 </div>
 <div class="detail" id="photo_large_url/2">
   
+  
   <div class="detail-header">
     <a href="#photo_large_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">photo_large_url(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L33" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1222,14 +1329,17 @@ otherwise returns nil.</p>
 </div>
 <div class="detail" id="photo_thumb_url/1">
   
+  
   <div class="detail-header">
     <a href="#photo_thumb_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">photo_thumb_url(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1241,14 +1351,17 @@ otherwise returns nil.</p>
 </div>
 <div class="detail" id="photo_thumb_url/2">
   
+  
   <div class="detail-header">
     <a href="#photo_thumb_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">photo_thumb_url(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L35" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1260,14 +1373,17 @@ otherwise returns nil.</p>
 </div>
 <div class="detail" id="preload/3">
   
+  
   <div class="detail-header">
     <a href="#preload/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preload(query, conn, arg3)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1289,20 +1405,23 @@ end
 def preload(record_or_records, _conn, include_opts) do
   MyApp.Repo.preload(record_or_records, include_opts)
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="project_users/2">
   
+  
   <div class="detail-header">
     <a href="#project_users/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">project_users(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L27" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1314,14 +1433,17 @@ end</code></pre>
 </div>
 <div class="detail" id="relationships/2">
   
+  
   <div class="detail-header">
     <a href="#relationships/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">relationships(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1347,22 +1469,25 @@ end</code></pre>
 <p>See JaSerializer.Relationship.HasMany for details on fields.</p>
 <p>When using the DSL this is defined for you based on the has_many and has_one
 macros.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:relationships/2"><code class="inline">JaSerializer.Serializer.relationships/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:relationships/2"><code class="inline">JaSerializer.Serializer.relationships/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="render/2">
   
-    <span id="render/1" />
+  
+    <span id="render/1"></span>
   
   <div class="detail-header">
     <a href="#render/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">render(template, assigns \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L11" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L1" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1375,14 +1500,17 @@ macros.</p>
 </div>
 <div class="detail" id="sign_up_context/1">
   
+  
   <div class="detail-header">
     <a href="#sign_up_context/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">sign_up_context(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1394,14 +1522,17 @@ macros.</p>
 </div>
 <div class="detail" id="sign_up_context/2">
   
+  
   <div class="detail-header">
     <a href="#sign_up_context/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">sign_up_context(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1413,14 +1544,17 @@ macros.</p>
 </div>
 <div class="detail" id="slugged_route/2">
   
+  
   <div class="detail-header">
     <a href="#slugged_route/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">slugged_route(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L22" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1432,14 +1566,17 @@ macros.</p>
 </div>
 <div class="detail" id="state/1">
   
+  
   <div class="detail-header">
     <a href="#state/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">state(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1451,14 +1588,17 @@ macros.</p>
 </div>
 <div class="detail" id="state/2">
   
+  
   <div class="detail-header">
     <a href="#state/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">state(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1470,14 +1610,17 @@ macros.</p>
 </div>
 <div class="detail" id="state_transition/1">
   
+  
   <div class="detail-header">
     <a href="#state_transition/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">state_transition(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1489,14 +1632,17 @@ macros.</p>
 </div>
 <div class="detail" id="state_transition/2">
   
+  
   <div class="detail-header">
     <a href="#state_transition/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">state_transition(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1508,14 +1654,17 @@ macros.</p>
 </div>
 <div class="detail" id="stripe_connect_subscriptions/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_connect_subscriptions/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_connect_subscriptions(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L28" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1527,14 +1676,17 @@ macros.</p>
 </div>
 <div class="detail" id="stripe_platform_card/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_card/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_card(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L23" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1546,14 +1698,17 @@ macros.</p>
 </div>
 <div class="detail" id="stripe_platform_customer/2">
   
+  
   <div class="detail-header">
     <a href="#stripe_platform_customer/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">stripe_platform_customer(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L24" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1565,14 +1720,17 @@ macros.</p>
 </div>
 <div class="detail" id="template_not_found/2">
   
+  
   <div class="detail-header">
     <a href="#template_not_found/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">template_not_found(template, assigns)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L11" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1593,14 +1751,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="twitter/1">
   
+  
   <div class="detail-header">
     <a href="#twitter/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">twitter(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1612,14 +1773,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="twitter/2">
   
+  
   <div class="detail-header">
     <a href="#twitter/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">twitter(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1631,14 +1795,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="type/0">
   
+  
   <div class="detail-header">
     <a href="#type/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">type()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1650,14 +1817,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="type/2">
   
+  
   <div class="detail-header">
     <a href="#type/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">type(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L12" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1673,20 +1843,23 @@ MyApp.V1.Serializers.Post becomes &quot;post&quot;
 MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 <p>To override simply define the type function:</p>
 <pre><code class="elixir">def type(_post,_conn), do: &quot;category&quot;</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:type/2"><code class="inline">JaSerializer.Serializer.type/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:type/2"><code class="inline">JaSerializer.Serializer.type/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="updated_at/1">
   
+  
   <div class="detail-header">
     <a href="#updated_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">updated_at(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1698,14 +1871,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="updated_at/2">
   
+  
   <div class="detail-header">
     <a href="#updated_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">updated_at(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1717,14 +1893,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="user_categories/2">
   
+  
   <div class="detail-header">
     <a href="#user_categories/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_categories(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L29" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1736,14 +1915,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="user_roles/2">
   
+  
   <div class="detail-header">
     <a href="#user_roles/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_roles(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L30" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1755,14 +1937,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="user_skills/2">
   
+  
   <div class="detail-header">
     <a href="#user_skills/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">user_skills(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L31" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1774,14 +1959,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="username/1">
   
+  
   <div class="detail-header">
     <a href="#username/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">username(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1793,14 +1981,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="username/2">
   
+  
   <div class="detail-header">
     <a href="#username/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">username(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1812,14 +2003,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="website/1">
   
+  
   <div class="detail-header">
     <a href="#website/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">website(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1831,14 +2025,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="website/2">
   
+  
   <div class="detail-header">
     <a href="#website/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">website(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/user_view.ex#L14" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1857,20 +2054,21 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-372682077e.js"></script>
+  <script src="dist/app-574613960f.js"></script>
+  
   </body>
 </html>
 

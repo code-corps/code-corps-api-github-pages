@@ -1,13 +1,14 @@
-dist/app-372682077e.js
-dist/app-f7824c48e6.css
+dist/app-5b9e160cec.css
+dist/app-da04b39d0c.js
 fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-bd6c4b7281.js
+dist/sidebar_items-483d164cbd.js
 api-reference.html
 readme.html
 license.html
+search.html
 404.html
 CloudexTest.html
 CloudexTest.Url.html
@@ -63,6 +64,7 @@ CodeCorps.GitHub.Event.Issues.ChangesetBuilder.html
 CodeCorps.GitHub.Event.Issues.TaskSyncer.html
 CodeCorps.GitHub.Event.Issues.UserLinker.html
 CodeCorps.GitHub.Event.Issues.Validator.html
+CodeCorps.GitHub.FailureAPI.html
 CodeCorps.GitHub.HTTPClientError.html
 CodeCorps.GitHub.Headers.html
 CodeCorps.GitHub.Installation.html

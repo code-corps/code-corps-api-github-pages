@@ -1,21 +1,23 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.0">
+    <meta name="generator" content="ExDoc v0.16.3">
     <title>CodeCorpsWeb.PreviewController – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bd6c4b7281.js"></script>
+    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    
   </head>
   <body data-type="modules">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +34,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -46,6 +50,8 @@
 
     
       <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
     
 
     
@@ -63,9 +69,9 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorpsWeb.PreviewController
         
-        
           <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -76,7 +82,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -173,13 +180,13 @@
     <a href="#model/0">model()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented</p>
+    <div class="summary-synopsis"><p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#permitted_attributes/3">permitted_attributes(conn, attrs, )</a>
+    <a href="#permitted_attributes/3">permitted_attributes(conn, attrs, _)</a>
   </div>
   
     <div class="summary-synopsis"><p>Used to determine which attributes are permitted during create and update</p>
@@ -227,7 +234,7 @@
     <a href="#repo/0">repo()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller</p>
+    <div class="summary-synopsis"><p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller</p>
 </div>
   
 </div>
@@ -264,20 +271,24 @@
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="filter/4">
   
+  
   <div class="detail-header">
     <a href="#filter/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">filter(conn, results, key, val)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -308,14 +319,17 @@ end</code></pre>
 </div>
 <div class="detail" id="handle_create/2">
   
+  
   <div class="detail-header">
     <a href="#handle_create/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_create(conn, attributes)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L13" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -340,14 +354,17 @@ end</code></pre>
 </div>
 <div class="detail" id="handle_delete/2">
   
+  
   <div class="detail-header">
     <a href="#handle_delete/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_delete(conn, model)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -370,14 +387,17 @@ end</code></pre>
 </div>
 <div class="detail" id="handle_index/2">
   
+  
   <div class="detail-header">
     <a href="#handle_index/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_index(conn, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -404,14 +424,17 @@ better customization hooks.</p>
 </div>
 <div class="detail" id="handle_index_query/2">
   
+  
   <div class="detail-header">
     <a href="#handle_index_query/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_index_query(conn, query)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -430,14 +453,17 @@ end</code></pre>
 </div>
 <div class="detail" id="handle_invalid_create/2">
   
+  
   <div class="detail-header">
     <a href="#handle_invalid_create/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_invalid_create(conn, errors)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -453,14 +479,17 @@ the error messages provided.</p>
 </div>
 <div class="detail" id="handle_invalid_update/2">
   
+  
   <div class="detail-header">
     <a href="#handle_invalid_update/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_invalid_update(conn, errors)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -476,14 +505,17 @@ the error messages provided.</p>
 </div>
 <div class="detail" id="handle_show/2">
   
+  
   <div class="detail-header">
     <a href="#handle_show/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_show(conn, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -507,14 +539,17 @@ the better customization hooks.</p>
 </div>
 <div class="detail" id="handle_update/3">
   
+  
   <div class="detail-header">
     <a href="#handle_update/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">handle_update(conn, model, attributes)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -543,14 +578,17 @@ end</code></pre>
 </div>
 <div class="detail" id="model/0">
   
+  
   <div class="detail-header">
     <a href="#model/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">model()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L11" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -563,7 +601,7 @@ end</code></pre>
     
   </div>
   <section class="docstring">
-    <p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented.</p>
+    <p>Must return the module implementing <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Schema.html"><code class="inline">Ecto.Schema</code></a> to be represented.</p>
 <p>Example:</p>
 <pre><code class="elixir">def model, do: MyApp.Models.Post</code></pre>
 <p>Defaults to the name of the controller, for example the controller
@@ -576,14 +614,17 @@ and <a href="#records/1"><code class="inline">records/1</code></a>.</p>
 </div>
 <div class="detail" id="permitted_attributes/3">
   
+  
   <div class="detail-header">
     <a href="#permitted_attributes/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">permitted_attributes(conn, attrs, )</span>
+    <span class="signature">permitted_attributes(conn, attrs, _)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -616,14 +657,17 @@ end</code></pre>
 </div>
 <div class="detail" id="record/2">
   
+  
   <div class="detail-header">
     <a href="#record/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">record(conn, id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -643,14 +687,17 @@ end</code></pre>
 </div>
 <div class="detail" id="records/1">
   
+  
   <div class="detail-header">
     <a href="#records/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">records(conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -670,14 +717,17 @@ end</code></pre>
 </div>
 <div class="detail" id="render_create/2">
   
+  
   <div class="detail-header">
     <a href="#render_create/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">render_create(conn, model)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -692,14 +742,17 @@ end</code></pre>
 </div>
 <div class="detail" id="render_update/2">
   
+  
   <div class="detail-header">
     <a href="#render_update/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">render_update(conn, model)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -714,21 +767,24 @@ end</code></pre>
 </div>
 <div class="detail" id="repo/0">
   
+  
   <div class="detail-header">
     <a href="#repo/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">repo()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
     
   </div>
   <section class="docstring">
-    <p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.1.4/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller.</p>
+    <p>Defines the module <code class="inline">use</code>-ing <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Repo.html"><code class="inline">Ecto.Repo</code></a> to be used by the controller.</p>
 <p>Defaults to the value set in config if present:</p>
 <pre><code class="elixir">config :ja_resource,
    repo: MyApp.Repo</code></pre>
@@ -740,14 +796,17 @@ end</code></pre>
 </div>
 <div class="detail" id="serialization_opts/3">
   
+  
   <div class="detail-header">
     <a href="#serialization_opts/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">serialization_opts(conn, arg2, model_or_models)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -766,14 +825,17 @@ such as for scrivener pagination, on an index endpoint.</p>
 </div>
 <div class="detail" id="sort/4">
   
+  
   <div class="detail-header">
     <a href="#sort/4" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">sort(conn, results, key, dir)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/preview_controller.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -808,20 +870,21 @@ end</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-372682077e.js"></script>
+  <script src="dist/app-574613960f.js"></script>
+  
   </body>
 </html>
 

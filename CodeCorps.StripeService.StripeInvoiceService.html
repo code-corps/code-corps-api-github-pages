@@ -1,21 +1,23 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.0">
+    <meta name="generator" content="ExDoc v0.16.3">
     <title>CodeCorps.StripeService.StripeInvoiceService – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bd6c4b7281.js"></script>
+    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    
   </head>
   <body data-type="modules">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +34,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -46,6 +50,8 @@
 
     
       <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
     
 
     
@@ -63,9 +69,9 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorps.StripeService.StripeInvoiceService
         
-        
           <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_invoice_service.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -76,7 +82,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -108,20 +115,24 @@
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="create/2">
   
+  
   <div class="detail-header">
     <a href="#create/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">create(invoice_id_from_stripe, customer_id_from_stripe)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/stripe_invoice_service.ex#L9" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -129,8 +140,8 @@
       <div class="specs">
         
           <pre>create(binary, binary) ::
-  {:ok, %CodeCorps.StripeInvoice{updated_at: term, user: term, user_id: term, stripe_connect_subscription_id: term, paid: term, subtotal: term, subscription_proration_date: term, charge_id_from_stripe: term, tax: term, period_start: term, ending_balance: term, next_payment_attempt: term, attempt_count: term, amount_due: term, tax_percent: term, receipt_number: term, description: term, closed: term, currency: term, total: term, application_fee: term, date: term, __meta__: term, statement_descriptor: term, forgiven: term, id: term, starting_balance: term, id_from_stripe: term, stripe_connect_subscription: term, webhooks_delievered_at: term, subscription_id_from_stripe: term, period_end: term, inserted_at: term, customer_id_from_stripe: term, attempted: term}} |
-  {:error, %Ecto.Changeset{action: term, changes: term, constraints: term, data: term, empty_values: term, errors: term, filters: term, params: term, prepare: term, repo: term, required: term, types: term, valid?: term, validations: term}}</pre>
+  {:ok, %CodeCorps.StripeInvoice{tax_percent: term, date: term, currency: term, user_id: term, statement_descriptor: term, id: term, updated_at: term, __meta__: term, forgiven: term, receipt_number: term, subtotal: term, stripe_connect_subscription_id: term, tax: term, period_start: term, ending_balance: term, closed: term, webhooks_delievered_at: term, next_payment_attempt: term, description: term, application_fee: term, period_end: term, attempt_count: term, paid: term, attempted: term, id_from_stripe: term, subscription_proration_date: term, starting_balance: term, total: term, amount_due: term, subscription_id_from_stripe: term, charge_id_from_stripe: term, customer_id_from_stripe: term, inserted_at: term, stripe_connect_subscription: term, user: term}} |
+  {:error, %Ecto.Changeset{action: term, changes: term, constraints: term, data: term, empty_values: term, errors: term, filters: term, params: term, prepare: term, repo: term, repo_opts: term, required: term, types: term, valid?: term, validations: term}}</pre>
         
       </div>
     
@@ -148,20 +159,21 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-372682077e.js"></script>
+  <script src="dist/app-574613960f.js"></script>
+  
   </body>
 </html>
 

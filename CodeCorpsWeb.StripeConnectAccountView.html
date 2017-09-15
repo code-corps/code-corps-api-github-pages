@@ -1,21 +1,23 @@
     <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.0">
+    <meta name="generator" content="ExDoc v0.16.3">
     <title>CodeCorpsWeb.StripeConnectAccountView – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bd6c4b7281.js"></script>
+    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    
   </head>
   <body data-type="modules">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +34,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -46,6 +50,8 @@
 
     
       <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
     
 
     
@@ -63,9 +69,9 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorpsWeb.StripeConnectAccountView
         
-        
           <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L1" title="View Source" class="view-source" rel="help">
-            <i class="icon-code"></i>
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
           </a>
         
       </h1>
@@ -76,7 +82,8 @@
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
@@ -974,20 +981,24 @@ to render a particular template</p>
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Functions
           </h1>
           <div class="detail" id="__phoenix_recompile__?/0">
   
+  
   <div class="detail-header">
     <a href="#__phoenix_recompile__?/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">__phoenix_recompile__?()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1000,14 +1011,17 @@ to render a particular template</p>
 </div>
 <div class="detail" id="__resource__/0">
   
+  
   <div class="detail-header">
     <a href="#__resource__/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">__resource__()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1020,14 +1034,17 @@ to render a particular template</p>
 </div>
 <div class="detail" id="__templates__/0">
   
+  
   <div class="detail-header">
     <a href="#__templates__/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">__templates__()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L1" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1040,14 +1057,17 @@ to render a particular template</p>
 </div>
 <div class="detail" id="attributes/2">
   
+  
   <div class="detail-header">
     <a href="#attributes/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">attributes(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1066,8 +1086,8 @@ end
 
 UserSerializer.attributes(user, conn)
 # %{email: &quot;...&quot;, name: &quot;...&quot;}</code></pre>
-<p>If using the <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.DSL.html"><code class="inline">JaSerializer.DSL</code></a> the default implementation is based on the
-<a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.DSL.html#attributes/1"><code class="inline">JaSerializer.DSL.attributes/1</code></a> macro. Eg:</p>
+<p>If using the <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.DSL.html"><code class="inline">JaSerializer.DSL</code></a> the default implementation is based on the
+<a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.DSL.html#attributes/1"><code class="inline">JaSerializer.DSL.attributes/1</code></a> macro. Eg:</p>
 <pre><code class="elixir">defmodule UserSerializer do
   attributes [:email, :name, :is_admin]
 end
@@ -1091,20 +1111,23 @@ end
 
 UserSerializer.attributes(user, conn)
 # %{email: &quot;...&quot;, name: &quot;...&quot;}</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:attributes/2"><code class="inline">JaSerializer.Serializer.attributes/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:attributes/2"><code class="inline">JaSerializer.Serializer.attributes/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="bank_account_bank_name/1">
   
+  
   <div class="detail-header">
     <a href="#bank_account_bank_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_bank_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1116,14 +1139,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_bank_name/2">
   
+  
   <div class="detail-header">
     <a href="#bank_account_bank_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_bank_name(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L81" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L82" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1135,14 +1161,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_last4/1">
   
+  
   <div class="detail-header">
     <a href="#bank_account_last4/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_last4(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1154,14 +1183,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_last4/2">
   
+  
   <div class="detail-header">
     <a href="#bank_account_last4/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_last4(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L84" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L85" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1173,14 +1205,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_routing_number/1">
   
+  
   <div class="detail-header">
     <a href="#bank_account_routing_number/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_routing_number(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1192,14 +1227,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_routing_number/2">
   
+  
   <div class="detail-header">
     <a href="#bank_account_routing_number/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_routing_number(m, c)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L87" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L88" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1211,14 +1249,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_status/1">
   
+  
   <div class="detail-header">
     <a href="#bank_account_status/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_status(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1230,14 +1271,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="bank_account_status/2">
   
+  
   <div class="detail-header">
     <a href="#bank_account_status/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">bank_account_status(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L165" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1249,14 +1293,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="business_name/1">
   
+  
   <div class="detail-header">
     <a href="#business_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">business_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1268,14 +1315,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="business_name/2">
   
+  
   <div class="detail-header">
     <a href="#business_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">business_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1287,14 +1337,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="business_url/1">
   
+  
   <div class="detail-header">
     <a href="#business_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">business_url(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1306,14 +1359,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="business_url/2">
   
+  
   <div class="detail-header">
     <a href="#business_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">business_url(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1325,14 +1381,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="can_accept_donations/1">
   
+  
   <div class="detail-header">
     <a href="#can_accept_donations/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">can_accept_donations(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1344,14 +1403,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="can_accept_donations/2">
   
+  
   <div class="detail-header">
     <a href="#can_accept_donations/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">can_accept_donations(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L74" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1363,14 +1425,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="charges_enabled/1">
   
+  
   <div class="detail-header">
     <a href="#charges_enabled/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">charges_enabled(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1382,14 +1447,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="charges_enabled/2">
   
+  
   <div class="detail-header">
     <a href="#charges_enabled/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">charges_enabled(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1401,14 +1469,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="country/1">
   
+  
   <div class="detail-header">
     <a href="#country/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">country(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1420,14 +1491,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="country/2">
   
+  
   <div class="detail-header">
     <a href="#country/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">country(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1439,14 +1513,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="default_currency/1">
   
+  
   <div class="detail-header">
     <a href="#default_currency/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">default_currency(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1458,14 +1535,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="default_currency/2">
   
+  
   <div class="detail-header">
     <a href="#default_currency/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">default_currency(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1477,14 +1557,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="details_submitted/1">
   
+  
   <div class="detail-header">
     <a href="#details_submitted/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">details_submitted(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1496,14 +1579,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="details_submitted/2">
   
+  
   <div class="detail-header">
     <a href="#details_submitted/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">details_submitted(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1515,14 +1601,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="display_name/1">
   
+  
   <div class="detail-header">
     <a href="#display_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">display_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1534,14 +1623,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="display_name/2">
   
+  
   <div class="detail-header">
     <a href="#display_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">display_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1553,14 +1645,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="email/1">
   
+  
   <div class="detail-header">
     <a href="#email/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">email(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1572,14 +1667,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="email/2">
   
+  
   <div class="detail-header">
     <a href="#email/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">email(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1591,14 +1689,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="format/1">
   
+  
   <div class="detail-header">
     <a href="#format/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">format(data)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1610,14 +1711,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="format/2">
   
+  
   <div class="detail-header">
     <a href="#format/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">format(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1629,14 +1733,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="format/3">
   
+  
   <div class="detail-header">
     <a href="#format/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">format(data, conn, opts)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1648,14 +1755,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="id/2">
   
+  
   <div class="detail-header">
     <a href="#id/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">id(data, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1667,20 +1777,23 @@ UserSerializer.attributes(user, conn)
 <p>Default implementation attempts to get the :id field from the struct.</p>
 <p>To override simply define the id function:</p>
 <pre><code class="elixir">def id(struct, _conn), do: struct.slug</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:id/2"><code class="inline">JaSerializer.Serializer.id/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:id/2"><code class="inline">JaSerializer.Serializer.id/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="id_from_stripe/1">
   
+  
   <div class="detail-header">
     <a href="#id_from_stripe/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">id_from_stripe(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1692,14 +1805,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="id_from_stripe/2">
   
+  
   <div class="detail-header">
     <a href="#id_from_stripe/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">id_from_stripe(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1711,14 +1827,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="inserted_at/1">
   
+  
   <div class="detail-header">
     <a href="#inserted_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">inserted_at(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1730,14 +1849,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="inserted_at/2">
   
+  
   <div class="detail-header">
     <a href="#inserted_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">inserted_at(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1749,14 +1871,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_city/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_city/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_city(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1768,14 +1893,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_city/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_city/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_city(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1787,14 +1915,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_country/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_country/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_country(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1806,14 +1937,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_country/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_country/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_country(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1825,14 +1959,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_line1/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_line1/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_line1(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1844,14 +1981,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_line1/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_line1/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_line1(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1863,14 +2003,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_line2/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_line2/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_line2(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1882,14 +2025,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_line2/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_line2/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_line2(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1901,14 +2047,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_postal_code/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_postal_code/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_postal_code(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1920,14 +2069,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_postal_code/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_postal_code/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_postal_code(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1939,14 +2091,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_state/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_state/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_state(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1958,14 +2113,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_address_state/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_address_state/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_address_state(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1977,14 +2135,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_name/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -1996,14 +2157,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_name/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2015,14 +2179,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_tax_id/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_tax_id/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_tax_id(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2034,14 +2201,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_tax_id/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_tax_id/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_tax_id(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2053,14 +2223,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_tax_id_provided/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_tax_id_provided/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_tax_id_provided(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2072,14 +2245,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_tax_id_provided/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_tax_id_provided/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_tax_id_provided(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2091,14 +2267,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_vat_id/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_vat_id/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_vat_id(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2110,14 +2289,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_vat_id/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_vat_id/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_vat_id(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2129,14 +2311,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_vat_id_provided/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_vat_id_provided/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_vat_id_provided(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2148,14 +2333,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_business_vat_id_provided/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_business_vat_id_provided/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_business_vat_id_provided(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2167,14 +2355,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_dob_day/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_dob_day/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_dob_day(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2186,14 +2377,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_dob_day/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_dob_day/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_dob_day(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2205,14 +2399,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_dob_month/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_dob_month/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_dob_month(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2224,14 +2421,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_dob_month/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_dob_month/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_dob_month(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2243,14 +2443,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_dob_year/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_dob_year/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_dob_year(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2262,14 +2465,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_dob_year/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_dob_year/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_dob_year(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2281,14 +2487,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_first_name/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_first_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_first_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2300,14 +2509,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_first_name/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_first_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_first_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2319,14 +2531,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_gender/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_gender/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_gender(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2338,14 +2553,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_gender/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_gender/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_gender(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2357,14 +2575,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_last_name/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_last_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_last_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2376,14 +2597,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_last_name/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_last_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_last_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2395,14 +2619,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_maiden_name/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_maiden_name/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_maiden_name(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2414,14 +2641,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_maiden_name/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_maiden_name/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_maiden_name(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2433,14 +2663,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_city/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_city/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_city(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2452,14 +2685,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_city/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_city/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_city(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2471,14 +2707,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_country/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_country/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_country(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2490,14 +2729,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_country/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_country/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_country(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2509,14 +2751,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_line1/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_line1/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_line1(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2528,14 +2773,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_line1/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_line1/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_line1(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2547,14 +2795,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_line2/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_line2/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_line2(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2566,14 +2817,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_line2/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_line2/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_line2(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2585,14 +2839,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_postal_code/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_postal_code/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_postal_code(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2604,14 +2861,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_postal_code/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_postal_code/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_postal_code(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2623,14 +2883,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_state/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_state/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_state(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2642,14 +2905,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_address_state/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_address_state/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_address_state(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2661,14 +2927,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_id_number/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_id_number/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_id_number(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2680,14 +2949,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_id_number/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_id_number/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_id_number(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2699,14 +2971,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_id_number_provided/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_id_number_provided/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_id_number_provided(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2718,14 +2993,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_personal_id_number_provided/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_personal_id_number_provided/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_personal_id_number_provided(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2737,14 +3015,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_phone_number/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_phone_number/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_phone_number(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2756,14 +3037,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_phone_number/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_phone_number/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_phone_number(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2775,14 +3059,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_ssn_last_4/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_ssn_last_4/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_ssn_last_4(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2794,14 +3081,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_ssn_last_4/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_ssn_last_4/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_ssn_last_4(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2813,14 +3103,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_ssn_last_4_provided/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_ssn_last_4_provided/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_ssn_last_4_provided(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2832,14 +3125,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_ssn_last_4_provided/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_ssn_last_4_provided/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_ssn_last_4_provided(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2851,14 +3147,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_type/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_type/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_type(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2870,14 +3169,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_type/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_type/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_type(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2889,14 +3191,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_details/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_details/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_details(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2908,14 +3213,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_details/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_details/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_details(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2927,14 +3235,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_details_code/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_details_code/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_details_code(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2946,14 +3257,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_details_code/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_details_code/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_details_code(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2965,14 +3279,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_document/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_document/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_document(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -2984,14 +3301,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_document/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_document/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_document(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3003,14 +3323,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_status/1">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_status/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_status(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3022,14 +3345,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="legal_entity_verification_status/2">
   
+  
   <div class="detail-header">
     <a href="#legal_entity_verification_status/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">legal_entity_verification_status(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3041,14 +3367,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="links/2">
   
+  
   <div class="detail-header">
     <a href="#links/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">links(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3056,20 +3385,23 @@ UserSerializer.attributes(user, conn)
   </div>
   <section class="docstring">
     <p>return links about this resource</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:links/2"><code class="inline">JaSerializer.Serializer.links/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:links/2"><code class="inline">JaSerializer.Serializer.links/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="managed/1">
   
+  
   <div class="detail-header">
     <a href="#managed/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">managed(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3081,14 +3413,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="managed/2">
   
+  
   <div class="detail-header">
     <a href="#managed/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">managed(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3100,14 +3435,17 @@ UserSerializer.attributes(user, conn)
 </div>
 <div class="detail" id="meta/2">
   
+  
   <div class="detail-header">
     <a href="#meta/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">meta(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3120,20 +3458,23 @@ YourSerializer.format/3.</p>
 <p>A nil return value results in no meta key being added to the serializer.
 A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 <p>The default implementation returns nil.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:meta/2"><code class="inline">JaSerializer.Serializer.meta/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:meta/2"><code class="inline">JaSerializer.Serializer.meta/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="organization/2">
   
+  
   <div class="detail-header">
     <a href="#organization/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">organization(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L72" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3145,14 +3486,17 @@ A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 </div>
 <div class="detail" id="personal_id_number_status/1">
   
+  
   <div class="detail-header">
     <a href="#personal_id_number_status/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">personal_id_number_status(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3164,14 +3508,17 @@ A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 </div>
 <div class="detail" id="personal_id_number_status/2">
   
+  
   <div class="detail-header">
     <a href="#personal_id_number_status/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">personal_id_number_status(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L142" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3183,14 +3530,17 @@ A map return value will be formated with JaSerializer.Formatter.format/1.</p>
 </div>
 <div class="detail" id="preload/3">
   
+  
   <div class="detail-header">
     <a href="#preload/3" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">preload(query, conn, arg3)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L2" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3212,20 +3562,23 @@ end
 def preload(record_or_records, _conn, include_opts) do
   MyApp.Repo.preload(record_or_records, include_opts)
 end</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:preload/3"><code class="inline">JaSerializer.Serializer.preload/3</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="recipient_status/1">
   
+  
   <div class="detail-header">
     <a href="#recipient_status/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">recipient_status(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3237,14 +3590,17 @@ end</code></pre>
 </div>
 <div class="detail" id="recipient_status/2">
   
+  
   <div class="detail-header">
     <a href="#recipient_status/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">recipient_status(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L94" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3256,14 +3612,17 @@ end</code></pre>
 </div>
 <div class="detail" id="relationships/2">
   
+  
   <div class="detail-header">
     <a href="#relationships/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">relationships(struct, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3289,22 +3648,25 @@ end</code></pre>
 <p>See JaSerializer.Relationship.HasMany for details on fields.</p>
 <p>When using the DSL this is defined for you based on the has_many and has_one
 macros.</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:relationships/2"><code class="inline">JaSerializer.Serializer.relationships/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:relationships/2"><code class="inline">JaSerializer.Serializer.relationships/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="render/2">
   
-    <span id="render/1" />
+  
+    <span id="render/1"></span>
   
   <div class="detail-header">
     <a href="#render/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">render(template, assigns \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L1" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3317,14 +3679,17 @@ macros.</p>
 </div>
 <div class="detail" id="support_email/1">
   
+  
   <div class="detail-header">
     <a href="#support_email/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">support_email(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3336,14 +3701,17 @@ macros.</p>
 </div>
 <div class="detail" id="support_email/2">
   
+  
   <div class="detail-header">
     <a href="#support_email/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">support_email(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3355,14 +3723,17 @@ macros.</p>
 </div>
 <div class="detail" id="support_phone/1">
   
+  
   <div class="detail-header">
     <a href="#support_phone/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">support_phone(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3374,14 +3745,17 @@ macros.</p>
 </div>
 <div class="detail" id="support_phone/2">
   
+  
   <div class="detail-header">
     <a href="#support_phone/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">support_phone(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3393,14 +3767,17 @@ macros.</p>
 </div>
 <div class="detail" id="support_url/1">
   
+  
   <div class="detail-header">
     <a href="#support_url/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">support_url(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3412,14 +3789,17 @@ macros.</p>
 </div>
 <div class="detail" id="support_url/2">
   
+  
   <div class="detail-header">
     <a href="#support_url/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">support_url(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3431,14 +3811,17 @@ macros.</p>
 </div>
 <div class="detail" id="template_not_found/2">
   
+  
   <div class="detail-header">
     <a href="#template_not_found/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">template_not_found(template, assigns)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L3" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3459,14 +3842,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="transfers_enabled/1">
   
+  
   <div class="detail-header">
     <a href="#transfers_enabled/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">transfers_enabled(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3478,14 +3864,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="transfers_enabled/2">
   
+  
   <div class="detail-header">
     <a href="#transfers_enabled/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">transfers_enabled(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3497,14 +3886,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="type/0">
   
+  
   <div class="detail-header">
     <a href="#type/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">type()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3516,14 +3908,17 @@ to render a particular template.</p>
 </div>
 <div class="detail" id="type/2">
   
+  
   <div class="detail-header">
     <a href="#type/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">type(data, conn)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L4" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3539,20 +3934,23 @@ MyApp.V1.Serializers.Post becomes &quot;post&quot;
 MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 <p>To override simply define the type function:</p>
 <pre><code class="elixir">def type(_post,_conn), do: &quot;category&quot;</code></pre>
-<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.11.2/JaSerializer.Serializer.html#c:type/2"><code class="inline">JaSerializer.Serializer.type/2</code></a>.</p>
+<p>Callback implementation for <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Serializer.html#c:type/2"><code class="inline">JaSerializer.Serializer.type/2</code></a>.</p>
 
   </section>
 </div>
 <div class="detail" id="updated_at/1">
   
+  
   <div class="detail-header">
     <a href="#updated_at/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">updated_at(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3564,14 +3962,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="updated_at/2">
   
+  
   <div class="detail-header">
     <a href="#updated_at/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">updated_at(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3583,14 +3984,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_disabled_reason/1">
   
+  
   <div class="detail-header">
     <a href="#verification_disabled_reason/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_disabled_reason(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3602,14 +4006,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_disabled_reason/2">
   
+  
   <div class="detail-header">
     <a href="#verification_disabled_reason/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_disabled_reason(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3621,14 +4028,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_document_status/1">
   
+  
   <div class="detail-header">
     <a href="#verification_document_status/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_document_status(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3640,14 +4050,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_document_status/2">
   
+  
   <div class="detail-header">
     <a href="#verification_document_status/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_document_status(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L112" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3659,14 +4072,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_due_by/1">
   
+  
   <div class="detail-header">
     <a href="#verification_due_by/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_due_by(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3678,14 +4094,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_due_by/2">
   
+  
   <div class="detail-header">
     <a href="#verification_due_by/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_due_by(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3697,14 +4116,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_fields_needed/1">
   
+  
   <div class="detail-header">
     <a href="#verification_fields_needed/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_fields_needed(m)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3716,14 +4138,17 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
 </div>
 <div class="detail" id="verification_fields_needed/2">
   
+  
   <div class="detail-header">
     <a href="#verification_fields_needed/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
     <span class="signature">verification_fields_needed(m, c)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/views/stripe_connect_account_view.ex#L8" class="view-source" rel="help" title="View Source">
-       <i class="icon-code"></i>
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
      </a>
     
     
@@ -3742,20 +4167,21 @@ MyApp.V1.CommentsSerializer becomes &quot;comments&quot;</code></pre>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-372682077e.js"></script>
+  <script src="dist/app-574613960f.js"></script>
+  
   </body>
 </html>
 

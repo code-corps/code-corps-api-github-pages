@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.15.0">
+    <meta name="generator" content="ExDoc v0.16.3">
     <title>README – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bd6c4b7281.js"></script>
+    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    
   </head>
   <body data-type="extras">
-    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
 <div class="main">
 <button class="sidebar-toggle">
-  <i class="icon-menu"></i>
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
 </button>
 <section class="sidebar">
 
@@ -32,10 +34,12 @@
     
   </a>
 
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
-  </div>
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
@@ -46,6 +50,8 @@
 
     
       <li><a id="exceptions-list" href="#full-list">Exceptions</a></li>
+    
+
     
 
     
@@ -82,7 +88,7 @@
 </li>
 </ul>
 <h2 id="how-can-i-help" class="section-heading">
-  <a href="#how-can-i-help" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#how-can-i-help" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   How can I help?
 </h2>
 
@@ -96,7 +102,7 @@
 <p>Have questions? Need help? You can also always come :wave: hello <a href="http://slack.codecorps.org">in our Slack</a>, where there are always a ton of us around to help you learn, debug, or just shoot the breeze.</p>
 <p>We highlight everyone who’s contributed to <a href="https://www.codecorps.org/team">the Code Corps team page</a>. If we’ve missed you for some reason, please <a href="https://github.com/code-corps/code-corps-ember/issues/new">open an issue in the Ember app</a>!</p>
 <h2 id="where-should-i-help" class="section-heading">
-  <a href="#where-should-i-help" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#where-should-i-help" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Where should I help?
 </h2>
 
@@ -104,13 +110,13 @@
 <p>Of course, help with other areas is always welcome, so if the current milestones aren’t your cup of tea, feel free to <a href="https://github.com/code-corps/code-corps-api/issues">browse the issues</a>.</p>
 <p>And you can <em>always</em> ask us for advice on where to start <a href="http://slack.codecorps.org">in our Slack</a>.</p>
 <h2 id="installing" class="section-heading">
-  <a href="#installing" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#installing" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Installing
 </h2>
 
 <p><a href="https://github.com/code-corps/code-corps-api/blob/develop/docs/INSTALLING.md">Follow this guide to get started.</a></p>
 <h2 id="usage" class="section-heading">
-  <a href="#usage" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#usage" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Usage
 </h2>
 
@@ -130,7 +136,7 @@
 </li>
 </ul>
 <h2 id="documentation" class="section-heading">
-  <a href="#documentation" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#documentation" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Documentation
 </h2>
 
@@ -145,7 +151,7 @@
 </ul>
 <p>Want to improve the documentation? <a href="https://github.com/code-corps/code-corps-api/blob/develop/.github/CONTRIBUTING.md#what-kind-of-documentation-are-you-writing">Get started here.</a></p>
 <h2 id="things-we-care-about" class="section-heading">
-  <a href="#things-we-care-about" class="hover-link"><i class="icon-link"></i></a>
+  <a href="#things-we-care-about" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
   Things we care about
 </h2>
 
@@ -171,20 +177,21 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.15.0),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
           </span>
           <span class="line">
             designed by
             <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
             </span>
         </p>
-        <button class="night-mode-toggle" />
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
       </footer>
     </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-372682077e.js"></script>
+  <script src="dist/app-574613960f.js"></script>
+  
   </body>
 </html>
 
