@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    <script src="dist/sidebar_items-d34972df9c.js"></script>
     
   </head>
   <body data-type="extras">
@@ -449,6 +449,13 @@ webhook</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Issue.html">CodeCorps.GitHub.Issue</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of performing actions on the Issue endpoint of the github API</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Request.html">CodeCorps.GitHub.Request</a></div>
   
 </div>
@@ -700,6 +707,10 @@ authorization policies</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.Policy.Task.html">CodeCorps.Policy.Task</a></div>
+  
+    <div class="summary-synopsis"><p>Authorization policy in charge of dermining if a <code class="inline">User</code> is authorized to
+perform an action on a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -1204,6 +1215,21 @@ stripity_stripe structs</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Task.Query.html">CodeCorps.Task.Query</a></div>
+  
+    <div class="summary-synopsis"><p>Holds queries used to retrieve a list of, or a single <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record from the
+database, using a provided map of parameters/filters</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.Task.Service.html">CodeCorps.Task.Service</a></div>
+  
+    <div class="summary-synopsis"><p>Handles special CRUD operations for <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.TaskList.html">CodeCorps.TaskList</a></div>
   
 </div>
@@ -1444,6 +1470,14 @@ tests that require setting up a connection</p>
   
     <div class="summary-synopsis"><p>Converts params in the JSON api “data” format into flat params convient for
 changeset casting</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorpsWeb.Plug.IdsToIntegers.html">CodeCorpsWeb.Plug.IdsToIntegers</a></div>
+  
+    <div class="summary-synopsis"><p>Converts id values (primary or relationships) in a conn params map into
+integers, if applicable</p>
 </div>
   
 </div>

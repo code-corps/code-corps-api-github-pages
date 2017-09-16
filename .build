@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-483d164cbd.js
+dist/sidebar_items-d34972df9c.js
 api-reference.html
 readme.html
 license.html
@@ -68,6 +68,7 @@ CodeCorps.GitHub.FailureAPI.html
 CodeCorps.GitHub.HTTPClientError.html
 CodeCorps.GitHub.Headers.html
 CodeCorps.GitHub.Installation.html
+CodeCorps.GitHub.Issue.html
 CodeCorps.GitHub.Request.html
 CodeCorps.GitHub.SuccessAPI.html
 CodeCorps.GitHub.TestHelpers.html
@@ -207,6 +208,8 @@ CodeCorps.StripeTesting.Plan.html
 CodeCorps.StripeTesting.Subscription.html
 CodeCorps.StripeTesting.Token.html
 CodeCorps.Task.html
+CodeCorps.Task.Query.html
+CodeCorps.Task.Service.html
 CodeCorps.TaskList.html
 CodeCorps.TaskSkill.html
 CodeCorps.TestHelpers.html
@@ -256,6 +259,7 @@ CodeCorpsWeb.PasswordView.html
 CodeCorpsWeb.Plug.AnalyticsIdentify.html
 CodeCorpsWeb.Plug.CurrentUser.html
 CodeCorpsWeb.Plug.DataToAttributes.html
+CodeCorpsWeb.Plug.IdsToIntegers.html
 CodeCorpsWeb.Plug.Segment.html
 CodeCorpsWeb.Plug.SetSentryUserContext.html
 CodeCorpsWeb.PreloadHelpers.html

@@ -8,7 +8,7 @@
     <title>CodeCorpsWeb.FallbackController – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    <script src="dist/sidebar_items-d34972df9c.js"></script>
     
   </head>
   <body data-type="modules">
@@ -112,7 +112,8 @@
     <a href="#call/2">call(conn, action)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Default fallback for validation errors</p>
+    <div class="summary-synopsis"><p>Default fallback for different <code class="inline">with</code> clause errors in controllers across the
+application</p>
 </div>
   
 </div>
@@ -157,6 +158,7 @@
           <pre><a href="#t:supported_fallbacks/0">supported_fallbacks</a> ::
   {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>} |
   {:error, :not_authorized} |
+  {:error, :github} |
   nil</pre>
         
       </div>
@@ -190,7 +192,7 @@
     </a>
     <span class="signature">call(conn, action)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/fallback_controller.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/controllers/fallback_controller.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -205,8 +207,8 @@
     
   </div>
   <section class="docstring">
-    <p>Default fallback for validation errors.</p>
-<p>Renders validation errors for the provided changeset using <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.html"><code class="inline">JaSerializer</code></a></p>
+    <p>Default fallback for different <code class="inline">with</code> clause errors in controllers across the
+application.</p>
 
   </section>
 </div>

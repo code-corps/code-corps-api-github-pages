@@ -8,7 +8,7 @@
     <title>CodeCorps.Task – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-483d164cbd.js"></script>
+    <script src="dist/sidebar_items-d34972df9c.js"></script>
     
   </head>
   <body data-type="modules">
@@ -127,15 +127,6 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#github_create_changeset/2">github_create_changeset(struct, params)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset for creating a task that has a connected GitHub issue</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#update_changeset/2">update_changeset(struct, params)</a>
   </div>
   
@@ -178,7 +169,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.Task{__meta__: term, body: term, comments: term, github_id: term, id: term, inserted_at: term, markdown: term, number: term, order: term, position: term, project: term, project_id: term, status: term, task_list: term, task_list_id: term, task_skills: term, title: term, updated_at: term, user: term, user_id: term, user_task: term}</pre>
+          <pre>t() :: %CodeCorps.Task{__meta__: term, body: term, comments: term, github_issue_number: term, github_repo: term, github_repo_id: term, id: term, inserted_at: term, markdown: term, number: term, order: term, position: term, project: term, project_id: term, status: term, task_list: term, task_list_id: term, task_skills: term, title: term, updated_at: term, user: term, user_id: term, user_task: term}</pre>
         
       </div>
     
@@ -211,7 +202,7 @@
     </a>
     <span class="signature">apply_position(changeset)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L70" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L63" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -235,7 +226,7 @@
     </a>
     <span class="signature">changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -257,39 +248,22 @@
     </a>
     <span class="signature">create_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L45" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="github_create_changeset/2">
-  
-  
-  <div class="detail-header">
-    <a href="#github_create_changeset/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">github_create_changeset(struct, params)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L56" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
+      <div class="specs">
+        
+          <pre>create_changeset(struct, map) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
-    <p>Builds a changeset for creating a task that has a connected GitHub issue.</p>
-
+    
   </section>
 </div>
 <div class="detail" id="update_changeset/2">
@@ -302,7 +276,7 @@
     </a>
     <span class="signature">update_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/task.ex#L56" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
