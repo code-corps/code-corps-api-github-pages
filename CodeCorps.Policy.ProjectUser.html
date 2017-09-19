@@ -8,7 +8,7 @@
     <title>CodeCorps.Policy.ProjectUser – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-04e17b3cb8.js"></script>
+    <script src="dist/sidebar_items-4bdfe4db31.js"></script>
     
   </head>
   <body data-type="modules">
@@ -101,7 +101,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, changeset)</a>
+    <a href="#create?/2">create?(user, map)</a>
   </div>
   
 </div>
@@ -113,7 +113,7 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update?/2">update?(user, changeset)</a>
+    <a href="#update?/3">update?(user, existing_record, params)</a>
   </div>
   
 </div>
@@ -145,7 +145,7 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, changeset)</span>
+    <span class="signature">create?(user, map)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/project_user.ex#L12" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -156,7 +156,7 @@
     
       <div class="specs">
         
-          <pre>create?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>) :: boolean</pre>
+          <pre>create?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) :: boolean</pre>
         
       </div>
     
@@ -193,15 +193,15 @@
     
   </section>
 </div>
-<div class="detail" id="update?/2">
+<div class="detail" id="update?/3">
   
   
   <div class="detail-header">
-    <a href="#update?/2" class="detail-link" title="Link to this function">
+    <a href="#update?/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">update?(user, changeset)</span>
+    <span class="signature">update?(user, existing_record, params)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/project_user.ex#L15" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -212,7 +212,7 @@
     
       <div class="specs">
         
-          <pre>update?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>) :: boolean</pre>
+          <pre>update?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="CodeCorps.ProjectUser.html#t:t/0">CodeCorps.ProjectUser.t</a>, map) :: boolean</pre>
         
       </div>
     
