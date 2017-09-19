@@ -78,8 +78,10 @@
 
       
         <section id="moduledoc">
-          <p>Converts id values (primary or relationships) in a conn params map into
-integers, if applicable.</p>
+          <p>Converts <code class="inline">id</code> values in a <code class="inline">conn</code> parameters map into integers, if applicable.</p>
+<p>The JSON API specification expects <code class="inline">id</code> values in resource objects to be
+strings.</p>
+<p>See http://jsonapi.org/format/#document-resource-object-identification</p>
 
         </section>
       
@@ -142,7 +144,7 @@ integers, if applicable.</p>
     </a>
     <span class="signature">call(conn, opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/ids_to_integers.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/ids_to_integers.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -170,7 +172,7 @@ integers, if applicable.</p>
     </a>
     <span class="signature">init(opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/ids_to_integers.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps_web/plugs/ids_to_integers.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
