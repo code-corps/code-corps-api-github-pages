@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-1c9d5d086e.js
+dist/sidebar_items-22d0c5a4de.js
 api-reference.html
 readme.html
 license.html
@@ -12,6 +12,7 @@ search.html
 404.html
 CloudexTest.html
 CloudexTest.Url.html
+CodeCorps.Accounts.html
 CodeCorps.Adapter.MapTransformer.html
 CodeCorps.Analytics.InMemoryAPI.html
 CodeCorps.Analytics.SegmentAPI.html

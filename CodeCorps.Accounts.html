@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.JsonAPIHelpers – code_corps v0.0.1</title>
+    <title>CodeCorps.Accounts – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-22d0c5a4de.js"></script>
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.JsonAPIHelpers
+        CodeCorps.Accounts
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/json_api_helpers.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/accounts/accounts.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,8 +78,8 @@
 
       
         <section id="moduledoc">
-          <p>Contains helpers used to build a Json API structured payload from a flat
-attributes map.</p>
+          <p>Main entry-point for managing accounts.</p>
+<p>All actions to acounts should go through here.</p>
 
         </section>
       
@@ -102,8 +102,11 @@ attributes map.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_json_payload/1">build_json_payload(attrs)</a>
+    <a href="#create_from_github/1">create_from_github(attrs)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Creates a user record using attributes from a GitHub payload</p>
+</div>
   
 </div>
 
@@ -126,17 +129,17 @@ attributes map.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_json_payload/1">
+          <div class="detail" id="create_from_github/1">
   
   
   <div class="detail-header">
-    <a href="#build_json_payload/1" class="detail-link" title="Link to this function">
+    <a href="#create_from_github/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">build_json_payload(attrs)</span>
+    <span class="signature">create_from_github(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/test/support/json_api_helpers.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/accounts/accounts.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -145,13 +148,16 @@ attributes map.</p>
     
       <div class="specs">
         
-          <pre>build_json_payload(map) :: map</pre>
+          <pre>create_from_github(map) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
+    <p>Creates a user record using attributes from a GitHub payload.</p>
+
   </section>
 </div>
 
