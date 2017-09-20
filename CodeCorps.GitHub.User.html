@@ -148,7 +148,7 @@ then associates the given user with that OAuth token</p>
     </a>
     <span class="signature">connect(user, code, state)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/user.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/user.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -170,6 +170,8 @@ then associates the given user with that OAuth token</p>
 then associates the given user with that OAuth token.</p>
 <p>Also associates any orphaned <code class="inline">GithubAppInstallation</code> records matching their
 <code class="inline">sender_github_id</code> field with the user’s <code class="inline">github_id</code></p>
+<p>Also associates any existing tasks and comments to the newly connected user,
+based on the user’s <code class="inline">github_id</code></p>
 <p>Returns one of the following:</p>
 <ul>
 <li><code class="inline">{:ok, %CodeCorps.User{}}</code>
@@ -194,7 +196,7 @@ then associates the given user with that OAuth token.</p>
     </a>
     <span class="signature">me(access_token, opts \\ [])</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/user.ex#L79" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/user.ex#L118" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
