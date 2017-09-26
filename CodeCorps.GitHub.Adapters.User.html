@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Adapters.User – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-a8f5218ef6.js"></script>
+    <script src="dist/sidebar_items-93860229de.js"></script>
     
   </head>
   <body data-type="modules">
@@ -140,7 +140,7 @@ or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User<
     </a>
     <span class="signature">from_github_user(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/user.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/user.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -157,8 +157,9 @@ or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User<
   <section class="docstring">
     <p>Converts a Github user payload into a map of attributes suitable for creating
 or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
-<p>Any nil values are removed here, since we do not want to, for example, delete
-an existing email just because the github payload doesn’t have that data.</p>
+<p>Any <code class="inline">nil</code> values are removed here. For example, we don’t want to delete
+an existing email just because the GitHub payload is missing that data.</p>
+<p>The <code class="inline">type</code> gets transformed to match our expected values for user type.</p>
 
   </section>
 </div>
