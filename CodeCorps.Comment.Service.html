@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.Policy.UserSkill – code_corps v0.0.1</title>
+    <title>CodeCorps.Comment.Service – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-34a987399d.js"></script>
@@ -67,15 +67,21 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.UserSkill
+        CodeCorps.Comment.Service
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user_skill.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/comment/service.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>In charge of performing CRUD operations on <code class="inline">Comment</code> records, as well as any
+additional actions that need to be performed when such an operation happens.</p>
+
+        </section>
       
 
       
@@ -96,14 +102,20 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, map)</a>
+    <a href="#create/1">create(attributes)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Creates a <code class="inline">Comment</code> record using the provided parameters</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#delete?/2">delete?(user, user_skill)</a>
+    <a href="#update/2">update(comment, attributes)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Updates the provided <code class="inline">Comment</code> record using the provided parameters</p>
+</div>
   
 </div>
 
@@ -126,48 +138,67 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="create/1">
   
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, map)</span>
+    <span class="signature">create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user_skill.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/comment/service.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>create(map) ::
+  {:ok, <a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Creates a <code class="inline">Comment</code> record using the provided parameters</p>
+<p>Also creates comment on GitHub if associated <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> is github-connected.</p>
+
   </section>
 </div>
-<div class="detail" id="delete?/2">
+<div class="detail" id="update/2">
   
   
   <div class="detail-header">
-    <a href="#delete?/2" class="detail-link" title="Link to this function">
+    <a href="#update/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">delete?(user, user_skill)</span>
+    <span class="signature">update(comment, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user_skill.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/comment/service.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>update(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>, map) ::
+  {:ok, <a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Updates the provided <code class="inline">Comment</code> record using the provided parameters</p>
+
   </section>
 </div>
 

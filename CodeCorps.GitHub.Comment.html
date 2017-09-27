@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.Policy.UserSkill – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-34a987399d.js"></script>
@@ -67,15 +67,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.UserSkill
+        CodeCorps.GitHub.Comment
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user_skill.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/comment/comment.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Handles GitHub API requests for actions on Comments</p>
+
+        </section>
       
 
       
@@ -96,13 +101,13 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, map)</a>
+    <a href="#create/1">create(comment)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#delete?/2">delete?(user, user_skill)</a>
+    <a href="#update/1">update(comment)</a>
   </div>
   
 </div>
@@ -126,44 +131,56 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="create/1">
   
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, map)</span>
+    <span class="signature">create(comment)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user_skill.ex#L6" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/comment/comment.ex#L9" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>create(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>) :: <a href="CodeCorps.GitHub.html#t:response/0">CodeCorps.GitHub.response</a></pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
     
   </section>
 </div>
-<div class="detail" id="delete?/2">
+<div class="detail" id="update/1">
   
   
   <div class="detail-header">
-    <a href="#delete?/2" class="detail-link" title="Link to this function">
+    <a href="#update/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">delete?(user, user_skill)</span>
+    <span class="signature">update(comment)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/user_skill.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/comment/comment.ex#L29" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>update(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>) :: <a href="CodeCorps.GitHub.html#t:response/0">CodeCorps.GitHub.response</a></pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
