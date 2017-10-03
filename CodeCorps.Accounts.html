@@ -8,7 +8,7 @@
     <title>CodeCorps.Accounts – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e1679c5e83.js"></script>
+    <script src="dist/sidebar_items-c9bb16a6c5.js"></script>
     
   </head>
   <body data-type="modules">
@@ -79,7 +79,7 @@
       
         <section id="moduledoc">
           <p>Main entry-point for managing accounts.</p>
-<p>All actions to acounts should go through here.</p>
+<p>All actions to accounts should go through here.</p>
 
         </section>
       
@@ -111,10 +111,11 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_from_github_changeset/2">create_from_github_changeset(struct, params)</a>
+    <a href="#update_from_github_oauth/3">update_from_github_oauth(user, params, access_token)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Casts a changeset used for creating a user account from a github user payload</p>
+    <div class="summary-synopsis"><p>Updates a user record using attributes from a GitHub payload along with the
+access token</p>
 </div>
   
 </div>
@@ -148,7 +149,7 @@
     </a>
     <span class="signature">create_from_github(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/accounts/accounts.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/accounts/accounts.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -169,17 +170,17 @@
 
   </section>
 </div>
-<div class="detail" id="create_from_github_changeset/2">
+<div class="detail" id="update_from_github_oauth/3">
   
   
   <div class="detail-header">
-    <a href="#create_from_github_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#update_from_github_oauth/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_from_github_changeset(struct, params)</span>
+    <span class="signature">update_from_github_oauth(user, params, access_token)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/accounts/accounts.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/accounts/accounts.ex#L36" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -188,13 +189,16 @@
     
       <div class="specs">
         
-          <pre>create_from_github_changeset(struct, map) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+          <pre>update_from_github_oauth(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Casts a changeset used for creating a user account from a github user payload</p>
+    <p>Updates a user record using attributes from a GitHub payload along with the
+access token.</p>
 
   </section>
 </div>
