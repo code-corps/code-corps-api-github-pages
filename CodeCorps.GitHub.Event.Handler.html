@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.StripeService.Adapters.StripeExternalAccountAdapter – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.Handler – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-89c81ced12.js"></script>
@@ -67,15 +67,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.Adapters.StripeExternalAccountAdapter
+        CodeCorps.GitHub.Event.Handler <small>behaviour</small>
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_external_account.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/handler.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Default behavior for all GitHub webhook event handlers.</p>
+
+        </section>
       
 
       
@@ -90,21 +95,24 @@
           
 
           
-  <div class="summary-functions summary">
+
+          
+  <div class="summary-callbacks summary">
     <h2>
-      <a href="#functions">Functions</a>
+      <a href="#callbacks">Callbacks</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_params/2">to_params(external_account, connect_account)</a>
+    <a href="#c:handle/2">handle(arg0, map)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>The only entry point a GitHub webhook event handler function should contain</p>
+</div>
   
 </div>
 
   </div>
 
-
-          
 
         </section>
       
@@ -112,40 +120,52 @@
       
 
       
-        <section id="functions" class="details-list">
+
+      
+        <section id="callbacks" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#functions">
+            <a class="hover-link" href="#callbacks">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Functions
+            Callbacks
           </h1>
-          <div class="detail" id="to_params/2">
+          <div class="detail" id="c:handle/2">
   
   
   <div class="detail-header">
-    <a href="#to_params/2" class="detail-link" title="Link to this function">
+    <a href="#c:handle/2" class="detail-link" title="Link to this callback">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this callback</span>
     </a>
-    <span class="signature">to_params(external_account, connect_account)</span>
+    <span class="signature">handle(arg0, map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/adapters/stripe_external_account.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/handler.ex#L15" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) ::
+  {:ok, any} |
+  {:error, atom}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>The only entry point a GitHub webhook event handler function should contain.</p>
+<p>Receives a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> record and a payload, returns an <code class="inline">:ok</code>
+tuple if the process was successful, or an <code class="inline">:error</code> tuple, where the second
+element is an atom, if it failed.</p>
+
   </section>
 </div>
 
         </section>
-      
-
       
           <footer class="footer">
         <p>
