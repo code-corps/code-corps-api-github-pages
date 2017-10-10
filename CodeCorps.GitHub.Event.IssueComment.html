@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.IssueComment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-89c81ced12.js"></script>
+    <script src="dist/sidebar_items-f588754ac0.js"></script>
     
   </head>
   <body data-type="modules">
@@ -78,8 +78,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of dealing with “IssueComment” GitHub Webhook events</p>
-<p>https://developer.github.com/v3/activity/events/types/#issuecommentevent</p>
+          <p>In charge of handling a GitHub Webhook payload for the IssueComment event type
+<a href="https://developer.github.com/v3/activity/events/types/#issuecommentevent">https://developer.github.com/v3/activity/events/types/#issuecommentevent</a></p>
 
         </section>
       
@@ -94,6 +94,19 @@
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:outcome/0">outcome()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -105,7 +118,7 @@
     <a href="#handle/2">handle(github_event, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles the “Issues” GitHub webhook</p>
+    <div class="summary-synopsis"><p>Handles the “IssueComment” GitHub webhook</p>
 </div>
   
 </div>
@@ -118,6 +131,58 @@
         </section>
       
 
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment.ex#L22" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:outcome/0">outcome</a> ::
+  {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>]} |
+  {:error, :unexpected_action} |
+  {:error, :unexpected_payload} |
+  {:error, :repository_not_found} |
+  {:error, :validation_error_on_inserting_user_for_task} |
+  {:error, :multiple_github_users_matched_same_cc_user_for_task} |
+  {:error, :validation_error_on_inserting_user_for_comment} |
+  {:error, :multiple_github_users_matched_same_cc_user_for_comment} |
+  {:error, :validation_error_on_syncing_tasks} |
+  {:error, :validation_error_on_syncing_comments} |
+  {:error, :unexpected_transaction_outcome}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
       
 
       
@@ -139,7 +204,7 @@
     </a>
     <span class="signature">handle(github_event, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment.ex#L59" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment.ex#L54" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -148,56 +213,38 @@
     
       <div class="specs">
         
-          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: outcome</pre>
+          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: <a href="#t:outcome/0">outcome</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Handles the “Issues” GitHub webhook</p>
+    <p>Handles the “IssueComment” GitHub webhook</p>
 <p>The process is as follows</p>
 <ul>
 <li>validate the payload is structured as expected
 </li>
-<li>try and find the appropriate <code class="inline">GithubRepo</code> record.
+<li>validate the action is properly supported
 </li>
-<li><p>for each <code class="inline">ProjectGithubRepo</code> belonging to that <code class="inline">Project</code></p>
+<li>match payload with affected <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record using <a href="CodeCorps.GitHub.Event.Common.RepoFinder.html"><code class="inline">CodeCorps.GitHub.Event.Common.RepoFinder</code></a>
+</li>
+<li>match issue part of the payload with a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using <a href="CodeCorps.GitHub.Event.Issues.UserLinker.html"><code class="inline">CodeCorps.GitHub.Event.Issues.UserLinker</code></a>
+</li>
+<li>match comment part of the payload with a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using <a href="CodeCorps.GitHub.Event.IssueComment.UserLinker.html"><code class="inline">CodeCorps.GitHub.Event.IssueComment.UserLinker</code></a>
+</li>
+<li><p>for each <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a> belonging to matched repo</p>
 <ul>
-<li><p>find or initialize a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
-<ul>
-<li>if initializing, associate with existing, or create <code class="inline">User</code>
+<li>match and update, or create a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> on the associated <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a>
 </li>
-</ul>
-</li>
-<li><p>find or initialize a <code class="inline">Comment</code></p>
-<ul>
-<li>if initializing, associate with existing, or create <code class="inline">User</code>
-</li>
-</ul>
-</li>
-<li>commit the change as an insert or update action
+<li>match and update, or create a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> associated to <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
 </li>
 </ul>
 </li>
 </ul>
-<p>Depending on the success of the process, the function will return one of</p>
-<ul>
-<li><code class="inline">{:ok, list_of_tasks}</code>
-</li>
-<li><code class="inline">{:error, :not_fully_implemented}</code> - while we’re aware of this action, we have not implemented support for it yet
-</li>
-<li><code class="inline">{:error, :unexpected_payload}</code> - the payload was not as expected
-</li>
-<li><code class="inline">{:error, :unexpected_action}</code> - the action was not of type we are aware of
-</li>
-<li><code class="inline">{:error, :unmatched_repository}</code> - the repository for this issue was not found
-</li>
-</ul>
-<p>Note that it is also possible to have a matched GithubRepo, but with that
-record not having any ProjectGithubRepo children. The outcome of that case
-should NOT be an errored event, since it simply means that the GithubRepo
-was not linked to a Project by the Project owner. This is allowed and
-relatively common.</p>
+<p>If the process runs all the way through, the function will return an <code class="inline">:ok</code>
+tuple with a list of affected (created or updated) comments.</p>
+<p>If it fails, it will instead return an <code class="inline">:error</code> tuple, where the second
+element is the atom indicating a reason.</p>
 
   </section>
 </div>
