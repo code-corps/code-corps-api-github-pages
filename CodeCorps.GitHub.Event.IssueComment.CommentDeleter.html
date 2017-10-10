@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.IssueComment.CommentDeleter – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-cc5f9a89e2.js"></script>
+    <script src="dist/sidebar_items-629f00ed49.js"></script>
     
   </head>
   <body data-type="modules">
@@ -99,9 +99,8 @@
     <a href="#delete_all/1">delete_all(map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>When provided a <code class="inline">GithubRepo</code>, a <code class="inline">User</code> and a GitHub API payload, for each
-<code class="inline">Project</code> associated to that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it
-creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> associated to the specified <code class="inline">User</code></p>
+    <div class="summary-synopsis"><p>When provided a GitHub API payload, it deletes each <code class="inline">Comment</code> associated to
+the specified <code class="inline">IssueComment</code></p>
 </div>
   
 </div>
@@ -135,7 +134,7 @@ creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="
     </a>
     <span class="signature">delete_all(map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_deleter.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_deleter.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -150,9 +149,8 @@ creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="
     
   </div>
   <section class="docstring">
-    <p>When provided a <code class="inline">GithubRepo</code>, a <code class="inline">User</code> and a GitHub API payload, for each
-<code class="inline">Project</code> associated to that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it
-creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> associated to the specified <code class="inline">User</code>.</p>
+    <p>When provided a GitHub API payload, it deletes each <code class="inline">Comment</code> associated to
+the specified <code class="inline">IssueComment</code>.</p>
 
   </section>
 </div>

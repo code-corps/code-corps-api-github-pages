@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.Policy.OrganizationGithubAppInstallation – code_corps v0.0.1</title>
+    <title>CodeCorps.Validators.TimeValidator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-629f00ed49.js"></script>
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.OrganizationGithubAppInstallation
+        CodeCorps.Validators.TimeValidator
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/organization_github_app_installation.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/validators/time_validator.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,7 +78,7 @@
 
       
         <section id="moduledoc">
-          <p>Handles <code class="inline">User</code> authorization of actions on <code class="inline">OrganizationGithubAppInstallation</code> records</p>
+          <p>Used for validating timestamp fields in a given changeset.</p>
 
         </section>
       
@@ -101,14 +101,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, params)</a>
+    <a href="#validate_time_after/2">validate_time_after(changeset, field)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Validates a time after a given time</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#delete?/2">delete?(user, github_app_installation)</a>
-  </div>
   
 </div>
 
@@ -131,17 +128,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="validate_time_after/2">
   
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#validate_time_after/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, params)</span>
+    <span class="signature">validate_time_after(changeset, field)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/organization_github_app_installation.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/validators/time_validator.ex#L11" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -150,29 +147,8 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="delete?/2">
-  
-  
-  <div class="detail-header">
-    <a href="#delete?/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">delete?(user, github_app_installation)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/policy/organization_github_app_installation.ex#L13" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Validates a time after a given time.</p>
+
   </section>
 </div>
 
