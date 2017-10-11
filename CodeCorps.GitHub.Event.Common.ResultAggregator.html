@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.Common.ResultAggregator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-59cd54acdd.js"></script>
+    <script src="dist/sidebar_items-25612e844c.js"></script>
     
   </head>
   <body data-type="modules">
@@ -154,11 +154,11 @@
   </div>
   <section class="docstring">
     <p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple.</p>
-<p>All list members are assumed to be either an <code class="inline">{:ok, commited_record}</code> or
+<p>All list members are assumed to be either an <code class="inline">{:ok, committed_record}</code> or
 <code class="inline">{:error, changeset}</code>.</p>
-<p>The aggregate is an <code class="inline">{:ok, commited_records}</code> if all results are
-<code class="inline">{:ok, committed_record}</code>, or an <code class="inline">{:error, {commited_records, changesets}}</code> if
-any of the results is an <code class="inline">{:error, changeset}</code>.</p>
+<p>The aggregate is an <code class="inline">{:ok, committed_records}</code> if all results are
+<code class="inline">{:ok, committed_record}</code>, or an <code class="inline">{:error, {committed_records, changesets}}</code>
+if any of the results is an <code class="inline">{:error, changeset}</code>.</p>
 
   </section>
 </div>
