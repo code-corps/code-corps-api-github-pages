@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.Installation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-4442d5e7ec.js"></script>
+    <script src="dist/sidebar_items-59cd54acdd.js"></script>
     
   </head>
   <body data-type="modules">
@@ -78,7 +78,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of dealing with “Installation” GitHub Webhook events</p>
+          <p>In charge of handling a GitHub Webhook payload for the Installation event type
+<a href="https://developer.github.com/v3/activity/events/types/#installationevent">https://developer.github.com/v3/activity/events/types/#installationevent</a></p>
 
         </section>
       
@@ -93,6 +94,19 @@
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:outcome/0">outcome()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -104,9 +118,7 @@
     <a href="#handle/2">handle(github_event, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles an “Installation” GitHub Webhook event. The event could be
-of subtype “created” or “deleted”. Only the “created” variant is handled at
-the moment</p>
+    <div class="summary-synopsis"><p>Handles the “Installation” GitHub Webhook event</p>
 </div>
   
 </div>
@@ -119,6 +131,57 @@ the moment</p>
         </section>
       
 
+      
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation.ex#L19" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:outcome/0">outcome</a> ::
+  {:ok, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>} |
+  {:error, :not_yet_implemented} |
+  {:error, :unexpected_action} |
+  {:error, :unexpected_payload} |
+  {:error, :validation_error_on_syncing_installation} |
+  {:error, :multiple_unprocessed_installations_found} |
+  {:error, :github_api_error_on_syncing_repos} |
+  {:error, :validation_error_on_deleting_removed_repos} |
+  {:error, :validation_error_on_syncing_existing_repos} |
+  {:error, :validation_error_on_marking_installation_processed}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
       
 
       
@@ -140,7 +203,7 @@ the moment</p>
     </a>
     <span class="signature">handle(github_event, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation.ex#L55" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/installation.ex#L52" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -149,33 +212,38 @@ the moment</p>
     
       <div class="specs">
         
-          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: outcome</pre>
+          <pre>handle(<a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>, map) :: <a href="#t:outcome/0">outcome</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Handles an “Installation” GitHub Webhook event. The event could be
-of subtype “created” or “deleted”. Only the “created” variant is handled at
-the moment.</p>
-<p><code class="inline">Installation::created</code> will first try to find the <code class="inline">User</code> using information
-from the payload.</p>
-<p>Depending on the outcame of that operation, it will either call one of</p>
+    <p>Handles the “Installation” GitHub Webhook event.</p>
+<p>The event could be of subtype <code class="inline">created</code> or <code class="inline">deleted</code>. Only the <code class="inline">created</code>
+variant is handled at the moment.</p>
+<p>The process of handling the “created” event subtype is as follows</p>
 <ul>
-<li><code class="inline">CodeCorps.GitHub.Event.Installation.UnmatchedUser.handle/2</code>
+<li>try to match the sender with an existing <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>
 </li>
+<li><p>call specific matching module depending on the user being matched or not</p>
+<ul>
 <li><a href="CodeCorps.GitHub.Event.Installation.MatchedUser.html#handle/2"><code class="inline">CodeCorps.GitHub.Event.Installation.MatchedUser.handle/2</code></a>
 </li>
+<li><a href="CodeCorps.GitHub.Event.Installation.UnmatchedUser.html#handle/1"><code class="inline">CodeCorps.GitHub.Event.Installation.UnmatchedUser.handle/1</code></a>
+</li>
 </ul>
-<p>These helper modules will create or update the <code class="inline">GithubAppInstallation</code> with
-proper data.</p>
-<p>Once that is done, the outcome will be returned.</p>
-<p>Additionally, a background task will launch
-<code class="inline">CodeCorps.GitHub.Event.Installation.Repos.process_async</code> to asynchronously
-fetch and process repositories for the installation.</p>
-<p>The installation will initially be returned with the state “processing”, but
-in the background, it will eventually switch to either “processed” or
-“errored”.</p>
+</li>
+<li><p>sync installation repositories using a third modules</p>
+<ul>
+<li><a href="CodeCorps.GitHub.Event.Installation.Repos.html#process/1"><code class="inline">CodeCorps.GitHub.Event.Installation.Repos.process/1</code></a>
+</li>
+</ul>
+</li>
+</ul>
+<p>If everything goes as expected, an <code class="inline">:ok</code> tuple will be returned, with a
+<a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a>, marked as “processed”.</p>
+<p>If a step in the process failes, an <code class="inline">:error</code> tuple will be returned, where the
+second element is an atom indicating which step of the process failed.</p>
 
   </section>
 </div>

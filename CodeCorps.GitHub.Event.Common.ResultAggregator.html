@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.StripeTesting.Plan – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.Common.ResultAggregator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-59cd54acdd.js"></script>
@@ -67,15 +67,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeTesting.Plan
+        CodeCorps.GitHub.Event.Common.ResultAggregator
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_testing/plan.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/common/result_aggregator.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Module used for the purpose of aggregating results from multiple repository commit actions.</p>
+
+        </section>
       
 
       
@@ -96,8 +101,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create/2">create(map, opts \\ [])</a>
+    <a href="#aggregate/1">aggregate(results)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple</p>
+</div>
   
 </div>
 
@@ -120,28 +128,38 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create/2">
+          <div class="detail" id="aggregate/1">
   
-  
-    <span id="create/1"></span>
   
   <div class="detail-header">
-    <a href="#create/2" class="detail-link" title="Link to this function">
+    <a href="#aggregate/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create(map, opts \\ [])</span>
+    <span class="signature">aggregate(results)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_testing/plan.ex#L2" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/common/result_aggregator.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>aggregate(list) :: {:ok, list} | {:error, {list, list}}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple.</p>
+<p>All list members are assumed to be either an <code class="inline">{:ok, commited_record}</code> or
+<code class="inline">{:error, changeset}</code>.</p>
+<p>The aggregate is an <code class="inline">{:ok, commited_records}</code> if all results are
+<code class="inline">{:ok, committed_record}</code>, or an <code class="inline">{:error, {commited_records, changesets}}</code> if
+any of the results is an <code class="inline">{:error, changeset}</code>.</p>
+
   </section>
 </div>
 
