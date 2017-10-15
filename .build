@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-589182effa.js
+dist/sidebar_items-2ea0ac80f4.js
 api-reference.html
 readme.html
 license.html
@@ -232,7 +232,6 @@ CodeCorps.Validators.SlugValidator.html
 CodeCorps.Validators.TimeValidator.html
 CodeCorpsWeb.html
 CodeCorpsWeb.ApiCase.html
-CodeCorpsWeb.AuthenticationHelpers.html
 CodeCorpsWeb.CategoryController.html
 CodeCorpsWeb.CategoryView.html
 CodeCorpsWeb.ChangesetView.html
