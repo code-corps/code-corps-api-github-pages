@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.IssueComment.CommentSyncer – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d80a1a3ddd.js"></script>
+    <script src="dist/sidebar_items-faa49d7b40.js"></script>
     
   </head>
   <body data-type="modules">
@@ -109,7 +109,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_all/3">sync_all(tasks, user, payload)</a>
+    <a href="#sync_all/4">sync_all(tasks, github_comment, user, payload)</a>
   </div>
   
     <div class="summary-synopsis"><p>When provided a list of <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>s, a <code class="inline">User</code> and a GitHub API payload, for each
@@ -147,7 +147,7 @@ associated to the specified <code class="inline">User</code></p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -181,17 +181,17 @@ associated to the specified <code class="inline">User</code></p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync_all/3">
+          <div class="detail" id="sync_all/4">
   
   
   <div class="detail-header">
-    <a href="#sync_all/3" class="detail-link" title="Link to this function">
+    <a href="#sync_all/4" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync_all(tasks, user, payload)</span>
+    <span class="signature">sync_all(tasks, github_comment, user, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L22" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L26" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -200,7 +200,7 @@ associated to the specified <code class="inline">User</code></p>
     
       <div class="specs">
         
-          <pre>sync_all([<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>], <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) :: <a href="#t:outcome/0">outcome</a></pre>
+          <pre>sync_all([<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>], <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) :: <a href="#t:outcome/0">outcome</a></pre>
         
       </div>
     

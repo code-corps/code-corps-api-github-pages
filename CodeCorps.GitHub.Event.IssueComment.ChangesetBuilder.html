@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.IssueComment.ChangesetBuilder – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d80a1a3ddd.js"></script>
+    <script src="dist/sidebar_items-faa49d7b40.js"></script>
     
   </head>
   <body data-type="modules">
@@ -102,7 +102,7 @@ an IssueComment webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_changeset/4">build_changeset(comment, map, task, user)</a>
+    <a href="#build_changeset/5">build_changeset(comment, map, github_comment, task, user)</a>
   </div>
   
     <div class="summary-synopsis"><p>Constructs a changeset for syncing a task when processing an IssueComment
@@ -130,17 +130,17 @@ webhook</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_changeset/4">
+          <div class="detail" id="build_changeset/5">
   
   
   <div class="detail-header">
-    <a href="#build_changeset/4" class="detail-link" title="Link to this function">
+    <a href="#build_changeset/5" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">build_changeset(comment, map, task, user)</span>
+    <span class="signature">build_changeset(comment, map, github_comment, task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/changeset_builder.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/changeset_builder.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -149,7 +149,7 @@ webhook</p>
     
       <div class="specs">
         
-          <pre>build_changeset(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>, map, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+          <pre>build_changeset(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>, map, <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
         
       </div>
     
