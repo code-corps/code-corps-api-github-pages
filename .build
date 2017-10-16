@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-2ea0ac80f4.js
+dist/sidebar_items-d80a1a3ddd.js
 api-reference.html
 readme.html
 license.html
@@ -47,6 +47,7 @@ CodeCorps.GitHub.APIErrorObject.html
 CodeCorps.GitHub.Adapters.Comment.html
 CodeCorps.GitHub.Adapters.GithubAppInstallation.html
 CodeCorps.GitHub.Adapters.GithubRepo.html
+CodeCorps.GitHub.Adapters.Issue.html
 CodeCorps.GitHub.Adapters.Task.html
 CodeCorps.GitHub.Adapters.User.html
 CodeCorps.GitHub.Comment.html
@@ -70,6 +71,7 @@ CodeCorps.GitHub.Event.IssueComment.UserLinker.html
 CodeCorps.GitHub.Event.IssueComment.Validator.html
 CodeCorps.GitHub.Event.Issues.html
 CodeCorps.GitHub.Event.Issues.ChangesetBuilder.html
+CodeCorps.GitHub.Event.Issues.IssueLinker.html
 CodeCorps.GitHub.Event.Issues.TaskSyncer.html
 CodeCorps.GitHub.Event.Issues.UserLinker.html
 CodeCorps.GitHub.Event.Issues.Validator.html
@@ -88,6 +90,7 @@ CodeCorps.GitHub.Webhook.Processor.html
 CodeCorps.Github.JWT.html
 CodeCorps.GithubAppInstallation.html
 CodeCorps.GithubEvent.html
+CodeCorps.GithubIssue.html
 CodeCorps.GithubRepo.html
 CodeCorps.Helpers.Query.html
 CodeCorps.Helpers.RandomIconColor.html
@@ -249,6 +252,7 @@ CodeCorpsWeb.Gettext.html
 CodeCorpsWeb.GitHubEventsController.html
 CodeCorpsWeb.GithubAppInstallationController.html
 CodeCorpsWeb.GithubAppInstallationView.html
+CodeCorpsWeb.GithubIssueView.html
 CodeCorpsWeb.GithubRepoController.html
 CodeCorpsWeb.GithubRepoView.html
 CodeCorpsWeb.GuardianSerializer.html

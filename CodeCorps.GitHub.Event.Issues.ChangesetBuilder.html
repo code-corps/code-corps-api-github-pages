@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.Issues.ChangesetBuilder – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2ea0ac80f4.js"></script>
+    <script src="dist/sidebar_items-d80a1a3ddd.js"></script>
     
   </head>
   <body data-type="modules">
@@ -102,7 +102,7 @@ Issues webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_changeset/4">build_changeset(task, map, project_github_repo, user)</a>
+    <a href="#build_changeset/5">build_changeset(task, map, github_issue, project_github_repo, user)</a>
   </div>
   
     <div class="summary-synopsis"><p>Constructs a changeset for syncing a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> when processing an Issues or
@@ -130,17 +130,17 @@ IssueComment webhook</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_changeset/4">
+          <div class="detail" id="build_changeset/5">
   
   
   <div class="detail-header">
-    <a href="#build_changeset/4" class="detail-link" title="Link to this function">
+    <a href="#build_changeset/5" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">build_changeset(task, map, project_github_repo, user)</span>
+    <span class="signature">build_changeset(task, map, github_issue, project_github_repo, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/changeset_builder.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/changeset_builder.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -149,7 +149,7 @@ IssueComment webhook</p>
     
       <div class="specs">
         
-          <pre>build_changeset(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, map, <a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+          <pre>build_changeset(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, map, <a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>, <a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
         
       </div>
     

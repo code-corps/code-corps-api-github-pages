@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.Issues.UserLinker – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2ea0ac80f4.js"></script>
+    <script src="dist/sidebar_items-d80a1a3ddd.js"></script>
     
   </head>
   <body data-type="modules">
@@ -80,7 +80,7 @@
         <section id="moduledoc">
           <p>In charge of finding a user to link with a Task when processing an Issues
 webhook.</p>
-<p>The only entry point is <a href="#find_or_create_user/1"><code class="inline">find_or_create_user/1</code></a>.</p>
+<p>The only entry point is <code class="inline">find_or_create_user/1</code>.</p>
 
         </section>
       
@@ -109,11 +109,11 @@ webhook.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create_user/1">find_or_create_user(attrs)</a>
+    <a href="#find_or_create_user/2">find_or_create_user(issue, map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a user using information contained in a GitHub Issue
-webhook payload</p>
+    <div class="summary-synopsis"><p>Finds or creates a user using information in a <code class="inline">GithubIssue</code> record and a
+Github Issue payload</p>
 </div>
   
 </div>
@@ -147,7 +147,7 @@ webhook payload</p>
     </a>
     <span class="signature">find_or_create_disassociated_user(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L63" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -165,17 +165,17 @@ webhook payload</p>
     
   </section>
 </div>
-<div class="detail" id="find_or_create_user/1">
+<div class="detail" id="find_or_create_user/2">
   
   
   <div class="detail-header">
-    <a href="#find_or_create_user/1" class="detail-link" title="Link to this function">
+    <a href="#find_or_create_user/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create_user(attrs)</span>
+    <span class="signature">find_or_create_user(issue, map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L39" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -184,14 +184,14 @@ webhook payload</p>
     
       <div class="specs">
         
-          <pre>find_or_create_user(map) :: linking_result</pre>
+          <pre>find_or_create_user(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>, map) :: linking_result</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a user using information contained in a GitHub Issue
-webhook payload.</p>
+    <p>Finds or creates a user using information in a <code class="inline">GithubIssue</code> record and a
+Github Issue payload.</p>
 <p>The process is as follows:</p>
 <ul>
 <li>Find all affected tasks and extract their user data.
@@ -204,7 +204,6 @@ webhook payload.</p>
   someone who does not have a matching GitHub-connected Code Corps account.
   We create a placeholder user account until that GitHub user is claimed by
   a Code Corps user.
-created.
 </li>
 <li>If there are multiple matching users, this is an unexpected scenario and
   should error out.
