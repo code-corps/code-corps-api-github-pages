@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-cc1cdff65b.js
+dist/sidebar_items-eccabb55be.js
 api-reference.html
 readme.html
 license.html
@@ -44,10 +44,11 @@ CodeCorps.GitHub.html
 CodeCorps.GitHub.API.html
 CodeCorps.GitHub.APIError.html
 CodeCorps.GitHub.APIErrorObject.html
+CodeCorps.GitHub.Adapters.AppInstallation.html
 CodeCorps.GitHub.Adapters.Comment.html
-CodeCorps.GitHub.Adapters.GithubAppInstallation.html
-CodeCorps.GitHub.Adapters.GithubRepo.html
 CodeCorps.GitHub.Adapters.Issue.html
+CodeCorps.GitHub.Adapters.PullRequest.html
+CodeCorps.GitHub.Adapters.Repo.html
 CodeCorps.GitHub.Adapters.Task.html
 CodeCorps.GitHub.Adapters.User.html
 CodeCorps.GitHub.Comment.html
@@ -76,6 +77,13 @@ CodeCorps.GitHub.Event.Issues.IssueLinker.html
 CodeCorps.GitHub.Event.Issues.TaskSyncer.html
 CodeCorps.GitHub.Event.Issues.UserLinker.html
 CodeCorps.GitHub.Event.Issues.Validator.html
+CodeCorps.GitHub.Event.PullRequest.html
+CodeCorps.GitHub.Event.PullRequest.BodyParser.html
+CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder.html
+CodeCorps.GitHub.Event.PullRequest.PullRequestLinker.html
+CodeCorps.GitHub.Event.PullRequest.TaskSyncer.html
+CodeCorps.GitHub.Event.PullRequest.UserLinker.html
+CodeCorps.GitHub.Event.PullRequest.Validator.html
 CodeCorps.GitHub.FailureAPI.html
 CodeCorps.GitHub.HTTPClientError.html
 CodeCorps.GitHub.Headers.html
@@ -93,6 +101,7 @@ CodeCorps.GithubAppInstallation.html
 CodeCorps.GithubComment.html
 CodeCorps.GithubEvent.html
 CodeCorps.GithubIssue.html
+CodeCorps.GithubPullRequest.html
 CodeCorps.GithubRepo.html
 CodeCorps.Helpers.Query.html
 CodeCorps.Helpers.RandomIconColor.html
@@ -256,6 +265,8 @@ CodeCorpsWeb.GithubAppInstallationController.html
 CodeCorpsWeb.GithubAppInstallationView.html
 CodeCorpsWeb.GithubIssueController.html
 CodeCorpsWeb.GithubIssueView.html
+CodeCorpsWeb.GithubPullRequestController.html
+CodeCorpsWeb.GithubPullRequestView.html
 CodeCorpsWeb.GithubRepoController.html
 CodeCorpsWeb.GithubRepoView.html
 CodeCorpsWeb.GuardianSerializer.html

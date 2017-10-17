@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-cc1cdff65b.js"></script>
+    <script src="dist/sidebar_items-eccabb55be.js"></script>
     
   </head>
   <body data-type="extras">
@@ -283,6 +283,14 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.AppInstallation.html">CodeCorps.GitHub.Adapters.AppInstallation</a></div>
+  
+    <div class="summary-synopsis"><p>Module used to convert GitHub payloads into attributes for a
+<code class="inline">GithubAppInstallation</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Comment.html">CodeCorps.GitHub.Adapters.Comment</a></div>
   
     <div class="summary-synopsis"><p>Adapts a GitHub payload into attributes for creating or updating a
@@ -291,23 +299,19 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.GithubAppInstallation.html">CodeCorps.GitHub.Adapters.GithubAppInstallation</a></div>
-  
-    <div class="summary-synopsis"><p>Module used to convert GitHub payloads into attributes for a
-<code class="inline">GithubAppInstallation</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.GithubRepo.html">CodeCorps.GitHub.Adapters.GithubRepo</a></div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Issue.html">CodeCorps.GitHub.Adapters.Issue</a></div>
   
     <div class="summary-synopsis"><p>Used to adapt a GitHub Issue payload into attributes for creating or updating
 a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> and vice-versa</p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.PullRequest.html">CodeCorps.GitHub.Adapters.PullRequest</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Repo.html">CodeCorps.GitHub.Adapters.Repo</a></div>
   
 </div>
 <div class="summary-row">
@@ -512,6 +516,56 @@ webhook</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.html">CodeCorps.GitHub.Event.PullRequest</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of handling a GitHub Webhook payload for the PullRequest event type</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.BodyParser.html">CodeCorps.GitHub.Event.PullRequest.BodyParser</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of extracting ids from markdown content, paired to a predefined list
+of keywords</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder.html">CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
+PullRequest webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.PullRequestLinker.html">CodeCorps.GitHub.Event.PullRequest.PullRequestLinker</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
+when processing the PullRequest webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.TaskSyncer.html">CodeCorps.GitHub.Event.PullRequest.TaskSyncer</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.UserLinker.html">CodeCorps.GitHub.Event.PullRequest.UserLinker</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a user to link with a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing
+a PullRequest webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.Validator.html">CodeCorps.GitHub.Event.PullRequest.Validator</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of validatng a GitHub PullRequest webhook payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.FailureAPI.html">CodeCorps.GitHub.FailureAPI</a></div>
   
     <div class="summary-synopsis"><p>A basic GitHub API mock which returns a 401 forbidden for all requests</p>
@@ -609,6 +663,10 @@ it</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GithubIssue.html">CodeCorps.GithubIssue</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GithubPullRequest.html">CodeCorps.GithubPullRequest</a></div>
   
 </div>
 <div class="summary-row">
@@ -1493,6 +1551,14 @@ tests that require setting up a connection</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorpsWeb.GithubIssueView.html">CodeCorpsWeb.GithubIssueView</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorpsWeb.GithubPullRequestController.html">CodeCorpsWeb.GithubPullRequestController</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorpsWeb.GithubPullRequestView.html">CodeCorpsWeb.GithubPullRequestView</a></div>
   
 </div>
 <div class="summary-row">

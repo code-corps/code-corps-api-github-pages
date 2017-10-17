@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Adapters.GithubRepo – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.PullRequest.UserLinker – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-cc1cdff65b.js"></script>
+    <script src="dist/sidebar_items-eccabb55be.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,15 +67,22 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Adapters.GithubRepo
+        CodeCorps.GitHub.Event.PullRequest.UserLinker
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/github_repo.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/user_linker.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>In charge of finding a user to link with a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing
+a PullRequest webhook.</p>
+<p>The only entry point is <code class="inline">find_or_create_user/1</code>.</p>
+
+        </section>
       
 
       
@@ -96,8 +103,18 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_api/1">from_api(payload)</a>
+    <a href="#find_or_create_disassociated_user/1">find_or_create_disassociated_user(attrs)</a>
   </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#find_or_create_user/2">find_or_create_user(pull_request, map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Finds or creates a user using information in a <code class="inline">GithubPullRequest</code> record and a
+Github Issue payload</p>
+</div>
   
 </div>
 
@@ -120,17 +137,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_api/1">
+          <div class="detail" id="find_or_create_disassociated_user/1">
   
   
   <div class="detail-header">
-    <a href="#from_api/1" class="detail-link" title="Link to this function">
+    <a href="#find_or_create_disassociated_user/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_api(payload)</span>
+    <span class="signature">find_or_create_disassociated_user(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/github_repo.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/user_linker.ex#L63" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -139,13 +156,62 @@
     
       <div class="specs">
         
-          <pre>from_api(map) :: map</pre>
+          <pre>find_or_create_disassociated_user(map) :: {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     
+  </section>
+</div>
+<div class="detail" id="find_or_create_user/2">
+  
+  
+  <div class="detail-header">
+    <a href="#find_or_create_user/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">find_or_create_user(pull_request, map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/user_linker.ex#L39" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>find_or_create_user(<a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>, map) :: linking_result</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Finds or creates a user using information in a <code class="inline">GithubPullRequest</code> record and a
+Github Issue payload.</p>
+<p>The process is as follows:</p>
+<ul>
+<li>Find all affected tasks and extract their user data.
+</li>
+<li><p>Search for the user in our database.</p>
+<ul>
+<li>If we match a single user, then the PR should be related to that user.
+</li>
+<li>If there are no matching users, then the PR was created on Github by
+  someone who does not have a matching GitHub-connected Code Corps account.
+  We create a placeholder user account until that GitHub user is claimed by
+  a Code Corps user.
+</li>
+<li>If there are multiple matching users, this is an unexpected scenario and
+  should error out.
+</li>
+</ul>
+</li>
+</ul>
+
   </section>
 </div>
 

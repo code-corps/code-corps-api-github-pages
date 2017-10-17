@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Adapters.GithubAppInstallation – code_corps v0.0.1</title>
+    <title>CodeCorps.GithubPullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-cc1cdff65b.js"></script>
+    <script src="dist/sidebar_items-eccabb55be.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,21 +67,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Adapters.GithubAppInstallation
+        CodeCorps.GithubPullRequest
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/github_app_installation.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/github_pull_request.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>Module used to convert GitHub payloads into attributes for a
-<code class="inline">GithubAppInstallation</code>.</p>
-
-        </section>
       
 
       
@@ -102,12 +96,14 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_installation_event/1">from_installation_event(payload)</a>
+    <a href="#create_changeset/2">create_changeset(struct, params)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts an installation event payload into attributes to create or update a
-<code class="inline">GithubAppInstallation</code></p>
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_changeset/2">update_changeset(struct, params)</a>
+  </div>
   
 </div>
 
@@ -130,34 +126,48 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_installation_event/1">
+          <div class="detail" id="create_changeset/2">
   
   
   <div class="detail-header">
-    <a href="#from_installation_event/1" class="detail-link" title="Link to this function">
+    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_installation_event(payload)</span>
+    <span class="signature">create_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/github_app_installation.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/github_pull_request.ex#L62" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>from_installation_event(map) :: map</pre>
-        
-      </div>
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="update_changeset/2">
+  
+  
+  <div class="detail-header">
+    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">update_changeset(struct, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/github_pull_request.ex#L69" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
     
   </div>
   <section class="docstring">
-    <p>Converts an installation event payload into attributes to create or update a
-<code class="inline">GithubAppInstallation</code>.</p>
-
+    
   </section>
 </div>
 
