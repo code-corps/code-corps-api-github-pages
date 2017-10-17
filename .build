@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-eccabb55be.js
+dist/sidebar_items-3489cd0f59.js
 api-reference.html
 readme.html
 license.html
@@ -49,8 +49,8 @@ CodeCorps.GitHub.Adapters.Comment.html
 CodeCorps.GitHub.Adapters.Issue.html
 CodeCorps.GitHub.Adapters.PullRequest.html
 CodeCorps.GitHub.Adapters.Repo.html
-CodeCorps.GitHub.Adapters.Task.html
 CodeCorps.GitHub.Adapters.User.html
+CodeCorps.GitHub.Adapters.Utils.BodyDecorator.html
 CodeCorps.GitHub.Comment.html
 CodeCorps.GitHub.Event.html
 CodeCorps.GitHub.Event.Common.RepoFinder.html
@@ -244,6 +244,7 @@ CodeCorps.UserSkill.html
 CodeCorps.UserTask.html
 CodeCorps.Validators.SlugValidator.html
 CodeCorps.Validators.TimeValidator.html
+CodeCorps.WebClient.html
 CodeCorpsWeb.html
 CodeCorpsWeb.ApiCase.html
 CodeCorpsWeb.CategoryController.html

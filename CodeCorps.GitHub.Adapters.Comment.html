@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Adapters.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-eccabb55be.js"></script>
+    <script src="dist/sidebar_items-3489cd0f59.js"></script>
     
   </head>
   <body data-type="modules">
@@ -78,8 +78,8 @@
 
       
         <section id="moduledoc">
-          <p>Adapts a GitHub payload into attributes for creating or updating a
-<a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record.</p>
+          <p>Used to convert between  GitHub data which represents a GitHub Issue Comment
+and <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> as well as <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> attributes.</p>
 
         </section>
       
@@ -102,14 +102,22 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_api/1">from_api(payload)</a>
+    <a href="#to_api/1">to_api(comment)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Converts a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> into a set of attributes suitable to create or
+update an GitHub Issue Comment through the GitHub API</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_api/1">to_api(comment)</a>
+    <a href="#to_comment/1">to_comment(payload)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Converts a Github Issue Comment payload into a set of attributes suitable to
+create or update a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a></p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -117,8 +125,8 @@
     <a href="#to_github_comment/1">to_github_comment(payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Adapts the GitHub payload into attributes for creating or updating a
-<a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record</p>
+    <div class="summary-synopsis"><p>Converts a GitHub Issue Comment payload into a set of attributes suitable for
+creating or updating a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a></p>
 </div>
   
 </div>
@@ -142,35 +150,7 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_api/1">
-  
-  
-  <div class="detail-header">
-    <a href="#from_api/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">from_api(payload)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/comment.ex#L19" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>from_api(map) :: map</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="to_api/1">
+          <div class="detail" id="to_api/1">
   
   
   <div class="detail-header">
@@ -180,7 +160,7 @@
     </a>
     <span class="signature">to_api(comment)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/comment.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/comment.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -195,7 +175,39 @@
     
   </div>
   <section class="docstring">
+    <p>Converts a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> into a set of attributes suitable to create or
+update an GitHub Issue Comment through the GitHub API.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_comment/1">
+  
+  
+  <div class="detail-header">
+    <a href="#to_comment/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_comment(payload)</span>
     
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/comment.ex#L24" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>to_comment(map) :: map</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Converts a Github Issue Comment payload into a set of attributes suitable to
+create or update a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a></p>
+
   </section>
 </div>
 <div class="detail" id="to_github_comment/1">
@@ -208,7 +220,7 @@
     </a>
     <span class="signature">to_github_comment(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/comment.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/comment.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -223,8 +235,8 @@
     
   </div>
   <section class="docstring">
-    <p>Adapts the GitHub payload into attributes for creating or updating a
-<a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record.</p>
+    <p>Converts a GitHub Issue Comment payload into a set of attributes suitable for
+creating or updating a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a></p>
 
   </section>
 </div>

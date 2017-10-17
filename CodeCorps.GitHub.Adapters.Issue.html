@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Adapters.Issue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-eccabb55be.js"></script>
+    <script src="dist/sidebar_items-3489cd0f59.js"></script>
     
   </head>
   <body data-type="modules">
@@ -102,21 +102,31 @@ a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssu
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_api/1">from_api(payload)</a>
+    <a href="#to_api/1">to_api(github_issue)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts a GitHub Issue payload into a set of attributes used to update or
-create a <code class="inline">GithubIssue</code> record</p>
+    <div class="summary-synopsis"><p>Converts a <code class="inline">GithubIssue</code> or <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> into a set of attributes used to create or
+update an associated GitHub Issue on the GitHub API</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_api/1">to_api(github_issue)</a>
+    <a href="#to_issue/1">to_issue(payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts a <code class="inline">GithubIssue</code> into a set of attributes used to update or create an
-associated GitHub Issue</p>
+    <div class="summary-synopsis"><p>Converts a GitHub Issue payload into a set of attributes used to create or
+update a <code class="inline">GithubIssue</code> record</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_task/1">to_task(payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts a GitHub Issue payload into a set of attributes used to create or
+update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record</p>
 </div>
   
 </div>
@@ -140,37 +150,7 @@ associated GitHub Issue</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_api/1">
-  
-  
-  <div class="detail-header">
-    <a href="#from_api/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">from_api(payload)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/issue.ex#L34" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>from_api(map) :: map</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Converts a GitHub Issue payload into a set of attributes used to update or
-create a <code class="inline">GithubIssue</code> record.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_api/1">
+          <div class="detail" id="to_api/1">
   
   
   <div class="detail-header">
@@ -180,7 +160,7 @@ create a <code class="inline">GithubIssue</code> record.</p>
     </a>
     <span class="signature">to_api(github_issue)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/issue.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/issue.ex#L71" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -189,14 +169,74 @@ create a <code class="inline">GithubIssue</code> record.</p>
     
       <div class="specs">
         
-          <pre>to_api(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>) :: map</pre>
+          <pre>to_api(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a> | <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>) :: map</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Converts a <code class="inline">GithubIssue</code> into a set of attributes used to update or create an
-associated GitHub Issue.</p>
+    <p>Converts a <code class="inline">GithubIssue</code> or <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> into a set of attributes used to create or
+update an associated GitHub Issue on the GitHub API.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_issue/1">
+  
+  
+  <div class="detail-header">
+    <a href="#to_issue/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_issue(payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/issue.ex#L36" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>to_issue(map) :: map</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Converts a GitHub Issue payload into a set of attributes used to create or
+update a <code class="inline">GithubIssue</code> record.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_task/1">
+  
+  
+  <div class="detail-header">
+    <a href="#to_task/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_task(payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/issue.ex#L53" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>to_task(map) :: map</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Converts a GitHub Issue payload into a set of attributes used to create or
+update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record.</p>
 
   </section>
 </div>

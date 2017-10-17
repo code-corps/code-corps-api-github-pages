@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-eccabb55be.js"></script>
+    <script src="dist/sidebar_items-3489cd0f59.js"></script>
     
   </head>
   <body data-type="extras">
@@ -293,8 +293,8 @@ tests that require working with the database</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Comment.html">CodeCorps.GitHub.Adapters.Comment</a></div>
   
-    <div class="summary-synopsis"><p>Adapts a GitHub payload into attributes for creating or updating a
-<a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record</p>
+    <div class="summary-synopsis"><p>Used to convert between  GitHub data which represents a GitHub Issue Comment
+and <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> as well as <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> attributes</p>
 </div>
   
 </div>
@@ -315,18 +315,17 @@ a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssu
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Task.html">CodeCorps.GitHub.Adapters.Task</a></div>
-  
-    <div class="summary-synopsis"><p>Used to adapt a GitHub issue payload into attributes for creating or updating
-a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> and vice-versa</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.User.html">CodeCorps.GitHub.Adapters.User</a></div>
   
     <div class="summary-synopsis"><p>Used to adapt a GitHub issue payload into attributes for creating or updating
 a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Utils.BodyDecorator.html">CodeCorps.GitHub.Adapters.Utils.BodyDecorator</a></div>
+  
+    <div class="summary-synopsis"><p>Decorates and undecorates the body of GitHub issues and comments as needed</p>
 </div>
   
 </div>
@@ -1443,6 +1442,13 @@ the task was assigned to the user</p>
   <div class="summary-signature"><a href="CodeCorps.Validators.TimeValidator.html">CodeCorps.Validators.TimeValidator</a></div>
   
     <div class="summary-synopsis"><p>Used for validating timestamp fields in a given changeset</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.WebClient.html">CodeCorps.WebClient</a></div>
+  
+    <div class="summary-synopsis"><p>Confirms URLs for the web client app routes</p>
 </div>
   
 </div>

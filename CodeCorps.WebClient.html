@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Adapters.Task – code_corps v0.0.1</title>
+    <title>CodeCorps.WebClient – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-eccabb55be.js"></script>
+    <script src="dist/sidebar_items-3489cd0f59.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Adapters.Task
+        CodeCorps.WebClient
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/task.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/web_client.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,8 +78,7 @@
 
       
         <section id="moduledoc">
-          <p>Used to adapt a GitHub issue payload into attributes for creating or updating
-a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> and vice-versa.</p>
+          <p>Confirms URLs for the web client app routes</p>
 
         </section>
       
@@ -102,21 +101,19 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> a
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_api/1">from_api(payload)</a>
+    <a href="#url/0">url()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts a GitHub issue payled into a set of attributes used to update or
-create a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record</p>
+    <div class="summary-synopsis"><p>Returns the web client site root URL</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_api/1">to_api(task)</a>
+    <a href="#url/1">url(arg1)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> into a set of attributes used to update or create an
-associated GitHub issue</p>
+    <div class="summary-synopsis"><p>Return the web client site url for the specified record</p>
 </div>
   
 </div>
@@ -140,17 +137,17 @@ associated GitHub issue</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_api/1">
+          <div class="detail" id="url/0">
   
   
   <div class="detail-header">
-    <a href="#from_api/1" class="detail-link" title="Link to this function">
+    <a href="#url/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_api(payload)</span>
+    <span class="signature">url()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/task.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/web_client.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -159,28 +156,27 @@ associated GitHub issue</p>
     
       <div class="specs">
         
-          <pre>from_api(map) :: map</pre>
+          <pre>url() :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Converts a GitHub issue payled into a set of attributes used to update or
-create a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record.</p>
+    <p>Returns the web client site root URL</p>
 
   </section>
 </div>
-<div class="detail" id="to_api/1">
+<div class="detail" id="url/1">
   
   
   <div class="detail-header">
-    <a href="#to_api/1" class="detail-link" title="Link to this function">
+    <a href="#url/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">to_api(task)</span>
+    <span class="signature">url(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/task.ex#L37" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/web_client.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -189,14 +185,13 @@ create a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task
     
       <div class="specs">
         
-          <pre>to_api(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>) :: map</pre>
+          <pre>url(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a> | <a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a> | <a href="CodeCorps.Project.html#t:t/0">CodeCorps.Project.t</a> | <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a> | <a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Converts a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> into a set of attributes used to update or create an
-associated GitHub issue</p>
+    <p>Return the web client site url for the specified record</p>
 
   </section>
 </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.UserCategory – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Adapters.Utils.BodyDecorator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-3489cd0f59.js"></script>
@@ -67,15 +67,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.UserCategory
+        CodeCorps.GitHub.Adapters.Utils.BodyDecorator
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user_category.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/utils/body_decorator.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Decorates and undecorates the body of GitHub issues and comments as needed.</p>
+
+        </section>
       
 
       
@@ -88,19 +93,6 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -109,11 +101,14 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/2">create_changeset(struct, params \\ %{})</a>
+    <a href="#add_code_corps_header/2">add_code_corps_header(attrs, comment)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code></p>
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#remove_code_corps_header/1">remove_code_corps_header(attrs)</a>
+  </div>
   
 </div>
 
@@ -125,47 +120,6 @@
         </section>
       
 
-      
-        <section id="types" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div class="detail" id="t:t/0">
-  
-  
-  <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <span class="signature">t()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user_category.ex#L4" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>t() :: %CodeCorps.UserCategory{__meta__: term, category: term, category_id: term, id: term, inserted_at: term, updated_at: term, user: term, user_id: term}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
       
 
       
@@ -177,29 +131,60 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_changeset/2">
+          <div class="detail" id="add_code_corps_header/2">
   
-  
-    <span id="create_changeset/1"></span>
   
   <div class="detail-header">
-    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#add_code_corps_header/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_changeset(struct, params \\ %{})</span>
+    <span class="signature">add_code_corps_header(attrs, comment)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user_category.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/utils/body_decorator.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>add_code_corps_header(map, <a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a> | <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>) :: map</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>.</p>
-
+    
+  </section>
+</div>
+<div class="detail" id="remove_code_corps_header/1">
+  
+  
+  <div class="detail-header">
+    <a href="#remove_code_corps_header/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">remove_code_corps_header(attrs)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/adapters/utils/body_decorator.ex#L45" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>remove_code_corps_header(map) :: map</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 
