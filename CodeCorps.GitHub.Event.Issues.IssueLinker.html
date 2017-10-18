@@ -78,8 +78,9 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a issue to link with a Task when processing an Issues
-webhook.</p>
+          <p>In charge of finding a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> to link with a
+<code class="inline">CodeCorps.Issue</code> when processing an Issues webhook, or handling a
+<a href="CodeCorpsWeb.TaskController.html"><code class="inline">CodeCorpsWeb.TaskController</code></a> request.</p>
 <p>The only entry point is <code class="inline">create_or_update_issue/1</code>.</p>
 
         </section>
@@ -106,7 +107,8 @@ webhook.</p>
     <a href="#create_or_update_issue/2">create_or_update_issue(github_repo, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubIssue</code> using the data in a GitHub Issue payload</p>
+    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> using the data in a GitHub Issue
+payload</p>
 </div>
   
 </div>
@@ -140,7 +142,7 @@ webhook.</p>
     </a>
     <span class="signature">create_or_update_issue(github_repo, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/issue_linker.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/issue_linker.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -155,20 +157,18 @@ webhook.</p>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <code class="inline">GithubIssue</code> using the data in a GitHub Issue payload.</p>
+    <p>Finds or creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> using the data in a GitHub Issue
+payload.</p>
 <p>The process is as follows:</p>
 <ul>
-<li><p>Search for the issue in our database with the payload data.</p>
-<ul>
-<li>If we return a single <code class="inline">GithubIssue</code>, then the <code class="inline">GithubIssue</code> should be
-  updated.
+<li>Search for the issue in our database with the payload data.
 </li>
-<li>If there are no matching <code class="inline">GithubIssue</code> records, then a <code class="inline">GithubIssue</code>
-  should be created.
+<li>If found, update it with payload data
+</li>
+<li>If not found, create it from payload data
 </li>
 </ul>
-</li>
-</ul>
+<p><code class="inline">CodeCorps.GitHub.AdaptersIssue.to_issue/1</code> is used to adapt the payload data.</p>
 
   </section>
 </div>
