@@ -77,6 +77,15 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>In charge of syncing <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records with a GitHub comment
+payload.</p>
+<p>A single GitHub comment always matches a single <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>, but
+it can match multiple <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records. This module handles
+creating or updating all those records.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -112,9 +121,8 @@
     <a href="#sync_all/4">sync_all(tasks, github_comment, user, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>When provided a list of <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>s, a <code class="inline">User</code> and a GitHub API payload, for each
-<code class="inline">Comment</code> associated to those <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>s it creates or updates a <code class="inline">Comment</code>
-associated to the specified <code class="inline">User</code></p>
+    <div class="summary-synopsis"><p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the speciifed list of
+<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records</p>
 </div>
   
 </div>
@@ -147,7 +155,7 @@ associated to the specified <code class="inline">User</code></p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -191,7 +199,7 @@ associated to the specified <code class="inline">User</code></p>
     </a>
     <span class="signature">sync_all(tasks, github_comment, user, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L39" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -206,9 +214,13 @@ associated to the specified <code class="inline">User</code></p>
     
   </div>
   <section class="docstring">
-    <p>When provided a list of <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>s, a <code class="inline">User</code> and a GitHub API payload, for each
-<code class="inline">Comment</code> associated to those <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>s it creates or updates a <code class="inline">Comment</code>
-associated to the specified <code class="inline">User</code>.</p>
+    <p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the speciifed list of
+<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records.</p>
+<p>When provided a list of <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records, a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>,
+a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>, and a GitHub API payload , for each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
+record, it creates or updates a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record, using the provided
+GitHub API payload, associated to the specified <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> and
+<a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
 
   </section>
 </div>

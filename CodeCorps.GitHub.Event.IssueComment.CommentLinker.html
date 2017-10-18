@@ -78,9 +78,10 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a issue to link with a Task when processing an Issues
-webhook.</p>
-<p>The only entry point is <code class="inline">create_or_update_issue/1</code>.</p>
+          <p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
+<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing an Issue Comment webhook, or handling a
+<a href="CodeCorpsWeb.CommentController.html"><code class="inline">CodeCorpsWeb.CommentController</code></a> request.</p>
+<p>The only entry point is <code class="inline">create_or_update_comment/1</code>.</p>
 
         </section>
       
@@ -141,7 +142,7 @@ IssueComment payload</p>
     </a>
     <span class="signature">create_or_update_comment(github_issue, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_linker.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_linker.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
