@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-e2ebfb3ea7.js
+dist/sidebar_items-1b35c67c0f.js
 api-reference.html
 readme.html
 license.html
@@ -58,7 +58,6 @@ CodeCorps.GitHub.Adapters.Repo.html
 CodeCorps.GitHub.Adapters.User.html
 CodeCorps.GitHub.Adapters.Utils.BodyDecorator.html
 CodeCorps.GitHub.Event.html
-CodeCorps.GitHub.Event.Common.RepoFinder.html
 CodeCorps.GitHub.Event.Handler.html
 CodeCorps.GitHub.Event.Installation.html
 CodeCorps.GitHub.Event.Installation.ChangesetBuilder.html
@@ -79,16 +78,20 @@ CodeCorps.GitHub.Event.PullRequest.Validator.html
 CodeCorps.GitHub.FailureAPI.html
 CodeCorps.GitHub.HTTPClientError.html
 CodeCorps.GitHub.SuccessAPI.html
+CodeCorps.GitHub.Sync.Comment.html
 CodeCorps.GitHub.Sync.Comment.Comment.html
 CodeCorps.GitHub.Sync.Comment.Comment.Changeset.html
 CodeCorps.GitHub.Sync.Comment.GithubComment.html
+CodeCorps.GitHub.Sync.Issue.html
 CodeCorps.GitHub.Sync.Issue.GithubIssue.html
 CodeCorps.GitHub.Sync.Issue.Task.html
 CodeCorps.GitHub.Sync.Issue.Task.Changeset.html
+CodeCorps.GitHub.Sync.PullRequest.html
 CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest.html
 CodeCorps.GitHub.Sync.PullRequest.Task.html
 CodeCorps.GitHub.Sync.PullRequest.Task.Changeset.html
 CodeCorps.GitHub.Sync.User.RecordLinker.html
+CodeCorps.GitHub.Sync.Utils.RepoFinder.html
 CodeCorps.GitHub.TestHelpers.html
 CodeCorps.GitHub.Utils.ResultAggregator.html
 CodeCorps.GitHub.Webhook.EventSupport.html

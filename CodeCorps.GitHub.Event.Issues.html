@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.Issues – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
+    <script src="dist/sidebar_items-1b35c67c0f.js"></script>
     
   </head>
   <body data-type="modules">
@@ -151,7 +151,7 @@
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/issues.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/issues.ex#L16" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -161,15 +161,10 @@
       <div class="specs">
         
           <pre><a href="#t:outcome/0">outcome</a> ::
-  {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>]} |
-  {:error, :not_fully_implemented} |
+  <a href="CodeCorps.GitHub.Sync.Issue.html#t:outcome/0">CodeCorps.GitHub.Sync.Issue.outcome</a> |
   {:error, :unexpected_action} |
-  {:error, :unexpected_payload} |
-  {:error, :repository_not_found} |
-  {:error, :validation_error_on_inserting_user} |
-  {:error, :multiple_github_users_matched_same_cc_user} |
-  {:error, :validation_error_on_syncing_tasks} |
-  {:error, :unexpected_transaction_outcome}</pre>
+  {:error, :not_fully_implemented} |
+  {:error, :unexpected_payload}</pre>
         
       </div>
     
@@ -202,7 +197,7 @@
     </a>
     <span class="signature">handle(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/issues.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/issues.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -218,27 +213,15 @@
   </div>
   <section class="docstring">
     <p>Handles the “Issues” GitHub webhook</p>
-<p>The process is as follows</p>
+<p>The process is as follows:</p>
 <ul>
 <li>validate the payload is structured as expected
 </li>
 <li>validate the action is properly supported
 </li>
-<li>match payload with affected <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record using <a href="CodeCorps.GitHub.Event.Common.RepoFinder.html"><code class="inline">CodeCorps.GitHub.Event.Common.RepoFinder</code></a>
-</li>
-<li>match with a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using <code class="inline">CodeCorps.GitHub.Event.Issues.UserLinker</code>
-</li>
-<li><p>for each <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a> belonging to matched repo</p>
-<ul>
-<li>match and update, or create a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> on the associated <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a>
+<li>sync the issue using <a href="CodeCorps.GitHub.Sync.Issue.html"><code class="inline">CodeCorps.GitHub.Sync.Issue</code></a>
 </li>
 </ul>
-</li>
-</ul>
-<p>If the process runs all the way through, the function will return an <code class="inline">:ok</code>
-tuple with a list of affected (created or updated) tasks.</p>
-<p>If it fails, it will instead return an <code class="inline">:error</code> tuple, where the second
-element is the atom indicating a reason.</p>
 
   </section>
 </div>

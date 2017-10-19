@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.Common.RepoFinder – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.PullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
+    <script src="dist/sidebar_items-1b35c67c0f.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,21 +67,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Common.RepoFinder
+        CodeCorps.GitHub.Sync.PullRequest
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/common/repo_finder.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>In charge of tracking down a relevant <code class="inline">GithubRepo</code> record for a Github API
-payload</p>
-
-        </section>
       
 
       
@@ -94,6 +88,19 @@ payload</p>
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:outcome/0">outcome()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -102,10 +109,10 @@ payload</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_repo/1">find_repo(map)</a>
+    <a href="#sync/1">sync(payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>For a provided Github API payload, attemps to find a <code class="inline">GithubRepo</code> record</p>
+    <div class="summary-synopsis"><p>Syncs a GitHub pull request API payload with our data</p>
 </div>
   
 </div>
@@ -119,6 +126,53 @@ payload</p>
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L12" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:outcome/0">outcome</a> ::
+  {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>]} |
+  {:error, :repository_not_found} |
+  {:error, :validation_error_on_inserting_user} |
+  {:error, :multiple_github_users_matched_same_cc_user} |
+  {:error, :validation_error_on_syncing_tasks} |
+  {:error, :unexpected_transaction_outcome}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -129,17 +183,17 @@ payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_repo/1">
+          <div class="detail" id="sync/1">
   
   
   <div class="detail-header">
-    <a href="#find_repo/1" class="detail-link" title="Link to this function">
+    <a href="#sync/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_repo(map)</span>
+    <span class="signature">sync(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/common/repo_finder.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L38" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -148,25 +202,32 @@ payload</p>
     
       <div class="specs">
         
-          <pre>find_repo(map) ::
-  {:ok, <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>} |
-  {:error, :unmatched_repository}</pre>
+          <pre>sync(map) :: <a href="#t:outcome/0">outcome</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>For a provided Github API payload, attemps to find a <code class="inline">GithubRepo</code> record.</p>
-<p>Returns</p>
+    <p>Syncs a GitHub pull request API payload with our data.</p>
+<p>The process is as follows:</p>
 <ul>
-<li><code class="inline">{:ok, GithubRepo.t}</code> if record was found
+<li>match payload with affected <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record using
+  <a href="CodeCorps.GitHub.Sync.Utils.RepoFinder.html"><code class="inline">CodeCorps.GitHub.Sync.Utils.RepoFinder</code></a>
 </li>
-<li><code class="inline">{:error, :unmatched_repository}</code> if record was not found
+<li>match with <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
+  <code class="inline">CodeCorps.GitHub.Event.PullRequest.UserLinker</code>
 </li>
-<li><code class="inline">{:error, :unmatched_project}</code> if record was found, but has no associated
-  <code class="inline">ProjectGithubRepo</code> children
+<li><p>for each <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a> belonging to matched repo:</p>
+<ul>
+<li>create or update <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a>
 </li>
 </ul>
+</li>
+</ul>
+<p>If the sync succeeds, it will return an <code class="inline">:ok</code> tuple with a list of created or
+updated tasks.</p>
+<p>If the sync fails, it will return an <code class="inline">:error</code> tuple, where the second element
+is the atom indicating a reason.</p>
 
   </section>
 </div>
