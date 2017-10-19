@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.IssueComment.CommentLinker – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Issue.GithubIssue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
+    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.IssueComment.CommentLinker
+        CodeCorps.GitHub.Sync.Issue.GithubIssue
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_linker.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/issue/github_issue/github_issue.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,10 +78,9 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
-<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing an Issue Comment webhook, or handling a
-<a href="CodeCorpsWeb.CommentController.html"><code class="inline">CodeCorpsWeb.CommentController</code></a> request.</p>
-<p>The only entry point is <code class="inline">create_or_update_comment/1</code>.</p>
+          <p>In charge of finding a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> to link with a
+<code class="inline">CodeCorps.Issue</code> when processing a GitHub Issue payload.</p>
+<p>The only entry point is <a href="#create_or_update_issue/2"><code class="inline">create_or_update_issue/2</code></a>.</p>
 
         </section>
       
@@ -104,11 +103,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_comment/2">create_or_update_comment(github_issue, attrs)</a>
+    <a href="#create_or_update_issue/2">create_or_update_issue(github_repo, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a GitHub
-IssueComment payload</p>
+    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> using the data in a GitHub Issue
+payload</p>
 </div>
   
 </div>
@@ -132,17 +131,17 @@ IssueComment payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_or_update_comment/2">
+          <div class="detail" id="create_or_update_issue/2">
   
   
   <div class="detail-header">
-    <a href="#create_or_update_comment/2" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_issue/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_comment(github_issue, attrs)</span>
+    <span class="signature">create_or_update_issue(github_repo, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_linker.ex#L33" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/issue/github_issue/github_issue.ex#L30" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -151,27 +150,24 @@ IssueComment payload</p>
     
       <div class="specs">
         
-          <pre>create_or_update_comment(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>, map) :: linking_result</pre>
+          <pre>create_or_update_issue(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>, map) :: linking_result</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a GitHub
-IssueComment payload.</p>
+    <p>Finds or creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> using the data in a GitHub Issue
+payload.</p>
 <p>The process is as follows:</p>
 <ul>
-<li><p>Search for the issue in our database with the payload data.</p>
-<ul>
+<li>Search for the issue in our database with the payload data.
+</li>
 <li>If found, update it with payload data
 </li>
 <li>If not found, create it from payload data
 </li>
 </ul>
-</li>
-</ul>
-<p><a href="CodeCorps.GitHub.Adapters.Comment.html#to_github_comment/1"><code class="inline">CodeCorps.GitHub.Adapters.Comment.to_github_comment/1</code></a> is used to adapt the
-payload data.</p>
+<p><code class="inline">CodeCorps.GitHub.AdaptersIssue.to_issue/1</code> is used to adapt the payload data.</p>
 
   </section>
 </div>

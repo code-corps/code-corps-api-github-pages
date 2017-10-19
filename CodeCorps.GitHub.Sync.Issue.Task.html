@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.IssueComment.CommentSyncer – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Issue.Task – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
+    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,24 +67,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.IssueComment.CommentSyncer
+        CodeCorps.GitHub.Sync.Issue.Task
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>In charge of syncing <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records with a GitHub comment
-payload.</p>
-<p>A single GitHub comment always matches a single <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>, but
-it can match multiple <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records. This module handles
-creating or updating all those records.</p>
-
-        </section>
       
 
       
@@ -118,11 +109,13 @@ creating or updating all those records.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_all/4">sync_all(tasks, github_comment, user, payload)</a>
+    <a href="#sync_all/3">sync_all(github_issue, user, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the speciifed list of
-<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records</p>
+    <div class="summary-synopsis"><p>When provided a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>, a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and a GitHub API
+payload, for each <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> associated to that
+<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> via a <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>, it
+creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
 </div>
   
 </div>
@@ -155,7 +148,7 @@ creating or updating all those records.</p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -165,8 +158,8 @@ creating or updating all those records.</p>
       <div class="specs">
         
           <pre><a href="#t:outcome/0">outcome</a> ::
-  {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>]} |
-  {:error, {[<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>], [<a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>]}}</pre>
+  {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>]} |
+  {:error, {[<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>], [<a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>]}}</pre>
         
       </div>
     
@@ -189,17 +182,17 @@ creating or updating all those records.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync_all/4">
+          <div class="detail" id="sync_all/3">
   
   
   <div class="detail-header">
-    <a href="#sync_all/4" class="detail-link" title="Link to this function">
+    <a href="#sync_all/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync_all(tasks, github_comment, user, payload)</span>
+    <span class="signature">sync_all(github_issue, user, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issue_comment/comment_syncer.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L24" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -208,19 +201,16 @@ creating or updating all those records.</p>
     
       <div class="specs">
         
-          <pre>sync_all([<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>], <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) :: <a href="#t:outcome/0">outcome</a></pre>
+          <pre>sync_all(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, map) :: {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>]}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the speciifed list of
-<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records.</p>
-<p>When provided a list of <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records, a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>,
-a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>, and a GitHub API payload , for each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
-record, it creates or updates a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record, using the provided
-GitHub API payload, associated to the specified <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> and
-<a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+    <p>When provided a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>, a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and a GitHub API
+payload, for each <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> associated to that
+<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> via a <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>, it
+creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.</p>
 
   </section>
 </div>

@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
+    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
     
   </head>
   <body data-type="extras">
@@ -386,13 +386,6 @@ payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Common.ResultAggregator.html">CodeCorps.GitHub.Event.Common.ResultAggregator</a></div>
-  
-    <div class="summary-synopsis"><p>Module used for the purpose of aggregating results from multiple repository commit actions</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Handler.html">CodeCorps.GitHub.Event.Handler</a></div>
   
     <div class="summary-synopsis"><p>Default behavior for all GitHub webhook event handlers</p>
@@ -467,32 +460,7 @@ InstallationRepositories event type</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.ChangesetBuilder.html">CodeCorps.GitHub.Event.IssueComment.ChangesetBuilder</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <code class="inline">Comment</code> with, when handling
-an IssueComment webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.CommentDeleter.html">CodeCorps.GitHub.Event.IssueComment.CommentDeleter</a></div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.CommentLinker.html">CodeCorps.GitHub.Event.IssueComment.CommentLinker</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
-<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing an Issue Comment webhook, or handling a
-<a href="CodeCorpsWeb.CommentController.html"><code class="inline">CodeCorpsWeb.CommentController</code></a> request</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.CommentSyncer.html">CodeCorps.GitHub.Event.IssueComment.CommentSyncer</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of syncing <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records with a GitHub comment
-payload</p>
-</div>
   
 </div>
 <div class="summary-row">
@@ -507,27 +475,6 @@ payload</p>
   
     <div class="summary-synopsis"><p>In charge of handling a GitHub Webhook payload for the Issues event type</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.ChangesetBuilder.html">CodeCorps.GitHub.Event.Issues.ChangesetBuilder</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
-Issues webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.IssueLinker.html">CodeCorps.GitHub.Event.Issues.IssueLinker</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> to link with a
-<code class="inline">CodeCorps.Issue</code> when processing an Issues webhook, or handling a
-<a href="CodeCorpsWeb.TaskController.html"><code class="inline">CodeCorpsWeb.TaskController</code></a> request</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.TaskSyncer.html">CodeCorps.GitHub.Event.Issues.TaskSyncer</a></div>
   
 </div>
 <div class="summary-row">
@@ -550,26 +497,6 @@ Issues webhook</p>
     <div class="summary-synopsis"><p>In charge of extracting ids from markdown content, paired to a predefined list
 of keywords</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder.html">CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
-PullRequest webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.PullRequestLinker.html">CodeCorps.GitHub.Event.PullRequest.PullRequestLinker</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
-when processing the PullRequest webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.TaskSyncer.html">CodeCorps.GitHub.Event.PullRequest.TaskSyncer</a></div>
   
 </div>
 <div class="summary-row">
@@ -599,7 +526,71 @@ GitHub API requests</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Syncers.User.RecordLinker.html">CodeCorps.GitHub.Syncers.User.RecordLinker</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.Comment.html">CodeCorps.GitHub.Sync.Comment.Comment</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of syncing <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records with a GitHub comment
+payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.Comment.Changeset.html">CodeCorps.GitHub.Sync.Comment.Comment.Changeset</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <code class="inline">Comment</code> with, when handling
+a GitHub Comment payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.GithubComment.html">CodeCorps.GitHub.Sync.Comment.GithubComment</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
+<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing a GitHub Comment payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.GithubIssue.html">CodeCorps.GitHub.Sync.Issue.GithubIssue</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> to link with a
+<code class="inline">CodeCorps.Issue</code> when processing a GitHub Issue payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.Task.html">CodeCorps.GitHub.Sync.Issue.Task</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.Task.Changeset.html">CodeCorps.GitHub.Sync.Issue.Task.Changeset</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
+Issues webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest.html">CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
+when processing a GitHub Pull Request payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.Task.html">CodeCorps.GitHub.Sync.PullRequest.Task</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.Task.Changeset.html">CodeCorps.GitHub.Sync.PullRequest.Task.Changeset</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
+PullRequest webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.User.RecordLinker.html">CodeCorps.GitHub.Sync.User.RecordLinker</a></div>
   
     <div class="summary-synopsis"><p>In charge of finding a user to link with a given record given a GitHub API
 payload containing the user</p>
@@ -608,6 +599,13 @@ payload containing the user</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.TestHelpers.html">CodeCorps.GitHub.TestHelpers</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Utils.ResultAggregator.html">CodeCorps.GitHub.Utils.ResultAggregator</a></div>
+  
+    <div class="summary-synopsis"><p>Module used for the purpose of aggregating results from multiple repository commit actions</p>
+</div>
   
 </div>
 <div class="summary-row">

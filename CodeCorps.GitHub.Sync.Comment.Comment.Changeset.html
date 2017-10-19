@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Syncers.User.RecordLinker – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Comment.Comment.Changeset – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
+    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Syncers.User.RecordLinker
+        CodeCorps.GitHub.Sync.Comment.Comment.Changeset
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/syncers/user/record_linker.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,9 +78,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a user to link with a given record given a GitHub API
-payload containing the user.</p>
-<p>The only entry point is <a href="#link_to/2"><code class="inline">link_to/2</code></a>.</p>
+          <p>In charge of building a <code class="inline">Changeset</code> to update a <code class="inline">Comment</code> with, when handling
+a GitHub Comment payload.</p>
 
         </section>
       
@@ -103,16 +102,10 @@ payload containing the user.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create_disassociated_user/1">find_or_create_disassociated_user(attrs)</a>
+    <a href="#build_changeset/5">build_changeset(comment, map, github_comment, task, user)</a>
   </div>
   
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#link_to/2">link_to(comment, map)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Finds or creates a user using information in the resource and the GitHub API
+    <div class="summary-synopsis"><p>Constructs a changeset for syncing a task when processing a GitHub Comment
 payload</p>
 </div>
   
@@ -137,17 +130,17 @@ payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_or_create_disassociated_user/1">
+          <div class="detail" id="build_changeset/5">
   
   
   <div class="detail-header">
-    <a href="#find_or_create_disassociated_user/1" class="detail-link" title="Link to this function">
+    <a href="#build_changeset/5" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create_disassociated_user(attrs)</span>
+    <span class="signature">build_changeset(comment, map, github_comment, task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/syncers/user/record_linker.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -156,62 +149,14 @@ payload</p>
     
       <div class="specs">
         
-          <pre>find_or_create_disassociated_user(map) :: {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>}</pre>
+          <pre>build_changeset(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>, map, <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="link_to/2">
-  
-  
-  <div class="detail-header">
-    <a href="#link_to/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">link_to(comment, map)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/syncers/user/record_linker.ex#L45" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>link_to(<a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a> | <a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a> | <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>, map) :: linking_result</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Finds or creates a user using information in the resource and the GitHub API
-payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li>Find all affected records and extract their user data.
-</li>
-<li><p>Search for the user in our database.</p>
-<ul>
-<li>If we match a single user, then the resource should be related to that
-  user.
-</li>
-<li>If there are no matching users, then the resource was created on GitHub by
-  someone who does not have a matching GitHub-connected Code Corps account.
-  We create a placeholder user account until that GitHub user is claimed by
-  a Code Corps user.
-</li>
-<li>If there are multiple matching users, this is an unexpected scenario and
-  should error out.
-</li>
-</ul>
-</li>
-</ul>
+    <p>Constructs a changeset for syncing a task when processing a GitHub Comment
+payload</p>
 
   </section>
 </div>

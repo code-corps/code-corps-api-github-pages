@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.Common.ResultAggregator – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
+    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Common.ResultAggregator
+        CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/common/result_aggregator.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/github_pull_request/github_pull_request.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,7 +78,9 @@
 
       
         <section id="moduledoc">
-          <p>Module used for the purpose of aggregating results from multiple repository commit actions.</p>
+          <p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
+when processing a GitHub Pull Request payload.</p>
+<p>The only entry point is <a href="#create_or_update_pull_request/2"><code class="inline">create_or_update_pull_request/2</code></a>.</p>
 
         </section>
       
@@ -101,10 +103,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#aggregate/1">aggregate(results)</a>
+    <a href="#create_or_update_pull_request/2">create_or_update_pull_request(github_repo, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple</p>
+    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+payload</p>
 </div>
   
 </div>
@@ -128,17 +131,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="aggregate/1">
+          <div class="detail" id="create_or_update_pull_request/2">
   
   
   <div class="detail-header">
-    <a href="#aggregate/1" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_pull_request/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">aggregate(results)</span>
+    <span class="signature">create_or_update_pull_request(github_repo, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/common/result_aggregator.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/github_pull_request/github_pull_request.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -147,18 +150,27 @@
     
       <div class="specs">
         
-          <pre>aggregate(list) :: {:ok, list} | {:error, {list, list}}</pre>
+          <pre>create_or_update_pull_request(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>, map) :: linking_result</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple.</p>
-<p>All list members are assumed to be either an <code class="inline">{:ok, committed_record}</code> or
-<code class="inline">{:error, changeset}</code>.</p>
-<p>The aggregate is an <code class="inline">{:ok, committed_records}</code> if all results are
-<code class="inline">{:ok, committed_record}</code>, or an <code class="inline">{:error, {committed_records, changesets}}</code>
-if any of the results is an <code class="inline">{:error, changeset}</code>.</p>
+    <p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+payload.</p>
+<p>The process is as follows:</p>
+<ul>
+<li><p>Search for the pull request in our database with the payload data.</p>
+<ul>
+<li>If we return a single <code class="inline">GithubPullRequest</code>, then the <code class="inline">GithubPullRequest</code>
+  should be updated.
+</li>
+<li>If there are no matching <code class="inline">GithubPullRequest</code> records, then a
+  <code class="inline">GithubPullRequest</code>should be created.
+</li>
+</ul>
+</li>
+</ul>
 
   </section>
 </div>

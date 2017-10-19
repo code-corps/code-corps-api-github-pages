@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Utils.ResultAggregator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
+    <script src="dist/sidebar_items-e2ebfb3ea7.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.PullRequest.ChangesetBuilder
+        CodeCorps.GitHub.Utils.ResultAggregator
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/changeset_builder.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/utils/result_aggregator.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,8 +78,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
-PullRequest webhook.</p>
+          <p>Module used for the purpose of aggregating results from multiple repository commit actions.</p>
 
         </section>
       
@@ -102,11 +101,10 @@ PullRequest webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_changeset/5">build_changeset(task, map, github_pull_request, project_github_repo, user)</a>
+    <a href="#aggregate/1">aggregate(results)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Constructs a changeset for syncing a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> when processing a PullRequest
-webhook</p>
+    <div class="summary-synopsis"><p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple</p>
 </div>
   
 </div>
@@ -130,17 +128,17 @@ webhook</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_changeset/5">
+          <div class="detail" id="aggregate/1">
   
   
   <div class="detail-header">
-    <a href="#build_changeset/5" class="detail-link" title="Link to this function">
+    <a href="#aggregate/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">build_changeset(task, map, github_pull_request, project_github_repo, user)</span>
+    <span class="signature">aggregate(results)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/changeset_builder.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/utils/result_aggregator.ex#L19" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -149,15 +147,18 @@ webhook</p>
     
       <div class="specs">
         
-          <pre>build_changeset(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, map, <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>, <a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
+          <pre>aggregate(list) :: {:ok, list} | {:error, {list, list}}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Constructs a changeset for syncing a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> when processing a PullRequest
-webhook.</p>
-<p>The changeset can be used to create or update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
+    <p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple.</p>
+<p>All list members are assumed to be either an <code class="inline">{:ok, committed_record}</code> or
+<code class="inline">{:error, changeset}</code>.</p>
+<p>The aggregate is an <code class="inline">{:ok, committed_records}</code> if all results are
+<code class="inline">{:ok, committed_record}</code>, or an <code class="inline">{:error, {committed_records, changesets}}</code>
+if any of the results is an <code class="inline">{:error, changeset}</code>.</p>
 
   </section>
 </div>
