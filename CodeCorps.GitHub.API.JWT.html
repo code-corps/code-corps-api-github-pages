@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Request – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.JWT – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-963732bb4d.js"></script>
+    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,15 +67,21 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Request
+        CodeCorps.GitHub.API.JWT
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/request.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/jwt.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>In charge of loading a a GitHub app .pem and generating a JSON Web Token from
+it.</p>
+
+        </section>
       
 
       
@@ -96,8 +102,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#retrieve/2">retrieve(endpoint, opts)</a>
+    <a href="#generate/0">generate()</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Generates a JWT from the GitHub App’s generated RSA private key using the
+RS256 algo, where the issuer is the GitHub App’s ID</p>
+</div>
   
 </div>
 
@@ -120,32 +130,31 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="retrieve/2">
+          <div class="detail" id="generate/0">
   
   
   <div class="detail-header">
-    <a href="#retrieve/2" class="detail-link" title="Link to this function">
+    <a href="#generate/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">retrieve(endpoint, opts)</span>
+    <span class="signature">generate()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/request.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/jwt.ex#L16" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>retrieve(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>) :: <a href="CodeCorps.GitHub.html#t:response/0">CodeCorps.GitHub.response</a></pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    
+    <p>Generates a JWT from the GitHub App’s generated RSA private key using the
+RS256 algo, where the issuer is the GitHub App’s ID.</p>
+<p>Used to exchange the JWT for an access token for a given integration, or
+for the GitHub App itself.</p>
+<p>Expires in 5 minutes.</p>
+
   </section>
 </div>
 

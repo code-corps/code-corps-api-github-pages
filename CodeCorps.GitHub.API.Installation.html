@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.PullRequest.UserLinker – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.Installation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-963732bb4d.js"></script>
+    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.PullRequest.UserLinker
+        CodeCorps.GitHub.API.Installation
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/user_linker.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,9 +78,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a user to link with a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing
-a PullRequest webhook.</p>
-<p>The only entry point is <code class="inline">find_or_create_user/1</code>.</p>
+          <p>Used to perform installation actions on the GitHub API.</p>
 
         </section>
       
@@ -103,17 +101,28 @@ a PullRequest webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create_disassociated_user/1">find_or_create_disassociated_user(attrs)</a>
+    <a href="#get_access_token/1">get_access_token(installation)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Get the access token for the installation</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create_user/2">find_or_create_user(pull_request, map)</a>
+    <a href="#refresh_token/1">refresh_token(installation)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a user using information in a <code class="inline">GithubPullRequest</code> record and a
-Github Issue payload</p>
+    <div class="summary-synopsis"><p>Refreshes the access token for the installation</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#repositories/1">repositories(installation)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>List repositories that are accessible to the authenticated installation</p>
 </div>
   
 </div>
@@ -137,17 +146,17 @@ Github Issue payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_or_create_disassociated_user/1">
+          <div class="detail" id="get_access_token/1">
   
   
   <div class="detail-header">
-    <a href="#find_or_create_disassociated_user/1" class="detail-link" title="Link to this function">
+    <a href="#get_access_token/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create_disassociated_user(attrs)</span>
+    <span class="signature">get_access_token(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/user_linker.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -156,26 +165,34 @@ Github Issue payload</p>
     
       <div class="specs">
         
-          <pre>find_or_create_disassociated_user(map) :: {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>}</pre>
+          <pre>get_access_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
+  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
+    <p>Get the access token for the installation.</p>
+<p>Returns either the current access token stored in the database because
+it has not yet expired, or makes a request to the GitHub API for a new
+access token using the GitHub App’s JWT.</p>
+<p>https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/about-authentication-options-for-github-apps/#authenticating-as-an-installation</p>
+
   </section>
 </div>
-<div class="detail" id="find_or_create_user/2">
+<div class="detail" id="refresh_token/1">
   
   
   <div class="detail-header">
-    <a href="#find_or_create_user/2" class="detail-link" title="Link to this function">
+    <a href="#refresh_token/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create_user(pull_request, map)</span>
+    <span class="signature">refresh_token(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/pull_request/user_linker.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L60" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -184,33 +201,51 @@ Github Issue payload</p>
     
       <div class="specs">
         
-          <pre>find_or_create_user(<a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>, map) :: linking_result</pre>
+          <pre>refresh_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
+  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a user using information in a <code class="inline">GithubPullRequest</code> record and a
-Github Issue payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li>Find all affected tasks and extract their user data.
-</li>
-<li><p>Search for the user in our database.</p>
-<ul>
-<li>If we match a single user, then the PR should be related to that user.
-</li>
-<li>If there are no matching users, then the PR was created on Github by
-  someone who does not have a matching GitHub-connected Code Corps account.
-  We create a placeholder user account until that GitHub user is claimed by
-  a Code Corps user.
-</li>
-<li>If there are multiple matching users, this is an unexpected scenario and
-  should error out.
-</li>
-</ul>
-</li>
-</ul>
+    <p>Refreshes the access token for the installation.</p>
+<p>Makes a request to the GitHub API for a new access token using the GitHub
+App’s JWT.</p>
+<p>https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/about-authentication-options-for-github-apps/#authenticating-as-an-installation</p>
+
+  </section>
+</div>
+<div class="detail" id="repositories/1">
+  
+  
+  <div class="detail-header">
+    <a href="#repositories/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">repositories(installation)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L20" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>repositories(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
+  {:ok, [map]} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>List repositories that are accessible to the authenticated installation.</p>
+<p>https://developer.github.com/v3/apps/installations/#list-repositories</p>
 
   </section>
 </div>

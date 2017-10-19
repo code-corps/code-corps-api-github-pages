@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Installation – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-963732bb4d.js"></script>
+    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Installation
+        CodeCorps.GitHub.API.Comment
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/installation.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/comment.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,7 +78,7 @@
 
       
         <section id="moduledoc">
-          <p>Used to perform installation actions on the GitHub API.</p>
+          <p>Handles GitHub API requests for actions on Comments</p>
 
         </section>
       
@@ -101,29 +101,14 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_access_token/1">get_access_token(installation)</a>
+    <a href="#create/1">create(comment)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Get the access token for the installation</p>
-</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#refresh_token/1">refresh_token(installation)</a>
+    <a href="#update/1">update(comment)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Refreshes the access token for the installation</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#repositories/1">repositories(installation)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>List repositories that are accessible to the authenticated installation</p>
-</div>
   
 </div>
 
@@ -146,17 +131,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="get_access_token/1">
+          <div class="detail" id="create/1">
   
   
   <div class="detail-header">
-    <a href="#get_access_token/1" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">get_access_token(installation)</span>
+    <span class="signature">create(comment)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/installation.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/comment.ex#L18" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -165,34 +150,26 @@
     
       <div class="specs">
         
-          <pre>get_access_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
-  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+          <pre>create(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>) :: <a href="CodeCorps.GitHub.html#t:response/0">CodeCorps.GitHub.response</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Get the access token for the installation.</p>
-<p>Returns either the current access token stored in the database because
-it has not yet expired, or makes a request to the GitHub API for a new
-access token using the GitHub App’s JWT.</p>
-<p>https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/about-authentication-options-for-github-apps/#authenticating-as-an-installation</p>
-
+    
   </section>
 </div>
-<div class="detail" id="refresh_token/1">
+<div class="detail" id="update/1">
   
   
   <div class="detail-header">
-    <a href="#refresh_token/1" class="detail-link" title="Link to this function">
+    <a href="#update/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">refresh_token(installation)</span>
+    <span class="signature">update(comment)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/installation.ex#L61" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/comment.ex#L39" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -201,52 +178,13 @@ access token using the GitHub App’s JWT.</p>
     
       <div class="specs">
         
-          <pre>refresh_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
-  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+          <pre>update(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>) :: <a href="CodeCorps.GitHub.html#t:response/0">CodeCorps.GitHub.response</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Refreshes the access token for the installation.</p>
-<p>Makes a request to the GitHub API for a new access token using the GitHub
-App’s JWT.</p>
-<p>https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/about-authentication-options-for-github-apps/#authenticating-as-an-installation</p>
-
-  </section>
-</div>
-<div class="detail" id="repositories/1">
-  
-  
-  <div class="detail-header">
-    <a href="#repositories/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">repositories(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/installation.ex#L21" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>repositories(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
-  {:ok, [map]} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>List repositories that are accessible to the authenticated installation.</p>
-<p>https://developer.github.com/v3/apps/installations/#list-repositories</p>
-
   </section>
 </div>
 

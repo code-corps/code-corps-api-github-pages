@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Event.Issues.UserLinker – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.Headers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-963732bb4d.js"></script>
+    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,22 +67,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Issues.UserLinker
+        CodeCorps.GitHub.API.Headers
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/headers.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>In charge of finding a user to link with a Task when processing an Issues
-webhook.</p>
-<p>The only entry point is <code class="inline">find_or_create_user/1</code>.</p>
-
-        </section>
       
 
       
@@ -95,6 +88,19 @@ webhook.</p>
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:t/0">t()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -103,18 +109,20 @@ webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create_disassociated_user/1">find_or_create_disassociated_user(attrs)</a>
+    <a href="#access_token_request/0">access_token_request()</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create_user/2">find_or_create_user(issue, map)</a>
+    <a href="#integration_request/1">integration_request(headers)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a user using information in a <code class="inline">GithubIssue</code> record and a
-Github Issue payload</p>
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_request/2">user_request(headers, options)</a>
+  </div>
   
 </div>
 
@@ -127,6 +135,47 @@ Github Issue payload</p>
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:t/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">t()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/headers.ex#L5" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>t() :: [header]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -137,17 +186,17 @@ Github Issue payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_or_create_disassociated_user/1">
+          <div class="detail" id="access_token_request/0">
   
   
   <div class="detail-header">
-    <a href="#find_or_create_disassociated_user/1" class="detail-link" title="Link to this function">
+    <a href="#access_token_request/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create_disassociated_user(attrs)</span>
+    <span class="signature">access_token_request()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L63" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/headers.ex#L24" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -156,7 +205,7 @@ Github Issue payload</p>
     
       <div class="specs">
         
-          <pre>find_or_create_disassociated_user(map) :: {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>}</pre>
+          <pre>access_token_request() :: <a href="#t:t/0">t</a></pre>
         
       </div>
     
@@ -165,17 +214,17 @@ Github Issue payload</p>
     
   </section>
 </div>
-<div class="detail" id="find_or_create_user/2">
+<div class="detail" id="integration_request/1">
   
   
   <div class="detail-header">
-    <a href="#find_or_create_user/2" class="detail-link" title="Link to this function">
+    <a href="#integration_request/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create_user(issue, map)</span>
+    <span class="signature">integration_request(headers)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/event/issues/user_linker.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/headers.ex#L16" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -184,34 +233,41 @@ Github Issue payload</p>
     
       <div class="specs">
         
-          <pre>find_or_create_user(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>, map) :: linking_result</pre>
+          <pre>integration_request(%{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}) :: <a href="#t:t/0">t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a user using information in a <code class="inline">GithubIssue</code> record and a
-Github Issue payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li>Find all affected tasks and extract their user data.
-</li>
-<li><p>Search for the user in our database.</p>
-<ul>
-<li>If we match a single user, then the issue should be related to that user.
-</li>
-<li>If there are no matching users, then the issue was created on Github by
-  someone who does not have a matching GitHub-connected Code Corps account.
-  We create a placeholder user account until that GitHub user is claimed by
-  a Code Corps user.
-</li>
-<li>If there are multiple matching users, this is an unexpected scenario and
-  should error out.
-</li>
-</ul>
-</li>
-</ul>
-
+    
+  </section>
+</div>
+<div class="detail" id="user_request/2">
+  
+  
+  <div class="detail-header">
+    <a href="#user_request/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">user_request(headers, options)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/headers.ex#L8" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>user_request(%{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}, list) :: <a href="#t:t/0">t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Headers – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.User – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-963732bb4d.js"></script>
+    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,15 +67,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Headers
+        CodeCorps.GitHub.API.User
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/user.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Used to perform user actions on the github API</p>
+
+        </section>
       
 
       
@@ -88,19 +93,6 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -109,20 +101,21 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#access_token_request/0">access_token_request()</a>
+    <a href="#connect/3">connect(user, code, state)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>POSTs <code class="inline">code</code> and <code class="inline">state</code> to GitHub to receive an OAuth token,
+then associates the given user with that OAuth token</p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#integration_request/1">integration_request(headers)</a>
+    <a href="#me/2">me(access_token, opts \\ [])</a>
   </div>
   
+    <div class="summary-synopsis"><p>Requests the currently authenticated user payload from github</p>
 </div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#user_request/2">user_request(headers, options)</a>
-  </div>
   
 </div>
 
@@ -134,47 +127,6 @@
         </section>
       
 
-      
-        <section id="types" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div class="detail" id="t:t/0">
-  
-  
-  <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <span class="signature">t()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L5" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>t() :: [header]</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
       
 
       
@@ -186,17 +138,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="access_token_request/0">
+          <div class="detail" id="connect/3">
   
   
   <div class="detail-header">
-    <a href="#access_token_request/0" class="detail-link" title="Link to this function">
+    <a href="#connect/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">access_token_request()</span>
+    <span class="signature">connect(user, code, state)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/user.ex#L30" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -205,26 +157,46 @@
     
       <div class="specs">
         
-          <pre>access_token_request() :: <a href="#t:t/0">t</a></pre>
+          <pre>connect(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
+    <p>POSTs <code class="inline">code</code> and <code class="inline">state</code> to GitHub to receive an OAuth token,
+then associates the given user with that OAuth token.</p>
+<p>Also associates any orphaned <code class="inline">GithubAppInstallation</code> records matching their
+<code class="inline">sender_github_id</code> field with the user’s <code class="inline">github_id</code></p>
+<p>Also associates any existing tasks and comments to the newly connected user,
+based on the user’s <code class="inline">github_id</code></p>
+<p>Returns one of the following:</p>
+<ul>
+<li><code class="inline">{:ok, %CodeCorps.User{}}</code>
+</li>
+<li><code class="inline">{:error, %Ecto.Changeset{}}</code>
+</li>
+<li><code class="inline">{:error, GitHub.api_error_struct}</code>
+</li>
+</ul>
+
   </section>
 </div>
-<div class="detail" id="integration_request/1">
+<div class="detail" id="me/2">
   
+  
+    <span id="me/1"></span>
   
   <div class="detail-header">
-    <a href="#integration_request/1" class="detail-link" title="Link to this function">
+    <a href="#me/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">integration_request(headers)</span>
+    <span class="signature">me(access_token, opts \\ [])</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/user.ex#L52" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -233,41 +205,16 @@
     
       <div class="specs">
         
-          <pre>integration_request(%{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}) :: <a href="#t:t/0">t</a></pre>
+          <pre>me(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, <a href="https://hexdocs.pm/elixir/Keyword.html#t:t/0">Keyword.t</a>) ::
+  {:ok, map} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="user_request/2">
-  
-  
-  <div class="detail-header">
-    <a href="#user_request/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">user_request(headers, options)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/headers.ex#L8" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>user_request(%{optional(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>) => <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} | %{}, list) :: <a href="#t:t/0">t</a></pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
+    <p>Requests the currently authenticated user payload from github</p>
+
   </section>
 </div>
 

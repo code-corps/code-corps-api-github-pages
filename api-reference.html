@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-963732bb4d.js"></script>
+    <script src="dist/sidebar_items-f1565ca3d1.js"></script>
     
   </head>
   <body data-type="extras">
@@ -269,6 +269,46 @@ tests that require working with the database</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.Comment.html">CodeCorps.GitHub.API.Comment</a></div>
+  
+    <div class="summary-synopsis"><p>Handles GitHub API requests for actions on Comments</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.Headers.html">CodeCorps.GitHub.API.Headers</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.Installation.html">CodeCorps.GitHub.API.Installation</a></div>
+  
+    <div class="summary-synopsis"><p>Used to perform installation actions on the GitHub API</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.Issue.html">CodeCorps.GitHub.API.Issue</a></div>
+  
+    <div class="summary-synopsis"><p>Functions for working with issues on GitHub</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.JWT.html">CodeCorps.GitHub.API.JWT</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of loading a a GitHub app .pem and generating a JSON Web Token from
+it</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.API.User.html">CodeCorps.GitHub.API.User</a></div>
+  
+    <div class="summary-synopsis"><p>Used to perform user actions on the github API</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.APIError.html">CodeCorps.GitHub.APIError</a></div>
   
     <div class="summary-synopsis"><p>Represents a client error from the GitHub API</p>
@@ -326,13 +366,6 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></
   <div class="summary-signature"><a href="CodeCorps.GitHub.Adapters.Utils.BodyDecorator.html">CodeCorps.GitHub.Adapters.Utils.BodyDecorator</a></div>
   
     <div class="summary-synopsis"><p>Decorates and undecorates the body of GitHub issues and comments as needed</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Comment.html">CodeCorps.GitHub.Comment</a></div>
-  
-    <div class="summary-synopsis"><p>Handles GitHub API requests for actions on Comments</p>
 </div>
   
 </div>
@@ -406,7 +439,7 @@ payload</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.Validator.html">CodeCorps.GitHub.Event.Installation.Validator</a></div>
   
-    <div class="summary-synopsis"><p>In charge of validatng a GitHub Installation webhook payload</p>
+    <div class="summary-synopsis"><p>In charge of validatng a GitHub.API.Installation webhook payload</p>
 </div>
   
 </div>
@@ -421,7 +454,7 @@ InstallationRepositories event type</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.InstallationRepositories.Validator.html">CodeCorps.GitHub.Event.InstallationRepositories.Validator</a></div>
   
-    <div class="summary-synopsis"><p>In charge of validatng a GitHub InstallationRepositories webhook payload</p>
+    <div class="summary-synopsis"><p>In charge of validatng a GitHub.API.InstallationRepositories webhook payload</p>
 </div>
   
 </div>
@@ -463,14 +496,6 @@ payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.UserLinker.html">CodeCorps.GitHub.Event.IssueComment.UserLinker</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a user to link with a Comment when processing an
-IssueComment webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.IssueComment.Validator.html">CodeCorps.GitHub.Event.IssueComment.Validator</a></div>
   
     <div class="summary-synopsis"><p>In charge of validatng a GitHub IssueComment webhook payload</p>
@@ -503,14 +528,6 @@ Issues webhook</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.TaskSyncer.html">CodeCorps.GitHub.Event.Issues.TaskSyncer</a></div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Issues.UserLinker.html">CodeCorps.GitHub.Event.Issues.UserLinker</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a user to link with a Task when processing an Issues
-webhook</p>
-</div>
   
 </div>
 <div class="summary-row">
@@ -556,14 +573,6 @@ when processing the PullRequest webhook</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.UserLinker.html">CodeCorps.GitHub.Event.PullRequest.UserLinker</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a user to link with a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing
-a PullRequest webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.PullRequest.Validator.html">CodeCorps.GitHub.Event.PullRequest.Validator</a></div>
   
     <div class="summary-synopsis"><p>In charge of validatng a GitHub PullRequest webhook payload</p>
@@ -582,28 +591,6 @@ a PullRequest webhook</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Headers.html">CodeCorps.GitHub.Headers</a></div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Installation.html">CodeCorps.GitHub.Installation</a></div>
-  
-    <div class="summary-synopsis"><p>Used to perform installation actions on the GitHub API</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Issue.html">CodeCorps.GitHub.Issue</a></div>
-  
-    <div class="summary-synopsis"><p>Functions for working with issues on GitHub</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Request.html">CodeCorps.GitHub.Request</a></div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.SuccessAPI.html">CodeCorps.GitHub.SuccessAPI</a></div>
   
     <div class="summary-synopsis"><p>A mocked github API layer which returns a default successful response for all
@@ -612,14 +599,15 @@ GitHub API requests</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.TestHelpers.html">CodeCorps.GitHub.TestHelpers</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Syncers.User.RecordLinker.html">CodeCorps.GitHub.Syncers.User.RecordLinker</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a user to link with a given record given a GitHub API
+payload containing the user</p>
+</div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.User.html">CodeCorps.GitHub.User</a></div>
-  
-    <div class="summary-synopsis"><p>Used to perform user actions on the github API</p>
-</div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.TestHelpers.html">CodeCorps.GitHub.TestHelpers</a></div>
   
 </div>
 <div class="summary-row">
@@ -640,14 +628,6 @@ GitHub API requests</p>
   <div class="summary-signature"><a href="CodeCorps.GitHub.Webhook.Processor.html">CodeCorps.GitHub.Webhook.Processor</a></div>
   
     <div class="summary-synopsis"><p>Serves as a point of entry to process GitHub webhooks</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.Github.JWT.html">CodeCorps.Github.JWT</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of loading a a GitHub app .pem and generating a JSON Web Token from
-it</p>
 </div>
   
 </div>
