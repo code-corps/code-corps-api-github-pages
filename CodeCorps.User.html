@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.16.3">
+    <meta name="generator" content="ExDoc v0.18.1">
     <title>CodeCorps.User – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-233f623552.js"></script>
+    <script src="dist/sidebar_items-0a76436f11.js"></script>
+    
+    
+    
     
   </head>
   <body data-type="modules">
@@ -53,8 +56,6 @@
     
 
     
-
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -69,7 +70,7 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorps.User
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -189,7 +190,7 @@
     </a>
     <span class="signature">t()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L16" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -198,7 +199,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.User{updated_at: term, inserted_at: term, skills: term, username: term, default_color: term, github_app_installation: term, state_transition: term, stripe_platform_customer: term, sign_up_context: term, user_categories: term, id: term, first_name: term, user_skills: term, roles: term, user_roles: term, email: term, github_avatar_url: term, stripe_connect_subscriptions: term, categories: term, password_confirmation: term, stripe_platform_card: term, admin: term, encrypted_password: term, biography: term, slugged_route: term, website: term, github_auth_token: term, github_username: term, project_users: term, password: term, github_email: term, last_name: term, github_id: term, stripe_connect_customers: term, state: term, twitter: term, github_app_installations: term, __meta__: term, type: term, cloudinary_public_id: term}</pre>
+          <pre>t() :: %CodeCorps.User{inserted_at: term(), github_id: term(), default_color: term(), github_app_installations: term(), id: term(), state_transition: term(), twitter: term(), user_categories: term(), stripe_platform_customer: term(), email: term(), github_app_installation: term(), stripe_platform_card: term(), admin: term(), stripe_connect_customers: term(), user_roles: term(), user_skills: term(), biography: term(), __meta__: term(), cloudinary_public_id: term(), github_avatar_url: term(), github_username: term(), github_email: term(), slugged_route: term(), stripe_connect_subscriptions: term(), last_name: term(), roles: term(), website: term(), state: term(), password_confirmation: term(), github_auth_token: term(), username: term(), updated_at: term(), sign_up_context: term(), skills: term(), project_users: term(), first_name: term(), categories: term(), type: term(), encrypted_password: term(), password: term()}</pre>
         
       </div>
     
@@ -231,7 +232,7 @@
     </a>
     <span class="signature">apply_state_transition(changeset, map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L115" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -255,7 +256,7 @@
     </a>
     <span class="signature">changeset(struct, params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L71" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L71" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -278,7 +279,7 @@
     </a>
     <span class="signature">check_email_availability(email)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L125" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -300,7 +301,7 @@
     </a>
     <span class="signature">check_username_availability(username)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L131" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -322,7 +323,7 @@
     </a>
     <span class="signature">registration_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L81" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -345,7 +346,7 @@
     </a>
     <span class="signature">reset_password_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L108" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -367,7 +368,7 @@
     </a>
     <span class="signature">update_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/user.ex#L98" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -388,7 +389,7 @@
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.1),
           </span>
           <span class="line">
             designed by
@@ -402,6 +403,9 @@
 </section>
 </div>
   <script src="dist/app-574613960f.js"></script>
+  
+  
+  
   
   </body>
 </html>

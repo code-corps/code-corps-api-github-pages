@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.16.3">
+    <meta name="generator" content="ExDoc v0.18.1">
     <title>CodeCorps.StripeService.WebhookProcessing.IgnoredEventHandler – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-233f623552.js"></script>
+    <script src="dist/sidebar_items-0a76436f11.js"></script>
+    
+    
+    
     
   </head>
   <body data-type="modules">
@@ -53,8 +56,6 @@
     
 
     
-
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -69,7 +70,7 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorps.StripeService.WebhookProcessing.IgnoredEventHandler
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -153,7 +154,7 @@ Determines the reason for ignoring the event, then updates the record to
     </a>
     <span class="signature">handle(local_event, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -162,7 +163,7 @@ Determines the reason for ignoring the event, then updates the record to
     
       <div class="specs">
         
-          <pre>handle(<a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>, module) :: {:ok, <a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>}</pre>
+          <pre>handle(<a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>(), module()) :: {:ok, <a href="CodeCorps.StripeEvent.html#t:t/0">CodeCorps.StripeEvent.t</a>()}</pre>
         
       </div>
     
@@ -171,7 +172,7 @@ Determines the reason for ignoring the event, then updates the record to
     <p>Takes in a <a href="CodeCorps.StripeEvent.html"><code class="inline">CodeCorps.StripeEvent</code></a> to be processed as “ignored”.
 Determines the reason for ignoring the event, then updates the record to
 <code class="inline">status: &quot;ignored&quot;</code> and <code class="inline">ignored_reason: inferred_message</code></p>
-<p>Returns `{:ok, %CodeCorps.StripeEvent{}}</p>
+<p>Returns <code class="inline">{:ok, %CodeCorps.StripeEvent{}}</code></p>
 
   </section>
 </div>
@@ -185,7 +186,7 @@ Determines the reason for ignoring the event, then updates the record to
     </a>
     <span class="signature">ignored_event_types(arg)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L41" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -194,7 +195,7 @@ Determines the reason for ignoring the event, then updates the record to
     
       <div class="specs">
         
-          <pre>ignored_event_types(module) :: list</pre>
+          <pre>ignored_event_types(module()) :: list()</pre>
         
       </div>
     
@@ -214,7 +215,7 @@ Determines the reason for ignoring the event, then updates the record to
     </a>
     <span class="signature">should_handle?(type, handler)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/webhook_processing/ignored_event_handler.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -223,7 +224,7 @@ Determines the reason for ignoring the event, then updates the record to
     
       <div class="specs">
         
-          <pre>should_handle?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>, module) :: boolean</pre>
+          <pre>should_handle?(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), module()) :: boolean()</pre>
         
       </div>
     
@@ -243,7 +244,7 @@ Determines the reason for ignoring the event, then updates the record to
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.1),
           </span>
           <span class="line">
             designed by
@@ -257,6 +258,9 @@ Determines the reason for ignoring the event, then updates the record to
 </section>
 </div>
   <script src="dist/app-574613960f.js"></script>
+  
+  
+  
   
   </body>
 </html>

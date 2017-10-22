@@ -4,11 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.16.3">
+    <meta name="generator" content="ExDoc v0.18.1">
     <title>CodeCorps.GitHub.API.Installation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-233f623552.js"></script>
+    <script src="dist/sidebar_items-0a76436f11.js"></script>
+    
+    
+    
     
   </head>
   <body data-type="modules">
@@ -53,8 +56,6 @@
     
 
     
-
-    
   </ul>
   <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
@@ -69,7 +70,7 @@
         <small class="visible-xs">code_corps v0.0.1</small>
         CodeCorps.GitHub.API.Installation
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -156,7 +157,7 @@
     </a>
     <span class="signature">get_access_token(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -165,10 +166,10 @@
     
       <div class="specs">
         
-          <pre>get_access_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
-  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+          <pre>get_access_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) ::
+  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
         
       </div>
     
@@ -192,7 +193,7 @@ access token using the GitHub App’s JWT.</p>
     </a>
     <span class="signature">refresh_token(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L60" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -201,10 +202,10 @@ access token using the GitHub App’s JWT.</p>
     
       <div class="specs">
         
-          <pre>refresh_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
-  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>}</pre>
+          <pre>refresh_token(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) ::
+  {:ok, <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
         
       </div>
     
@@ -227,7 +228,7 @@ App’s JWT.</p>
     </a>
     <span class="signature">repositories(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/installation.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -236,9 +237,9 @@ App’s JWT.</p>
     
       <div class="specs">
         
-          <pre>repositories(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) ::
-  {:ok, [map]} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>}</pre>
+          <pre>repositories(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) ::
+  {:ok, [map()]} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>()}</pre>
         
       </div>
     
@@ -258,7 +259,7 @@ App’s JWT.</p>
         <p>
           <span class="line">
             Built using
-            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.16.3),
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.1),
           </span>
           <span class="line">
             designed by
@@ -272,6 +273,9 @@ App’s JWT.</p>
 </section>
 </div>
   <script src="dist/app-574613960f.js"></script>
+  
+  
+  
   
   </body>
 </html>
