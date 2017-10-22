@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e669ab2435.js"></script>
+    <script src="dist/sidebar_items-233f623552.js"></script>
     
   </head>
   <body data-type="modules">
@@ -88,19 +88,6 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:outcome/0">outcome()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -109,7 +96,17 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync/1">sync(payload)</a>
+    <a href="#delete/2">delete(changes, payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>When provided a GitHub API payload, it deletes each <code class="inline">Comment</code> associated to
+the specified <code class="inline">IssueComment</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sync/2">sync(map, payload)</a>
   </div>
   
     <div class="summary-synopsis"><p>Syncs a GitHub comment API payload with our data</p>
@@ -126,58 +123,6 @@
       
 
       
-        <section id="types" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div class="detail" id="t:outcome/0">
-  
-  
-  <div class="detail-header">
-    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <span class="signature">outcome()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/comment/comment.ex#L18" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre><a href="#t:outcome/0">outcome</a> ::
-  {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>]} |
-  {:error, :repository_not_found} |
-  {:error, :validation_error_on_inserting_issue_for_task} |
-  {:error, :validation_error_on_inserting_github_comment} |
-  {:error, :validation_error_on_inserting_user_for_task} |
-  {:error, :multiple_github_users_matched_same_cc_user_for_task} |
-  {:error, :validation_error_on_inserting_user_for_comment} |
-  {:error, :multiple_github_users_matched_same_cc_user_for_comment} |
-  {:error, :validation_error_on_syncing_tasks} |
-  {:error, :validation_error_on_syncing_comments} |
-  {:error, :unexpected_transaction_outcome}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
-      
 
       
         <section id="functions" class="details-list">
@@ -188,17 +133,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync/1">
+          <div class="detail" id="delete/2">
   
   
   <div class="detail-header">
-    <a href="#sync/1" class="detail-link" title="Link to this function">
+    <a href="#delete/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync(payload)</span>
+    <span class="signature">delete(changes, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/comment/comment.ex#L52" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/comment/comment.ex#L39" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -207,37 +152,59 @@
     
       <div class="specs">
         
-          <pre>sync(map) :: <a href="#t:outcome/0">outcome</a></pre>
+          <pre>delete(map, map) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a></pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>When provided a GitHub API payload, it deletes each <code class="inline">Comment</code> associated to
+the specified <code class="inline">IssueComment</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="sync/2">
+  
+  
+  <div class="detail-header">
+    <a href="#sync/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sync(map, payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/comment/comment.ex#L27" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>sync(map, map) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a></pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Syncs a GitHub comment API payload with our data.</p>
+<p>Expects a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> record and a list of <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
+records passed in with the changes.</p>
 <p>The process is as follows:</p>
 <ul>
-<li>match payload with <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record using
-  <a href="CodeCorps.GitHub.Sync.Utils.RepoFinder.html"><code class="inline">CodeCorps.GitHub.Sync.Utils.RepoFinder</code></a>
+<li>create a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> related to the <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>
 </li>
-<li>match issue part of the payload with <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
+<li>match the comment payload with a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
   <a href="CodeCorps.GitHub.Sync.User.RecordLinker.html"><code class="inline">CodeCorps.GitHub.Sync.User.RecordLinker</code></a>
 </li>
-<li>match comment part of the payload with a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
-  <a href="CodeCorps.GitHub.Sync.User.RecordLinker.html"><code class="inline">CodeCorps.GitHub.Sync.User.RecordLinker</code></a>
-</li>
-<li><p>for each <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a> belonging to the matched repo:</p>
+<li><p>for each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>:</p>
 <ul>
-<li>create or update <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a>
-</li>
 <li>create or update <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> for the <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
 </li>
 </ul>
 </li>
 </ul>
-<p>If the sync succeeds, it will return an <code class="inline">:ok</code> tuple with a list of created or
-updated comments.</p>
-<p>If the sync fails, it will return an <code class="inline">:error</code> tuple, where the second element
-is the atom indicating a reason.</p>
 
   </section>
 </div>

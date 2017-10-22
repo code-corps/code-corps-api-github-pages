@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.User – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-233f623552.js"></script>
@@ -67,20 +67,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.User
+        CodeCorps.GitHub.Sync
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>This module defines a user of the Code Corps app.</p>
-
-        </section>
       
 
       
@@ -99,7 +94,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
+    <a href="#t:outcome/0">outcome()</a>
   </div>
   
 </div>
@@ -114,50 +109,57 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#apply_state_transition/2">apply_state_transition(changeset, map)</a>
+    <a href="#fetch_issue/2">fetch_issue(map, url)</a>
   </div>
   
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#changeset/2">changeset(struct, params \\ %{})</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code></p>
+    <div class="summary-synopsis"><p>Fetches an issue from the GitHub API using <code class="inline">GitHub.API.Issue.from_url/2</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#check_email_availability/1">check_email_availability(email)</a>
+    <a href="#fetch_pull_request/2">fetch_pull_request(map, url)</a>
   </div>
   
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#check_username_availability/1">check_username_availability(username)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#registration_changeset/2">registration_changeset(struct, params)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset for registering the user</p>
+    <div class="summary-synopsis"><p>Fetches a pull request from the GitHub API using
+<code class="inline">GitHub.API.PullRequest.from_url/2</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#reset_password_changeset/2">reset_password_changeset(struct, params)</a>
+    <a href="#find_repo/2">find_repo(_, payload)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> using <code class="inline">GitHub.Sync.Utils.RepoFinder</code></p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update_changeset/2">update_changeset(struct, params)</a>
+    <a href="#issue_comment_event/1">issue_comment_event(payload)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Syncs a GitHub IssueComment event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#issue_event/1">issue_event(payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Syncs a GitHub Issues event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pull_request_event/1">pull_request_event(payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Syncs a GitHub PullRequest event</p>
+</div>
   
 </div>
 
@@ -179,17 +181,17 @@
             Types
           </h1>
           <div class="types-list">
-            <div class="detail" id="t:t/0">
+            <div class="detail" id="t:outcome/0">
   
   
   <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
+    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">t()</span>
+    <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -198,7 +200,22 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.User{updated_at: term, inserted_at: term, skills: term, username: term, default_color: term, github_app_installation: term, state_transition: term, stripe_platform_customer: term, sign_up_context: term, user_categories: term, id: term, first_name: term, user_skills: term, roles: term, user_roles: term, email: term, github_avatar_url: term, stripe_connect_subscriptions: term, categories: term, password_confirmation: term, stripe_platform_card: term, admin: term, encrypted_password: term, biography: term, slugged_route: term, website: term, github_auth_token: term, github_username: term, project_users: term, password: term, github_email: term, last_name: term, github_id: term, stripe_connect_customers: term, state: term, twitter: term, github_app_installations: term, __meta__: term, type: term, cloudinary_public_id: term}</pre>
+          <pre><a href="#t:outcome/0">outcome</a> ::
+  {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>]} |
+  {:ok, <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>} |
+  {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>]} |
+  {:error, :repo_not_found} |
+  {:error, :fetching_issue} |
+  {:error, :fetching_pull_request} |
+  {:error, :multiple_issue_users_match} |
+  {:error, :multiple_comment_users_match} |
+  {:error, :validating_github_pull_request} |
+  {:error, :validating_github_issue} |
+  {:error, :validating_github_comment} |
+  {:error, :validating_user} |
+  {:error, :validating_tasks} |
+  {:error, :validating_comments} |
+  {:error, :unexpected_transaction_outcome}</pre>
         
       </div>
     
@@ -221,17 +238,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="apply_state_transition/2">
+          <div class="detail" id="fetch_issue/2">
   
   
   <div class="detail-header">
-    <a href="#apply_state_transition/2" class="detail-link" title="Link to this function">
+    <a href="#fetch_issue/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">apply_state_transition(changeset, map)</span>
+    <span class="signature">fetch_issue(map, url)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L115" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L114" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -240,45 +257,21 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="changeset/2">
-  
-  
-    <span id="changeset/1"></span>
-  
-  <div class="detail-header">
-    <a href="#changeset/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">changeset(struct, params \\ %{})</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L71" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>.</p>
+    <p>Fetches an issue from the GitHub API using <code class="inline">GitHub.API.Issue.from_url/2</code>.</p>
 
   </section>
 </div>
-<div class="detail" id="check_email_availability/1">
+<div class="detail" id="fetch_pull_request/2">
   
   
   <div class="detail-header">
-    <a href="#check_email_availability/1" class="detail-link" title="Link to this function">
+    <a href="#fetch_pull_request/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">check_email_availability(email)</span>
+    <span class="signature">fetch_pull_request(map, url)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L125" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L123" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -287,65 +280,22 @@
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="check_username_availability/1">
-  
-  
-  <div class="detail-header">
-    <a href="#check_username_availability/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">check_username_availability(username)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L131" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="registration_changeset/2">
-  
-  
-  <div class="detail-header">
-    <a href="#registration_changeset/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">registration_changeset(struct, params)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L81" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Builds a changeset for registering the user.</p>
+    <p>Fetches a pull request from the GitHub API using
+<code class="inline">GitHub.API.PullRequest.from_url/2</code>.</p>
 
   </section>
 </div>
-<div class="detail" id="reset_password_changeset/2">
+<div class="detail" id="find_repo/2">
   
   
   <div class="detail-header">
-    <a href="#reset_password_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#find_repo/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">reset_password_changeset(struct, params)</span>
+    <span class="signature">find_repo(_, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L108" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L106" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -354,20 +304,21 @@
     
   </div>
   <section class="docstring">
-    
+    <p>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> using <code class="inline">GitHub.Sync.Utils.RepoFinder</code>.</p>
+
   </section>
 </div>
-<div class="detail" id="update_changeset/2">
+<div class="detail" id="issue_comment_event/1">
   
   
   <div class="detail-header">
-    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#issue_comment_event/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">update_changeset(struct, params)</span>
+    <span class="signature">issue_comment_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/model/user.ex#L98" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L74" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -376,7 +327,95 @@
     
   </div>
   <section class="docstring">
+    <p>Syncs a GitHub IssueComment event.</p>
+<ul>
+<li><p>For the deleted action</p>
+<ul>
+<li>Deletes the related comment records with <code class="inline">GitHub.Sync.Comment</code>
+</li>
+</ul>
+</li>
+<li><p>For any other action</p>
+<ul>
+<li>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+</li>
+<li>If it’s a pull request, it fetches the pull request from the GitHub API
+  and syncs it with <code class="inline">GitHub.Sync.PullRequest</code>
+</li>
+<li>Syncs the issue portion of the event with <code class="inline">GitHub.Sync.Issue</code>
+</li>
+<li>Syncs the comment portion of the event with <code class="inline">GitHub.Sync.Comment</code>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://developer.github.com/v3/activity/events/types/#issuecommentevent">https://developer.github.com/v3/activity/events/types/#issuecommentevent</a></p>
+
+  </section>
+</div>
+<div class="detail" id="issue_event/1">
+  
+  
+  <div class="detail-header">
+    <a href="#issue_event/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">issue_event(payload)</span>
     
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L38" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Syncs a GitHub Issues event.</p>
+<ul>
+<li>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+</li>
+<li>Syncs the issue portion of the event with <code class="inline">GitHub.Sync.Issue</code>
+</li>
+</ul>
+<p><a href="https://developer.github.com/v3/activity/events/types/#issuesevent">https://developer.github.com/v3/activity/events/types/#issuesevent</a></p>
+
+  </section>
+</div>
+<div class="detail" id="pull_request_event/1">
+  
+  
+  <div class="detail-header">
+    <a href="#pull_request_event/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">pull_request_event(payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/sync.ex#L94" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Syncs a GitHub PullRequest event.</p>
+<ul>
+<li>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+</li>
+<li>Fetches the issue from the GitHub API
+</li>
+<li>Syncs the pull request portion of the event with <code class="inline">GitHub.Sync.PullRequest</code>
+</li>
+<li>Syncs the issue portion of the event with <code class="inline">GitHub.Sync.Issue</code>, using the
+  changes passed in from the issue fetching and the pull request syncing
+</li>
+</ul>
+<p><a href="https://developer.github.com/v3/activity/events/types/#pullrequestevent">https://developer.github.com/v3/activity/events/types/#pullrequestevent</a></p>
+
   </section>
 </div>
 

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>CodeCorps.GitHub.Sync.PullRequest.Task.Changeset – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.PullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e669ab2435.js"></script>
+    <script src="dist/sidebar_items-233f623552.js"></script>
     
   </head>
   <body data-type="modules">
@@ -67,9 +67,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.PullRequest.Task.Changeset
+        CodeCorps.GitHub.API.PullRequest
         
-          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/task/changeset.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/pull_request.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -78,8 +78,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
-PullRequest webhook.</p>
+          <p>Functions for working with pull requests on GitHub.</p>
 
         </section>
       
@@ -102,11 +101,12 @@ PullRequest webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#build_changeset/5">build_changeset(task, map, github_pull_request, project_github_repo, user)</a>
+    <a href="#from_url/2">from_url(url, github_repo)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Constructs a changeset for syncing a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> when processing a PullRequest
-webhook</p>
+    <div class="summary-synopsis"><p>Fetches a pull request from the GitHub API, given the API URL for the pull
+request and the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record that points to its GitHub
+repository</p>
 </div>
   
 </div>
@@ -130,34 +130,28 @@ webhook</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_changeset/5">
+          <div class="detail" id="from_url/2">
   
   
   <div class="detail-header">
-    <a href="#build_changeset/5" class="detail-link" title="Link to this function">
+    <a href="#from_url/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">build_changeset(task, map, github_pull_request, project_github_repo, user)</span>
+    <span class="signature">from_url(url, github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/sync/pull_request/task/changeset.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/pull_request.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>build_changeset(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>, map, <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>, <a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a></pre>
-        
-      </div>
-    
   </div>
   <section class="docstring">
-    <p>Constructs a changeset for syncing a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> when processing a PullRequest
-webhook.</p>
-<p>The changeset can be used to create or update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
+    <p>Fetches a pull request from the GitHub API, given the API URL for the pull
+request and the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record that points to its GitHub
+repository.</p>
 
   </section>
 </div>

@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.API – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e669ab2435.js"></script>
+    <script src="dist/sidebar_items-233f623552.js"></script>
     
   </head>
   <body data-type="modules">
@@ -96,6 +96,25 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#opts_for/1">opts_for(installation)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get access token headers for a given <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#opts_for/2">opts_for(user, installation)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get access token headers for a given <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and
+<a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#request/5">request(method, url, headers, body, options)</a>
   </div>
   
@@ -120,7 +139,71 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="request/5">
+          <div class="detail" id="opts_for/1">
+  
+  
+  <div class="detail-header">
+    <a href="#opts_for/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">opts_for(installation)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/api.ex#L40" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>opts_for(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) :: list</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Get access token headers for a given <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a>.</p>
+<p>This should only be used in instances where the full permissions of the
+application are needed and there is no need for attribution to a user.</p>
+
+  </section>
+</div>
+<div class="detail" id="opts_for/2">
+  
+  
+  <div class="detail-header">
+    <a href="#opts_for/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">opts_for(user, installation)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/api.ex#L29" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>opts_for(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>) :: list</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Get access token headers for a given <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and
+<a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a>.</p>
+<p>If the user does not have a <code class="inline">github_auth_token</code> (meaning they are not
+connected to GitHub), then we default to the installation which will post on
+behalf of the user as a bot.</p>
+
+  </section>
+</div>
+<div class="detail" id="request/5">
   
   
   <div class="detail-header">
@@ -130,7 +213,7 @@
     </a>
     <span class="signature">request(method, url, headers, body, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/api.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/doc/blob/master/lib/code_corps/github/api/api.ex#L11" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
