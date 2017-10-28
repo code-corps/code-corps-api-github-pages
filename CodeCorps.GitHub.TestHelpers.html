@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.TestHelpers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-25ec82f4ca.js"></script>
+    <script src="dist/sidebar_items-aab362bf59.js"></script>
     
     
     
@@ -109,6 +109,12 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#setup_real_repo/0">setup_real_repo()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#with_mock_api/2">with_mock_api(mock_module, list)</a>
   </div>
   
@@ -122,6 +128,12 @@ with_mock_api(MyApiModule) do
   execute_code_calling_api
 end</code></pre>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#with_real_api/1">with_real_api(list)</a>
+  </div>
   
 </div>
 
@@ -154,7 +166,7 @@ end</code></pre>
     </a>
     <span class="signature">load_endpoint_fixture(id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L3" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L5" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -182,7 +194,7 @@ end</code></pre>
     </a>
     <span class="signature">load_event_fixture(id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L10" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -192,6 +204,34 @@ end</code></pre>
       <div class="specs">
         
           <pre>load_event_fixture(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: map()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="setup_real_repo/0">
+  
+  
+  <div class="detail-header">
+    <a href="#setup_real_repo/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">setup_real_repo()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L15" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>setup_real_repo() :: %CodeCorps.GithubRepo{__meta__: term(), github_account_avatar_url: term(), github_account_id: term(), github_account_login: term(), github_account_type: term(), github_app_installation: term(), github_app_installation_id: term(), github_id: term(), id: term(), inserted_at: term(), name: term(), project_github_repos: term(), updated_at: term()}</pre>
         
       </div>
     
@@ -210,7 +250,7 @@ end</code></pre>
     </a>
     <span class="signature">with_mock_api(mock_module, list)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L83" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -237,6 +277,36 @@ with_mock_api(MyApiModule) do
   execute_code_calling_api
 end</code></pre>
 
+  </section>
+</div>
+<div class="detail" id="with_real_api/1">
+  
+  
+  <div class="detail-header">
+    <a href="#with_real_api/1" class="detail-link" title="Link to this macro">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this macro</span>
+    </a>
+    <span class="signature">with_real_api(list)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L95" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+      <span class="note">(macro)</span>
+    
+    
+      <div class="specs">
+        
+          <pre>with_real_api([{:do, function()}]) :: any()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 

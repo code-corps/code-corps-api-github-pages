@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.Policy – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.EagerAPI – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-aab362bf59.js"></script>
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy
+        CodeCorps.GitHub.EagerAPI
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/policy.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/eager_api.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,7 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>Handles authorization for various API actions performed on objects in the database.</p>
+          <p>Eager loads a resource from the GitHub API by fetching all of its pages in
+parallel.</p>
 
         </section>
       
@@ -102,12 +103,14 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#authorize/4">authorize(user, action, struct, params \\ %{})</a>
+    <a href="#get_all/3">get_all(url, headers, options)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Determines if the specified user can perform the specified action on the
-specified resource</p>
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#retrieve_total_pages/1">retrieve_total_pages(headers)</a>
+  </div>
   
 </div>
 
@@ -130,40 +133,48 @@ specified resource</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="authorize/4">
+          <div class="detail" id="get_all/3">
   
-  
-    <span id="authorize/3"></span>
   
   <div class="detail-header">
-    <a href="#authorize/4" class="detail-link" title="Link to this function">
+    <a href="#get_all/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">authorize(user, action, struct, params \\ %{})</span>
+    <span class="signature">get_all(url, headers, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/policy.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/eager_api.ex#L7" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
-      <div class="specs">
-        
-          <pre>authorize(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), atom(), struct(), map()) ::
-  {:ok, :authorized} |
-  {:error, :not_authorized}</pre>
-        
-      </div>
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="retrieve_total_pages/1">
+  
+  
+  <div class="detail-header">
+    <a href="#retrieve_total_pages/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">retrieve_total_pages(headers)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/eager_api.ex#L32" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
     
   </div>
   <section class="docstring">
-    <p>Determines if the specified user can perform the specified action on the
-specified resource.</p>
-<p>The resource can be a record, when performing an action on an existing record,
-or it can be a map of parameters, when creating a new record.</p>
-
+    
   </section>
 </div>
 
