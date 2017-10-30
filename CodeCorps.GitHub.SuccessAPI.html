@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.SuccessAPI – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-aab362bf59.js"></script>
+    <script src="dist/sidebar_items-c392286590.js"></script>
     
     
     
@@ -90,7 +90,7 @@ macro.</p>
 should be added here.</p>
 <p>To assert a request has been made to GitHub as a result as an action, the
 <code class="inline">assert_received</code> test helper can be used:</p>
-<pre><code class="elixir">assert_received({:get, &quot;https://api.github.com/user&quot;, headers, body, options})</code></pre>
+<pre><code class="elixir">assert_received({:get, &quot;https://api.github.com/user&quot;, body, headers, options})</code></pre>
 
         </section>
       
@@ -113,13 +113,7 @@ should be added here.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_all/3">get_all(url, headers, options)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#request/5">request(method, url, headers, body, options)</a>
+    <a href="#request/5">request(method, url, body, headers, options)</a>
   </div>
   
 </div>
@@ -143,29 +137,7 @@ should be added here.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="get_all/3">
-  
-  
-  <div class="detail-header">
-    <a href="#get_all/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">get_all(url, headers, options)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/success_api.ex#L36" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="request/5">
+          <div class="detail" id="request/5">
   
   
   <div class="detail-header">
@@ -173,9 +145,9 @@ should be added here.</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">request(method, url, headers, body, options)</span>
+    <span class="signature">request(method, url, body, headers, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/success_api.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/success_api.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

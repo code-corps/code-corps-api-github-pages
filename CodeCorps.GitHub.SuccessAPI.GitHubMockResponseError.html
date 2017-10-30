@@ -5,16 +5,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.EagerAPI – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.SuccessAPI.GitHubMockResponseError – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-aab362bf59.js"></script>
+    <script src="dist/sidebar_items-c392286590.js"></script>
     
     
     
     
   </head>
-  <body data-type="modules">
+  <body data-type="exceptions">
     <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
 
     <div class="main">
@@ -68,21 +68,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.EagerAPI
+        CodeCorps.GitHub.SuccessAPI.GitHubMockResponseError <small>exception</small>
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/eager_api.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/success_api.ex#L30" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>Eager loads a resource from the GitHub API by fetching all of its pages in
-parallel.</p>
-
-        </section>
       
 
       
@@ -103,14 +97,20 @@ parallel.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#get_all/3">get_all(url, headers, options)</a>
+    <a href="#exception/1">exception(msg)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/elixir/Exception.html#c:exception/1"><code class="inline">Exception.exception/1</code></a></p>
+</div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#retrieve_total_pages/1">retrieve_total_pages(headers)</a>
+    <a href="#message/1">message(exception)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/elixir/Exception.html#c:message/1"><code class="inline">Exception.message/1</code></a></p>
+</div>
   
 </div>
 
@@ -133,48 +133,64 @@ parallel.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="get_all/3">
+          <div class="detail" id="exception/1">
   
   
   <div class="detail-header">
-    <a href="#get_all/3" class="detail-link" title="Link to this function">
+    <a href="#exception/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">get_all(url, headers, options)</span>
+    <span class="signature">exception(msg)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/eager_api.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/success_api.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>exception(keyword()) :: <a href="https://hexdocs.pm/elixir/Exception.html#t:t/0">Exception.t</a>()</pre>
+        
+          <pre>exception(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: <a href="https://hexdocs.pm/elixir/Exception.html#t:t/0">Exception.t</a>()</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Callback implementation for <a href="https://hexdocs.pm/elixir/Exception.html#c:exception/1"><code class="inline">Exception.exception/1</code></a>.</p>
+
   </section>
 </div>
-<div class="detail" id="retrieve_total_pages/1">
+<div class="detail" id="message/1">
   
   
   <div class="detail-header">
-    <a href="#retrieve_total_pages/1" class="detail-link" title="Link to this function">
+    <a href="#message/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">retrieve_total_pages(headers)</span>
+    <span class="signature">message(exception)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/eager_api.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/success_api.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>message(<a href="https://hexdocs.pm/elixir/Exception.html#t:t/0">Exception.t</a>()) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>Callback implementation for <a href="https://hexdocs.pm/elixir/Exception.html#c:message/1"><code class="inline">Exception.message/1</code></a>.</p>
+
   </section>
 </div>
 
