@@ -8,7 +8,7 @@
     <title>CodeCorps.GithubRepo – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-c392286590.js"></script>
+    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
     
     
     
@@ -104,6 +104,34 @@
 
 
           
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#changeset/2">changeset(struct, params \\ %{})</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sync_states/0">sync_states()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_sync_changeset/2">update_sync_changeset(struct, params)</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
 
@@ -139,7 +167,7 @@
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.GithubRepo{__meta__: term(), github_account_avatar_url: term(), github_account_id: term(), github_account_login: term(), github_account_type: term(), github_app_installation: term(), github_app_installation_id: term(), github_id: term(), id: term(), inserted_at: term(), name: term(), project_github_repos: term(), updated_at: term()}</pre>
+          <pre>t() :: %CodeCorps.GithubRepo{__meta__: term(), github_account_avatar_url: term(), github_account_id: term(), github_account_login: term(), github_account_type: term(), github_app_installation: term(), github_app_installation_id: term(), github_id: term(), id: term(), inserted_at: term(), name: term(), project_github_repos: term(), sync_state: term(), syncing_comments_count: term(), syncing_issues_count: term(), syncing_pull_requests_count: term(), updated_at: term()}</pre>
         
       </div>
     
@@ -153,6 +181,86 @@
         </section>
       
 
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="changeset/2">
+  
+  
+    <span id="changeset/1"></span>
+  
+  <div class="detail-header">
+    <a href="#changeset/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">changeset(struct, params \\ %{})</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/github_repo.ex#L27" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Builds a changeset based on the <code class="inline">struct</code> and <code class="inline">params</code>.</p>
+
+  </section>
+</div>
+<div class="detail" id="sync_states/0">
+  
+  
+  <div class="detail-header">
+    <a href="#sync_states/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sync_states()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/github_repo.ex#L48" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="update_sync_changeset/2">
+  
+  
+  <div class="detail-header">
+    <a href="#update_sync_changeset/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">update_sync_changeset(struct, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/github_repo.ex#L42" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+        </section>
       
 
       
