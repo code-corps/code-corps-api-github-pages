@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment.Comment.Changeset – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -103,11 +103,19 @@ a GitHub Comment payload.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#build_changeset/4">build_changeset(comment, github_comment, task, user)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Constructs a changeset for syncing a task from a <code class="inline">GithubComment</code> record</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#build_changeset/5">build_changeset(comment, attrs, github_comment, task, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Constructs a changeset for syncing a task when processing a GitHub Comment
-payload</p>
+    <div class="summary-synopsis"><p>Constructs a changeset for syncing a task from a GitHub API Comment payload</p>
 </div>
   
 </div>
@@ -131,7 +139,36 @@ payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="build_changeset/5">
+          <div class="detail" id="build_changeset/4">
+  
+  
+  <div class="detail-header">
+    <a href="#build_changeset/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">build_changeset(comment, github_comment, task, user)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L39" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>build_changeset(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>(), <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>(), <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Constructs a changeset for syncing a task from a <code class="inline">GithubComment</code> record.</p>
+
+  </section>
+</div>
+<div class="detail" id="build_changeset/5">
   
   
   <div class="detail-header">
@@ -141,7 +178,7 @@ payload</p>
     </a>
     <span class="signature">build_changeset(comment, attrs, github_comment, task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -156,8 +193,7 @@ payload</p>
     
   </div>
   <section class="docstring">
-    <p>Constructs a changeset for syncing a task when processing a GitHub Comment
-payload</p>
+    <p>Constructs a changeset for syncing a task from a GitHub API Comment payload.</p>
 
   </section>
 </div>

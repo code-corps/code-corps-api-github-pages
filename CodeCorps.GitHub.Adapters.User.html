@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Adapters.User – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -103,11 +103,31 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.<
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_github_user/1">from_github_user(payload)</a>
+    <a href="#to_github_user/1">to_github_user(payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts a GitHub User payload into a set of attributes used to create or
+update a <code class="inline">GithubUser</code> record</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_user/1">to_user(payload)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts a Github user payload into a map of attributes suitable for creating
 or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_user_attrs/1">to_user_attrs(github_user)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Converts a <code class="inline">GithubUser</code> into a set of attributes used to create or update a
+GitHub User on the GitHub API</p>
 </div>
   
 </div>
@@ -131,17 +151,17 @@ or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User<
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_github_user/1">
+          <div class="detail" id="to_github_user/1">
   
   
   <div class="detail-header">
-    <a href="#from_github_user/1" class="detail-link" title="Link to this function">
+    <a href="#to_github_user/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_github_user(payload)</span>
+    <span class="signature">to_github_user(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -150,7 +170,37 @@ or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User<
     
       <div class="specs">
         
-          <pre>from_github_user(map()) :: map()</pre>
+          <pre>to_github_user(map()) :: map()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Converts a GitHub User payload into a set of attributes used to create or
+update a <code class="inline">GithubUser</code> record.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_user/1">
+  
+  
+  <div class="detail-header">
+    <a href="#to_user/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_user(payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L30" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>to_user(map()) :: map()</pre>
         
       </div>
     
@@ -158,9 +208,39 @@ or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User<
   <section class="docstring">
     <p>Converts a Github user payload into a map of attributes suitable for creating
 or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
-<p>Any <code class="inline">nil</code> values are removed here. For example, we don’t want to delete
-an existing email just because the GitHub payload is missing that data.</p>
+<p>Any <code class="inline">nil</code> values are removed. For example, we don’t want to delete an
+existing email just because it’s <code class="inline">nil</code> in the payload.</p>
 <p>The <code class="inline">type</code> gets transformed to match our expected values for user type.</p>
+
+  </section>
+</div>
+<div class="detail" id="to_user_attrs/1">
+  
+  
+  <div class="detail-header">
+    <a href="#to_user_attrs/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_user_attrs(github_user)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L60" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>to_user_attrs(<a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>()) :: map()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Converts a <code class="inline">GithubUser</code> into a set of attributes used to create or update a
+GitHub User on the GitHub API.</p>
 
   </section>
 </div>

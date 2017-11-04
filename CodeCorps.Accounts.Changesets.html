@@ -8,7 +8,7 @@
     <title>CodeCorps.Accounts.Changesets – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -105,7 +105,7 @@
     <a href="#create_from_github_changeset/2">create_from_github_changeset(struct, params)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Casts a changeset used for creating a user account from a github user payload</p>
+    <div class="summary-synopsis"><p>Casts a changeset used for creating a user account from a GitHub user payload</p>
 </div>
   
 </div>
@@ -114,7 +114,16 @@
     <a href="#update_from_github_oauth_changeset/2">update_from_github_oauth_changeset(struct, params)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Casts a changeset used for creating a user account from a github user payload</p>
+    <div class="summary-synopsis"><p>Casts a changeset used for updating a user account from a GitHub OAuth payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_with_github_user_changeset/2">update_with_github_user_changeset(struct, params)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Casts a changeset used for updating a user account from a GitHub user payload</p>
 </div>
   
 </div>
@@ -163,7 +172,7 @@
     
   </div>
   <section class="docstring">
-    <p>Casts a changeset used for creating a user account from a github user payload</p>
+    <p>Casts a changeset used for creating a user account from a GitHub user payload</p>
 
   </section>
 </div>
@@ -177,7 +186,7 @@
     </a>
     <span class="signature">update_from_github_oauth_changeset(struct, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/changesets.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/changesets.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -192,7 +201,36 @@
     
   </div>
   <section class="docstring">
-    <p>Casts a changeset used for creating a user account from a github user payload</p>
+    <p>Casts a changeset used for updating a user account from a GitHub OAuth payload</p>
+
+  </section>
+</div>
+<div class="detail" id="update_with_github_user_changeset/2">
+  
+  
+  <div class="detail-header">
+    <a href="#update_with_github_user_changeset/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">update_with_github_user_changeset(struct, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/changesets.ex#L31" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>update_with_github_user_changeset(struct(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Casts a changeset used for updating a user account from a GitHub user payload</p>
 
   </section>
 </div>

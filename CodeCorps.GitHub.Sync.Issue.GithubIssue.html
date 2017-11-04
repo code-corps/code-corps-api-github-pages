@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Issue.GithubIssue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -104,11 +104,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_issue/2">create_or_update_issue(arg, attrs)</a>
+    <a href="#create_or_update_issue/2">create_or_update_issue(repo, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> using the data in a GitHub Issue
-payload</p>
+    <div class="summary-synopsis"><p>Creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> for the provided <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+using specified attributes</p>
 </div>
   
 </div>
@@ -140,9 +140,9 @@ payload</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_issue(arg, attrs)</span>
+    <span class="signature">create_or_update_issue(repo, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/github_issue/github_issue.ex#L31" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/github_issue/github_issue.ex#L52" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -151,24 +151,18 @@ payload</p>
     
       <div class="specs">
         
+          <pre>create_or_update_issue(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), map()) :: linking_result()</pre>
+        
           <pre>create_or_update_issue({<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>() | nil}, map()) :: linking_result()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> using the data in a GitHub Issue
-payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li>Search for the issue in our database with the payload data.
-</li>
-<li>If found, update it with payload data
-</li>
-<li>If not found, create it from payload data
-</li>
-</ul>
-<p><code class="inline">CodeCorps.GitHub.AdaptersIssue.to_issue/1</code> is used to adapt the payload data.</p>
+    <p>Creates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> for the provided <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+using specified attributes.</p>
+<p>Links to existing <a href="CodeCorps.GithubPullRequest.html"><code class="inline">CodeCorps.GithubPullRequest</code></a> if matched by
+<code class="inline">github_repo_id</code> and <code class="inline">number</code>.</p>
 
   </section>
 </div>

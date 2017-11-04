@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Issue.Task – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -120,6 +120,15 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sync_project_github_repo/1">sync_project_github_repo(project_github_repo)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates or updates <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> records for the specified <code class="inline">ProjectGithubRepo</code></p>
+</div>
+  
+</div>
 
   </div>
 
@@ -149,7 +158,7 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L15" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -193,7 +202,7 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
     </a>
     <span class="signature">sync_all(github_issue, user, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L25" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -212,6 +221,38 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
 payload, for each <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> associated to that
 <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> via a <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>, it
 creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.</p>
+
+  </section>
+</div>
+<div class="detail" id="sync_project_github_repo/1">
+  
+  
+  <div class="detail-header">
+    <a href="#sync_project_github_repo/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sync_project_github_repo(project_github_repo)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L46" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Creates or updates <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> records for the specified <code class="inline">ProjectGithubRepo</code>.</p>
+<p>For each <code class="inline">GithubIssue</code> record that relates to the <code class="inline">GithubRepo</code> for a given
+<code class="inline">ProjectGithubRepo</code>:</p>
+<ul>
+<li>Create or update the <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>
+</li>
+<li>Associate the <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record with the <code class="inline">User</code> that relates to the <code class="inline">GithubUser</code>
+  for the <code class="inline">GithubIssue</code>
+</li>
+</ul>
 
   </section>
 </div>

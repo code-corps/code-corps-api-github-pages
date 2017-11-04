@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.API.Repository – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -79,7 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>Functions for working with issues on GitHub.</p>
+          <p>Functions for retrieving a GitHub repository’s issues, pull requests, and
+comments from the GitHub API.</p>
 
         </section>
       
@@ -102,8 +103,29 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#issue_comments/1">issue_comments(github_repo)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves comments from all issues in a github repository</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#issues/1">issues(github_repo)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Retrieves issues for a repository</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pulls/1">pulls(github_repo)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves pull requests for a repository</p>
+</div>
   
 </div>
 
@@ -126,7 +148,38 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="issues/1">
+          <div class="detail" id="issue_comments/1">
+  
+  
+  <div class="detail-header">
+    <a href="#issue_comments/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">issue_comments(github_repo)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/repository.ex#L61" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>issue_comments(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) ::
+  {:ok, [map()]} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves comments from all issues in a github repository.</p>
+
+  </section>
+</div>
+<div class="detail" id="issues/1">
   
   
   <div class="detail-header">
@@ -136,7 +189,7 @@
     </a>
     <span class="signature">issues(github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/repository.ex#L14" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/repository.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -153,7 +206,42 @@
     
   </div>
   <section class="docstring">
+    <p>Retrieves issues for a repository</p>
+<p>All pages of records are retrieved.
+Closed issues are included.</p>
+
+  </section>
+</div>
+<div class="detail" id="pulls/1">
+  
+  
+  <div class="detail-header">
+    <a href="#pulls/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">pulls(github_repo)</span>
     
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/repository.ex#L42" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>pulls(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) ::
+  {:ok, [map()]} |
+  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves pull requests for a repository.</p>
+<p>All pages of records are retrieved.</p>
+
   </section>
 </div>
 

@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment.GithubComment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -104,11 +104,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_comment/2">create_or_update_comment(github_issue, arg)</a>
+    <a href="#create_or_update_comment/2">create_or_update_comment(github_issue, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a GitHub
-IssueComment payload</p>
+    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a
+GitHubComment payload</p>
 </div>
   
 </div>
@@ -117,8 +117,8 @@ IssueComment payload</p>
     <a href="#delete/1">delete(github_id)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Deletes the <code class="inline">GithubComment</code> record using the GitHub ID from a GitHub API
-comment payload</p>
+    <div class="summary-synopsis"><p>Deletes the <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record using the GitHub ID from a GitHub
+API comment payload</p>
 </div>
   
 </div>
@@ -150,9 +150,9 @@ comment payload</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_comment(github_issue, arg)</span>
+    <span class="signature">create_or_update_comment(github_issue, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/github_comment/github_comment.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/github_comment/github_comment.ex#L54" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -161,27 +161,18 @@ comment payload</p>
     
       <div class="specs">
         
+          <pre>create_or_update_comment(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), map()) :: linking_result()</pre>
+        
           <pre>create_or_update_comment(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), map()) :: linking_result()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a GitHub
-IssueComment payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li><p>Search for the issue in our database with the payload data.</p>
-<ul>
-<li>If found, update it with payload data
-</li>
-<li>If not found, create it from payload data
-</li>
-</ul>
-</li>
-</ul>
-<p><a href="CodeCorps.GitHub.Adapters.Comment.html#to_github_comment/1"><code class="inline">CodeCorps.GitHub.Adapters.Comment.to_github_comment/1</code></a> is used to adapt the
-payload data.</p>
+    <p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a
+GitHubComment payload.</p>
+<p>The comment is matched with an existing GithubIssue record using the
+<code class="inline">issue_url</code> property of the payload.</p>
 
   </section>
 </div>
@@ -195,7 +186,7 @@ payload data.</p>
     </a>
     <span class="signature">delete(github_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/github_comment/github_comment.ex#L48" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/github_comment/github_comment.ex#L95" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -210,10 +201,10 @@ payload data.</p>
     
   </div>
   <section class="docstring">
-    <p>Deletes the <code class="inline">GithubComment</code> record using the GitHub ID from a GitHub API
-comment payload.</p>
-<p>Returns the deleted <code class="inline">Comment</code> record or an empty <code class="inline">Comment</code> record if no such
-record existed.</p>
+    <p>Deletes the <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record using the GitHub ID from a GitHub
+API comment payload.</p>
+<p>Returns the deleted <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record or an empty
+<a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record if no such record existed.</p>
 
   </section>
 </div>

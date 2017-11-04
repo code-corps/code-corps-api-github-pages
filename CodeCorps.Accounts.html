@@ -8,7 +8,7 @@
     <title>CodeCorps.Accounts – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -112,12 +112,27 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#create_from_github_user/1">create_from_github_user(github_user)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates a user record using attributes from a GitHub payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#update_from_github_oauth/3">update_from_github_oauth(user, params, access_token)</a>
   </div>
   
     <div class="summary-synopsis"><p>Updates a user record using attributes from a GitHub payload along with the
 access token</p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_with_github_user/2">update_with_github_user(user, github_user)</a>
+  </div>
   
 </div>
 
@@ -150,7 +165,7 @@ access token</p>
     </a>
     <span class="signature">create_from_github(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/accounts.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/accounts.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -160,6 +175,37 @@ access token</p>
       <div class="specs">
         
           <pre>create_from_github(map()) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Creates a user record using attributes from a GitHub payload.</p>
+
+  </section>
+</div>
+<div class="detail" id="create_from_github_user/1">
+  
+  
+  <div class="detail-header">
+    <a href="#create_from_github_user/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">create_from_github_user(github_user)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/accounts.ex#L47" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>create_from_github_user(<a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>()) ::
   {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()} |
   {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
         
@@ -181,7 +227,7 @@ access token</p>
     </a>
     <span class="signature">update_from_github_oauth(user, params, access_token)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/accounts.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/accounts.ex#L87" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -201,6 +247,36 @@ access token</p>
     <p>Updates a user record using attributes from a GitHub payload along with the
 access token.</p>
 
+  </section>
+</div>
+<div class="detail" id="update_with_github_user/2">
+  
+  
+  <div class="detail-header">
+    <a href="#update_with_github_user/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">update_with_github_user(user, github_user)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/accounts/accounts.ex#L65" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>update_with_github_user(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), <a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>()) ::
+  {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 

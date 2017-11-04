@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-e338fbfb5b.js"></script>
+    <script src="dist/sidebar_items-59e45920b4.js"></script>
     
     
     
@@ -137,6 +137,15 @@ from a GitHub API comment payload</p>
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sync_project_github_repo/1">sync_project_github_repo(project_github_repo)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Creates or updates <code class="inline">Comment</code> records for the specified <code class="inline">ProjectGithubRepo</code></p>
+</div>
+  
+</div>
 
   </div>
 
@@ -166,7 +175,7 @@ from a GitHub API comment payload</p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L29" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -210,7 +219,7 @@ from a GitHub API comment payload</p>
     </a>
     <span class="signature">delete_all(github_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L107" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -241,7 +250,7 @@ from a GitHub API comment payload.</p>
     </a>
     <span class="signature">sync_all(tasks, github_comment, user, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L38" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L43" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -263,6 +272,40 @@ a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>, 
 record, it creates or updates a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record, using the provided
 GitHub API payload, associated to the specified <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> and
 <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+
+  </section>
+</div>
+<div class="detail" id="sync_project_github_repo/1">
+  
+  
+  <div class="detail-header">
+    <a href="#sync_project_github_repo/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sync_project_github_repo(project_github_repo)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L60" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>Creates or updates <code class="inline">Comment</code> records for the specified <code class="inline">ProjectGithubRepo</code>.</p>
+<p>For each <code class="inline">GithubComment</code> record that relates to the <code class="inline">GithubRepo</code> for a given
+<code class="inline">ProjectGithubRepo</code>:</p>
+<ul>
+<li>Find the related <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record
+</li>
+<li>Create or update the <code class="inline">Comment</code> record
+</li>
+<li>Associate the <code class="inline">Comment</code> record with the <code class="inline">User</code> that relates to the
+  <code class="inline">GithubUser</code> for the <code class="inline">GithubComment</code>
+</li>
+</ul>
 
   </section>
 </div>
