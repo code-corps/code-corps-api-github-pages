@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Issue.Task – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-7251faa9c1.js"></script>
+    <script src="dist/sidebar_items-8e59fcd91a.js"></script>
     
     
     
@@ -110,13 +110,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_all/3">sync_all(github_issue, user, payload)</a>
+    <a href="#sync_all/2">sync_all(github_issue, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>When provided a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>, a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and a GitHub API
-payload, for each <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> associated to that
-<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> via a <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>, it
-creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
+    <div class="summary-synopsis"><p>When provided a <code class="inline">GithubIssue</code> and a <code class="inline">User</code>, for each <code class="inline">Project</code> associated to
+that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
 </div>
   
 </div>
@@ -192,17 +190,17 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync_all/3">
+          <div class="detail" id="sync_all/2">
   
   
   <div class="detail-header">
-    <a href="#sync_all/3" class="detail-link" title="Link to this function">
+    <a href="#sync_all/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync_all(github_issue, user, payload)</span>
+    <span class="signature">sync_all(github_issue, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L23" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -211,16 +209,14 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
     
       <div class="specs">
         
-          <pre>sync_all(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), map()) :: {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()]}</pre>
+          <pre>sync_all(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()]}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>When provided a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>, a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and a GitHub API
-payload, for each <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> associated to that
-<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> via a <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>, it
-creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.</p>
+    <p>When provided a <code class="inline">GithubIssue</code> and a <code class="inline">User</code>, for each <code class="inline">Project</code> associated to
+that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>.</p>
 
   </section>
 </div>
@@ -234,7 +230,7 @@ creates or updates a <a href="CodeCorps.Task.html"><code class="inline">CodeCorp
     </a>
     <span class="signature">sync_project_github_repo(project_github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

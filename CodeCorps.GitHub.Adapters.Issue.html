@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Adapters.Issue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-7251faa9c1.js"></script>
+    <script src="dist/sidebar_items-8e59fcd91a.js"></script>
     
     
     
@@ -123,17 +123,7 @@ update a <code class="inline">GithubIssue</code> record</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_issue_attrs/1">to_issue_attrs(github_issue)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts a <code class="inline">GithubIssue</code> record into attributes with the same keys as the
-GitHub API’s Issue</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#to_task/1">to_task(payload)</a>
+    <a href="#to_task/1">to_task(github_issue)</a>
   </div>
   
     <div class="summary-synopsis"><p>Converts a GitHub Issue payload into a set of attributes used to create or
@@ -171,7 +161,7 @@ update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task
     </a>
     <span class="signature">to_api(github_issue)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/issue.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/issue.ex#L81" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -221,36 +211,6 @@ update a <code class="inline">GithubIssue</code> record.</p>
 
   </section>
 </div>
-<div class="detail" id="to_issue_attrs/1">
-  
-  
-  <div class="detail-header">
-    <a href="#to_issue_attrs/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">to_issue_attrs(github_issue)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/issue.ex#L62" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>to_issue_attrs(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>()) :: map()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Converts a <code class="inline">GithubIssue</code> record into attributes with the same keys as the
-GitHub API’s Issue</p>
-
-  </section>
-</div>
 <div class="detail" id="to_task/1">
   
   
@@ -259,9 +219,9 @@ GitHub API’s Issue</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">to_task(payload)</span>
+    <span class="signature">to_task(github_issue)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/issue.ex#L53" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/issue.ex#L61" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -270,7 +230,7 @@ GitHub API’s Issue</p>
     
       <div class="specs">
         
-          <pre>to_task(map()) :: map()</pre>
+          <pre>to_task(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>()) :: map()</pre>
         
       </div>
     
