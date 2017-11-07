@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Utils.ResultAggregator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-618a66d4ae.js"></script>
+    <script src="dist/sidebar_items-cf03fee758.js"></script>
     
     
     
@@ -79,7 +79,7 @@
 
       
         <section id="moduledoc">
-          <p>Module used for the purpose of aggregating results from multiple repository commit actions.</p>
+          <p>Used for aggregating a list of results.</p>
 
         </section>
       
@@ -105,7 +105,7 @@
     <a href="#aggregate/1">aggregate(results)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple</p>
+    <div class="summary-synopsis"><p>Aggregates a list of result tuples into a single result tuple</p>
 </div>
   
 </div>
@@ -139,7 +139,7 @@
     </a>
     <span class="signature">aggregate(results)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/utils/result_aggregator.ex#L19" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/utils/result_aggregator.ex#L22" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -154,12 +154,20 @@
     
   </div>
   <section class="docstring">
-    <p>Aggregates a list of database commit results into an <code class="inline">:ok</code>, or <code class="inline">:error</code> tuple.</p>
-<p>All list members are assumed to be either an <code class="inline">{:ok, committed_record}</code> or
-<code class="inline">{:error, changeset}</code>.</p>
-<p>The aggregate is an <code class="inline">{:ok, committed_records}</code> if all results are
-<code class="inline">{:ok, committed_record}</code>, or an <code class="inline">{:error, {committed_records, changesets}}</code>
-if any of the results is an <code class="inline">{:error, changeset}</code>.</p>
+    <p>Aggregates a list of result tuples into a single result tuple.</p>
+<p>A result tuple is a two-element tuple where the first element is <code class="inline">:ok</code>,
+or <code class="inline">:error</code>, while the second element is the resulting data.</p>
+<p>This function goes through a list of such tuples and aggregates the list into
+a single tuple where</p>
+<ul>
+<li><p>if all tuples in the list are <code class="inline">:ok</code> tuples, returns <code class="inline">{:ok, results}</code></p>
+</li>
+<li><p>if any tuple is an <code class="inline">:error</code> tuple, returns <code class="inline">{:error, {results, errors}}</code></p>
+</li>
+<li><p><code class="inline">results</code> and <code class="inline">errors</code> are lists of second tuple elements in their
+  respective tuples</p>
+</li>
+</ul>
 
   </section>
 </div>

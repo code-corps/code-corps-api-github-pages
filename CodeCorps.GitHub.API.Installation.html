@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.API.Installation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-618a66d4ae.js"></script>
+    <script src="dist/sidebar_items-cf03fee758.js"></script>
     
     
     
@@ -157,7 +157,7 @@
     </a>
     <span class="signature">get_access_token(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L54" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -193,7 +193,7 @@ access token using the GitHub App’s JWT.</p>
     </a>
     <span class="signature">refresh_token(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L70" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -228,7 +228,7 @@ App’s JWT.</p>
     </a>
     <span class="signature">repositories(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/installation.ex#L22" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -239,13 +239,14 @@ App’s JWT.</p>
         
           <pre>repositories(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) ::
   {:ok, [map()]} |
-  {:error, <a href="CodeCorps.GitHub.html#t:api_error_struct/0">CodeCorps.GitHub.api_error_struct</a>()}</pre>
+  {:error, <a href="CodeCorps.GitHub.html#t:paginated_endpoint_error/0">CodeCorps.GitHub.paginated_endpoint_error</a>()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>List repositories that are accessible to the authenticated installation.</p>
+<p>All pages of records are retrieved.</p>
 <p>https://developer.github.com/v3/apps/installations/#list-repositories</p>
 
   </section>

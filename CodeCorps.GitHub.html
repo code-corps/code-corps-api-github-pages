@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-618a66d4ae.js"></script>
+    <script src="dist/sidebar_items-cf03fee758.js"></script>
     
     
     
@@ -119,6 +119,16 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#t:paginated_endpoint_error/0">paginated_endpoint_error()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Potential errors which can happen when retrieving data from a paginated
+endpoint</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#t:response/0">response()</a>
   </div>
   
@@ -136,6 +146,11 @@
   <div class="summary-signature">
     <a href="#get_all/3">get_all(endpoint, headers, options)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>A low level utility function to make an authenticated request to a GitHub API
+endpoint which supports pagination, and fetch all the pages from that endpoint
+at once, by making parallel requests to each page and aggregating the results</p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -195,7 +210,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">api_error_struct()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L93" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L92" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -225,7 +240,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">body()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L89" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -253,7 +268,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">headers()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L90" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -281,7 +296,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">method()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L88" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L87" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -299,6 +314,55 @@ GitHub API on behalf of a GitHub App or integration</p>
     
   </section>
 </div>
+<div class="detail" id="t:paginated_endpoint_error/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:paginated_endpoint_error/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">paginated_endpoint_error()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L107" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:paginated_endpoint_error/0">paginated_endpoint_error</a>() ::
+  <a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>() |
+  <a href="CodeCorps.GitHub.APIError.html#t:t/0">CodeCorps.GitHub.APIError.t</a>() |
+  <a href="CodeCorps.GitHub.HTTPClientError.html#t:t/0">CodeCorps.GitHub.HTTPClientError.t</a>() |
+  <a href="CodeCorps.GitHub.API.Errors.PaginationError.html#t:t/0">CodeCorps.GitHub.API.Errors.PaginationError.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Potential errors which can happen when retrieving data from a paginated
+endpoint.</p>
+<p>If a new access token is required, then it is regenerated and stored into an
+installation, which can result in any of</p>
+<ul>
+<li><code class="inline">Ecto.Changeset.t</code>
+</li>
+<li><code class="inline">CodeCorps.GitHub.APIError.t</code>
+</li>
+<li><code class="inline">CodeCorps.GitHub.HTTPClientError.t</code>
+</li>
+</ul>
+<p>Once that is done, the actual request is made, which can error out with</p>
+<ul>
+<li><code class="inline">CodeCorps.GitHub.Errors.PaginationError.t</code>
+</li>
+</ul>
+
+  </section>
+</div>
 <div class="detail" id="t:response/0">
   
   
@@ -309,7 +373,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">response()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L91" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -351,16 +415,28 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">get_all(endpoint, headers, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L132" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L133" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>get_all(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="#t:headers/0">headers</a>(), list()) ::
+  {:ok, [map()]} |
+  {:error, <a href="CodeCorps.GitHub.API.Errors.PaginationError.html#t:t/0">CodeCorps.GitHub.API.Errors.PaginationError.t</a>()} |
+  {:error, <a href="#t:api_error_struct/0">api_error_struct</a>()}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    
+    <p>A low level utility function to make an authenticated request to a GitHub API
+endpoint which supports pagination, and fetch all the pages from that endpoint
+at once, by making parallel requests to each page and aggregating the results.</p>
+
   </section>
 </div>
 <div class="detail" id="integration_request/5">
@@ -373,7 +449,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">integration_request(method, endpoint, body, headers, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L146" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -403,7 +479,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">request(method, endpoint, body, headers, options)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L99" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L113" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -432,7 +508,7 @@ GitHub API on behalf of a GitHub App or integration</p>
     </a>
     <span class="signature">user_access_token_request(code, state)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L146" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L166" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

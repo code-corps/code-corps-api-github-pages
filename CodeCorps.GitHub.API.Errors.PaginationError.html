@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.Issue.Task – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.API.Errors.PaginationError – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-cf03fee758.js"></script>
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.Issue.Task
+        CodeCorps.GitHub.API.Errors.PaginationError
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/errors/pagination_error.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -95,7 +95,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:outcome/0">outcome()</a>
+    <a href="#t:t/0">t()</a>
   </div>
   
 </div>
@@ -110,21 +110,8 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_all/2">sync_all(github_issue, user)</a>
+    <a href="#new/1">new(arg)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>When provided a <code class="inline">GithubIssue</code> and a <code class="inline">User</code>, for each <code class="inline">Project</code> associated to
-that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#sync_project_github_repo/1">sync_project_github_repo(project_github_repo)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Creates or updates <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> records for the specified <code class="inline">ProjectGithubRepo</code></p>
-</div>
   
 </div>
 
@@ -146,17 +133,17 @@ that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGi
             Types
           </h1>
           <div class="types-list">
-            <div class="detail" id="t:outcome/0">
+            <div class="detail" id="t:t/0">
   
   
   <div class="detail-header">
-    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">outcome()</span>
+    <span class="signature">t()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/errors/pagination_error.ex#L4" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -165,9 +152,7 @@ that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGi
     
       <div class="specs">
         
-          <pre><a href="#t:outcome/0">outcome</a>() ::
-  {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()]} |
-  {:error, {[<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()], [<a href="https://hexdocs.pm/ecto/2.2.2/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()]}}</pre>
+          <pre>t() :: %CodeCorps.GitHub.API.Errors.PaginationError{api_errors: list(), client_errors: list(), message: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), retrieved_pages: list()}</pre>
         
       </div>
     
@@ -190,47 +175,17 @@ that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGi
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync_all/2">
+          <div class="detail" id="new/1">
   
   
   <div class="detail-header">
-    <a href="#sync_all/2" class="detail-link" title="Link to this function">
+    <a href="#new/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync_all(github_issue, user)</span>
+    <span class="signature">new(arg)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L23" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>sync_all(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()]}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>When provided a <code class="inline">GithubIssue</code> and a <code class="inline">User</code>, for each <code class="inline">Project</code> associated to
-that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGithubRepo</code>, it creates or updates a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>.</p>
-
-  </section>
-</div>
-<div class="detail" id="sync_project_github_repo/1">
-  
-  
-  <div class="detail-header">
-    <a href="#sync_project_github_repo/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">sync_project_github_repo(project_github_repo)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/task.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/api/errors/pagination_error.ex#L18" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -239,17 +194,7 @@ that <code class="inline">GithubRepo</code> via a <code class="inline">ProjectGi
     
   </div>
   <section class="docstring">
-    <p>Creates or updates <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> records for the specified <code class="inline">ProjectGithubRepo</code>.</p>
-<p>For each <code class="inline">GithubIssue</code> record that relates to the <code class="inline">GithubRepo</code> for a given
-<code class="inline">ProjectGithubRepo</code>:</p>
-<ul>
-<li>Create or update the <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a>
-</li>
-<li>Associate the <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record with the <code class="inline">User</code> that relates to the <code class="inline">GithubUser</code>
-  for the <code class="inline">GithubIssue</code>
-</li>
-</ul>
-
+    
   </section>
 </div>
 
