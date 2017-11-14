@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Webhook.Handler – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-036f457e7a.js"></script>
+    <script src="dist/sidebar_items-d54ea65966.js"></script>
     
     
     
@@ -102,10 +102,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/3">handle(type, id, payload)</a>
+    <a href="#handle_supported/3">handle_supported(type, id, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles a GitHub event based on its type</p>
+    <div class="summary-synopsis"><p>Handles a fully supported GitHub event based on its type and action</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#handle_unsupported/3">handle_unsupported(type, id, payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Handles an unsupported supported GitHub event</p>
 </div>
   
 </div>
@@ -129,26 +138,74 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="handle/3">
+          <div class="detail" id="handle_supported/3">
   
   
   <div class="detail-header">
-    <a href="#handle/3" class="detail-link" title="Link to this function">
+    <a href="#handle_supported/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">handle(type, id, payload)</span>
+    <span class="signature">handle_supported(type, id, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/handler.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/handler.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>handle_supported(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), map()) :: {:ok, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>()}</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Handles a GitHub event based on its type.</p>
+    <p>Handles a fully supported GitHub event based on its type and action.</p>
+<p>The handling process consistes of 3 steps</p>
+<ul>
+<li>create event record marked as “unprocessed”
+</li>
+<li>mark event record as processing and handle it
+</li>
+<li>mark event record as processed or errored depending on handling outcome
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="handle_unsupported/3">
+  
+  
+  <div class="detail-header">
+    <a href="#handle_unsupported/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">handle_unsupported(type, id, payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/handler.ex#L43" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>handle_unsupported(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), map()) :: {:ok, <a href="CodeCorps.GithubEvent.html#t:t/0">CodeCorps.GithubEvent.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Handles an unsupported supported GitHub event.</p>
+<p>“unsupported” means that, while we generally support this event type,
+we do not yet support this specific event action.</p>
+<p>The process consistes of simply storing the event and marking it as
+“unsupported”.</p>
 
   </section>
 </div>

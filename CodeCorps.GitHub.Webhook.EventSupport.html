@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Webhook.EventSupport – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-036f457e7a.js"></script>
+    <script src="dist/sidebar_items-d54ea65966.js"></script>
     
     
     
@@ -115,11 +115,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#status/1">status(event_type)</a>
+    <a href="#status/2">status(type, action)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns :supported if the GitHub event type is in the list of events we
-support, :unsupported otherwise</p>
+    <div class="summary-synopsis"><p>Returns <code class="inline">:handled</code> if the GitHub event/action is being handled by the system,
+<code class="inline">:ignored</code> otherwise</p>
 </div>
   
 </div>
@@ -128,7 +128,17 @@ support, :unsupported otherwise</p>
     <a href="#supported_events/0">supported_events()</a>
   </div>
   
-    <div class="summary-synopsis"><p>Convenience function. Makes the internal list of supported events public</p>
+    <div class="summary-synopsis"><p>Utility function. Returns list of supported events as <code class="inline">{type, action}</code> tuples</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#unsupported_events/0">unsupported_events()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Utility function. Returns list of unsupported events as <code class="inline">{type, action}</code>
+tuples</p>
 </div>
   
 </div>
@@ -161,7 +171,7 @@ support, :unsupported otherwise</p>
     </a>
     <span class="signature">support_status()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L6" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -170,7 +180,7 @@ support, :unsupported otherwise</p>
     
       <div class="specs">
         
-          <pre>support_status() :: :supported | :unsupported</pre>
+          <pre>support_status() :: :supported | :unsupported | :ignored</pre>
         
       </div>
     
@@ -193,17 +203,17 @@ support, :unsupported otherwise</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="status/1">
+          <div class="detail" id="status/2">
   
   
   <div class="detail-header">
-    <a href="#status/1" class="detail-link" title="Link to this function">
+    <a href="#status/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">status(event_type)</span>
+    <span class="signature">status(type, action)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L67" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -212,14 +222,14 @@ support, :unsupported otherwise</p>
     
       <div class="specs">
         
-          <pre>status(any()) :: <a href="#t:support_status/0">support_status</a>()</pre>
+          <pre>status(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: <a href="#t:support_status/0">support_status</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Returns :supported if the GitHub event type is in the list of events we
-support, :unsupported otherwise.</p>
+    <p>Returns <code class="inline">:handled</code> if the GitHub event/action is being handled by the system,
+<code class="inline">:ignored</code> otherwise.</p>
 
   </section>
 </div>
@@ -233,7 +243,7 @@ support, :unsupported otherwise.</p>
     </a>
     <span class="signature">supported_events()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L31" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -242,13 +252,46 @@ support, :unsupported otherwise.</p>
     
       <div class="specs">
         
-          <pre>supported_events() :: list()</pre>
+          <pre>supported_events() :: [tuple()]</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Convenience function. Makes the internal list of supported events public.</p>
+    <p>Utility function. Returns list of supported events as <code class="inline">{type, action}</code> tuples.</p>
+<p>Supported events are events of types and actions we currently fully support.</p>
+
+  </section>
+</div>
+<div class="detail" id="unsupported_events/0">
+  
+  
+  <div class="detail-header">
+    <a href="#unsupported_events/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">unsupported_events()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/webhook/event_support.ex#L58" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>unsupported_events() :: [tuple()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Utility function. Returns list of unsupported events as <code class="inline">{type, action}</code>
+tuples.</p>
+<p>Unsupported events are events of types we technically support, but actions we
+do not yet implement the handling of.</p>
 
   </section>
 </div>
