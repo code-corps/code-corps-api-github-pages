@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d54ea65966.js"></script>
+    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
     
     
     
@@ -97,11 +97,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#delete/2">delete(_, map)</a>
+    <a href="#delete/1">delete(map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>When provided a GitHub API payload, it deletes each <code class="inline">Comment</code> associated to
-the specified <code class="inline">IssueComment</code> and then deletes the <code class="inline">GithubComment</code></p>
+    <div class="summary-synopsis"><p>Creates an  <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html"><code class="inline">Ecto.Multi</code></a> intended to delete a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>
+specified by <code class="inline">github_id</code>, as well as 0 to 1 <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records
+associated to <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a></p>
 </div>
   
 </div>
@@ -110,7 +111,8 @@ the specified <code class="inline">IssueComment</code> and then deletes the <cod
     <a href="#sync/2">sync(map, payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Syncs a GitHub comment API payload with our data</p>
+    <div class="summary-synopsis"><p>Creates an <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html"><code class="inline">Ecto.Multi</code></a> intended to process a GitHub issue comment related API
+payload</p>
 </div>
   
 </div>
@@ -134,17 +136,17 @@ the specified <code class="inline">IssueComment</code> and then deletes the <cod
             </a>
             Functions
           </h1>
-          <div class="detail" id="delete/2">
+          <div class="detail" id="delete/1">
   
   
   <div class="detail-header">
-    <a href="#delete/2" class="detail-link" title="Link to this function">
+    <a href="#delete/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">delete(_, map)</span>
+    <span class="signature">delete(map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment.ex#L39" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -153,14 +155,15 @@ the specified <code class="inline">IssueComment</code> and then deletes the <cod
     
       <div class="specs">
         
-          <pre>delete(map(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
+          <pre>delete(map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>When provided a GitHub API payload, it deletes each <code class="inline">Comment</code> associated to
-the specified <code class="inline">IssueComment</code> and then deletes the <code class="inline">GithubComment</code>.</p>
+    <p>Creates an  <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html"><code class="inline">Ecto.Multi</code></a> intended to delete a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>
+specified by <code class="inline">github_id</code>, as well as 0 to 1 <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records
+associated to <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a></p>
 
   </section>
 </div>
@@ -174,7 +177,7 @@ the specified <code class="inline">IssueComment</code> and then deletes the <cod
     </a>
     <span class="signature">sync(map, payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -189,21 +192,19 @@ the specified <code class="inline">IssueComment</code> and then deletes the <cod
     
   </div>
   <section class="docstring">
-    <p>Syncs a GitHub comment API payload with our data.</p>
-<p>Expects a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> record and a list of <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
-records passed in with the changes.</p>
-<p>The process is as follows:</p>
+    <p>Creates an <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html"><code class="inline">Ecto.Multi</code></a> intended to process a GitHub issue comment related API
+payload.</p>
+<p>Expects a partial transaction outcome with <code class="inline">:github_issue</code> and :task keys.</p>
+<p>Returns an <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html"><code class="inline">Ecto.Multi</code></a> with the follwing steps</p>
 <ul>
-<li>create a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> related to the <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>
+<li>create or update a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> from the
+  provided <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> and API payload
 </li>
-<li>match the comment payload with a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
-  <a href="CodeCorps.GitHub.Sync.User.RecordLinker.html"><code class="inline">CodeCorps.GitHub.Sync.User.RecordLinker</code></a>
+<li>match the <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> with a new or existing <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>
 </li>
-<li><p>for each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>:</p>
-<ul>
-<li>create or update <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> for the <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
-</li>
-</ul>
+<li>create or update a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> using the created
+  <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>, related to the matched <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> and the
+  provided <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
 </li>
 </ul>
 

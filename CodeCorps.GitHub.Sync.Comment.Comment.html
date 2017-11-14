@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d54ea65966.js"></script>
+    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
     
     
     
@@ -119,21 +119,20 @@ creating or updating all those records.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#delete_all/1">delete_all(github_id)</a>
+    <a href="#delete/1">delete(github_id)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Deletes all <code class="inline">Comment</code> records related to <code class="inline">GithubComment</code> using the GitHub ID
-from a GitHub API comment payload</p>
+    <div class="summary-synopsis"><p>Deletes <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records associated to <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>
+with specified <code class="inline">github_id</code></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_all/4">sync_all(tasks, github_comment, user, payload)</a>
+    <a href="#sync/3">sync(task, github_comment, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the specified list of
-<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records</p>
+    <div class="summary-synopsis"><p>Creates or updates a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> for the specified <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></p>
 </div>
   
 </div>
@@ -142,7 +141,8 @@ from a GitHub API comment payload</p>
     <a href="#sync_project_github_repo/1">sync_project_github_repo(project_github_repo)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Creates or updates <code class="inline">Comment</code> records for the specified <code class="inline">ProjectGithubRepo</code></p>
+    <div class="summary-synopsis"><p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the specified
+<a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a></p>
 </div>
   
 </div>
@@ -209,17 +209,17 @@ from a GitHub API comment payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="delete_all/1">
+          <div class="detail" id="delete/1">
   
   
   <div class="detail-header">
-    <a href="#delete_all/1" class="detail-link" title="Link to this function">
+    <a href="#delete/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">delete_all(github_id)</span>
+    <span class="signature">delete(github_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L107" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L97" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -228,29 +228,30 @@ from a GitHub API comment payload</p>
     
       <div class="specs">
         
-          <pre>delete_all(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()]}</pre>
+          <pre>delete(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()]}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Deletes all <code class="inline">Comment</code> records related to <code class="inline">GithubComment</code> using the GitHub ID
-from a GitHub API comment payload.</p>
-<p>Returns a list of the deleted <code class="inline">Comment</code> records.</p>
+    <p>Deletes <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records associated to <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>
+with specified <code class="inline">github_id</code></p>
+<p>Since there can be 0 or 1 such records, returns <code class="inline">{:ok, results}</code> where
+<code class="inline">results</code> is a 1-element or blank list of deleted records.</p>
 
   </section>
 </div>
-<div class="detail" id="sync_all/4">
+<div class="detail" id="sync/3">
   
   
   <div class="detail-header">
-    <a href="#sync_all/4" class="detail-link" title="Link to this function">
+    <a href="#sync/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync_all(tasks, github_comment, user, payload)</span>
+    <span class="signature">sync(task, github_comment, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L42" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -259,19 +260,18 @@ from a GitHub API comment payload.</p>
     
       <div class="specs">
         
-          <pre>sync_all([<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()], <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>sync(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the specified list of
-<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records.</p>
-<p>When provided a list of <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> records, a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>,
-a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>, and a GitHub API payload , for each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>
-record, it creates or updates a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record, using the provided
-GitHub API payload, associated to the specified <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> and
-<a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+    <p>Creates or updates a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> for the specified <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>.</p>
+<p>When provided a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a>, a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>, a
+<a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>, and a GitHub API payload, it creates or updates a
+<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record, using the provided GitHub API
+payload, associated to the specified <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>,
+<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> and <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
 
   </section>
 </div>
@@ -285,25 +285,32 @@ GitHub API payload, associated to the specified <a href="CodeCorps.GithubComment
     </a>
     <span class="signature">sync_project_github_repo(project_github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L62" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
     
+      <div class="specs">
+        
+          <pre>sync_project_github_repo(<a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+        
+      </div>
+    
   </div>
   <section class="docstring">
-    <p>Creates or updates <code class="inline">Comment</code> records for the specified <code class="inline">ProjectGithubRepo</code>.</p>
-<p>For each <code class="inline">GithubComment</code> record that relates to the <code class="inline">GithubRepo</code> for a given
-<code class="inline">ProjectGithubRepo</code>:</p>
+    <p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the specified
+<a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>.</p>
+<p>For each <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record that relates to the
+<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> for a given<a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>:</p>
 <ul>
-<li>Find the related <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> record
+<li>Find the related <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> record
 </li>
-<li>Create or update the <code class="inline">Comment</code> record
+<li>Create or update the related <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record
 </li>
-<li>Associate the <code class="inline">Comment</code> record with the <code class="inline">User</code> that relates to the
-  <code class="inline">GithubUser</code> for the <code class="inline">GithubComment</code>
+<li>Associate the <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> record with the <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> that
+  relates to the <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a> for the <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a>
 </li>
 </ul>
 

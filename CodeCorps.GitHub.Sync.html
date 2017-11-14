@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d54ea65966.js"></script>
+    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
     
     
     
@@ -77,6 +77,12 @@
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Syncs events received from the GitHub API and also syncs entire GitHub
+repositories.</p>
+
+        </section>
       
 
       
@@ -182,7 +188,7 @@
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -204,8 +210,8 @@
   {:error, :validating_github_issue} |
   {:error, :validating_github_comment} |
   {:error, :validating_user} |
-  {:error, :validating_tasks} |
-  {:error, :validating_comments} |
+  {:error, :validating_task} |
+  {:error, :validating_comment} |
   {:error, :unexpected_transaction_outcome}</pre>
         
       </div>
@@ -239,12 +245,18 @@
     </a>
     <span class="signature">issue_comment_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L77" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L91" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>issue_comment_event(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -284,12 +296,18 @@
     </a>
     <span class="signature">issue_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L41" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>issue_event(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -314,12 +332,18 @@
     </a>
     <span class="signature">pull_request_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L113" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>pull_request_event(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
@@ -349,7 +373,7 @@
     </a>
     <span class="signature">sync_project_github_repo(project_github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L205" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L226" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -392,7 +416,7 @@ repository, marking progress of the sync state along the way.</p>
     </a>
     <span class="signature">sync_repo(repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L165" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L186" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
