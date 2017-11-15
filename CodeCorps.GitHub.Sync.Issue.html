@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Issue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
+    <script src="dist/sidebar_items-9ff5350cba.js"></script>
     
     
     
@@ -152,13 +152,10 @@
     <p>Syncs a GitHub issue API payload with our data.</p>
 <p>The process is as follows:</p>
 <ul>
-<li>match with <code class="inline">User</code> using <code class="inline">GitHub.Sync.User.RecordLinker</code>
+<li>match with <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using <a href="CodeCorps.GitHub.Sync.User.RecordLinker.html"><code class="inline">CodeCorps.GitHub.Sync.User.RecordLinker</code></a>
 </li>
-<li><p>for the <code class="inline">ProjectGithubRepo</code> belonging to the matched repo:</p>
-<ul>
-<li>create or update the <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> for the <code class="inline">Project</code>
-</li>
-</ul>
+<li>create or update the <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> in the
+  matched <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
 </li>
 </ul>
 <p>If the sync succeeds, it will return an <code class="inline">:ok</code> tuple with the created or

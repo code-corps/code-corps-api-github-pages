@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-2f8d924fb9.js
+dist/sidebar_items-9ff5350cba.js
 api-reference.html
 readme.html
 license.html
@@ -25,6 +25,7 @@ CodeCorps.GithubUser.html
 CodeCorps.JsonAPIHelpers.html
 CodeCorps.ModelCase.html
 CodeCorps.Policy.GithubEvent.html
+CodeCorps.Policy.GithubRepo.html
 CodeCorps.PolicyCase.html
 CodeCorps.Processor.html
 CodeCorps.Processor.Async.html
@@ -56,7 +57,6 @@ CodeCorps.Preview.html
 CodeCorps.Project.html
 CodeCorps.Project.Query.html
 CodeCorps.ProjectCategory.html
-CodeCorps.ProjectGithubRepo.html
 CodeCorps.ProjectSkill.html
 CodeCorps.ProjectUser.html
 CodeCorps.Repo.html
@@ -107,7 +107,6 @@ CodeCorps.Policy.OrganizationInvite.html
 CodeCorps.Policy.Preview.html
 CodeCorps.Policy.Project.html
 CodeCorps.Policy.ProjectCategory.html
-CodeCorps.Policy.ProjectGithubRepo.html
 CodeCorps.Policy.ProjectSkill.html
 CodeCorps.Policy.ProjectUser.html
 CodeCorps.Policy.Role.html

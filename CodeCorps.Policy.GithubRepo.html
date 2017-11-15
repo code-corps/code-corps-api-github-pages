@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.Policy.ProjectGithubRepo – code_corps v0.0.1</title>
+    <title>CodeCorps.Policy.GithubRepo – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
+    <script src="dist/sidebar_items-9ff5350cba.js"></script>
     
     
     
@@ -68,15 +68,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.ProjectGithubRepo
+        CodeCorps.Policy.GithubRepo
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/project_github_repo.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/github_repo.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Handles <code class="inline">User</code> authorization of actions on <code class="inline">GithubRepo</code> records</p>
+
+        </section>
       
 
       
@@ -97,13 +102,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, params)</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#delete?/2">delete?(user, project_github_repo)</a>
+    <a href="#update?/3">update?(user, github_repo, params)</a>
   </div>
   
 </div>
@@ -127,56 +126,22 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="update?/3">
   
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#update?/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, params)</span>
+    <span class="signature">update?(user, github_repo, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/project_github_repo.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/github_repo.ex#L12" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
-    
-      <div class="specs">
-        
-          <pre>create?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), map()) :: boolean()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="delete?/2">
-  
-  
-  <div class="detail-header">
-    <a href="#delete?/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">delete?(user, project_github_repo)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/project_github_repo.ex#L12" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>delete?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), <a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>()) :: boolean()</pre>
-        
-      </div>
     
   </div>
   <section class="docstring">

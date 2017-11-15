@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
+    <script src="dist/sidebar_items-9ff5350cba.js"></script>
     
     
     
@@ -143,15 +143,6 @@ repositories.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_project_github_repo/1">sync_project_github_repo(project_github_repo)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Syncs a <code class="inline">ProjectGithubRepo</code> with Code Corps</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
     <a href="#sync_repo/1">sync_repo(repo)</a>
   </div>
   
@@ -188,7 +179,7 @@ repositories.</p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -245,7 +236,7 @@ repositories.</p>
     </a>
     <span class="signature">issue_comment_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L91" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L90" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -296,7 +287,7 @@ repositories.</p>
     </a>
     <span class="signature">issue_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L45" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -332,7 +323,7 @@ repositories.</p>
     </a>
     <span class="signature">pull_request_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L113" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L112" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -363,49 +354,6 @@ repositories.</p>
 
   </section>
 </div>
-<div class="detail" id="sync_project_github_repo/1">
-  
-  
-  <div class="detail-header">
-    <a href="#sync_project_github_repo/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">sync_project_github_repo(project_github_repo)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L226" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>sync_project_github_repo(<a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>()) :: {:ok, <a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>()}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Syncs a <code class="inline">ProjectGithubRepo</code> with Code Corps.</p>
-<p>Fetches and syncs records from the GitHub API for a given project’s GitHub
-repository, marking progress of the sync state along the way.</p>
-<ul>
-<li>Finds the <code class="inline">GithubRepo</code> and syncs it with Github using <a href="#sync_repo/1"><code class="inline">sync_repo/1</code></a>
-</li>
-<li>Creates or updates <code class="inline">User</code> records for the <code class="inline">GithubUser</code> records
-</li>
-<li>Creates or updates <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> records, and relates them to any related
-  <code class="inline">GithubIssue</code> and <code class="inline">User</code> records created previously
-</li>
-<li>Creates or updates <code class="inline">Comment</code> records, and relates them to any related
-  <code class="inline">GithubComment</code> and <code class="inline">User</code> records created previously
-</li>
-</ul>
-
-  </section>
-</div>
 <div class="detail" id="sync_repo/1">
   
   
@@ -416,7 +364,7 @@ repository, marking progress of the sync state along the way.</p>
     </a>
     <span class="signature">sync_repo(repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L186" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L182" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -450,6 +398,14 @@ progress of the sync state along the way.</p>
 </li>
 <li>Creates or updates <code class="inline">GithubComment</code> records (and their related <code class="inline">GithubUser</code>
   records)
+</li>
+<li>Creates or updates <code class="inline">User</code> records for the <code class="inline">GithubUser</code> records
+</li>
+<li>Creates or updates <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> records, and relates them to any related
+  <code class="inline">GithubIssue</code> and <code class="inline">User</code> records created previously
+</li>
+<li>Creates or updates <code class="inline">Comment</code> records, and relates them to any related
+  <code class="inline">GithubComment</code> and <code class="inline">User</code> records created previously
 </li>
 </ul>
 

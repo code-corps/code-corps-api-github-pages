@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.TestHelpers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
+    <script src="dist/sidebar_items-9ff5350cba.js"></script>
     
     
     
@@ -109,13 +109,13 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#setup_coderly_project_repo/0">setup_coderly_project_repo()</a>
+    <a href="#setup_coderly_repo/0">setup_coderly_repo()</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#setup_real_project_repo/5">setup_real_project_repo(repo_owner, repo_name, repo_owner_id, app_github_id, repo_github_id)</a>
+    <a href="#setup_real_repo/5">setup_real_repo(repo_owner, repo_name, repo_owner_id, app_github_id, repo_github_id)</a>
   </div>
   
 </div>
@@ -218,15 +218,15 @@ end</code></pre>
     
   </section>
 </div>
-<div class="detail" id="setup_coderly_project_repo/0">
+<div class="detail" id="setup_coderly_repo/0">
   
   
   <div class="detail-header">
-    <a href="#setup_coderly_project_repo/0" class="detail-link" title="Link to this function">
+    <a href="#setup_coderly_repo/0" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">setup_coderly_project_repo()</span>
+    <span class="signature">setup_coderly_repo()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L15" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -237,7 +237,7 @@ end</code></pre>
     
       <div class="specs">
         
-          <pre>setup_coderly_project_repo() :: %CodeCorps.ProjectGithubRepo{__meta__: term(), github_repo: term(), github_repo_id: term(), id: term(), inserted_at: term(), project: term(), project_id: term(), sync_state: term(), updated_at: term()}</pre>
+          <pre>setup_coderly_repo() :: %CodeCorps.GithubRepo{__meta__: term(), github_account_avatar_url: term(), github_account_id: term(), github_account_login: term(), github_account_type: term(), github_app_installation: term(), github_app_installation_id: term(), github_comments: term(), github_id: term(), github_issues: term(), id: term(), inserted_at: term(), name: term(), project: term(), project_id: term(), sync_state: term(), syncing_comments_count: term(), syncing_issues_count: term(), syncing_pull_requests_count: term(), updated_at: term()}</pre>
         
       </div>
     
@@ -246,15 +246,15 @@ end</code></pre>
     
   </section>
 </div>
-<div class="detail" id="setup_real_project_repo/5">
+<div class="detail" id="setup_real_repo/5">
   
   
   <div class="detail-header">
-    <a href="#setup_real_project_repo/5" class="detail-link" title="Link to this function">
+    <a href="#setup_real_repo/5" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">setup_real_project_repo(repo_owner, repo_name, repo_owner_id, app_github_id, repo_github_id)</span>
+    <span class="signature">setup_real_repo(repo_owner, repo_name, repo_owner_id, app_github_id, repo_github_id)</span>
     
       <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L29" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -265,7 +265,7 @@ end</code></pre>
     
       <div class="specs">
         
-          <pre>setup_real_project_repo(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>()) :: %CodeCorps.ProjectGithubRepo{__meta__: term(), github_repo: term(), github_repo_id: term(), id: term(), inserted_at: term(), project: term(), project_id: term(), sync_state: term(), updated_at: term()}</pre>
+          <pre>setup_real_repo(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>()) :: %CodeCorps.GithubRepo{__meta__: term(), github_account_avatar_url: term(), github_account_id: term(), github_account_login: term(), github_account_type: term(), github_app_installation: term(), github_app_installation_id: term(), github_comments: term(), github_id: term(), github_issues: term(), id: term(), inserted_at: term(), name: term(), project: term(), project_id: term(), sync_state: term(), syncing_comments_count: term(), syncing_issues_count: term(), syncing_pull_requests_count: term(), updated_at: term()}</pre>
         
       </div>
     
@@ -284,7 +284,7 @@ end</code></pre>
     </a>
     <span class="signature">with_mock_api(mock_module, list)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L88" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -323,7 +323,7 @@ end</code></pre>
     </a>
     <span class="signature">with_real_api(list)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L101" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/test/support/github/test_helpers.ex#L100" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.PullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
+    <script src="dist/sidebar_items-9ff5350cba.js"></script>
     
     
     
@@ -158,11 +158,8 @@
 <li>match with <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
   <code class="inline">CodeCorps.GitHub.Event.PullRequest.UserLinker</code>
 </li>
-<li><p>for each <a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a> belonging to matched repo:</p>
-<ul>
-<li>create or update <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a>
-</li>
-</ul>
+<li>create or update each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> matching
+  the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
 </li>
 </ul>
 <p>If the sync succeeds, it will return an <code class="inline">:ok</code> tuple with a list of created or

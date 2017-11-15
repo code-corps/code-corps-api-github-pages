@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f8d924fb9.js"></script>
+    <script src="dist/sidebar_items-9ff5350cba.js"></script>
     
     
     
@@ -138,11 +138,11 @@ with specified <code class="inline">github_id</code></p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync_project_github_repo/1">sync_project_github_repo(project_github_repo)</a>
+    <a href="#sync_github_repo/1">sync_github_repo(github_repo)</a>
   </div>
   
     <div class="summary-synopsis"><p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the specified
-<a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a></p>
+<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a></p>
 </div>
   
 </div>
@@ -175,7 +175,7 @@ with specified <code class="inline">github_id</code></p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -219,7 +219,7 @@ with specified <code class="inline">github_id</code></p>
     </a>
     <span class="signature">delete(github_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L97" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L94" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -251,7 +251,7 @@ with specified <code class="inline">github_id</code></p>
     </a>
     <span class="signature">sync(task, github_comment, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L40" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -275,17 +275,17 @@ payload, associated to the specified <a href="CodeCorps.GithubComment.html"><cod
 
   </section>
 </div>
-<div class="detail" id="sync_project_github_repo/1">
+<div class="detail" id="sync_github_repo/1">
   
   
   <div class="detail-header">
-    <a href="#sync_project_github_repo/1" class="detail-link" title="Link to this function">
+    <a href="#sync_github_repo/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync_project_github_repo(project_github_repo)</span>
+    <span class="signature">sync_github_repo(github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L62" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L60" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -294,16 +294,16 @@ payload, associated to the specified <a href="CodeCorps.GithubComment.html"><cod
     
       <div class="specs">
         
-          <pre>sync_project_github_repo(<a href="CodeCorps.ProjectGithubRepo.html#t:t/0">CodeCorps.ProjectGithubRepo.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>sync_github_repo(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
     <p>Creates or updates <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records for the specified
-<a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>.</p>
+<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>.</p>
 <p>For each <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record that relates to the
-<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> for a given<a href="CodeCorps.ProjectGithubRepo.html"><code class="inline">CodeCorps.ProjectGithubRepo</code></a>:</p>
+<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> for a given<a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>:</p>
 <ul>
 <li>Find the related <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> record
 </li>
