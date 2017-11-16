@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-9ff5350cba.js
+dist/sidebar_items-d1c4ae1fe0.js
 api-reference.html
 readme.html
 license.html
@@ -30,7 +30,11 @@ CodeCorps.PolicyCase.html
 CodeCorps.Processor.html
 CodeCorps.Processor.Async.html
 CodeCorps.Processor.Sync.html
+CodeCorps.Sentry.html
+CodeCorps.Sentry.Async.html
+CodeCorps.Sentry.Sync.html
 CodeCorps.StripeCase.html
+CodeCorps.TestEnvironmentHelper.html
 CodeCorps.TestHelpers.html
 CodeCorpsWeb.ApiCase.html
 CodeCorpsWeb.ChannelCase.html
@@ -270,6 +274,7 @@ CloudexTest.html
 CloudexTest.Url.html
 CodeCorps.Cloudex.CloudinaryUrl.html
 CodeCorps.Cloudex.Uploader.html
+CodeCorps.GitHub.Event.GitHubEventError.html
 CodeCorps.GitHub.SuccessAPI.GitHubMockResponseError.html
 CodeCorps.GitHub.SuccessAPI.UnhandledGitHubEndpointError.html
 index.html
