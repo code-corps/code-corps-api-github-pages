@@ -8,7 +8,7 @@
     <title>CodeCorps.Validators.TimeValidator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d1c4ae1fe0.js"></script>
+    <script src="dist/sidebar_items-d0189f2786.js"></script>
     
     
     
@@ -102,6 +102,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#truncate/2">truncate(datetime, precision)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#validate_time_not_before/2">validate_time_not_before(changeset, field)</a>
   </div>
   
@@ -129,7 +135,35 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="validate_time_not_before/2">
+          <div class="detail" id="truncate/2">
+  
+  
+  <div class="detail-header">
+    <a href="#truncate/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">truncate(datetime, precision)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/validators/time_validator.ex#L33" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>truncate(<a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>(), :microsecond | :millisecond | :second) :: <a href="https://hexdocs.pm/elixir/DateTime.html#t:t/0">DateTime.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="validate_time_not_before/2">
   
   
   <div class="detail-header">
@@ -139,7 +173,7 @@
     </a>
     <span class="signature">validate_time_not_before(changeset, field)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/validators/time_validator.ex#L11" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/validators/time_validator.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -149,6 +183,7 @@
   </div>
   <section class="docstring">
     <p>Validates the new time is not before the previous time.</p>
+<p>Works at second-level accuracy by truncating both timestamps to the second.</p>
 
   </section>
 </div>
