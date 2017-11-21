@@ -8,7 +8,7 @@
     <title>CodeCorps.StripeService.StripePlatformCustomerService – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-666b62e1d0.js"></script>
+    <script src="dist/sidebar_items-4a9660de2d.js"></script>
     
     
     
@@ -80,7 +80,7 @@
       
         <section id="moduledoc">
           <p>Used to perform actions on <code class="inline">StripePlatformCustomer</code> records while propagating
-to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-alpha.6/Stripe.Customer.html"><code class="inline">Stripe.Customer</code></a> records.</p>
+to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Customer.html"><code class="inline">Stripe.Customer</code></a> records.</p>
 
         </section>
       
@@ -196,7 +196,7 @@ with provided attributes</p>
 </li>
 <li><code class="inline">{:error, %Ecto.Changeset{}}</code> -if there was a validation issue while updating the local record
 </li>
-<li><code class="inline">{:error, %Stripe.APIErrorResponse{}}</code> - if there was a problem with updating the API record
+<li><code class="inline">{:error, %Stripe.Error{}}</code> - if there was a problem with updating the API record
 </li>
 <li><code class="inline">{:error, :unhandled}</code> -if something unexpected went wrong
 </li>
@@ -233,7 +233,7 @@ retrieved from API using the provided Stripe ID</p>
 </li>
 <li><code class="inline">{:error, %Ecto.Changeset{}}</code> -if there was a validation issue while updating the local record
 </li>
-<li><code class="inline">{:error, %Stripe.APIErrorResponse{}}</code> - if there was a problem with retrieving the API record
+<li><code class="inline">{:error, %Stripe.Error{}}</code> - if there was a problem with retrieving the API record
 </li>
 <li><code class="inline">{:error, :unhandled}</code> -if something unexpected went wrong
 </li>
