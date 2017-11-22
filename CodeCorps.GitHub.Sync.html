@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-4a9660de2d.js"></script>
+    <script src="dist/sidebar_items-0dc94b0b3b.js"></script>
     
     
     
@@ -236,7 +236,7 @@ repositories.</p>
     </a>
     <span class="signature">issue_comment_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L90" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L92" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -255,7 +255,7 @@ repositories.</p>
 <ul>
 <li><p>For the deleted action</p>
 <ul>
-<li>Deletes the related comment records with <code class="inline">GitHub.Sync.Comment</code>
+<li>Deletes the related comment records with <code class="inline">Sync.Comment</code>
 </li>
 </ul>
 </li>
@@ -264,11 +264,11 @@ repositories.</p>
 <li>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
 </li>
 <li>If it’s a pull request, it fetches the pull request from the GitHub API
-  and syncs it with <code class="inline">GitHub.Sync.PullRequest</code>
+  and syncs it with <code class="inline">Sync.PullRequest</code>
 </li>
-<li>Syncs the issue portion of the event with <code class="inline">GitHub.Sync.Issue</code>
+<li>Syncs the issue portion of the event with <code class="inline">Sync.Issue</code>
 </li>
-<li>Syncs the comment portion of the event with <code class="inline">GitHub.Sync.Comment</code>
+<li>Syncs the comment portion of the event with <code class="inline">Sync.Comment</code>
 </li>
 </ul>
 </li>
@@ -306,7 +306,7 @@ repositories.</p>
 <ul>
 <li>Finds the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
 </li>
-<li>Syncs the issue portion of the event with <code class="inline">GitHub.Sync.Issue</code>
+<li>Syncs the issue portion of the event with <code class="inline">Sync.Issue</code>
 </li>
 </ul>
 <p><a href="https://developer.github.com/v3/activity/events/types/#issuesevent">https://developer.github.com/v3/activity/events/types/#issuesevent</a></p>
@@ -323,7 +323,7 @@ repositories.</p>
     </a>
     <span class="signature">pull_request_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L112" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L116" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -344,9 +344,9 @@ repositories.</p>
 </li>
 <li>Fetches the issue from the GitHub API
 </li>
-<li>Syncs the pull request portion of the event with <code class="inline">GitHub.Sync.PullRequest</code>
+<li>Syncs the pull request portion of the event with <code class="inline">Sync.PullRequest</code>
 </li>
-<li>Syncs the issue portion of the event with <code class="inline">GitHub.Sync.Issue</code>, using the
+<li>Syncs the issue portion of the event with <code class="inline">Sync.Issue</code>, using the
   changes passed in from the issue fetching and the pull request syncing
 </li>
 </ul>
@@ -364,7 +364,7 @@ repositories.</p>
     </a>
     <span class="signature">sync_repo(repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L182" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L162" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

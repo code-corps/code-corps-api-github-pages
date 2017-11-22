@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Issue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-4a9660de2d.js"></script>
+    <script src="dist/sidebar_items-0dc94b0b3b.js"></script>
     
     
     
@@ -97,10 +97,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync/2">sync(changes, payload)</a>
+    <a href="#sync/2">sync(payload, github_repo)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Syncs a GitHub issue API payload with our data</p>
+    <div class="summary-synopsis"><p>Performs sync of a github issue payload related to a repo</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sync/3">sync(payload, github_repo, github_pull_request)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Performs sync of a github issue payload related to a repo and a pull request</p>
 </div>
   
 </div>
@@ -132,9 +141,9 @@
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync(changes, payload)</span>
+    <span class="signature">sync(payload, github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/issue.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/issue.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -143,25 +152,53 @@
     
       <div class="specs">
         
-          <pre>sync((map() -> <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
+          <pre>sync(map(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Syncs a GitHub issue API payload with our data.</p>
-<p>The process is as follows:</p>
+    <p>Performs sync of a github issue payload related to a repo.</p>
+<p>Creates or updates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a></p>
 <ul>
-<li>match with <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using <a href="CodeCorps.GitHub.Sync.User.RecordLinker.html"><code class="inline">CodeCorps.GitHub.Sync.User.RecordLinker</code></a>
+<li>a <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a> is created or updated as part of the process and associated to <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a>
 </li>
-<li>create or update the <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> in the
-  matched <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+<li>the record is associated to the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+</li>
+<li>an ‘unregistered’ <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> is created if no record with matching <code class="inline">:github_id</code> is found
 </li>
 </ul>
-<p>If the sync succeeds, it will return an <code class="inline">:ok</code> tuple with the created or
-updated task.</p>
-<p>If the sync fails, it will return an <code class="inline">:error</code> tuple, where the second element
-is the atom indicating a reason.</p>
+
+  </section>
+</div>
+<div class="detail" id="sync/3">
+  
+  
+  <div class="detail-header">
+    <a href="#sync/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sync(payload, github_repo, github_pull_request)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/issue.ex#L16" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>sync(map(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Performs sync of a github issue payload related to a repo and a pull request.</p>
+<p>Performs work identical to <a href="#sync/2"><code class="inline">sync/2</code></a>, with the adition of associating the
+resulting <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> with the specified <a href="CodeCorps.GithubPullRequest.html"><code class="inline">CodeCorps.GithubPullRequest</code></a>.</p>
 
   </section>
 </div>
