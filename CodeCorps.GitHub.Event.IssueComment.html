@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Event.IssueComment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-34aa5e8a0d.js"></script>
+    <script src="dist/sidebar_items-00b01688b9.js"></script>
     
     
     
@@ -79,8 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of handling a GitHub Webhook payload for the IssueComment event type
-<a href="https://developer.github.com/v3/activity/events/types/#issuecommentevent">https://developer.github.com/v3/activity/events/types/#issuecommentevent</a></p>
+          <p>In charge of handling a GitHub Webhook payload for the IssueComment event type</p>
+<p><a href="https://developer.github.com/v3/activity/events/types/#issuecommentevent">https://developer.github.com/v3/activity/events/types/#issuecommentevent</a></p>
 
         </section>
       
@@ -95,19 +95,6 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:outcome/0">outcome()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -132,49 +119,6 @@
         </section>
       
 
-      
-        <section id="types" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div class="detail" id="t:outcome/0">
-  
-  
-  <div class="detail-header">
-    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <span class="signature">outcome()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/issue_comment/issue_comment.ex#L15" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre><a href="#t:outcome/0">outcome</a>() ::
-  <a href="CodeCorps.GitHub.Sync.html#t:outcome/0">CodeCorps.GitHub.Sync.outcome</a>() |
-  {:error, :unexpected_payload}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
       
 
       
@@ -205,7 +149,7 @@
     
       <div class="specs">
         
-          <pre>handle(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>handle(map()) :: {:ok, any()} | {:error, atom()}</pre>
         
       </div>
     
