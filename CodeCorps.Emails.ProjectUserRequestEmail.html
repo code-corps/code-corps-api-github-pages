@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Adapters.AppInstallation – code_corps v0.0.1</title>
+    <title>CodeCorps.Emails.ProjectUserRequestEmail – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-5729493380.js"></script>
@@ -68,21 +68,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Adapters.AppInstallation
+        CodeCorps.Emails.ProjectUserRequestEmail
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/app_installation.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/emails/project_user_request_email.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>Module used to convert GitHub payloads into attributes for a
-<code class="inline">GithubAppInstallation</code>.</p>
-
-        </section>
       
 
       
@@ -103,22 +97,8 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_installation_event/1">from_installation_event(payload)</a>
+    <a href="#create/1">create(project_user)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Converts an installation event payload into attributes to create or update a
-<code class="inline">GithubAppInstallation</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#to_github_repo_attrs/1">to_github_repo_attrs(installation)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts a <code class="inline">GithubAppInstallation</code> record attributes into a map of attributes
-that can be used for a <code class="inline">GithubRepo</code> record</p>
-</div>
   
 </div>
 
@@ -141,17 +121,17 @@ that can be used for a <code class="inline">GithubRepo</code> record</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="from_installation_event/1">
+          <div class="detail" id="create/1">
   
   
   <div class="detail-header">
-    <a href="#from_installation_event/1" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_installation_event(payload)</span>
+    <span class="signature">create(project_user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/app_installation.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/emails/project_user_request_email.ex#L11" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -160,45 +140,13 @@ that can be used for a <code class="inline">GithubRepo</code> record</p>
     
       <div class="specs">
         
-          <pre>from_installation_event(map()) :: map()</pre>
+          <pre>create(<a href="CodeCorps.ProjectUser.html#t:t/0">CodeCorps.ProjectUser.t</a>()) :: <a href="https://hexdocs.pm/bamboo/0.8.0/Bamboo.Email.html#t:t/0">Bamboo.Email.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Converts an installation event payload into attributes to create or update a
-<code class="inline">GithubAppInstallation</code>.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_github_repo_attrs/1">
-  
-  
-  <div class="detail-header">
-    <a href="#to_github_repo_attrs/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">to_github_repo_attrs(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/app_installation.ex#L43" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>to_github_repo_attrs(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) :: map()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Converts a <code class="inline">GithubAppInstallation</code> record attributes into a map of attributes
-that can be used for a <code class="inline">GithubRepo</code> record.</p>
-
   </section>
 </div>
 
