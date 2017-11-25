@@ -4,12 +4,15 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-2f06db8df1.js
+dist/sidebar_items-a38f94b8be.js
 api-reference.html
 readme.html
 license.html
 search.html
 404.html
+CodeCorps.Auth.BearerAuthPipeline.html
+CodeCorps.Auth.EnsureAuthPipeline.html
+CodeCorps.Auth.ErrorHandler.html
 CodeCorps.AuthenticationTestHelpers.html
 CodeCorps.DbAccessCase.html
 CodeCorps.Emails.ProjectUserRequestEmail.html
@@ -24,6 +27,8 @@ CodeCorps.GitHub.Sync.User.User.html
 CodeCorps.GitHub.TestHelpers.html
 CodeCorps.GithubIssueAssignee.html
 CodeCorps.GithubUser.html
+CodeCorps.Guardian.html
+CodeCorps.Guardian.Plug.html
 CodeCorps.JsonAPIHelpers.html
 CodeCorps.ModelCase.html
 CodeCorps.Policy.GithubEvent.html
@@ -147,7 +152,6 @@ CodeCorpsWeb.html
 CodeCorpsWeb.Endpoint.html
 CodeCorpsWeb.ErrorHelpers.html
 CodeCorpsWeb.Gettext.html
-CodeCorpsWeb.GuardianSerializer.html
 CodeCorpsWeb.Router.html
 CodeCorpsWeb.Router.Helpers.html
 CodeCorpsWeb.UserSocket.html

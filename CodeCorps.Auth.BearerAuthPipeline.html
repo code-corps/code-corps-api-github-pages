@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorpsWeb.GuardianSerializer – code_corps v0.0.1</title>
+    <title>CodeCorps.Auth.BearerAuthPipeline – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2f06db8df1.js"></script>
+    <script src="dist/sidebar_items-a38f94b8be.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorpsWeb.GuardianSerializer
+        CodeCorps.Auth.BearerAuthPipeline
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/guardian_serializer.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/auth/bearer_auth_pipeline.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -97,19 +97,19 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#for_token/1">for_token(project)</a>
+    <a href="#call/2">call(conn, opts)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Serializes the object into the token. Suggestion: “User:2”</p>
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/plug/1.4.3/Plug.html#c:call/2"><code class="inline">Plug.call/2</code></a></p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#from_token/1">from_token(arg1)</a>
+    <a href="#init/1">init(opts)</a>
   </div>
   
-    <div class="summary-synopsis"><p>De-serializes the object from a token</p>
+    <div class="summary-synopsis"><p>Callback implementation for <a href="https://hexdocs.pm/plug/1.4.3/Plug.html#c:init/1"><code class="inline">Plug.init/1</code></a></p>
 </div>
   
 </div>
@@ -133,17 +133,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="for_token/1">
+          <div class="detail" id="call/2">
   
   
   <div class="detail-header">
-    <a href="#for_token/1" class="detail-link" title="Link to this function">
+    <a href="#call/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">for_token(project)</span>
+    <span class="signature">call(conn, opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/guardian_serializer.ex#L10" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/auth/bearer_auth_pipeline.ex#L2" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -152,22 +152,21 @@
     
   </div>
   <section class="docstring">
-    <p>Serializes the object into the token. Suggestion: “User:2”</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/guardian/0.14.5/Guardian.Serializer.html#c:for_token/1"><code class="inline">Guardian.Serializer.for_token/1</code></a>.</p>
+    <p>Callback implementation for <a href="https://hexdocs.pm/plug/1.4.3/Plug.html#c:call/2"><code class="inline">Plug.call/2</code></a>.</p>
 
   </section>
 </div>
-<div class="detail" id="from_token/1">
+<div class="detail" id="init/1">
   
   
   <div class="detail-header">
-    <a href="#from_token/1" class="detail-link" title="Link to this function">
+    <a href="#init/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">from_token(arg1)</span>
+    <span class="signature">init(opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/guardian_serializer.ex#L24" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/auth/bearer_auth_pipeline.ex#L2" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -176,8 +175,7 @@
     
   </div>
   <section class="docstring">
-    <p>De-serializes the object from a token</p>
-<p>Callback implementation for <a href="https://hexdocs.pm/guardian/0.14.5/Guardian.Serializer.html#c:from_token/1"><code class="inline">Guardian.Serializer.from_token/1</code></a>.</p>
+    <p>Callback implementation for <a href="https://hexdocs.pm/plug/1.4.3/Plug.html#c:init/1"><code class="inline">Plug.init/1</code></a>.</p>
 
   </section>
 </div>
