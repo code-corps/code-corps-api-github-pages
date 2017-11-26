@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.Policy.ProjectCategory – code_corps v0.0.1</title>
+    <title>CodeCorps.Skills – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-2702ea905d.js"></script>
@@ -68,15 +68,20 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.ProjectCategory
+        CodeCorps.Skills
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/project_category.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/skills/skills.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Work with skills.</p>
+
+        </section>
       
 
       
@@ -97,14 +102,17 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, params)</a>
+    <a href="#do_popular/1">do_popular(limit \\ 10)</a>
   </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#delete?/2">delete?(user, project_category)</a>
+    <a href="#popular/1">popular(params \\ %{})</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Find the most popular skills, in order, with a limit</p>
+</div>
   
 </div>
 
@@ -127,17 +135,19 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="do_popular/1">
   
+  
+    <span id="do_popular/0"></span>
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#do_popular/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, params)</span>
+    <span class="signature">do_popular(limit \\ 10)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/project_category.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/skills/skills.ex#L26" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -146,7 +156,7 @@
     
       <div class="specs">
         
-          <pre>create?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), map()) :: boolean()</pre>
+          <pre>do_popular(pos_integer()) :: [<a href="CodeCorps.Skill.html#t:t/0">CodeCorps.Skill.t</a>()]</pre>
         
       </div>
     
@@ -155,17 +165,19 @@
     
   </section>
 </div>
-<div class="detail" id="delete?/2">
+<div class="detail" id="popular/1">
   
+  
+    <span id="popular/0"></span>
   
   <div class="detail-header">
-    <a href="#delete?/2" class="detail-link" title="Link to this function">
+    <a href="#popular/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">delete?(user, project_category)</span>
+    <span class="signature">popular(params \\ %{})</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/project_category.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/skills/skills.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -174,13 +186,14 @@
     
       <div class="specs">
         
-          <pre>delete?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), <a href="CodeCorps.ProjectCategory.html#t:t/0">CodeCorps.ProjectCategory.t</a>()) :: boolean()</pre>
+          <pre>popular(map()) :: [<a href="CodeCorps.Skill.html#t:t/0">CodeCorps.Skill.t</a>()]</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
+    <p>Find the most popular skills, in order, with a limit.</p>
+
   </section>
 </div>
 

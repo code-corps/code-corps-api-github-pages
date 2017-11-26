@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-86d289e967.js
+dist/sidebar_items-2702ea905d.js
 api-reference.html
 readme.html
 license.html
@@ -40,6 +40,7 @@ CodeCorps.Processor.Sync.html
 CodeCorps.Sentry.html
 CodeCorps.Sentry.Async.html
 CodeCorps.Sentry.Sync.html
+CodeCorps.Skills.html
 CodeCorps.StripeCase.html
 CodeCorps.TestEnvironmentHelper.html
 CodeCorps.TestHelpers.html
