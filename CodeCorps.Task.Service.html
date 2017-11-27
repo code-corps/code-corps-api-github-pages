@@ -8,7 +8,7 @@
     <title>CodeCorps.Task.Service – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-2702ea905d.js"></script>
+    <script src="dist/sidebar_items-5e3eb9f3d2.js"></script>
     
     
     
@@ -94,6 +94,19 @@
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:result/0">result()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -125,6 +138,51 @@
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:result/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:result/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">result()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/task/service.ex#L26" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:result/0">result</a>() ::
+  {:ok, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :github} |
+  {:error, :task_not_found}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -145,7 +203,7 @@
     </a>
     <span class="signature">create(attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/task/service.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/task/service.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -154,10 +212,7 @@
     
       <div class="specs">
         
-          <pre>create(map()) ::
-  {:ok, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
-  {:error, :github}</pre>
+          <pre>create(map()) :: <a href="#t:result/0">result</a>()</pre>
         
       </div>
     
@@ -177,7 +232,7 @@
     </a>
     <span class="signature">update(task, attributes)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/task/service.ex#L42" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/task/service.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -186,10 +241,7 @@
     
       <div class="specs">
         
-          <pre>update(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), map()) ::
-  {:ok, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
-  {:error, :github}</pre>
+          <pre>update(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), map()) :: <a href="#t:result/0">result</a>()</pre>
         
       </div>
     
