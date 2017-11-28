@@ -8,7 +8,7 @@
     <title>CodeCorps.Helpers.Query – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-d7816dc817.js"></script>
+    <script src="dist/sidebar_items-354466f07a.js"></script>
     
     
     
@@ -109,6 +109,15 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#optional_filters/3">optional_filters(query, params, list)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Applies optional filters by key-value to query dynamically</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#project_filter/2">project_filter(query, arg2)</a>
   </div>
   
@@ -205,6 +214,39 @@
   </div>
   <section class="docstring">
     
+  </section>
+</div>
+<div class="detail" id="optional_filters/3">
+  
+  
+  <div class="detail-header">
+    <a href="#optional_filters/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">optional_filters(query, params, list)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/helpers/query.ex#L84" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>optional_filters(Queryable.t(), map(), list()) :: Queryable.t()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Applies optional filters by key-value to query dynamically.</p>
+<p>Used by piping a queryable with a map of parameters and a list of keys to
+filter by.</p>
+<p>For each key in the list, the params map has a value for that key,
+the query condition for that <code class="inline">{key, value}</code> is applied to the queriable.</p>
+
   </section>
 </div>
 <div class="detail" id="project_filter/2">
