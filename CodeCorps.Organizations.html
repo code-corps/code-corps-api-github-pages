@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.Policy.Organization – code_corps v0.0.1</title>
+    <title>CodeCorps.Organizations – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-0c34a2ae5c.js"></script>
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.Organization
+        CodeCorps.Organizations
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/organization.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/organizations/organizations.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,8 +79,7 @@
 
       
         <section id="moduledoc">
-          <p>Authorization policies for performing actions on <code class="inline">Organization</code> records</p>
-
+          
         </section>
       
 
@@ -102,21 +101,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/2">create?(user, map)</a>
+    <a href="#create/1">create(params)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Returns a boolean indicating if the specified user is allowed to create the
-organization specified by a map of attributes</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update?/2">update?(user, organization)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Returns a boolean indicating if the specified user is allowed to update the
-specified organization</p>
+    <div class="summary-synopsis"><p>Creates a <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a> from a set of parameters,
+fulfilling the associated <a href="CodeCorps.OrganizationInvite.html"><code class="inline">CodeCorps.OrganizationInvite</code></a>, if it exists, by
+associating it with the created record</p>
 </div>
   
 </div>
@@ -140,17 +130,17 @@ specified organization</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/2">
+          <div class="detail" id="create/1">
   
   
   <div class="detail-header">
-    <a href="#create?/2" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user, map)</span>
+    <span class="signature">create(params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/organization.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/organizations/organizations.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -159,44 +149,17 @@ specified organization</p>
     
       <div class="specs">
         
-          <pre>create?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), map()) :: boolean()</pre>
+          <pre>create(map()) ::
+  {:ok, <a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Returns a boolean indicating if the specified user is allowed to create the
-organization specified by a map of attributes.</p>
-
-  </section>
-</div>
-<div class="detail" id="update?/2">
-  
-  
-  <div class="detail-header">
-    <a href="#update?/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">update?(user, organization)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/organization.ex#L31" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>update?(<a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>(), <a href="CodeCorps.Organization.html#t:t/0">CodeCorps.Organization.t</a>()) :: boolean()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Returns a boolean indicating if the specified user is allowed to update the
-specified organization.</p>
+    <p>Creates a <a href="CodeCorps.Organization.html"><code class="inline">CodeCorps.Organization</code></a> from a set of parameters,
+fulfilling the associated <a href="CodeCorps.OrganizationInvite.html"><code class="inline">CodeCorps.OrganizationInvite</code></a>, if it exists, by
+associating it with the created record.</p>
 
   </section>
 </div>
