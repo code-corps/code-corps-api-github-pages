@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-f9bbf7fa26.js
+dist/sidebar_items-20a3b9f87d.js
 api-reference.html
 readme.html
 license.html
@@ -15,6 +15,8 @@ CodeCorps.Auth.EnsureAuthPipeline.html
 CodeCorps.Auth.ErrorHandler.html
 CodeCorps.AuthenticationTestHelpers.html
 CodeCorps.DbAccessCase.html
+CodeCorps.Emails.ProjectApprovalRequestEmail.html
+CodeCorps.Emails.ProjectApprovedEmail.html
 CodeCorps.Emails.ProjectUserRequestEmail.html
 CodeCorps.GitHub.API.Errors.PaginationError.html
 CodeCorps.GitHub.API.Gateway.html
@@ -38,6 +40,7 @@ CodeCorps.PolicyCase.html
 CodeCorps.Processor.html
 CodeCorps.Processor.Async.html
 CodeCorps.Processor.Sync.html
+CodeCorps.Projects.html
 CodeCorps.Sentry.html
 CodeCorps.Sentry.Async.html
 CodeCorps.Sentry.Sync.html
