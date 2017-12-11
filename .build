@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-20a3b9f87d.js
+dist/sidebar_items-177e1c8127.js
 api-reference.html
 readme.html
 license.html
@@ -166,6 +166,7 @@ CodeCorpsWeb.Plug.DataToAttributes.html
 CodeCorpsWeb.Plug.IdsToIntegers.html
 CodeCorpsWeb.Plug.Segment.html
 CodeCorpsWeb.Plug.SetSentryUserContext.html
+CodeCorpsWeb.Plug.SetTimberUserContext.html
 CodeCorps.Adapter.MapTransformer.html
 CodeCorps.ConnUtils.html
 CodeCorps.Presenters.ImagePresenter.html
