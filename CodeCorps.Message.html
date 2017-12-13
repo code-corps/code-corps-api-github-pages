@@ -8,7 +8,7 @@
     <title>CodeCorps.Message – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-65c081eaa2.js"></script>
+    <script src="dist/sidebar_items-9097633ade.js"></script>
     
     
     
@@ -83,7 +83,7 @@
 <p>The author does not need to be a member of the project in order to send a
 message to the project.</p>
 <p>No recipient will be defined for the message. The recipient is defined at the
-level of the <code class="inline">CodeCorps.Conversation</code>.</p>
+level of the <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a>.</p>
 <p>A message may be used as a broadcast to a number of users. A message MAY
 therefore have many conversations associated with it.</p>
 
@@ -150,7 +150,7 @@ therefore have many conversations associated with it.</p>
     
       <div class="specs">
         
-          <pre>t() :: %CodeCorps.Message{__meta__: term(), author: term(), author_id: term(), body: term(), id: term(), initiated_by: term(), inserted_at: term(), project: term(), project_id: term(), subject: term(), updated_at: term()}</pre>
+          <pre>t() :: %CodeCorps.Message{__meta__: term(), author: term(), author_id: term(), body: term(), conversations: term(), id: term(), initiated_by: term(), inserted_at: term(), project: term(), project_id: term(), subject: term(), updated_at: term()}</pre>
         
       </div>
     

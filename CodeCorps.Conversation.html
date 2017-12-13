@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.Emails.OrganizationInviteEmail – code_corps v0.0.1</title>
+    <title>CodeCorps.Conversation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-9097633ade.js"></script>
@@ -68,15 +68,27 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Emails.OrganizationInviteEmail
+        CodeCorps.Conversation
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/emails/organization_invite_email.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/conversation.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>A header of a <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a> thread, depicting a start of a conversation
+with a specific <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
+<p>When a project sends a <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a> to one or more users, a
+<a href="CodeCorps.Conversation.html#content"><code class="inline">CodeCorps.Conversation</code></a> needs to be created for each of those users, so
+separate conversations can be held with different users starting from the same
+original <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a></p>
+<p>Once replies start coming in, a <a href="CodeCorps.ConversationPart.html"><code class="inline">CodeCorps.ConversationPart</code></a> is created for
+each of those replies.</p>
+
+        </section>
       
 
       
@@ -89,15 +101,13 @@
             Summary
           </h1>
           
-
-          
-  <div class="summary-functions summary">
+  <div class="summary-types summary">
     <h2>
-      <a href="#functions">Functions</a>
+      <a href="#types">Types</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create/1">create(invite)</a>
+    <a href="#t:t/0">t()</a>
   </div>
   
 </div>
@@ -107,31 +117,32 @@
 
           
 
+          
+
         </section>
       
 
       
-
-      
-        <section id="functions" class="details-list">
+        <section id="types" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#functions">
+            <a class="hover-link" href="#types">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Functions
+            Types
           </h1>
-          <div class="detail" id="create/1">
+          <div class="types-list">
+            <div class="detail" id="t:t/0">
   
   
   <div class="detail-header">
-    <a href="#create/1" class="detail-link" title="Link to this function">
+    <a href="#t:t/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
+      <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">create(invite)</span>
+    <span class="signature">t()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/emails/organization_invite_email.ex#L8" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/model/conversation.ex#L16" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -140,7 +151,7 @@
     
       <div class="specs">
         
-          <pre>create(<a href="CodeCorps.OrganizationInvite.html#t:t/0">CodeCorps.OrganizationInvite.t</a>()) :: <a href="https://hexdocs.pm/bamboo/0.8.0/Bamboo.Email.html#t:t/0">Bamboo.Email.t</a>()</pre>
+          <pre>t() :: %CodeCorps.Conversation{__meta__: term(), conversation_parts: term(), id: term(), inserted_at: term(), message: term(), message_id: term(), read_at: term(), status: term(), updated_at: term(), user: term(), user_id: term()}</pre>
         
       </div>
     
@@ -150,7 +161,10 @@
   </section>
 </div>
 
+          </div>
         </section>
+      
+
       
 
       
