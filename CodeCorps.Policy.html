@@ -8,7 +8,7 @@
     <title>CodeCorps.Policy – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-177e1c8127.js"></script>
+    <script src="dist/sidebar_items-65c081eaa2.js"></script>
     
     
     
@@ -110,6 +110,16 @@ specified resource</p>
 </div>
   
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#scope/2">scope(arg, current_user)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Scopes a queryable so it’s only able to return those records the specified
+user is authorized to view</p>
+</div>
+  
+</div>
 
   </div>
 
@@ -163,6 +173,36 @@ specified resource</p>
 specified resource.</p>
 <p>The resource can be a record, when performing an action on an existing record,
 or it can be a map of parameters, when creating a new record.</p>
+
+  </section>
+</div>
+<div class="detail" id="scope/2">
+  
+  
+  <div class="detail-header">
+    <a href="#scope/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">scope(arg, current_user)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/policy.ex#L30" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>scope(module(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Scopes a queryable so it’s only able to return those records the specified
+user is authorized to view.</p>
 
   </section>
 </div>
