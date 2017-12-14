@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.HTTPClientError – code_corps v0.0.1</title>
+    <title>CodeCorps.Policy.Conversation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-70e51d15ea.js"></script>
@@ -68,15 +68,21 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.HTTPClientError
+        CodeCorps.Policy.Conversation
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L74" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/conversation.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>Handles <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> authorization of actions on <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a>
+records.</p>
+
+        </section>
       
 
       
@@ -89,19 +95,6 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
-    <h2>
-      <a href="#types">Types</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:t/0">t()</a>
-  </div>
-  
-</div>
-
-  </div>
-
 
           
   <div class="summary-functions summary">
@@ -110,7 +103,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#new/1">new(opts)</a>
+    <a href="#scope/2">scope(queryable, current_user)</a>
   </div>
   
 </div>
@@ -123,47 +116,6 @@
         </section>
       
 
-      
-        <section id="types" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#types">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Types
-          </h1>
-          <div class="types-list">
-            <div class="detail" id="t:t/0">
-  
-  
-  <div class="detail-header">
-    <a href="#t:t/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <span class="signature">t()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L80" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>t() :: %CodeCorps.GitHub.HTTPClientError{message: term(), reason: term()}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
       
 
       
@@ -175,22 +127,28 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="new/1">
+          <div class="detail" id="scope/2">
   
   
   <div class="detail-header">
-    <a href="#new/1" class="detail-link" title="Link to this function">
+    <a href="#scope/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">new(opts)</span>
+    <span class="signature">scope(queryable, current_user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/github.ex#L82" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/conversation.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>scope(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">
