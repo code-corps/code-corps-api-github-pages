@@ -8,7 +8,7 @@
     <title>CodeCorps.Messages – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-95ab26a42e.js"></script>
+    <script src="dist/sidebar_items-86620ec7d1.js"></script>
     
     
     
@@ -102,6 +102,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#add_part/1">add_part(map)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#create/1">create(params)</a>
   </div>
   
@@ -120,6 +126,15 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#get_part/1">get_part(id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Gets a <a href="CodeCorps.ConversationPart.html"><code class="inline">CodeCorps.ConversationPart</code></a> record</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#list/2">list(scope, params)</a>
   </div>
   
@@ -133,6 +148,15 @@
   </div>
   
     <div class="summary-synopsis"><p>Lists pre-scoped <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> records filtered by parameters</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#list_parts/2">list_parts(scope, params)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Lists pre-scoped <a href="CodeCorps.ConversationPart.html"><code class="inline">CodeCorps.ConversationPart</code></a> records filtered by parameters</p>
 </div>
   
 </div>
@@ -156,7 +180,37 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create/1">
+          <div class="detail" id="add_part/1">
+  
+  
+  <div class="detail-header">
+    <a href="#add_part/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">add_part(map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L74" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>add_part(map()) ::
+  {:ok, <a href="CodeCorps.ConversationPart.html#t:t/0">CodeCorps.ConversationPart.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="create/1">
   
   
   <div class="detail-header">
@@ -166,7 +220,7 @@
     </a>
     <span class="signature">create(params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L44" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L67" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -197,7 +251,7 @@
     </a>
     <span class="signature">get_conversation(id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L51" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -216,6 +270,35 @@
 
   </section>
 </div>
+<div class="detail" id="get_part/1">
+  
+  
+  <div class="detail-header">
+    <a href="#get_part/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get_part(id)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L59" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get_part(integer()) :: <a href="CodeCorps.Conversation.html#t:t/0">CodeCorps.Conversation.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Gets a <a href="CodeCorps.ConversationPart.html"><code class="inline">CodeCorps.ConversationPart</code></a> record</p>
+
+  </section>
+</div>
 <div class="detail" id="list/2">
   
   
@@ -226,7 +309,7 @@
     </a>
     <span class="signature">list(scope, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -255,7 +338,7 @@
     </a>
     <span class="signature">list_conversations(scope, params)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L25" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L32" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -271,6 +354,35 @@
   </div>
   <section class="docstring">
     <p>Lists pre-scoped <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> records filtered by parameters</p>
+
+  </section>
+</div>
+<div class="detail" id="list_parts/2">
+  
+  
+  <div class="detail-header">
+    <a href="#list_parts/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">list_parts(scope, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/messages.ex#L43" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>list_parts(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>(), map()) :: [<a href="CodeCorps.Conversation.html#t:t/0">CodeCorps.Conversation.t</a>()]</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Lists pre-scoped <a href="CodeCorps.ConversationPart.html"><code class="inline">CodeCorps.ConversationPart</code></a> records filtered by parameters</p>
 
   </section>
 </div>

@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.Policy.Skill – code_corps v0.0.1</title>
+    <title>CodeCorps.Messages.ConversationParts – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-86620ec7d1.js"></script>
@@ -68,15 +68,21 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.Policy.Skill
+        CodeCorps.Messages.ConversationParts
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/skill.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_parts.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>An individual part of a conversation in a <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> thread,
+i.e. a reply to the <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> by any participant.</p>
+
+        </section>
       
 
       
@@ -97,7 +103,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create?/1">create?(user)</a>
+    <a href="#create/1">create(attrs)</a>
   </div>
   
 </div>
@@ -121,22 +127,28 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create?/1">
+          <div class="detail" id="create/1">
   
   
   <div class="detail-header">
-    <a href="#create?/1" class="detail-link" title="Link to this function">
+    <a href="#create/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create?(user)</span>
+    <span class="signature">create(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/skill.ex#L5" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_parts.ex#L15" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
     
     
+    
+      <div class="specs">
+        
+          <pre>create(map()) :: <a href="CodeCorps.ConversationPart.html#t:t/0">CodeCorps.ConversationPart.t</a>() | <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+        
+      </div>
     
   </div>
   <section class="docstring">

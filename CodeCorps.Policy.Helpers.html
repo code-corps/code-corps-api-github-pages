@@ -8,7 +8,7 @@
     <title>CodeCorps.Policy.Helpers – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-95ab26a42e.js"></script>
+    <script src="dist/sidebar_items-86620ec7d1.js"></script>
     
     
     
@@ -121,6 +121,15 @@ authorization policies.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#get_conversation/1">get_conversation(arg1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Retrieves conversation from associated record</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#get_membership/2">get_membership(project, user)</a>
   </div>
   
@@ -224,7 +233,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">administered_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L44" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -254,7 +263,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">contributed_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L54" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -274,6 +283,35 @@ containing a <code class="inline">project_id</code> field</p>
 
   </section>
 </div>
+<div class="detail" id="get_conversation/1">
+  
+  
+  <div class="detail-header">
+    <a href="#get_conversation/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get_conversation(arg1)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L110" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>get_conversation(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>() | <a href="CodeCorps.ConversationPart.html#t:t/0">CodeCorps.ConversationPart.t</a>() | map()) :: <a href="CodeCorps.Message.html#t:t/0">CodeCorps.Message.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Retrieves conversation from associated record</p>
+
+  </section>
+</div>
 <div class="detail" id="get_membership/2">
   
   
@@ -284,7 +322,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">get_membership(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L131" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L140" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -316,7 +354,7 @@ and <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>
     </a>
     <span class="signature">get_message(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L109" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L118" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -345,7 +383,7 @@ and <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a>
     </a>
     <span class="signature">get_organization(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L70" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -376,7 +414,7 @@ containing an <code class="inline">organization_id</code> field</p>
     </a>
     <span class="signature">get_project(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L81" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L82" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -407,7 +445,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">get_role(changeset)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L89" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L90" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -438,7 +476,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">get_task(arg1)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L118" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L127" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -467,7 +505,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">owned_by?(project, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L32" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -496,7 +534,7 @@ containing a <code class="inline">project_id</code> field</p>
     </a>
     <span class="signature">task_authored_by?(task, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L124" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/policy/helpers.ex#L133" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
