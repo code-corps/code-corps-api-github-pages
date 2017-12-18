@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-86620ec7d1.js
+dist/sidebar_items-10a42f86a7.js
 api-reference.html
 readme.html
 license.html
@@ -38,6 +38,7 @@ CodeCorps.Message.html
 CodeCorps.Messages.html
 CodeCorps.Messages.ConversationParts.html
 CodeCorps.Messages.ConversationQuery.html
+CodeCorps.Messages.Conversations.html
 CodeCorps.Messages.Query.html
 CodeCorps.ModelCase.html
 CodeCorps.Organizations.html
@@ -61,6 +62,7 @@ CodeCorps.TestHelpers.html
 CodeCorpsWeb.ApiCase.html
 CodeCorpsWeb.ChannelCase.html
 CodeCorpsWeb.ConnCase.html
+CodeCorpsWeb.ConversationChannel.html
 CodeCorpsWeb.ViewCase.html
 CodeCorps.Accounts.html
 CodeCorps.Accounts.Changesets.html

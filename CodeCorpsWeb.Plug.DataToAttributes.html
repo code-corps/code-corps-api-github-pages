@@ -8,7 +8,7 @@
     <title>CodeCorpsWeb.Plug.DataToAttributes – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-86620ec7d1.js"></script>
+    <script src="dist/sidebar_items-10a42f86a7.js"></script>
     
     
     
@@ -79,9 +79,10 @@
 
       
         <section id="moduledoc">
-          <p>Converts params in the JSON api “data” format into flat params convient for
+          <p>Converts params in the JSON api format into flat params convient for
 changeset casting.</p>
-<p>This is done using <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Params.html#to_attributes/1"><code class="inline">JaSerializer.Params.to_attributes/1</code></a></p>
+<p>For base parameters, this is done using <a href="https://hexdocs.pm/ja_serializer/0.12.0/JaSerializer.Params.html#to_attributes/1"><code class="inline">JaSerializer.Params.to_attributes/1</code></a></p>
+<p>For included records, this is done using custom code.</p>
 
         </section>
       
@@ -104,7 +105,7 @@ changeset casting.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#call/2">call(conn, opts)</a>
+    <a href="#call/2">call(conn, opts \\ [])</a>
   </div>
   
 </div>
@@ -137,14 +138,16 @@ changeset casting.</p>
           <div class="detail" id="call/2">
   
   
+    <span id="call/1"></span>
+  
   <div class="detail-header">
     <a href="#call/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">call(conn, opts)</span>
+    <span class="signature">call(conn, opts \\ [])</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L23" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -172,7 +175,7 @@ changeset casting.</p>
     </a>
     <span class="signature">init(opts)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L12" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps_web/plugs/data_to_attributes.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
