@@ -8,7 +8,7 @@
     <title>CodeCorps.Messages.ConversationQuery – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-bce4028cb5.js"></script>
+    <script src="dist/sidebar_items-f24c9b44b8.js"></script>
     
     
     
@@ -102,6 +102,16 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#active_filter/2">active_filter(queryable, map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Filters <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> record queries to return only those
+considered to be active</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#project_filter/2">project_filter(queryable, map)</a>
   </div>
   
@@ -112,11 +122,10 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#status_filter/2">status_filter(queryable, map)</a>
+    <a href="#status_filter/2">status_filter(queryable, arg2)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Narrows down a <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> query to return only those records
-considered to have a specific status</p>
+    <div class="summary-synopsis"><p>Filters <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> record queries by their status</p>
 </div>
   
 </div>
@@ -150,7 +159,45 @@ params map</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="project_filter/2">
+          <div class="detail" id="active_filter/2">
+  
+  
+  <div class="detail-header">
+    <a href="#active_filter/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">active_filter(queryable, map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_query.ex#L56" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>active_filter(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Filters <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> record queries to return only those
+considered to be active.</p>
+<p>Active conversations belong either:</p>
+<ul>
+<li>to a <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a> initiated by user
+</li>
+<li>to a <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a> initiated by an admin, with at least a single
+  conversation part
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="project_filter/2">
   
   
   <div class="detail-header">
@@ -188,9 +235,9 @@ params map</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">status_filter(queryable, map)</span>
+    <span class="signature">status_filter(queryable, arg2)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_query.ex#L56" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_query.ex#L66" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -205,16 +252,7 @@ params map</p>
     
   </div>
   <section class="docstring">
-    <p>Narrows down a <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> query to return only those records
-considered to have a specific status.</p>
-<p>The status of <code class="inline">active</code> means that only those records are included which either</p>
-<ul>
-<li>belong to a <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a> initiated by user
-</li>
-<li>belong to a <a href="CodeCorps.Message.html"><code class="inline">CodeCorps.Message</code></a> initiated by admin, with at least a single
-  reply in the form of a <a href="CodeCorps.ConversationPart.html"><code class="inline">CodeCorps.ConversationPart</code></a>
-</li>
-</ul>
+    <p>Filters <a href="CodeCorps.Conversation.html"><code class="inline">CodeCorps.Conversation</code></a> record queries by their status.</p>
 
   </section>
 </div>
