@@ -137,7 +137,7 @@ i.e. a reply to the <a href="CodeCorps.Conversation.html"><code class="inline">C
     </a>
     <span class="signature">create(attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_parts.ex#L17" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/messages/conversation_parts.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -146,7 +146,9 @@ i.e. a reply to the <a href="CodeCorps.Conversation.html"><code class="inline">C
     
       <div class="specs">
         
-          <pre>create(map()) :: <a href="CodeCorps.ConversationPart.html#t:t/0">CodeCorps.ConversationPart.t</a>() | <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+          <pre>create(map()) ::
+  {:ok, <a href="CodeCorps.ConversationPart.html#t:t/0">CodeCorps.ConversationPart.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
         
       </div>
     
