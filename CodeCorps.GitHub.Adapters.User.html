@@ -161,7 +161,7 @@ GitHub User on the GitHub API</p>
     </a>
     <span class="signature">to_github_user(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L46" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -191,7 +191,7 @@ update a <code class="inline">GithubUser</code> record.</p>
     </a>
     <span class="signature">to_user(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L30" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -208,8 +208,6 @@ update a <code class="inline">GithubUser</code> record.</p>
   <section class="docstring">
     <p>Converts a Github user payload into a map of attributes suitable for creating
 or updating a <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a></p>
-<p>Any <code class="inline">nil</code> values are removed. For example, we don’t want to delete an
-existing email just because it’s <code class="inline">nil</code> in the payload.</p>
 <p>The <code class="inline">type</code> gets transformed to match our expected values for user type.</p>
 
   </section>
@@ -224,7 +222,7 @@ existing email just because it’s <code class="inline">nil</code> in the payloa
     </a>
     <span class="signature">to_user_attrs(github_user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/adapters/user.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
