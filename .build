@@ -4,13 +4,14 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-18fd88eedc.js
+dist/sidebar_items-2df63225d2.js
 api-reference.html
 readme.html
 license.html
 search.html
 404.html
 CodeCorps.Accounts.Users.html
+CodeCorps.Admin.GithubEventQuery.html
 CodeCorps.Auth.BearerAuthPipeline.html
 CodeCorps.Auth.EnsureAuthPipeline.html
 CodeCorps.Auth.ErrorHandler.html

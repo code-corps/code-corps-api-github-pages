@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.StripeService.StripeConnectSubscriptionService – code_corps v0.0.1</title>
+    <title>CodeCorps.Admin.GithubEventQuery – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
     <script src="dist/sidebar_items-2df63225d2.js"></script>
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.StripeService.StripeConnectSubscriptionService
+        CodeCorps.Admin.GithubEventQuery
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription_service.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/admin/github_event_query.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,8 +79,7 @@
 
       
         <section id="moduledoc">
-          <p>Used to perform actions on <code class="inline">StripeConnectSubscription</code> records while propagating
-to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> records.</p>
+          <p>Holds helpers to query <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> records using a map of params.</p>
 
         </section>
       
@@ -103,21 +102,28 @@ to and from associated <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#find_or_create/1">find_or_create(attributes)</a>
+    <a href="#action_filter/2">action_filter(queryable, map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a new <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record on Stripe API, as well as an associated local
-<code class="inline">StripeConnectSubscription</code> record</p>
+    <div class="summary-synopsis"><p>Filters a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> query by <code class="inline">action</code>, if specified in params</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update_from_stripe/2">update_from_stripe(stripe_id, connect_customer_id)</a>
+    <a href="#status_filter/2">status_filter(queryable, map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Updates an existing <code class="inline">StripeConnectSubscription</code> record by retrieving
-a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record and using that data as update parameters</p>
+    <div class="summary-synopsis"><p>Filters a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> query by <code class="inline">status</code>, if specified in params</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#type_filter/2">type_filter(queryable, map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Filters a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> query by <code class="inline">type</code>, if specified in params</p>
 </div>
   
 </div>
@@ -141,17 +147,17 @@ a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.h
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_or_create/1">
+          <div class="detail" id="action_filter/2">
   
   
   <div class="detail-header">
-    <a href="#find_or_create/1" class="detail-link" title="Link to this function">
+    <a href="#action_filter/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">find_or_create(attributes)</span>
+    <span class="signature">action_filter(queryable, map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription_service.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/admin/github_event_query.ex#L18" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -160,42 +166,27 @@ a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.h
     
       <div class="specs">
         
-          <pre>find_or_create(map()) ::
-  {:ok, <a href="CodeCorps.StripeConnectSubscription.html#t:t/0">CodeCorps.StripeConnectSubscription.t</a>()} |
-  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
-  {:error, <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Error.html#t:t/0">Stripe.Error.t</a>()} |
-  {:error, :project_not_found} |
-  {:error, :project_not_ready} |
-  {:error, :user_not_found} |
-  {:error, :user_not_ready}</pre>
+          <pre>action_filter(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a new <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record on Stripe API, as well as an associated local
-<code class="inline">StripeConnectSubscription</code> record</p>
-<h1>Side effects</h1>
-<ul>
-<li>If the subscription is created or found, associated project totals will get updated
-</li>
-<li>If the subscription is created or found, associated donation goal states will be updated
-</li>
-</ul>
+    <p>Filters a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> query by <code class="inline">action</code>, if specified in params</p>
 
   </section>
 </div>
-<div class="detail" id="update_from_stripe/2">
+<div class="detail" id="status_filter/2">
   
   
   <div class="detail-header">
-    <a href="#update_from_stripe/2" class="detail-link" title="Link to this function">
+    <a href="#status_filter/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">update_from_stripe(stripe_id, connect_customer_id)</span>
+    <span class="signature">status_filter(queryable, map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/stripe_service/stripe_connect_subscription_service.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/admin/github_event_query.ex#L28" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -204,17 +195,42 @@ a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.h
     
       <div class="specs">
         
-          <pre>update_from_stripe(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(), <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) ::
-  {:ok, <a href="CodeCorps.StripeConnectSubscription.html#t:t/0">CodeCorps.StripeConnectSubscription.t</a>()} |
-  {:error, <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Error.html#t:t/0">Stripe.Error.t</a>()} |
-  {:error, :not_found}</pre>
+          <pre>status_filter(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Updates an existing <code class="inline">StripeConnectSubscription</code> record by retrieving
-a <a href="https://hexdocs.pm/stripity_stripe/2.0.0-beta.1/Stripe.Subscription.html"><code class="inline">Stripe.Subscription</code></a> record and using that data as update parameters</p>
+    <p>Filters a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> query by <code class="inline">status</code>, if specified in params</p>
+
+  </section>
+</div>
+<div class="detail" id="type_filter/2">
+  
+  
+  <div class="detail-header">
+    <a href="#type_filter/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">type_filter(queryable, map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/admin/github_event_query.ex#L38" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>type_filter(<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Queryable.html#t:t/0">Ecto.Queryable.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Filters a <a href="CodeCorps.GithubEvent.html"><code class="inline">CodeCorps.GithubEvent</code></a> query by <code class="inline">type</code>, if specified in params</p>
 
   </section>
 </div>
