@@ -4,7 +4,7 @@ fonts/icomoon.eot
 fonts/icomoon.svg
 fonts/icomoon.ttf
 fonts/icomoon.woff
-dist/sidebar_items-feb5f1d2e8.js
+dist/sidebar_items-45eb493af7.js
 api-reference.html
 readme.html
 license.html
@@ -61,6 +61,7 @@ CodeCorps.Sentry.Async.html
 CodeCorps.Sentry.Sync.html
 CodeCorps.Skills.html
 CodeCorps.StripeCase.html
+CodeCorps.Task.html
 CodeCorps.TestEnvironmentHelper.html
 CodeCorps.TestHelpers.html
 CodeCorpsWeb.ApiCase.html
@@ -108,10 +109,10 @@ CodeCorps.StripeFileUpload.html
 CodeCorps.StripeInvoice.html
 CodeCorps.StripePlatformCard.html
 CodeCorps.StripePlatformCustomer.html
-CodeCorps.Task.html
-CodeCorps.Task.Query.html
 CodeCorps.TaskList.html
 CodeCorps.TaskSkill.html
+CodeCorps.Tasks.html
+CodeCorps.Tasks.Query.html
 CodeCorps.Transition.UserState.html
 CodeCorps.User.html
 CodeCorps.UserCategory.html
@@ -126,7 +127,6 @@ CodeCorps.Services.ForgotPasswordService.html
 CodeCorps.Services.MarkdownRendererService.html
 CodeCorps.Services.ProjectService.html
 CodeCorps.Services.UserService.html
-CodeCorps.Task.Service.html
 CodeCorps.Policy.html
 CodeCorps.Policy.Category.html
 CodeCorps.Policy.Comment.html
