@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Event.Installation.MatchedUser – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Installation – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -68,20 +68,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Installation.MatchedUser
+        CodeCorps.GitHub.Sync.Installation
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/matched_user.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>In charge of handling the matched user case of an installation event</p>
-
-        </section>
       
 
       
@@ -100,6 +95,12 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#t:commit_result/0">commit_result()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#t:outcome/0">outcome()</a>
   </div>
   
@@ -115,10 +116,10 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#handle/2">handle(user, payload)</a>
+    <a href="#sync/1">sync(payload)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Handles the installation event in the case of a matched user</p>
+    <div class="summary-synopsis"><p>Tries to sync a GithubAppInstallation record using a Github API payload</p>
 </div>
   
 </div>
@@ -141,7 +142,37 @@
             Types
           </h1>
           <div class="types-list">
-            <div class="detail" id="t:outcome/0">
+            <div class="detail" id="t:commit_result/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:commit_result/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">commit_result()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L7" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:commit_result/0">commit_result</a>() ::
+  {:ok, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:outcome/0">
   
   
   <div class="detail-header">
@@ -151,7 +182,7 @@
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/matched_user.ex#L16" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L10" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -161,8 +192,8 @@
       <div class="specs">
         
           <pre><a href="#t:outcome/0">outcome</a>() ::
-  process_outcome() |
-  {:error, :too_many_unprocessed_installations}</pre>
+  <a href="#t:commit_result/0">commit_result</a>() |
+  {:error, :multiple_unprocessed_installations_found}</pre>
         
       </div>
     
@@ -185,17 +216,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="handle/2">
+          <div class="detail" id="sync/1">
   
   
   <div class="detail-header">
-    <a href="#handle/2" class="detail-link" title="Link to this function">
+    <a href="#sync/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">handle(user, payload)</span>
+    <span class="signature">sync(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/matched_user.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L43" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -204,22 +235,30 @@
     
       <div class="specs">
         
-          <pre>handle(map(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>sync(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Handles the installation event in the case of a matched user.</p>
-<p>This is done by attempting to find a <code class="inline">GithubAppInstallation</code> record belonging
-to the matched user, with a blank <code class="inline">github_id</code> field.</p>
-<p>If no records are found, this means the installation was done from GitHub
-directly and it just so happens we have a connected GitHub user on record
-who performed the installation.</p>
-<p>If a record is found, then we update it’s <code class="inline">github_id</code> field and then fetch
-repositories for that installation and store them locally.</p>
-<p>The case of multiple records being found should not be possible and results
-in an error tuple being returned.</p>
+    <p>Tries to sync a GithubAppInstallation record using a Github API payload.</p>
+<p>The process is branching.</p>
+<p>If the installation can be matched by github id, then it is simply updated.</p>
+<p>If the installation cannot be matched by github id, then the system tries to
+locate the user, through the sender github id.</p>
+<p>If that fails, an unassociated installation is created.</p>
+<p>If a user is found, the system looks for a “skeleton” installation. This is
+a <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record which was created from the project
+integration page, but the webhook for the next step, which is actually
+performing the installation on Github.com, has not yet been done.</p>
+<p>This “skeleton” record is associated to a project and a user, but does
+not have any github data yet.</p>
+<p>In this case, the system assumes a single “skeleton” installation. If multiple
+are found, an error tuple is returned.</p>
+<p>If an installation is matched this way, it gets updated.</p>
+<p>Finally, if no installation has been matched in this alternative way, an
+installation associated to a user, but not associated to a project gets
+created.</p>
 
   </section>
 </div>

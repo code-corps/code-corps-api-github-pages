@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -479,35 +479,6 @@ a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a></
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.ChangesetBuilder.html">CodeCorps.GitHub.Event.Installation.ChangesetBuilder</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of managing changesets when creating or updating a
-<code class="inline">GithubAppInstallation</code> in the process of handling an Installation event</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.MatchedUser.html">CodeCorps.GitHub.Event.Installation.MatchedUser</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of handling the matched user case of an installation event</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.Repos.html">CodeCorps.GitHub.Event.Installation.Repos</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of processing repos during an installation event</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.UnmatchedUser.html">CodeCorps.GitHub.Event.Installation.UnmatchedUser</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of handling the unmatched user case of an installation event</p>
-</div>
-  
-</div>
-<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Installation.Validator.html">CodeCorps.GitHub.Event.Installation.Validator</a></div>
   
     <div class="summary-synopsis"><p>In charge of validatng a GitHub.API.Installation webhook payload</p>
@@ -572,6 +543,13 @@ InstallationRepositories event type</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Event.Validator.html">CodeCorps.GitHub.Event.Validator</a></div>
+  
+    <div class="summary-synopsis"><p>Default behavior for all GitHub webhook event payload validators</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.FailureAPI.html">CodeCorps.GitHub.FailureAPI</a></div>
   
     <div class="summary-synopsis"><p>A basic GitHub API mock which returns a 401 forbidden for all requests</p>
@@ -627,6 +605,18 @@ a GitHub Comment payload</p>
   
 </div>
 <div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Installation.html">CodeCorps.GitHub.Sync.Installation</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Installation.Changeset.html">CodeCorps.GitHub.Sync.Installation.Changeset</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of managing changesets when creating or updating a
+<code class="inline">GithubAppInstallation</code> in the process of handling an Installation event</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.html">CodeCorps.GitHub.Sync.Issue</a></div>
   
 </div>
@@ -653,6 +643,10 @@ Issues webhook</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.html">CodeCorps.GitHub.Sync.PullRequest</a></div>
   
+    <div class="summary-synopsis"><p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
+when processing a GitHub Pull Request payload</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.BodyParser.html">CodeCorps.GitHub.Sync.PullRequest.BodyParser</a></div>
@@ -663,11 +657,7 @@ of keywords</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest.html">CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
-when processing a GitHub Pull Request payload</p>
-</div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Repo.html">CodeCorps.GitHub.Sync.Repo</a></div>
   
 </div>
 <div class="summary-row">
@@ -694,9 +684,10 @@ payload containing the user</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Utils.RepoFinder.html">CodeCorps.GitHub.Sync.Utils.RepoFinder</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Utils.Finder.html">CodeCorps.GitHub.Sync.Utils.Finder</a></div>
   
-    <div class="summary-synopsis"><p>Finds a relevant <code class="inline">GithubRepo</code> record given a Github API payload</p>
+    <div class="summary-synopsis"><p>Used to retrieve locally stored github records, using data contained in GitHub
+API payloads</p>
 </div>
   
 </div>

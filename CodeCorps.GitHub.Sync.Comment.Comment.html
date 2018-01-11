@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.Comment.Comment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -104,7 +104,13 @@ creating or updating all those records.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:outcome/0">outcome()</a>
+    <a href="#t:commit_result/0">commit_result()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:commit_result_aggregate/0">commit_result_aggregate()</a>
   </div>
   
 </div>
@@ -165,15 +171,45 @@ with specified <code class="inline">github_id</code></p>
             Types
           </h1>
           <div class="types-list">
-            <div class="detail" id="t:outcome/0">
+            <div class="detail" id="t:commit_result/0">
   
   
   <div class="detail-header">
-    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
+    <a href="#t:commit_result/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">outcome()</span>
+    <span class="signature">commit_result()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L30" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:commit_result/0">commit_result</a>() ::
+  {:ok, <a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:commit_result_aggregate/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:commit_result_aggregate/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">commit_result_aggregate()</span>
     
       <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L27" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
@@ -184,7 +220,7 @@ with specified <code class="inline">github_id</code></p>
     
       <div class="specs">
         
-          <pre><a href="#t:outcome/0">outcome</a>() ::
+          <pre><a href="#t:commit_result_aggregate/0">commit_result_aggregate</a>() ::
   {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()]} |
   {:error, {[<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()], [<a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()]}}</pre>
         
@@ -219,7 +255,7 @@ with specified <code class="inline">github_id</code></p>
     </a>
     <span class="signature">delete(github_id)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L94" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L114" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -251,7 +287,7 @@ with specified <code class="inline">github_id</code></p>
     </a>
     <span class="signature">sync(task, github_comment, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L40" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L42" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -260,7 +296,7 @@ with specified <code class="inline">github_id</code></p>
     
       <div class="specs">
         
-          <pre>sync(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>sync(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="#t:commit_result/0">commit_result</a>()</pre>
         
       </div>
     
@@ -285,7 +321,7 @@ payload, associated to the specified <a href="CodeCorps.GithubComment.html"><cod
     </a>
     <span class="signature">sync_github_repo(github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L60" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/comment.ex#L78" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -294,7 +330,7 @@ payload, associated to the specified <a href="CodeCorps.GithubComment.html"><cod
     
       <div class="specs">
         
-          <pre>sync_github_repo(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>sync_github_repo(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: <a href="#t:commit_result_aggregate/0">commit_result_aggregate</a>()</pre>
         
       </div>
     

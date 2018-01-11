@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -101,7 +101,49 @@ repositories.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#t:comment_deleted_outcome/0">comment_deleted_outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:installation_event_outcome/0">installation_event_outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:installation_repositories_event_outcome/0">installation_repositories_event_outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:issue_comment_outcome/0">issue_comment_outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:issue_event_outcome/0">issue_event_outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#t:outcome/0">outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:pull_request_comment_outcome/0">pull_request_comment_outcome()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:pull_request_event_outcome/0">pull_request_event_outcome()</a>
   </div>
   
 </div>
@@ -115,6 +157,24 @@ repositories.</p>
       <a href="#functions">Functions</a>
     </h2>
     <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#installation_event/1">installation_event(payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Handles a GitHub installation event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#installation_repositories_event/1">installation_repositories_event(payload)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Syncs a GitHub InstallationRepositories event</p>
+</div>
+  
+</div>
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#issue_comment_event/1">issue_comment_event(payload)</a>
   </div>
@@ -169,7 +229,177 @@ repositories.</p>
             Types
           </h1>
           <div class="types-list">
-            <div class="detail" id="t:outcome/0">
+            <div class="detail" id="t:comment_deleted_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:comment_deleted_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">comment_deleted_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L85" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>comment_deleted_outcome() :: {:ok, map()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:installation_event_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:installation_event_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">installation_event_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L273" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:installation_event_outcome/0">installation_event_outcome</a>() ::
+  {:ok, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()} |
+  {:error, :validation_error_on_syncing_installation, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :multiple_unprocessed_installations_found, map()} |
+  {:error, :github_api_error_on_syncing_repos, struct()} |
+  {:error, :validation_error_on_deleting_removed_repos, {list(), list()}} |
+  {:error, :validation_error_on_syncing_existing_repos, {list(), list()}} |
+  {:error, :validation_error_on_marking_installation_processed, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :unexpected_transaction_outcome, map()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:installation_repositories_event_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:installation_repositories_event_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">installation_repositories_event_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L330" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:installation_repositories_event_outcome/0">installation_repositories_event_outcome</a>() ::
+  {:ok, [<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()]} |
+  {:error, :unmatched_installation, map()} |
+  {:error, :validation_error_on_syncing_repos, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :unexpected_transaction_outcome, map()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:issue_comment_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:issue_comment_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">issue_comment_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L87" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:issue_comment_outcome/0">issue_comment_outcome</a>() ::
+  {:ok, <a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()} |
+  {:error, :repo_not_found, map()} |
+  {:error, :validating_github_issue, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :validating_user, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :multiple_issue_users_match, map()} |
+  {:error, :validating_task, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :validating_github_comment, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :validating_user, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :multiple_comment_users_match, map()} |
+  {:error, :validating_comment, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :unexpected_transaction_outcome, any()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:issue_event_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:issue_event_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">issue_event_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L37" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:issue_event_outcome/0">issue_event_outcome</a>() ::
+  {:ok, <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()} |
+  {:error, :repo_not_found, map()} |
+  {:error, :validating_github_issue, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :validating_user, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :multiple_issue_users_match, map()} |
+  {:error, :validating_task, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :unexpected_transaction_outcome, any()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:outcome/0">
   
   
   <div class="detail-header">
@@ -179,7 +409,7 @@ repositories.</p>
     </a>
     <span class="signature">outcome()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L20" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L22" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -191,19 +421,84 @@ repositories.</p>
           <pre><a href="#t:outcome/0">outcome</a>() ::
   {:ok, [<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>()]} |
   {:ok, <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>()} |
-  {:ok, [<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>()]} |
   {:error, :repo_not_found, %{}} |
   {:error, :fetching_issue} |
   {:error, :fetching_pull_request} |
-  {:error, :multiple_issue_users_match} |
   {:error, :multiple_comment_users_match} |
   {:error, :validating_github_pull_request} |
-  {:error, :validating_github_issue} |
   {:error, :validating_github_comment} |
   {:error, :validating_user} |
   {:error, :validating_task} |
   {:error, :validating_comment} |
   {:error, :unexpected_transaction_outcome}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:pull_request_comment_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:pull_request_comment_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">pull_request_comment_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L100" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:pull_request_comment_outcome/0">pull_request_comment_outcome</a>() ::
+  <a href="#t:issue_comment_outcome/0">issue_comment_outcome</a>() |
+  {:error, :fetching_pull_request, struct()} |
+  {:error, :validating_github_pull_request, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="t:pull_request_event_outcome/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:pull_request_event_outcome/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">pull_request_event_outcome()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L372" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:pull_request_event_outcome/0">pull_request_event_outcome</a>() ::
+  {:ok, map()} |
+  {:error, :repo_not_found, map()} |
+  {:error, :fetching_issue, struct()} |
+  {:error, :validating_github_pull_request, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :validating_github_issue, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :validating_user, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :multiple_issue_users_match, %{}} |
+  {:error, :validating_task, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()} |
+  {:error, :unexpected_transaction_outcome, map()}</pre>
         
       </div>
     
@@ -226,7 +521,84 @@ repositories.</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="issue_comment_event/1">
+          <div class="detail" id="installation_event/1">
+  
+  
+  <div class="detail-header">
+    <a href="#installation_event/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">installation_event(payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L297" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>installation_event(map()) :: <a href="#t:installation_event_outcome/0">installation_event_outcome</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Handles a GitHub installation event.</p>
+<p>Currently only supports the “added” version of the event.</p>
+<p>The event is handled by first syncing the installation payload into a new or
+existing <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record, using
+<a href="CodeCorps.GitHub.Sync.Installation.html#sync/1"><code class="inline">CodeCorps.GitHub.Sync.Installation.sync/1</code></a>, followed by syncing the
+record’s <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> children using
+<a href="CodeCorps.GitHub.Sync.Repo.html#sync_installation/1"><code class="inline">CodeCorps.GitHub.Sync.Repo.sync_installation/1</code></a>.</p>
+<p><a href="https://developer.github.com/v3/activity/events/types/#installationevent">https://developer.github.com/v3/activity/events/types/#installationevent</a></p>
+
+  </section>
+</div>
+<div class="detail" id="installation_repositories_event/1">
+  
+  
+  <div class="detail-header">
+    <a href="#installation_repositories_event/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">installation_repositories_event(payload)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L348" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>installation_repositories_event(map()) :: <a href="#t:installation_repositories_event_outcome/0">installation_repositories_event_outcome</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Syncs a GitHub InstallationRepositories event.</p>
+<ul>
+<li><p>For the “removed” action</p>
+<ul>
+<li>Deletes all  <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> records matched with the payload
+</li>
+</ul>
+</li>
+<li>For the “added” action
+  -
+</li>
+</ul>
+<p><a href="https://developer.github.com/v3/activity/events/types/#issuecommentevent">https://developer.github.com/v3/activity/events/types/#issuecommentevent</a></p>
+
+  </section>
+</div>
+<div class="detail" id="issue_comment_event/1">
   
   
   <div class="detail-header">
@@ -236,7 +608,7 @@ repositories.</p>
     </a>
     <span class="signature">issue_comment_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L92" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L214" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -245,7 +617,10 @@ repositories.</p>
     
       <div class="specs">
         
-          <pre>issue_comment_event(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>issue_comment_event(map()) ::
+  <a href="#t:comment_deleted_outcome/0">comment_deleted_outcome</a>() |
+  <a href="#t:pull_request_comment_outcome/0">pull_request_comment_outcome</a>() |
+  <a href="#t:issue_comment_outcome/0">issue_comment_outcome</a>()</pre>
         
       </div>
     
@@ -287,7 +662,7 @@ repositories.</p>
     </a>
     <span class="signature">issue_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L45" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L55" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -296,7 +671,7 @@ repositories.</p>
     
       <div class="specs">
         
-          <pre>issue_event(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>issue_event(map()) :: <a href="#t:issue_event_outcome/0">issue_event_outcome</a>()</pre>
         
       </div>
     
@@ -323,7 +698,7 @@ repositories.</p>
     </a>
     <span class="signature">pull_request_event(payload)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L116" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L395" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -332,7 +707,7 @@ repositories.</p>
     
       <div class="specs">
         
-          <pre>pull_request_event(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>pull_request_event(map()) :: <a href="#t:pull_request_event_outcome/0">pull_request_event_outcome</a>()</pre>
         
       </div>
     
@@ -364,7 +739,7 @@ repositories.</p>
     </a>
     <span class="signature">sync_repo(repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L162" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/sync.ex#L472" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>

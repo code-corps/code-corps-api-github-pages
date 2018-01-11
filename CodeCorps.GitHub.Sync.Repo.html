@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Event.Installation.Repos – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Repo – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -68,20 +68,15 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Installation.Repos
+        CodeCorps.GitHub.Sync.Repo
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/repos.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/repo/repo.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>In charge of processing repos during an installation event</p>
-
-        </section>
       
 
       
@@ -102,13 +97,14 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#process/1">process(installation)</a>
+    <a href="#sync_installation/1">sync_installation(installation)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Creates and returns a multi used to sync a <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> records
-associated with the provided <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record, based
-on freshly retrieved GitHub data</p>
 </div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sync_installation/2">sync_installation(installation, map)</a>
+  </div>
   
 </div>
 
@@ -131,17 +127,17 @@ on freshly retrieved GitHub data</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="process/1">
+          <div class="detail" id="sync_installation/1">
   
   
   <div class="detail-header">
-    <a href="#process/1" class="detail-link" title="Link to this function">
+    <a href="#sync_installation/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">process(installation)</span>
+    <span class="signature">sync_installation(installation)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/repos.ex#L35" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/repo/repo.ex#L40" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -150,26 +146,43 @@ on freshly retrieved GitHub data</p>
     
       <div class="specs">
         
-          <pre>process(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
+          <pre>sync_installation(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()) ::
+  aggregated_result() |
+  {:error, struct()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Creates and returns a multi used to sync a <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> records
-associated with the provided <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record, based
-on freshly retrieved GitHub data.</p>
-<p>Note that a GitHub API call is being called as part of this process.</p>
-<p>The list of repositories from the API call is considered the master list.</p>
-<ul>
-<li>Anything existing locally, but not on this list is deleted.
-</li>
-<li>Anything existing both locally and on this list is updated.
-</li>
-<li>Anything existing not locally, but on this list is created.
-</li>
-</ul>
-
+    
+  </section>
+</div>
+<div class="detail" id="sync_installation/2">
+  
+  
+  <div class="detail-header">
+    <a href="#sync_installation/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sync_installation(installation, map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/repo/repo.ex#L30" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>sync_installation(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>(), map()) :: aggregated_result()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 

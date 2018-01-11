@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.Utils.RepoFinder – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Utils.Finder – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.Utils.RepoFinder
+        CodeCorps.GitHub.Sync.Utils.Finder
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/utils/repo_finder.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/utils/finder.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,7 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>Finds a relevant <code class="inline">GithubRepo</code> record given a Github API payload.</p>
+          <p>Used to retrieve locally stored github records, using data contained in GitHub
+API payloads.</p>
 
         </section>
       
@@ -102,10 +103,21 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
+    <a href="#find_installation/1">find_installation(map)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>For a provided Github API payload, attemps to find a
+<a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#find_repo/1">find_repo(map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>For a provided Github API payload, attemps to find a <code class="inline">GithubRepo</code> record</p>
+    <div class="summary-synopsis"><p>For a provided Github API payload, attemps to find a <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+record</p>
 </div>
   
 </div>
@@ -129,7 +141,39 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="find_repo/1">
+          <div class="detail" id="find_installation/1">
+  
+  
+  <div class="detail-header">
+    <a href="#find_installation/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">find_installation(map)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/utils/finder.ex#L34" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>find_installation(map()) ::
+  {:ok, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()} |
+  {:error, :unmatched_installation}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>For a provided Github API payload, attemps to find a
+<a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record.</p>
+
+  </section>
+</div>
+<div class="detail" id="find_repo/1">
   
   
   <div class="detail-header">
@@ -139,7 +183,7 @@
     </a>
     <span class="signature">find_repo(map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/utils/repo_finder.ex#L15" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/utils/finder.ex#L17" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -156,14 +200,8 @@
     
   </div>
   <section class="docstring">
-    <p>For a provided Github API payload, attemps to find a <code class="inline">GithubRepo</code> record.</p>
-<p>Returns</p>
-<ul>
-<li><code class="inline">{:ok, GithubRepo.t}</code> if record was found
-</li>
-<li><code class="inline">{:error, :unmatched_repository}</code> if record was not found
-</li>
-</ul>
+    <p>For a provided Github API payload, attemps to find a <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+record.</p>
 
   </section>
 </div>

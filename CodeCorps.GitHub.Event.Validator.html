@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Event.Installation.UnmatchedUser – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Event.Validator – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Event.Installation.UnmatchedUser
+        CodeCorps.GitHub.Event.Validator <small>behaviour</small>
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/unmatched_user.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/validator.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,7 +79,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of handling the unmatched user case of an installation event</p>
+          <p>Default behavior for all GitHub webhook event payload validators.</p>
 
         </section>
       
@@ -94,64 +94,54 @@
             Summary
           </h1>
           
-  <div class="summary-types summary">
+
+          
+
+          
+  <div class="summary-callbacks summary">
     <h2>
-      <a href="#types">Types</a>
+      <a href="#callbacks">Callbacks</a>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:outcome/0">outcome()</a>
+    <a href="#c:valid?/1">valid?(map)</a>
   </div>
   
-</div>
-
-  </div>
-
-
-          
-  <div class="summary-functions summary">
-    <h2>
-      <a href="#functions">Functions</a>
-    </h2>
-    <div class="summary-row">
-  <div class="summary-signature">
-    <a href="#handle/1">handle(payload)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Handles the installation event in the case of an unmatched user</p>
+    <div class="summary-synopsis"><p>The only entry point a GitHub webhook event validator function should contain</p>
 </div>
   
 </div>
 
   </div>
 
-
-          
 
         </section>
       
 
       
-        <section id="types" class="details-list">
+
+      
+
+      
+        <section id="callbacks" class="details-list">
           <h1 class="section-heading">
-            <a class="hover-link" href="#types">
+            <a class="hover-link" href="#callbacks">
               <span class="icon-link" aria-hidden="true"></span>
               <span class="sr-only">Link to this section</span>
             </a>
-            Types
+            Callbacks
           </h1>
-          <div class="types-list">
-            <div class="detail" id="t:outcome/0">
+          <div class="detail" id="c:valid?/1">
   
   
   <div class="detail-header">
-    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
+    <a href="#c:valid?/1" class="detail-link" title="Link to this callback">
       <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
+      <span class="sr-only">Link to this callback</span>
     </a>
-    <span class="signature">outcome()</span>
+    <span class="signature">valid?(map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/unmatched_user.ex#L13" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/validator.ex#L12" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -160,72 +150,20 @@
     
       <div class="specs">
         
-          <pre><a href="#t:outcome/0">outcome</a>() ::
-  process_outcome() |
-  {:error, :unexpected_installation_payload}</pre>
+          <pre>valid?(map()) :: boolean()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    
-  </section>
-</div>
-
-          </div>
-        </section>
-      
-
-      
-        <section id="functions" class="details-list">
-          <h1 class="section-heading">
-            <a class="hover-link" href="#functions">
-              <span class="icon-link" aria-hidden="true"></span>
-              <span class="sr-only">Link to this section</span>
-            </a>
-            Functions
-          </h1>
-          <div class="detail" id="handle/1">
-  
-  
-  <div class="detail-header">
-    <a href="#handle/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">handle(payload)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/event/installation/unmatched_user.ex#L30" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>handle(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Handles the installation event in the case of an unmatched user.</p>
-<p>This is done by attempting to find a <code class="inline">GithubAppInstallation</code> record by it’s
-<code class="inline">github_id</code> field.</p>
-<p>If a record is not found, which is the expected case, one is created and it’s
-<code class="inline">sender_github_id</code> field is set, to be matched with a user which could later
-connect with github.</p>
-<p>If a record is found, the something must have went wrong at some point, since
-it should not happen, but the process continues gracefuly and simply updates
-the record (making no actual changes in most cases).</p>
+    <p>The only entry point a GitHub webhook event validator function should contain.</p>
+<p>Receives the GitHub payload, returns <code class="inline">true</code> if the payload is in the expected
+format, <code class="inline">false</code> otherwise.</p>
 
   </section>
 </div>
 
         </section>
-      
-
       
           <footer class="footer">
         <p>

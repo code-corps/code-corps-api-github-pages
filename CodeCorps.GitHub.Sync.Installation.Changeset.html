@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Installation.Changeset – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.PullRequest.GithubPullRequest
+        CodeCorps.GitHub.Sync.Installation.Changeset
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/pull_request/github_pull_request/github_pull_request.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/changeset.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,9 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
-when processing a GitHub Pull Request payload.</p>
-<p>The only entry point is <a href="#create_or_update_pull_request/2"><code class="inline">create_or_update_pull_request/2</code></a>.</p>
+          <p>In charge of managing changesets when creating or updating a
+<code class="inline">GithubAppInstallation</code> in the process of handling an Installation event.</p>
 
         </section>
       
@@ -104,11 +103,21 @@ when processing a GitHub Pull Request payload.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_pull_request/2">create_or_update_pull_request(github_repo, attrs)</a>
+    <a href="#create_changeset/2">create_changeset(params, user \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
-payload</p>
+    <div class="summary-synopsis"><p>Builds a changeset to create a <code class="inline">GithubAppInstallation</code> based on the payload
+from an Installation event</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update_changeset/2">update_changeset(record, params)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Builds a changeset to update a <code class="inline">GithubAppInstallation</code> based on the payload
+from an Installation event</p>
 </div>
   
 </div>
@@ -132,17 +141,19 @@ payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_or_update_pull_request/2">
+          <div class="detail" id="create_changeset/2">
   
+  
+    <span id="create_changeset/1"></span>
   
   <div class="detail-header">
-    <a href="#create_or_update_pull_request/2" class="detail-link" title="Link to this function">
+    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_pull_request(github_repo, attrs)</span>
+    <span class="signature">create_changeset(params, user \\ nil)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/pull_request/github_pull_request/github_pull_request.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/changeset.ex#L21" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -151,27 +162,45 @@ payload</p>
     
       <div class="specs">
         
-          <pre>create_or_update_pull_request(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), map()) :: linking_result()</pre>
+          <pre>create_changeset(map(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>() | nil) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
-payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li><p>Search for the pull request in our database with the payload data.</p>
-<ul>
-<li>If we return a single <code class="inline">GithubPullRequest</code>, then the <code class="inline">GithubPullRequest</code>
-  should be updated.
-</li>
-<li>If there are no matching <code class="inline">GithubPullRequest</code> records, then a
-  <code class="inline">GithubPullRequest</code>should be created.
-</li>
-</ul>
-</li>
-</ul>
+    <p>Builds a changeset to create a <code class="inline">GithubAppInstallation</code> based on the payload
+from an Installation event.</p>
+<p>An optional user to associate the installation with can be provided.</p>
+
+  </section>
+</div>
+<div class="detail" id="update_changeset/2">
+  
+  
+  <div class="detail-header">
+    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">update_changeset(record, params)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/changeset.ex#L39" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>update_changeset(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Builds a changeset to update a <code class="inline">GithubAppInstallation</code> based on the payload
+from an Installation event.</p>
 
   </section>
 </div>

@@ -8,7 +8,7 @@
     <title>CodeCorps.GitHub.Sync.PullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-45eb493af7.js"></script>
+    <script src="dist/sidebar_items-688fe5d862.js"></script>
     
     
     
@@ -78,6 +78,13 @@
       </h1>
 
       
+        <section id="moduledoc">
+          <p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
+when processing a GitHub Pull Request payload.</p>
+<p>The only entry point is <a href="#create_or_update_pull_request/2"><code class="inline">create_or_update_pull_request/2</code></a>.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -97,10 +104,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync/2">sync(changes, payload)</a>
+    <a href="#create_or_update_pull_request/2">create_or_update_pull_request(payload, github_repo)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Syncs a GitHub pull request API payload with our data</p>
+    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+payload</p>
 </div>
   
 </div>
@@ -124,17 +132,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync/2">
+          <div class="detail" id="create_or_update_pull_request/2">
   
   
   <div class="detail-header">
-    <a href="#sync/2" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_pull_request/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync(changes, payload)</span>
+    <span class="signature">create_or_update_pull_request(payload, github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -143,29 +151,27 @@
     
       <div class="specs">
         
-          <pre>sync(map(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Multi.html#t:t/0">Ecto.Multi.t</a>()</pre>
+          <pre>create_or_update_pull_request(map(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: linking_result()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Syncs a GitHub pull request API payload with our data.</p>
+    <p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+payload.</p>
 <p>The process is as follows:</p>
 <ul>
-<li>match payload with affected <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> record using
-  <a href="CodeCorps.GitHub.Sync.Utils.RepoFinder.html"><code class="inline">CodeCorps.GitHub.Sync.Utils.RepoFinder</code></a>
+<li><p>Search for the pull request in our database with the payload data.</p>
+<ul>
+<li>If we return a single <code class="inline">GithubPullRequest</code>, then the <code class="inline">GithubPullRequest</code>
+  should be updated.
 </li>
-<li>match with <a href="CodeCorps.User.html"><code class="inline">CodeCorps.User</code></a> using
-  <code class="inline">CodeCorps.GitHub.Event.PullRequest.UserLinker</code>
-</li>
-<li>create or update each <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> for the <a href="CodeCorps.Project.html"><code class="inline">CodeCorps.Project</code></a> matching
-  the <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a>
+<li>If there are no matching <code class="inline">GithubPullRequest</code> records, then a
+  <code class="inline">GithubPullRequest</code>should be created.
 </li>
 </ul>
-<p>If the sync succeeds, it will return an <code class="inline">:ok</code> tuple with a list of created or
-updated tasks.</p>
-<p>If the sync fails, it will return an <code class="inline">:error</code> tuple, where the second element
-is the atom indicating a reason.</p>
+</li>
+</ul>
 
   </section>
 </div>
