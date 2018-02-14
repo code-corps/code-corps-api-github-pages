@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.PullRequest – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.GithubUser – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.PullRequest
+        CodeCorps.GitHub.Sync.GithubUser
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_user/github_user.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,9 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
-when processing a GitHub Pull Request payload.</p>
-<p>The only entry point is <a href="#create_or_update_pull_request/2"><code class="inline">create_or_update_pull_request/2</code></a>.</p>
+          <p>In charge of syncing to a <code class="inline">GithubUser</code> record given a GitHub API payload
+containing the user.</p>
 
         </section>
       
@@ -104,10 +103,10 @@ when processing a GitHub Pull Request payload.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_pull_request/2">create_or_update_pull_request(payload, github_repo)</a>
+    <a href="#create_or_update_github_user/1">create_or_update_github_user(map)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubUser</code> record using information in the GitHub API
 payload</p>
 </div>
   
@@ -132,17 +131,17 @@ payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_or_update_pull_request/2">
+          <div class="detail" id="create_or_update_github_user/1">
   
   
   <div class="detail-header">
-    <a href="#create_or_update_pull_request/2" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_github_user/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_pull_request(payload, github_repo)</span>
+    <span class="signature">create_or_update_github_user(map)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/pull_request/pull_request.ex#L34" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_user/github_user.ex#L14" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -151,27 +150,14 @@ payload</p>
     
       <div class="specs">
         
-          <pre>create_or_update_pull_request(map(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: linking_result()</pre>
+          <pre>create_or_update_github_user(map()) :: {:ok, <a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>()}</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+    <p>Finds or creates a <code class="inline">GithubUser</code> record using information in the GitHub API
 payload.</p>
-<p>The process is as follows:</p>
-<ul>
-<li><p>Search for the pull request in our database with the payload data.</p>
-<ul>
-<li>If we return a single <code class="inline">GithubPullRequest</code>, then the <code class="inline">GithubPullRequest</code>
-  should be updated.
-</li>
-<li>If there are no matching <code class="inline">GithubPullRequest</code> records, then a
-  <code class="inline">GithubPullRequest</code>should be created.
-</li>
-</ul>
-</li>
-</ul>
 
   </section>
 </div>

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.Comment.Comment.Changeset – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.Task.Changeset – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.Comment.Comment.Changeset
+        CodeCorps.GitHub.Sync.Task.Changeset
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/task/changeset.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,8 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of building a <code class="inline">Changeset</code> to update a <code class="inline">Comment</code> with, when handling
-a GitHub Comment payload.</p>
+          <p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
+Issues webhook.</p>
 
         </section>
       
@@ -103,21 +103,21 @@ a GitHub Comment payload.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/3">create_changeset(github_comment, task, user)</a>
+    <a href="#create_changeset/3">create_changeset(github_issue, github_repo, user)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Constructs a changeset for creating a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when syncing from a
-GitHub API Comment payload</p>
+    <div class="summary-synopsis"><p>Constructs a changeset for creating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
+Issues or IssueComment webhook</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#update_changeset/2">update_changeset(comment, github_comment)</a>
+    <a href="#update_changeset/3">update_changeset(task, github_issue, github_repo)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Constructs a changeset for updating a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when syncing from a
-GitHub API Comment payload</p>
+    <div class="summary-synopsis"><p>Constructs a changeset for updating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
+Issues or IssueComment webhook</p>
 </div>
   
 </div>
@@ -149,9 +149,9 @@ GitHub API Comment payload</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_changeset(github_comment, task, user)</span>
+    <span class="signature">create_changeset(github_issue, github_repo, user)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L26" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/task/changeset.ex#L29" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -160,28 +160,28 @@ GitHub API Comment payload</p>
     
       <div class="specs">
         
-          <pre>create_changeset(<a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>(), <a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+          <pre>create_changeset(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Constructs a changeset for creating a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when syncing from a
-GitHub API Comment payload.</p>
+    <p>Constructs a changeset for creating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
+Issues or IssueComment webhook.</p>
 
   </section>
 </div>
-<div class="detail" id="update_changeset/2">
+<div class="detail" id="update_changeset/3">
   
   
   <div class="detail-header">
-    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#update_changeset/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">update_changeset(comment, github_comment)</span>
+    <span class="signature">update_changeset(task, github_issue, github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/comment/comment/changeset.ex#L47" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/task/changeset.ex#L56" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -190,14 +190,14 @@ GitHub API Comment payload.</p>
     
       <div class="specs">
         
-          <pre>update_changeset(<a href="CodeCorps.Comment.html#t:t/0">CodeCorps.Comment.t</a>(), <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+          <pre>update_changeset(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Constructs a changeset for updating a <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when syncing from a
-GitHub API Comment payload.</p>
+    <p>Constructs a changeset for updating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
+Issues or IssueComment webhook.</p>
 
   </section>
 </div>

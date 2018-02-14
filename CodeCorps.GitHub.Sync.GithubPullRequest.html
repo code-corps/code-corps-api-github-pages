@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.Issue.Task.Changeset – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.GithubPullRequest – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.Issue.Task.Changeset
+        CodeCorps.GitHub.Sync.GithubPullRequest
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/changeset.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_pull_request/gitub_pull_request.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,8 +79,9 @@
 
       
         <section id="moduledoc">
-          <p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
-Issues webhook.</p>
+          <p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
+when processing a GitHub Pull Request payload.</p>
+<p>The only entry point is <a href="#create_or_update_pull_request/2"><code class="inline">create_or_update_pull_request/2</code></a>.</p>
 
         </section>
       
@@ -103,21 +104,11 @@ Issues webhook.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/3">create_changeset(github_issue, github_repo, user)</a>
+    <a href="#create_or_update_pull_request/2">create_or_update_pull_request(payload, github_repo)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Constructs a changeset for creating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
-Issues or IssueComment webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_changeset/3">update_changeset(task, github_issue, github_repo)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Constructs a changeset for updating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
-Issues or IssueComment webhook</p>
+    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+payload</p>
 </div>
   
 </div>
@@ -141,17 +132,17 @@ Issues or IssueComment webhook</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_changeset/3">
+          <div class="detail" id="create_or_update_pull_request/2">
   
   
   <div class="detail-header">
-    <a href="#create_changeset/3" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_pull_request/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_changeset(github_issue, github_repo, user)</span>
+    <span class="signature">create_or_update_pull_request(payload, github_repo)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/changeset.ex#L29" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_pull_request/gitub_pull_request.ex#L34" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -160,44 +151,27 @@ Issues or IssueComment webhook</p>
     
       <div class="specs">
         
-          <pre>create_changeset(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+          <pre>create_or_update_pull_request(map(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: linking_result()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Constructs a changeset for creating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
-Issues or IssueComment webhook.</p>
-
-  </section>
-</div>
-<div class="detail" id="update_changeset/3">
-  
-  
-  <div class="detail-header">
-    <a href="#update_changeset/3" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">update_changeset(task, github_issue, github_repo)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/issue/task/changeset.ex#L56" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>update_changeset(<a href="CodeCorps.Task.html#t:t/0">CodeCorps.Task.t</a>(), <a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Constructs a changeset for updating a <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing an
-Issues or IssueComment webhook.</p>
+    <p>Finds or creates a <code class="inline">GithubPullRequest</code> using the data in a GitHub PullRequest
+payload.</p>
+<p>The process is as follows:</p>
+<ul>
+<li><p>Search for the pull request in our database with the payload data.</p>
+<ul>
+<li>If we return a single <code class="inline">GithubPullRequest</code>, then the <code class="inline">GithubPullRequest</code>
+  should be updated.
+</li>
+<li>If there are no matching <code class="inline">GithubPullRequest</code> records, then a
+  <code class="inline">GithubPullRequest</code>should be created.
+</li>
+</ul>
+</li>
+</ul>
 
   </section>
 </div>

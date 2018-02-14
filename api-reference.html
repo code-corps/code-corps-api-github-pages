@@ -8,7 +8,7 @@
     <title>API Reference – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -571,17 +571,12 @@ GitHub API requests</p>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.html">CodeCorps.GitHub.Sync</a></div>
   
-    <div class="summary-synopsis"><p>Syncs events received from the GitHub API and also syncs entire GitHub
-repositories</p>
+    <div class="summary-synopsis"><p>GitHub syncing functions for</p>
 </div>
   
 </div>
 <div class="summary-row">
   <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.html">CodeCorps.GitHub.Sync.Comment</a></div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.Comment.html">CodeCorps.GitHub.Sync.Comment.Comment</a></div>
   
     <div class="summary-synopsis"><p>In charge of syncing <a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> records with a GitHub comment
 payload</p>
@@ -589,7 +584,7 @@ payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.Comment.Changeset.html">CodeCorps.GitHub.Sync.Comment.Comment.Changeset</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.Changeset.html">CodeCorps.GitHub.Sync.Comment.Changeset</a></div>
   
     <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <code class="inline">Comment</code> with, when handling
 a GitHub Comment payload</p>
@@ -597,19 +592,11 @@ a GitHub Comment payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Comment.GithubComment.html">CodeCorps.GitHub.Sync.Comment.GithubComment</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
-<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing a GitHub Comment payload</p>
-</div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubAppInstallation.html">CodeCorps.GitHub.Sync.GithubAppInstallation</a></div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Installation.html">CodeCorps.GitHub.Sync.Installation</a></div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Installation.Changeset.html">CodeCorps.GitHub.Sync.Installation.Changeset</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubAppInstallation.Changeset.html">CodeCorps.GitHub.Sync.GithubAppInstallation.Changeset</a></div>
   
     <div class="summary-synopsis"><p>In charge of managing changesets when creating or updating a
 <code class="inline">GithubAppInstallation</code> in the process of handling an Installation event</p>
@@ -617,11 +604,15 @@ a GitHub Comment payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.html">CodeCorps.GitHub.Sync.Issue</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubComment.html">CodeCorps.GitHub.Sync.GithubComment</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
+<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing a GitHub Comment payload</p>
+</div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.GithubIssue.html">CodeCorps.GitHub.Sync.Issue.GithubIssue</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubIssue.html">CodeCorps.GitHub.Sync.GithubIssue</a></div>
   
     <div class="summary-synopsis"><p>In charge of finding or creating a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> to link with a
 <a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing a GitHub Issue payload</p>
@@ -629,19 +620,7 @@ a GitHub Comment payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.Task.html">CodeCorps.GitHub.Sync.Issue.Task</a></div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Issue.Task.Changeset.html">CodeCorps.GitHub.Sync.Issue.Task.Changeset</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
-Issues webhook</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.html">CodeCorps.GitHub.Sync.PullRequest</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubPullRequest.html">CodeCorps.GitHub.Sync.GithubPullRequest</a></div>
   
     <div class="summary-synopsis"><p>In charge of finding a pull request to link with a <code class="inline">GithubPullRequest</code> record
 when processing a GitHub Pull Request payload</p>
@@ -649,7 +628,7 @@ when processing a GitHub Pull Request payload</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.PullRequest.BodyParser.html">CodeCorps.GitHub.Sync.PullRequest.BodyParser</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubPullRequest.BodyParser.html">CodeCorps.GitHub.Sync.GithubPullRequest.BodyParser</a></div>
   
     <div class="summary-synopsis"><p>In charge of extracting ids from markdown content, paired to a predefined list
 of keywords</p>
@@ -657,14 +636,40 @@ of keywords</p>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Repo.html">CodeCorps.GitHub.Sync.Repo</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubRepo.html">CodeCorps.GitHub.Sync.GithubRepo</a></div>
   
 </div>
 <div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.User.GithubUser.html">CodeCorps.GitHub.Sync.User.GithubUser</a></div>
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubUser.html">CodeCorps.GitHub.Sync.GithubUser</a></div>
   
     <div class="summary-synopsis"><p>In charge of syncing to a <code class="inline">GithubUser</code> record given a GitHub API payload
 containing the user</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.GithubUser.Changeset.html">CodeCorps.GitHub.Sync.GithubUser.Changeset</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of changesets for actions on <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a> records</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Task.html">CodeCorps.GitHub.Sync.Task</a></div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.Task.Changeset.html">CodeCorps.GitHub.Sync.Task.Changeset</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of building a <code class="inline">Changeset</code> to update a <a href="https://hexdocs.pm/elixir/Task.html"><code class="inline">Task</code></a> with, when handling an
+Issues webhook</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.User.html">CodeCorps.GitHub.Sync.User</a></div>
+  
+    <div class="summary-synopsis"><p>In charge of finding or creating a <code class="inline">User</code> given a <code class="inline">GithubUser</code></p>
 </div>
   
 </div>
@@ -673,13 +678,6 @@ containing the user</p>
   
     <div class="summary-synopsis"><p>In charge of finding a user to link with a given record given a GitHub API
 payload containing the user</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature"><a href="CodeCorps.GitHub.Sync.User.User.html">CodeCorps.GitHub.Sync.User.User</a></div>
-  
-    <div class="summary-synopsis"><p>In charge of finding or creating a <code class="inline">User</code> given a <code class="inline">GithubUser</code></p>
 </div>
   
 </div>

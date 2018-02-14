@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.Installation – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.GithubComment – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,15 +68,22 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.Installation
+        CodeCorps.GitHub.Sync.GithubComment
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_comment/github_comment.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
         
       </h1>
 
+      
+        <section id="moduledoc">
+          <p>In charge of finding a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> to link with a
+<a href="CodeCorps.Comment.html"><code class="inline">CodeCorps.Comment</code></a> when processing a GitHub Comment payload.</p>
+<p>The only entry point is <a href="#create_or_update_comment/2"><code class="inline">create_or_update_comment/2</code></a>.</p>
+
+        </section>
       
 
       
@@ -95,13 +102,7 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#t:commit_result/0">commit_result()</a>
-  </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#t:outcome/0">outcome()</a>
+    <a href="#t:result/0">result()</a>
   </div>
   
 </div>
@@ -116,10 +117,21 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#sync/1">sync(payload)</a>
+    <a href="#create_or_update_comment/2">create_or_update_comment(github_issue, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Tries to sync a GithubAppInstallation record using a Github API payload</p>
+    <div class="summary-synopsis"><p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a
+GitHubComment payload</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete/1">delete(github_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Deletes the <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record using the GitHub ID from a GitHub
+API comment payload</p>
 </div>
   
 </div>
@@ -142,17 +154,17 @@
             Types
           </h1>
           <div class="types-list">
-            <div class="detail" id="t:commit_result/0">
+            <div class="detail" id="t:result/0">
   
   
   <div class="detail-header">
-    <a href="#t:commit_result/0" class="detail-link" title="Link to this type">
+    <a href="#t:result/0" class="detail-link" title="Link to this type">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this type</span>
     </a>
-    <span class="signature">commit_result()</span>
+    <span class="signature">result()</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L7" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_comment/github_comment.ex#L20" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -161,39 +173,9 @@
     
       <div class="specs">
         
-          <pre><a href="#t:commit_result/0">commit_result</a>() ::
-  {:ok, <a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>()} |
+          <pre><a href="#t:result/0">result</a>() ::
+  {:ok, <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>()} |
   {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    
-  </section>
-</div>
-<div class="detail" id="t:outcome/0">
-  
-  
-  <div class="detail-header">
-    <a href="#t:outcome/0" class="detail-link" title="Link to this type">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this type</span>
-    </a>
-    <span class="signature">outcome()</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L10" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre><a href="#t:outcome/0">outcome</a>() ::
-  <a href="#t:commit_result/0">commit_result</a>() |
-  {:error, :multiple_unprocessed_installations_found}</pre>
         
       </div>
     
@@ -216,17 +198,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="sync/1">
+          <div class="detail" id="create_or_update_comment/2">
   
   
   <div class="detail-header">
-    <a href="#sync/1" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_comment/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">sync(payload)</span>
+    <span class="signature">create_or_update_comment(github_issue, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/installation.ex#L43" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_comment/github_comment.ex#L60" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -235,30 +217,50 @@
     
       <div class="specs">
         
-          <pre>sync(map()) :: <a href="#t:outcome/0">outcome</a>()</pre>
+          <pre>create_or_update_comment(<a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>(), map()) :: <a href="#t:result/0">result</a>()</pre>
+        
+          <pre>create_or_update_comment(<a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), map()) :: <a href="#t:result/0">result</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Tries to sync a GithubAppInstallation record using a Github API payload.</p>
-<p>The process is branching.</p>
-<p>If the installation can be matched by github id, then it is simply updated.</p>
-<p>If the installation cannot be matched by github id, then the system tries to
-locate the user, through the sender github id.</p>
-<p>If that fails, an unassociated installation is created.</p>
-<p>If a user is found, the system looks for a “skeleton” installation. This is
-a <a href="CodeCorps.GithubAppInstallation.html"><code class="inline">CodeCorps.GithubAppInstallation</code></a> record which was created from the project
-integration page, but the webhook for the next step, which is actually
-performing the installation on Github.com, has not yet been done.</p>
-<p>This “skeleton” record is associated to a project and a user, but does
-not have any github data yet.</p>
-<p>In this case, the system assumes a single “skeleton” installation. If multiple
-are found, an error tuple is returned.</p>
-<p>If an installation is matched this way, it gets updated.</p>
-<p>Finally, if no installation has been matched in this alternative way, an
-installation associated to a user, but not associated to a project gets
-created.</p>
+    <p>Finds or creates a <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> using the data in a
+GitHubComment payload.</p>
+<p>The comment is matched with an existing GithubIssue record using the
+<code class="inline">issue_url</code> property of the payload.</p>
+
+  </section>
+</div>
+<div class="detail" id="delete/1">
+  
+  
+  <div class="detail-header">
+    <a href="#delete/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">delete(github_id)</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_comment/github_comment.ex#L117" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>delete(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: {:ok, <a href="CodeCorps.GithubComment.html#t:t/0">CodeCorps.GithubComment.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Deletes the <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record using the GitHub ID from a GitHub
+API comment payload.</p>
+<p>Returns the deleted <a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record or an empty
+<a href="CodeCorps.GithubComment.html"><code class="inline">CodeCorps.GithubComment</code></a> record if no such record existed.</p>
 
   </section>
 </div>

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.User.GithubUser – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.GithubIssue – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.User.GithubUser
+        CodeCorps.GitHub.Sync.GithubIssue
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/user/github_user.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_issue/github_issue.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,8 +79,9 @@
 
       
         <section id="moduledoc">
-          <p>In charge of syncing to a <code class="inline">GithubUser</code> record given a GitHub API payload
-containing the user.</p>
+          <p>In charge of finding or creating a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> to link with a
+<a href="CodeCorps.Task.html"><code class="inline">CodeCorps.Task</code></a> when processing a GitHub Issue payload.</p>
+<p>The only entry point is <a href="#create_or_update_issue/2"><code class="inline">create_or_update_issue/2</code></a>.</p>
 
         </section>
       
@@ -95,6 +96,19 @@ containing the user.</p>
             Summary
           </h1>
           
+  <div class="summary-types summary">
+    <h2>
+      <a href="#types">Types</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#t:result/0">result()</a>
+  </div>
+  
+</div>
+
+  </div>
+
 
           
   <div class="summary-functions summary">
@@ -103,11 +117,10 @@ containing the user.</p>
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_github_user/1">create_or_update_github_user(map)</a>
+    <a href="#create_or_update_issue/3">create_or_update_issue(payload, github_repo, github_pull_request \\ nil)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Finds or creates a <code class="inline">GithubUser</code> record using information in the GitHub API
-payload</p>
+    <div class="summary-synopsis"><p>Creates or updates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> from a GitHub issue API payload</p>
 </div>
   
 </div>
@@ -121,6 +134,49 @@ payload</p>
       
 
       
+        <section id="types" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#types">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Types
+          </h1>
+          <div class="types-list">
+            <div class="detail" id="t:result/0">
+  
+  
+  <div class="detail-header">
+    <a href="#t:result/0" class="detail-link" title="Link to this type">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this type</span>
+    </a>
+    <span class="signature">result()</span>
+    
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_issue/github_issue.ex#L21" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre><a href="#t:result/0">result</a>() ::
+  {:ok, <a href="CodeCorps.GithubIssue.html#t:t/0">CodeCorps.GithubIssue.t</a>()} |
+  {:error, <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()}</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    
+  </section>
+</div>
+
+          </div>
+        </section>
+      
 
       
         <section id="functions" class="details-list">
@@ -131,17 +187,19 @@ payload</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_or_update_github_user/1">
+          <div class="detail" id="create_or_update_issue/3">
   
+  
+    <span id="create_or_update_issue/2"></span>
   
   <div class="detail-header">
-    <a href="#create_or_update_github_user/1" class="detail-link" title="Link to this function">
+    <a href="#create_or_update_issue/3" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_github_user(map)</span>
+    <span class="signature">create_or_update_issue(payload, github_repo, github_pull_request \\ nil)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/user/github_user.ex#L18" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_issue/github_issue.ex#L33" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -150,14 +208,17 @@ payload</p>
     
       <div class="specs">
         
-          <pre>create_or_update_github_user(map()) :: {:ok, <a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>()}</pre>
+          <pre>create_or_update_issue(map(), <a href="CodeCorps.GithubRepo.html#t:t/0">CodeCorps.GithubRepo.t</a>(), <a href="CodeCorps.GithubPullRequest.html#t:t/0">CodeCorps.GithubPullRequest.t</a>() | nil) :: <a href="#t:result/0">result</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Finds or creates a <code class="inline">GithubUser</code> record using information in the GitHub API
-payload.</p>
+    <p>Creates or updates a <a href="CodeCorps.GithubIssue.html"><code class="inline">CodeCorps.GithubIssue</code></a> from a GitHub issue API payload.</p>
+<p>The created record is associated to the provided <a href="CodeCorps.GithubRepo.html"><code class="inline">CodeCorps.GithubRepo</code></a> and,
+optionally, to a provided <a href="CodeCorps.GithubPullRequest.html"><code class="inline">CodeCorps.GithubPullRequest</code></a>.</p>
+<p>The created record is also associated with a matched <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a>,
+which is created if necessary.</p>
 
   </section>
 </div>

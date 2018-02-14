@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.User.User – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.GithubUser.Changeset – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.User.User
+        CodeCorps.GitHub.Sync.GithubUser.Changeset
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/user/user.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_user/changeset.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,7 +79,7 @@
 
       
         <section id="moduledoc">
-          <p>In charge of finding or creating a <code class="inline">User</code> given a <code class="inline">GithubUser</code>.</p>
+          <p>In charge of changesets for actions on <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a> records.</p>
 
         </section>
       
@@ -102,17 +102,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_or_update_user/1">create_or_update_user(github_user)</a>
+    <a href="#changeset/2">changeset(struct, attrs)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Creates or updates a <code class="inline">User</code> given a <code class="inline">GithubUser</code></p>
+    <div class="summary-synopsis"><p>Builds a changeset for creating or updating a <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a> record</p>
 </div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#sync_github_repo/1">sync_github_repo(github_repo)</a>
-  </div>
   
 </div>
 
@@ -135,17 +129,17 @@
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_or_update_user/1">
+          <div class="detail" id="changeset/2">
   
   
   <div class="detail-header">
-    <a href="#create_or_update_user/1" class="detail-link" title="Link to this function">
+    <a href="#changeset/2" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_or_update_user(github_user)</span>
+    <span class="signature">changeset(struct, attrs)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/user/user.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_user/changeset.ex#L13" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -154,36 +148,14 @@
     
       <div class="specs">
         
-          <pre>create_or_update_user(<a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>()) :: {:ok, <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>()}</pre>
+          <pre>changeset(<a href="CodeCorps.GithubUser.html#t:t/0">CodeCorps.GithubUser.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Creates or updates a <code class="inline">User</code> given a <code class="inline">GithubUser</code>.</p>
+    <p>Builds a changeset for creating or updating a <a href="CodeCorps.GithubUser.html"><code class="inline">CodeCorps.GithubUser</code></a> record.</p>
 
-  </section>
-</div>
-<div class="detail" id="sync_github_repo/1">
-  
-  
-  <div class="detail-header">
-    <a href="#sync_github_repo/1" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">sync_github_repo(github_repo)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/user/user.ex#L19" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    
   </section>
 </div>
 

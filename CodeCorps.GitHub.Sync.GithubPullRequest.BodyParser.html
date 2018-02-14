@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.18.1">
-    <title>CodeCorps.GitHub.Sync.Installation.Changeset – code_corps v0.0.1</title>
+    <title>CodeCorps.GitHub.Sync.GithubPullRequest.BodyParser – code_corps v0.0.1</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-    <script src="dist/sidebar_items-688fe5d862.js"></script>
+    <script src="dist/sidebar_items-9a30f5ca4c.js"></script>
     
     
     
@@ -68,9 +68,9 @@
 
       <h1>
         <small class="visible-xs">code_corps v0.0.1</small>
-        CodeCorps.GitHub.Sync.Installation.Changeset
+        CodeCorps.GitHub.Sync.GithubPullRequest.BodyParser
         
-          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/changeset.ex#L1" title="View Source" class="view-source" rel="help">
+          <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_pull_request/body_parser.ex#L1" title="View Source" class="view-source" rel="help">
             <span class="icon-code" aria-hidden="true"></span>
             <span class="sr-only">View Source</span>
           </a>
@@ -79,8 +79,8 @@
 
       
         <section id="moduledoc">
-          <p>In charge of managing changesets when creating or updating a
-<code class="inline">GithubAppInstallation</code> in the process of handling an Installation event.</p>
+          <p>In charge of extracting ids from markdown content, paired to a predefined list
+of keywords.</p>
 
         </section>
       
@@ -103,21 +103,11 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#create_changeset/2">create_changeset(params, user \\ nil)</a>
+    <a href="#extract_closing_ids/1">extract_closing_ids(content)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Builds a changeset to create a <code class="inline">GithubAppInstallation</code> based on the payload
-from an Installation event</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#update_changeset/2">update_changeset(record, params)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Builds a changeset to update a <code class="inline">GithubAppInstallation</code> based on the payload
-from an Installation event</p>
+    <div class="summary-synopsis"><p>Searches for GitHub closing keyword format inside a content string.
+Returns all unique ids matched, as integers</p>
 </div>
   
 </div>
@@ -141,19 +131,17 @@ from an Installation event</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="create_changeset/2">
+          <div class="detail" id="extract_closing_ids/1">
   
-  
-    <span id="create_changeset/1"></span>
   
   <div class="detail-header">
-    <a href="#create_changeset/2" class="detail-link" title="Link to this function">
+    <a href="#extract_closing_ids/1" class="detail-link" title="Link to this function">
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">create_changeset(params, user \\ nil)</span>
+    <span class="signature">extract_closing_ids(content)</span>
     
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/changeset.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/github_pull_request/body_parser.ex#L12" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -162,45 +150,14 @@ from an Installation event</p>
     
       <div class="specs">
         
-          <pre>create_changeset(map(), <a href="CodeCorps.User.html#t:t/0">CodeCorps.User.t</a>() | nil) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
+          <pre>extract_closing_ids(<a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()) :: [integer()]</pre>
         
       </div>
     
   </div>
   <section class="docstring">
-    <p>Builds a changeset to create a <code class="inline">GithubAppInstallation</code> based on the payload
-from an Installation event.</p>
-<p>An optional user to associate the installation with can be provided.</p>
-
-  </section>
-</div>
-<div class="detail" id="update_changeset/2">
-  
-  
-  <div class="detail-header">
-    <a href="#update_changeset/2" class="detail-link" title="Link to this function">
-      <span class="icon-link" aria-hidden="true"></span>
-      <span class="sr-only">Link to this function</span>
-    </a>
-    <span class="signature">update_changeset(record, params)</span>
-    
-      <a href="https://github.com/code-corps/code-corps-api/blob/master/lib/code_corps/github/sync/installation/changeset.ex#L39" class="view-source" rel="help" title="View Source">
-       <span class="icon-code" aria-hidden="true"></span>
-       <span class="sr-only">View Source</span>
-     </a>
-    
-    
-    
-      <div class="specs">
-        
-          <pre>update_changeset(<a href="CodeCorps.GithubAppInstallation.html#t:t/0">CodeCorps.GithubAppInstallation.t</a>(), map()) :: <a href="https://hexdocs.pm/ecto/2.2.6/Ecto.Changeset.html#t:t/0">Ecto.Changeset.t</a>()</pre>
-        
-      </div>
-    
-  </div>
-  <section class="docstring">
-    <p>Builds a changeset to update a <code class="inline">GithubAppInstallation</code> based on the payload
-from an Installation event.</p>
+    <p>Searches for GitHub closing keyword format inside a content string.
+Returns all unique ids matched, as integers.</p>
 
   </section>
 </div>
